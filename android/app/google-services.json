@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "71023789235",
+    "project_id": "app-qtm-25e27",
+    "storage_bucket": "app-qtm-25e27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:71023789235:android:a291a047ec005bf26b9cc6",
+        "android_client_info": {
+          "package_name": "com.mycompany.appqtm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "71023789235-1fd9q9u2r7vh3qqkg04aeld9jsnq8rlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApWuwsBxvNjuZ9qd9x4H3GcDP7hLKnQ4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "71023789235-1fd9q9u2r7vh3qqkg04aeld9jsnq8rlv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "71023789235-rp32hdspteq9tpqpemcqm8pbrv1a73m6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.appqtm"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

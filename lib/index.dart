@@ -1,0 +1,122 @@
+// Export pages
+export '/pages/patient/home/home_patient_page/home_patient_page_widget.dart'
+    show HomePatientPageWidget;
+export '/pages/patient/initial_search/initial_search/initial_search_widget.dart'
+    show InitialSearchWidget;
+export '/pages/patient/search/search/search_widget.dart' show SearchWidget;
+export '/pages/patient/requests_page/requests_page/requests_page_widget.dart'
+    show RequestsPageWidget;
+export '/pages/patient/profile_therapist/profile_therapist/profile_therapist_widget.dart'
+    show ProfileTherapistWidget;
+export '/terms_page/terms_page_widget.dart' show TermsPageWidget;
+export '/pages/patient/payment/payment_cards/payment_cards_widget.dart'
+    show PaymentCardsWidget;
+export '/pages/patient/confirm_schedule/confirm_schedule/confirm_schedule_widget.dart'
+    show ConfirmScheduleWidget;
+export '/pages/patient/profile_therapist/components/choose_timers/choose_timers_widget.dart'
+    show ChooseTimersWidget;
+export '/pages/patient/profile_therapist/components/choose_practices/choose_practices_widget.dart'
+    show ChoosePracticesWidget;
+export '/pages/patient/home/components/manager_requests/manager_requests_widget.dart'
+    show ManagerRequestsWidget;
+export '/pages/patient/confirm_schedule/components/payment_confirm/payment_confirm_widget.dart'
+    show PaymentConfirmWidget;
+export '/pages/patient/schedule_management/schedule_page/schedule_page_widget.dart'
+    show SchedulePageWidget;
+export '/pages/login_page/login_page_widget.dart' show LoginPageWidget;
+export '/pages/therapist/schedulings/schedulings_page/schedulings_page_widget.dart'
+    show SchedulingsPageWidget;
+export '/pages/therapist/home/home_theraphist_page/home_theraphist_page_widget.dart'
+    show HomeTheraphistPageWidget;
+export '/pages/load_auth_page/load_auth_page_widget.dart'
+    show LoadAuthPageWidget;
+export '/pages/therapist/schedules/schedules_theraphist_page/schedules_theraphist_page_widget.dart'
+    show SchedulesTheraphistPageWidget;
+export '/pages/therapist/patients/patients_page_theraphist/patients_page_theraphist_widget.dart'
+    show PatientsPageTheraphistWidget;
+export '/pages/registe_user/signup_register_user_page/signup_register_user_page_widget.dart'
+    show SignupRegisterUserPageWidget;
+export '/pages/registe_user/type_user_page/type_user_page_widget.dart'
+    show TypeUserPageWidget;
+export '/pages/registe_user/user_theraphist/register_theraphist_page/register_theraphist_page_widget.dart'
+    show RegisterTheraphistPageWidget;
+export '/pages/registe_user/user_theraphist/profile_update_user_page/profile_update_user_page_widget.dart'
+    show ProfileUpdateUserPageWidget;
+export '/pages/registe_user/user_theraphist/add_timer_theraphist_page/add_timer_theraphist_page_widget.dart'
+    show AddTimerTheraphistPageWidget;
+export '/pages/registe_user/user_theraphist/add_pratical_theraphist_page/add_pratical_theraphist_page_widget.dart'
+    show AddPraticalTheraphistPageWidget;
+export '/pages/registe_user/user_theraphist/add_place_theraphist_page/add_place_theraphist_page_widget.dart'
+    show AddPlaceTheraphistPageWidget;
+export '/pages/registe_user/loading_page_user/loading_page_user_widget.dart'
+    show LoadingPageUserWidget;
+export '/pages/registe_user/user_patients/profile_patient_page/profile_patient_page_widget.dart'
+    show ProfilePatientPageWidget;
+export '/pages/therapist/home/notification_theraphist_page/notification_theraphist_page_widget.dart'
+    show NotificationTheraphistPageWidget;
+export '/pages/therapist/praticals/praticals_theraphist_page/praticals_theraphist_page_widget.dart'
+    show PraticalsTheraphistPageWidget;
+export '/pages/therapist/praticals/add_praticals_page/add_praticals_page_widget.dart'
+    show AddPraticalsPageWidget;
+export '/pages/therapist/praticals/add_timers_page/add_timers_page_widget.dart'
+    show AddTimersPageWidget;
+export '/pages/therapist/calendar/calendar_theraphist_page/calendar_theraphist_page_widget.dart'
+    show CalendarTheraphistPageWidget;
+export '/pages/registe_user/user_patients/register_patient_page/register_patient_page_widget.dart'
+    show RegisterPatientPageWidget;
+export '/pages/registe_user/terms_genrals/terms_inital_page/terms_inital_page_widget.dart'
+    show TermsInitalPageWidget;
+export '/pages/registe_user/terms_genrals/politics_inital_privacy_page/politics_inital_privacy_page_widget.dart'
+    show PoliticsInitalPrivacyPageWidget;
+export '/pages/registe_user/terms_genrals/politic_general_use_page/politic_general_use_page_widget.dart'
+    show PoliticGeneralUsePageWidget;
+export '/pages/therapist/coworkings/coworking_theraphist_page/coworking_theraphist_page_widget.dart'
+    show CoworkingTheraphistPageWidget;
+export '/pages/patient/schedule_management/components/status_cancel/status_cancel_widget.dart'
+    show StatusCancelWidget;
+export '/pages/patient/profile_therapist/components/choose_coworkings/choose_coworkings_widget.dart'
+    show ChooseCoworkingsWidget;
+export '/pages/patient/home/notification_patient_page/notification_patient_page_widget.dart'
+    show NotificationPatientPageWidget;
+export '/pages/patient/components/error_api/error_api_widget.dart'
+    show ErrorApiWidget;
+export '/pages/patient/home/history_requests_patients_page/history_requests_patients_page_widget.dart'
+    show HistoryRequestsPatientsPageWidget;
+export '/pages/therapist/invoincing/invoincing_theraphist_page/invoincing_theraphist_page_widget.dart'
+    show InvoincingTheraphistPageWidget;
+export '/pages/therapist/interest/interest_page/interest_page_widget.dart'
+    show InterestPageWidget;
+export '/pages/therapist/home/history_requests_theraphist_page/history_requests_theraphist_page_widget.dart'
+    show HistoryRequestsTheraphistPageWidget;
+export '/pages/drawer/politics_drawer_page/politics_drawer_page_widget.dart'
+    show PoliticsDrawerPageWidget;
+export '/pages/drawer/terms_drawer_page/terms_drawer_page_widget.dart'
+    show TermsDrawerPageWidget;
+export '/pages/patient/home/components/manager_request_history/manager_request_history_widget.dart'
+    show ManagerRequestHistoryWidget;
+export '/pages/registe_user/user_theraphist/date_bank/redirect_finished_page/redirect_finished_page_widget.dart'
+    show RedirectFinishedPageWidget;
+export '/pages/drawer/profile_theraphist_page/profile_theraphist_page_widget.dart'
+    show ProfileTheraphistPageWidget;
+export '/pages/registe_user/user_theraphist/date_bank/redirect_continue_page/redirect_continue_page_widget.dart'
+    show RedirectContinuePageWidget;
+export '/pages/patient/support_screen/screen_support/screen_support_widget.dart'
+    show ScreenSupportWidget;
+export '/pages/patient/support_screen/components/support_form/support_form_widget.dart'
+    show SupportFormWidget;
+export '/pages/patient/support_screen/components/support_consultas/support_consultas_widget.dart'
+    show SupportConsultasWidget;
+export '/pages/patient/support_screen/components/support_request_finished/support_request_finished_widget.dart'
+    show SupportRequestFinishedWidget;
+export '/pages/admin/home_page_admin/home_page_admin_widget.dart'
+    show HomePageAdminWidget;
+export '/pages/admin/theraphists/registred_theraphist_page/registred_theraphist_page_widget.dart'
+    show RegistredTheraphistPageWidget;
+export '/pages/admin/patients/registred_patients_page/registred_patients_page_widget.dart'
+    show RegistredPatientsPageWidget;
+export '/pages/admin/components/users_page/users_page_widget.dart'
+    show UsersPageWidget;
+export '/pages/patient/profile/profile_patient/profile_patient_widget.dart'
+    show ProfilePatientWidget;
+export '/pages/patient/profile/components/edit_profile/edit_profile_widget.dart'
+    show EditProfileWidget;

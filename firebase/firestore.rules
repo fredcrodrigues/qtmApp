@@ -1,0 +1,156 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /patients/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /schedule/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /requests/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /theraphist/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /certificate/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /practice/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /invoicing/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /place/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /coworking/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /type_place/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /specialty/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /interest/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /products/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /politics/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /terms/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /cards/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /horary/{document} {
+      allow create: if false;
+      allow read: if false;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /prescription/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /calendar/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /notifications/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /ff_user_push_notifications/{id} {
+      allow read, update, delete: if false;
+      allow create: if /databases/$(database)/documents/users/$(request.auth.uid) == request.resource.data.sender;
+    }
+  }
+}
