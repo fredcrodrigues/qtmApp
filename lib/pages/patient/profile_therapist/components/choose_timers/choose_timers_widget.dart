@@ -98,7 +98,7 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                                           40.0, 0.0, 40.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
-                                          '4qzh3y5j' /* Horário de consulta */,
+                                          '4qzh3y5j' /* Horário do atendimento */,
                                         ),
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)

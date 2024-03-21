@@ -119,7 +119,7 @@ class _AlertEventDeleteModalWidgetState
                             EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 8.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'v1n74mb3' /* sucesso */,
+                            'v1n74mb3' /* Sucesso */,
                           ),
                           textAlign: TextAlign.start,
                           style:

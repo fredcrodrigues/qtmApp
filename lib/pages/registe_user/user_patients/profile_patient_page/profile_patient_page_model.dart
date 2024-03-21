@@ -45,7 +45,7 @@ class ProfilePatientPageModel
   String? _textController2Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '7204lj8r' /* Campo Obirgatório */,
+        '7204lj8r' /* Campo Obrigatório */,
       );
     }
 

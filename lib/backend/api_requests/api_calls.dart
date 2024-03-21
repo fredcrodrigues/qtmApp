@@ -12,7 +12,7 @@ const _kPrivateApiFunctionName = 'ffPrivateApiCall';
 /// Start StripeApiNode Group Code
 
 class StripeApiNodeGroup {
-  static String baseUrl = 'https://app-qtm-25e27.uc.r.appspot.com';
+  static String baseUrl = 'https://stripe-api-node.onrender.com';
   static Map<String, String> headers = {};
   static ValidateCardCall validateCardCall = ValidateCardCall();
   static CreatePaymentIntentCall createPaymentIntentCall =

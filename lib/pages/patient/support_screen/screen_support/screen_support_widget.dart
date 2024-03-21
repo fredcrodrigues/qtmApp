@@ -205,7 +205,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      '8lhdzdnp' /* Consultas */,
+                                                      '8lhdzdnp' /* Atendimentos */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)

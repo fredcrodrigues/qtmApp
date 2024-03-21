@@ -420,7 +420,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'f0fqyz9g' /* cvc */,
+                                                                      'f0fqyz9g' /* CVC */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -508,7 +508,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                                     FFLocalizations.of(
                                                                             context)
                                                                         .getText(
-                                                                      'fwx7sj78' /* validade */,
+                                                                      'fwx7sj78' /* Validade */,
                                                                     ),
                                                                     style: FlutterFlowTheme.of(
                                                                             context)
@@ -710,7 +710,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                     ),
                               ),
                               Text(
-                                '${widget.theraphist?.valueSession?.toString()} BRL',
+                                '${functions.convertNumberCurrency(widget.theraphist!.valueSession)} BRL',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -759,28 +759,6 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                       if ((_model.responsePayment?.statusCode ??
                                               200) ==
                                           201) {
-                                        await showDialog(
-                                          context: context,
-                                          builder: (alertDialogContext) {
-                                            return AlertDialog(
-                                              title: Text('tESTE'),
-                                              content:
-                                                  Text(valueOrDefault<String>(
-                                                widget.theraphist?.fkUser?.id,
-                                                '0',
-                                              )),
-                                              actions: [
-                                                TextButton(
-                                                  onPressed: () =>
-                                                      Navigator.pop(
-                                                          alertDialogContext),
-                                                  child: Text('Ok'),
-                                                ),
-                                              ],
-                                            );
-                                          },
-                                        );
-
                                         var requestsRecordReference =
                                             RequestsRecord.collection.doc();
                                         await requestsRecordReference
@@ -983,7 +961,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                     setState(() {});
                                   },
                                   text: FFLocalizations.of(context).getText(
-                                    '0pr1u6gr' /* Confirmar consulta */,
+                                    '0pr1u6gr' /* Confirmar Atendimento */,
                                   ),
                                   options: FFButtonOptions(
                                     padding: EdgeInsets.all(24.0),

@@ -685,7 +685,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                               Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  '685z9384' /* Seus Cowokings */,
+                                                  '685z9384' /* Seus Coworkings */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)

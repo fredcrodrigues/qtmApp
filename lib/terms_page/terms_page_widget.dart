@@ -119,7 +119,7 @@ class _TermsPageWidgetState extends State<TermsPageWidget> {
                           children: [
                             Text(
                               FFLocalizations.of(context).getText(
-                                'frj37p98' /* 1.OBJETO */,
+                                'frj37p98' /* 1. OBJETO */,
                               ),
                               style: FlutterFlowTheme.of(context)
                                   .titleLarge

@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -71,17 +72,35 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
           child: AppBar(
             backgroundColor: Colors.white,
             automaticallyImplyLeading: false,
+            leading: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 10.0),
+              child: FlutterFlowIconButton(
+                borderColor: Colors.transparent,
+                borderRadius: 30.0,
+                borderWidth: 1.0,
+                buttonSize: 77.0,
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  color: Color(0xFF1C1C1C),
+                  size: 30.0,
+                ),
+                onPressed: () async {
+                  context.safePop();
+                },
+              ),
+            ),
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 20.0),
               child: Text(
                 FFLocalizations.of(context).getText(
-                  'wq78ty8s' /* Termos */,
+                  '1kf883h7' /* TERMOS E CONDIÇÕES */,
                 ),
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
-                      color: Color(0xFF1C1C1C),
+                      color: Color(0xFF313030),
                       fontSize: 20.0,
+                      fontWeight: FontWeight.w600,
                     ),
               ),
             ),
@@ -97,12 +116,6 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
             height: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: Image.asset(
-                  'assets/images/Prancheta_1.png',
-                ).image,
-              ),
             ),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
@@ -114,17 +127,21 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Expanded(
-                          child: Text(
-                            FFLocalizations.of(context).getText(
-                              '640a1h64' /* Os serviços da QTM Healthtech ... */,
+                          child: Padding(
+                            padding: EdgeInsetsDirectional.fromSTEB(
+                                0.0, 10.0, 0.0, 0.0),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                '640a1h64' /* Os serviços da QTM Healthtech ... */,
+                              ),
+                              textAlign: TextAlign.justify,
+                              style: FlutterFlowTheme.of(context)
+                                  .labelSmall
+                                  .override(
+                                    fontFamily: 'Readex Pro',
+                                    color: Color(0xFF8E979E),
+                                  ),
                             ),
-                            textAlign: TextAlign.justify,
-                            style: FlutterFlowTheme.of(context)
-                                .labelSmall
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Color(0xFF8E979E),
-                                ),
                           ),
                         ),
                       ],
@@ -145,7 +162,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -207,7 +224,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -245,7 +262,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -283,7 +300,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -321,7 +338,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -359,7 +376,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -397,7 +414,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -435,7 +452,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -473,7 +490,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -511,7 +528,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -549,7 +566,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -587,7 +604,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -627,7 +644,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -665,7 +682,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -703,7 +720,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -741,7 +758,7 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -764,96 +781,9 @@ class _TermsInitalPageWidgetState extends State<TermsInitalPageWidget> {
                       ],
                     ),
                     Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              visualDensity: VisualDensity.compact,
-                              materialTapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
-                              ),
-                            ),
-                            unselectedWidgetColor:
-                                FlutterFlowTheme.of(context).secondaryText,
-                          ),
-                          child: Checkbox(
-                            value: _model.checkboxValue ??= false,
-                            onChanged: (newValue) async {
-                              setState(() => _model.checkboxValue = newValue!);
-                            },
-                            activeColor: Color(0xFFA954B2),
-                            checkColor: FlutterFlowTheme.of(context).info,
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(
-                            FFLocalizations.of(context).getText(
-                              'k0xmvlcd' /* Eu aceito so termos e condiçõe... */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Color(0xFF8E979E),
-                                  fontSize: 12.0,
-                                ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 10.0),
-                              child: FFButtonWidget(
-                                onPressed: (_model.checkboxValue == false)
-                                    ? null
-                                    : () async {
-                                        context.pushNamed(
-                                            'politic_general_use_page');
-                                      },
-                                text: FFLocalizations.of(context).getText(
-                                  'iiqon57i' /* Continuar */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 352.0,
-                                  height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFF0DA0D4),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: 'Lexend Deca',
-                                        color: Colors.white,
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.normal,
-                                      ),
-                                  elevation: 0.0,
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1.0,
-                                  ),
-                                  disabledColor: Color(0xFFB0B0B0),
-                                  disabledTextColor: Color(0x82FFFFFF),
-                                ),
-                                showLoadingIndicator: false,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
+                      children: [],
                     ),
                   ].divide(SizedBox(height: 10.0)),
                 ),

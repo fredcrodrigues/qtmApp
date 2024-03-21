@@ -119,7 +119,7 @@ class _AlertEventCreateModalWidgetState
                             EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 8.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'io7kfv3s' /* sucesso */,
+                            'io7kfv3s' /* Sucesso */,
                           ),
                           textAlign: TextAlign.start,
                           style:

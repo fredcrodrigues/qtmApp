@@ -396,7 +396,7 @@ class _InvoincingTheraphistPageWidgetState
                                               Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  'd1eunopn' /* Active Users */,
+                                                  'd1eunopn' /* Usuario ativos */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)

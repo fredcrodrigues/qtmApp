@@ -167,8 +167,15 @@ class _LoadingPageUserWidgetState extends State<LoadingPageUserWidget>
                               if (valueOrDefault(
                                       currentUserDocument?.typeUser, '') ==
                                   'terapeuta') {
-                                context
-                                    .pushNamed('add_pratical_theraphist_page');
+                                context.pushNamed(
+                                  'home_theraphist_page',
+                                  queryParameters: {
+                                    'intro': serializeParam(
+                                      true,
+                                      ParamType.bool,
+                                    ),
+                                  }.withoutNulls,
+                                );
 
                                 return;
                               } else {

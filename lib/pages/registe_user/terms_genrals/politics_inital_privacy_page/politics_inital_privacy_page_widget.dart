@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -52,31 +51,35 @@ class _PoliticsInitalPrivacyPageWidgetState
           child: AppBar(
             backgroundColor: Colors.white,
             automaticallyImplyLeading: false,
-            leading: FlutterFlowIconButton(
-              borderColor: Colors.transparent,
-              borderRadius: 30.0,
-              borderWidth: 1.0,
-              buttonSize: 60.0,
-              icon: Icon(
-                Icons.arrow_back_ios,
-                color: Color(0xFF1C1C1C),
-                size: 30.0,
+            leading: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 10.0),
+              child: FlutterFlowIconButton(
+                borderColor: Colors.transparent,
+                borderRadius: 30.0,
+                borderWidth: 1.0,
+                buttonSize: 60.0,
+                icon: Icon(
+                  Icons.arrow_back_ios,
+                  color: Color(0xFF1C1C1C),
+                  size: 30.0,
+                ),
+                onPressed: () async {
+                  context.safePop();
+                },
               ),
-              onPressed: () async {
-                context.safePop();
-              },
             ),
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 20.0),
               child: Text(
                 FFLocalizations.of(context).getText(
-                  'jq4isirm' /* Politica de Privacidade */,
+                  'jq4isirm' /* POLITICAS DE PRIVACIDADE */,
                 ),
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
-                      color: Color(0xFF1C1C1C),
+                      color: Color(0xFF313030),
                       fontSize: 20.0,
+                      fontWeight: FontWeight.w600,
                     ),
               ),
             ),
@@ -92,12 +95,6 @@ class _PoliticsInitalPrivacyPageWidgetState
             height: double.infinity,
             decoration: BoxDecoration(
               color: Colors.white,
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: Image.asset(
-                  'assets/images/Prancheta_1.png',
-                ).image,
-              ),
             ),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
@@ -121,7 +118,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -159,7 +156,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -197,7 +194,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -235,7 +232,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -273,7 +270,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -311,7 +308,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -349,7 +346,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -387,7 +384,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -425,7 +422,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -463,7 +460,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -481,120 +478,6 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     ),
                               ),
                             ].divide(SizedBox(height: 10.0)),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Theme(
-                          data: ThemeData(
-                            checkboxTheme: CheckboxThemeData(
-                              visualDensity: VisualDensity.compact,
-                              materialTapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(4.0),
-                              ),
-                            ),
-                            unselectedWidgetColor:
-                                FlutterFlowTheme.of(context).secondaryText,
-                          ),
-                          child: Checkbox(
-                            value: _model.checkboxValue ??= false,
-                            onChanged: (newValue) async {
-                              setState(() => _model.checkboxValue = newValue!);
-                            },
-                            activeColor: Color(0xFFA954B2),
-                            checkColor: FlutterFlowTheme.of(context).info,
-                          ),
-                        ),
-                        Expanded(
-                          child: Text(
-                            FFLocalizations.of(context).getText(
-                              'f5gr4d25' /* Eu aceito as Politicas de priv... */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Readex Pro',
-                                  color: Color(0xFF8E979E),
-                                  fontSize: 12.0,
-                                ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
-                            child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 10.0),
-                              child: FFButtonWidget(
-                                onPressed: (_model.checkboxValue == false)
-                                    ? null
-                                    : () async {
-                                        if (valueOrDefault(
-                                                currentUserDocument?.typeUser,
-                                                '') ==
-                                            'terapeuta') {
-                                          context.pushNamed(
-                                            'profile_update_user_page',
-                                            queryParameters: {
-                                              'refUser': serializeParam(
-                                                currentUserReference,
-                                                ParamType.DocumentReference,
-                                              ),
-                                            }.withoutNulls,
-                                          );
-                                        } else {
-                                          context.pushNamed(
-                                            'profile_patient_page',
-                                            queryParameters: {
-                                              'refUser': serializeParam(
-                                                currentUserReference,
-                                                ParamType.DocumentReference,
-                                              ),
-                                            }.withoutNulls,
-                                          );
-                                        }
-                                      },
-                                text: FFLocalizations.of(context).getText(
-                                  'b8eqmv5b' /* Continuar */,
-                                ),
-                                options: FFButtonOptions(
-                                  width: 352.0,
-                                  height: 50.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFF0DA0D4),
-                                  textStyle: FlutterFlowTheme.of(context)
-                                      .titleSmall
-                                      .override(
-                                        fontFamily: 'Lexend Deca',
-                                        color: Colors.white,
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.normal,
-                                      ),
-                                  elevation: 0.0,
-                                  borderSide: BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1.0,
-                                  ),
-                                  disabledColor: Color(0xFFB0B0B0),
-                                  disabledTextColor: Color(0x82FFFFFF),
-                                ),
-                                showLoadingIndicator: false,
-                              ),
-                            ),
                           ),
                         ),
                       ],

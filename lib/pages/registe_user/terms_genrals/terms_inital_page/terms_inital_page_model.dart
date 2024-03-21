@@ -1,3 +1,4 @@
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -12,8 +13,6 @@ class TermsInitalPageModel extends FlutterFlowModel<TermsInitalPageWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for Checkbox widget.
-  bool? checkboxValue;
 
   /// Initialization and disposal methods.
 

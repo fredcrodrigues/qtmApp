@@ -33,7 +33,7 @@ class ProfileUpdateUserPageModel
   String? _textController1Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '14lf6oa2' /* Campo Obirgatório */,
+        '14lf6oa2' /* Campo ObrIgatório */,
       );
     }
 
@@ -47,7 +47,7 @@ class ProfileUpdateUserPageModel
   String? _textController2Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'g47nfjrv' /* Campo Obirgatório */,
+        'g47nfjrv' /* Campo ObrIgatório */,
       );
     }
 
@@ -64,7 +64,7 @@ class ProfileUpdateUserPageModel
   String? _textController3Validator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '0cbrhla6' /* Campo Obirgatório */,
+        '0cbrhla6' /* Campo Obrigatório */,
       );
     }
 

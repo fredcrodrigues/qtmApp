@@ -100,7 +100,10 @@ class _HistoryRequestsTheraphistPageWidgetState
       });
       _model.requests = await queryRequestsRecordOnce(
         queryBuilder: (requestsRecord) => requestsRecord
-            .whereIn('status', ['canceled', 'finalized', 'refused']),
+            .whereIn('status', ['canceled', 'finalized', 'refused']).where(
+          'fk_theraphist',
+          isEqualTo: FFAppState().refTheraphist,
+        ),
       );
       setState(() {
         _model.allRequests = _model.requests!.toList().cast<RequestsRecord>();
@@ -128,13 +131,15 @@ class _HistoryRequestsTheraphistPageWidgetState
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Color(0xFFA54EAF),
         drawer: Drawer(
           elevation: 16.0,
           child: Container(
@@ -1189,15 +1194,24 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                                               color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                             ),
                                                                             child:
-                                                                                Text(
-                                                                              FFLocalizations.of(context).getText(
-                                                                                '8xfxosob' /* Ver mais */,
+                                                                                Visibility(
+                                                                              visible: responsiveVisibility(
+                                                                                context: context,
+                                                                                phone: false,
+                                                                                tablet: false,
+                                                                                tabletLandscape: false,
+                                                                                desktop: false,
                                                                               ),
-                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                    fontFamily: 'Raleway',
-                                                                                    color: Color(0xFF9F9F9F),
-                                                                                    fontWeight: FontWeight.bold,
-                                                                                  ),
+                                                                              child: Text(
+                                                                                FFLocalizations.of(context).getText(
+                                                                                  '8xfxosob' /* Ver mais */,
+                                                                                ),
+                                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                      fontFamily: 'Raleway',
+                                                                                      color: Color(0xFF9F9F9F),
+                                                                                      fontWeight: FontWeight.bold,
+                                                                                    ),
+                                                                              ),
                                                                             ),
                                                                           ),
                                                                         ],

@@ -785,167 +785,135 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                         mainAxisSize:
                                                                             MainAxisSize.max,
                                                                         children: [
-                                                                          Builder(
-                                                                            builder:
-                                                                                (context) {
-                                                                              if (listOfRequestsItem.status == 'accept') {
-                                                                                return Row(
-                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                  children: [
-                                                                                    FFButtonWidget(
-                                                                                      onPressed: () async {
-                                                                                        context.pushNamed(
-                                                                                          'schedulePage',
-                                                                                          queryParameters: {
-                                                                                            'request': serializeParam(
-                                                                                              listOfRequestsItem,
-                                                                                              ParamType.Document,
-                                                                                            ),
-                                                                                            'reftheraphistUser': serializeParam(
-                                                                                              containerTheraphistRecord.fkUser,
-                                                                                              ParamType.DocumentReference,
-                                                                                            ),
-                                                                                          }.withoutNulls,
-                                                                                          extra: <String, dynamic>{
-                                                                                            'request': listOfRequestsItem,
-                                                                                          },
-                                                                                        );
-                                                                                      },
-                                                                                      text: FFLocalizations.of(context).getText(
-                                                                                        'p8av1hc8' /* Gerenciar */,
+                                                                          Row(
+                                                                            mainAxisSize:
+                                                                                MainAxisSize.max,
+                                                                            mainAxisAlignment:
+                                                                                MainAxisAlignment.spaceBetween,
+                                                                            children:
+                                                                                [
+                                                                              FFButtonWidget(
+                                                                                onPressed: () async {
+                                                                                  context.pushNamed(
+                                                                                    'schedulePage',
+                                                                                    queryParameters: {
+                                                                                      'request': serializeParam(
+                                                                                        listOfRequestsItem,
+                                                                                        ParamType.Document,
                                                                                       ),
-                                                                                      options: FFButtonOptions(
-                                                                                        width: 140.0,
-                                                                                        height: 40.0,
-                                                                                        padding: EdgeInsets.all(0.0),
-                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        color: Color(0xFF657DCA),
-                                                                                        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                              fontFamily: 'Raleway',
-                                                                                              color: Colors.white,
-                                                                                              fontSize: 12.0,
-                                                                                              fontWeight: FontWeight.bold,
-                                                                                            ),
-                                                                                        elevation: 0.0,
-                                                                                        borderSide: BorderSide(
-                                                                                          color: Color(0xFF9A9A9A),
-                                                                                          width: 1.0,
-                                                                                        ),
-                                                                                        borderRadius: BorderRadius.circular(24.0),
+                                                                                      'reftheraphistUser': serializeParam(
+                                                                                        containerTheraphistRecord.fkUser,
+                                                                                        ParamType.DocumentReference,
                                                                                       ),
-                                                                                    ),
-                                                                                    Expanded(
-                                                                                      child: FFButtonWidget(
-                                                                                        onPressed: () {
-                                                                                          print('Button pressed ...');
-                                                                                        },
-                                                                                        text: FFLocalizations.of(context).getText(
-                                                                                          '6nucau0k' /* Aceita */,
-                                                                                        ),
-                                                                                        options: FFButtonOptions(
-                                                                                          width: 160.0,
-                                                                                          height: 40.0,
-                                                                                          padding: EdgeInsets.all(0.0),
-                                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                          color: Color(0xFFECECEC),
-                                                                                          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                                fontFamily: 'Raleway',
-                                                                                                color: Color(0xFFA8A7A7),
-                                                                                                fontSize: 12.0,
-                                                                                                fontWeight: FontWeight.bold,
+                                                                                    }.withoutNulls,
+                                                                                    extra: <String, dynamic>{
+                                                                                      'request': listOfRequestsItem,
+                                                                                    },
+                                                                                  );
+                                                                                },
+                                                                                text: FFLocalizations.of(context).getText(
+                                                                                  'szpcqnhy' /* Gerenciar */,
+                                                                                ),
+                                                                                options: FFButtonOptions(
+                                                                                  width: 140.0,
+                                                                                  height: 40.0,
+                                                                                  padding: EdgeInsets.all(0.0),
+                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: Color(0xFF657DCA),
+                                                                                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                        fontFamily: 'Raleway',
+                                                                                        color: Colors.white,
+                                                                                        fontSize: 12.0,
+                                                                                        fontWeight: FontWeight.bold,
+                                                                                      ),
+                                                                                  elevation: 0.0,
+                                                                                  borderSide: BorderSide(
+                                                                                    color: Color(0xFF9A9A9A),
+                                                                                    width: 1.0,
+                                                                                  ),
+                                                                                  borderRadius: BorderRadius.circular(24.0),
+                                                                                ),
+                                                                              ),
+                                                                              Builder(
+                                                                                builder: (context) {
+                                                                                  if (listOfRequestsItem.status == 'accept') {
+                                                                                    return Row(
+                                                                                      mainAxisSize: MainAxisSize.max,
+                                                                                      children: [
+                                                                                        Stack(
+                                                                                          alignment: AlignmentDirectional(1.0, 1.0),
+                                                                                          children: [
+                                                                                            Icon(
+                                                                                              Icons.library_add_check_rounded,
+                                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                              size: 24.0,
+                                                                                            ),
+                                                                                            Container(
+                                                                                              width: 10.0,
+                                                                                              height: 10.0,
+                                                                                              decoration: BoxDecoration(
+                                                                                                color: Color(0xFF85E777),
+                                                                                                shape: BoxShape.circle,
+                                                                                                border: Border.all(
+                                                                                                  color: Colors.white,
+                                                                                                  width: 2.0,
+                                                                                                ),
                                                                                               ),
-                                                                                          elevation: 0.0,
-                                                                                          borderSide: BorderSide(
-                                                                                            color: Colors.transparent,
-                                                                                            width: 1.0,
+                                                                                            ),
+                                                                                          ],
+                                                                                        ),
+                                                                                        Text(
+                                                                                          FFLocalizations.of(context).getText(
+                                                                                            'thpiheki' /* Atendimento aceito */,
                                                                                           ),
-                                                                                          borderRadius: BorderRadius.circular(24.0),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ].divide(SizedBox(width: 5.0)),
-                                                                                );
-                                                                              } else {
-                                                                                return Row(
-                                                                                  mainAxisSize: MainAxisSize.max,
-                                                                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                  children: [
-                                                                                    FFButtonWidget(
-                                                                                      onPressed: () async {
-                                                                                        context.pushNamed(
-                                                                                          'schedulePage',
-                                                                                          queryParameters: {
-                                                                                            'request': serializeParam(
-                                                                                              listOfRequestsItem,
-                                                                                              ParamType.Document,
-                                                                                            ),
-                                                                                            'reftheraphistUser': serializeParam(
-                                                                                              containerTheraphistRecord.fkUser,
-                                                                                              ParamType.DocumentReference,
-                                                                                            ),
-                                                                                          }.withoutNulls,
-                                                                                          extra: <String, dynamic>{
-                                                                                            'request': listOfRequestsItem,
-                                                                                          },
-                                                                                        );
-                                                                                      },
-                                                                                      text: FFLocalizations.of(context).getText(
-                                                                                        'b5r0083q' /* Gerenciar */,
-                                                                                      ),
-                                                                                      options: FFButtonOptions(
-                                                                                        width: 140.0,
-                                                                                        height: 40.0,
-                                                                                        padding: EdgeInsets.all(0.0),
-                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                        color: Color(0x004B39EF),
-                                                                                        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                              fontFamily: 'Raleway',
-                                                                                              color: Color(0xFFB6B6B6),
-                                                                                              fontSize: 12.0,
-                                                                                              fontWeight: FontWeight.bold,
-                                                                                            ),
-                                                                                        elevation: 0.0,
-                                                                                        borderSide: BorderSide(
-                                                                                          color: Color(0xFF9A9A9A),
-                                                                                          width: 1.0,
-                                                                                        ),
-                                                                                        borderRadius: BorderRadius.circular(24.0),
-                                                                                      ),
-                                                                                    ),
-                                                                                    Expanded(
-                                                                                      child: FFButtonWidget(
-                                                                                        onPressed: () {
-                                                                                          print('Button pressed ...');
-                                                                                        },
-                                                                                        text: FFLocalizations.of(context).getText(
-                                                                                          'aigw6sc1' /* Aguardando */,
-                                                                                        ),
-                                                                                        options: FFButtonOptions(
-                                                                                          width: 160.0,
-                                                                                          height: 40.0,
-                                                                                          padding: EdgeInsets.all(0.0),
-                                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                          color: Color(0xFFECECEC),
-                                                                                          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                 fontFamily: 'Raleway',
-                                                                                                color: Color(0xFFA8A7A7),
-                                                                                                fontSize: 12.0,
-                                                                                                fontWeight: FontWeight.bold,
+                                                                                                fontWeight: FontWeight.w600,
                                                                                               ),
-                                                                                          elevation: 0.0,
-                                                                                          borderSide: BorderSide(
-                                                                                            color: Colors.transparent,
-                                                                                            width: 1.0,
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.circular(24.0),
                                                                                         ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ].divide(SizedBox(width: 5.0)),
-                                                                                );
-                                                                              }
-                                                                            },
+                                                                                      ].divide(SizedBox(width: 5.0)),
+                                                                                    );
+                                                                                  } else {
+                                                                                    return Row(
+                                                                                      mainAxisSize: MainAxisSize.max,
+                                                                                      children: [
+                                                                                        Stack(
+                                                                                          alignment: AlignmentDirectional(1.0, 1.0),
+                                                                                          children: [
+                                                                                            Icon(
+                                                                                              Icons.access_time_sharp,
+                                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                              size: 24.0,
+                                                                                            ),
+                                                                                            Container(
+                                                                                              width: 10.0,
+                                                                                              height: 10.0,
+                                                                                              decoration: BoxDecoration(
+                                                                                                color: Color(0xFFDAC366),
+                                                                                                shape: BoxShape.circle,
+                                                                                                border: Border.all(
+                                                                                                  color: Colors.white,
+                                                                                                  width: 2.0,
+                                                                                                ),
+                                                                                              ),
+                                                                                            ),
+                                                                                          ],
+                                                                                        ),
+                                                                                        Text(
+                                                                                          FFLocalizations.of(context).getText(
+                                                                                            'xzatk9w7' /* Em andamento */,
+                                                                                          ),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'Raleway',
+                                                                                                fontWeight: FontWeight.w600,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ].divide(SizedBox(width: 5.0)),
+                                                                                    );
+                                                                                  }
+                                                                                },
+                                                                              ),
+                                                                            ].divide(SizedBox(width: 5.0)),
                                                                           ),
                                                                         ],
                                                                       ),

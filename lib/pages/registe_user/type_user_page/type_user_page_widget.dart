@@ -145,7 +145,15 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                                             _model.theraphist?.reference;
                                       });
 
-                                      context.pushNamed('terms_inital_page');
+                                      context.pushNamed(
+                                        'profile_update_user_page',
+                                        queryParameters: {
+                                          'refUser': serializeParam(
+                                            currentUserReference,
+                                            ParamType.DocumentReference,
+                                          ),
+                                        }.withoutNulls,
+                                      );
 
                                       setState(() {});
                                     },
@@ -197,7 +205,15 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                                         typeUser: 'paciente',
                                       ));
 
-                                      context.pushNamed('terms_inital_page');
+                                      context.pushNamed(
+                                        'profile_patient_page',
+                                        queryParameters: {
+                                          'refUser': serializeParam(
+                                            currentUserReference,
+                                            ParamType.DocumentReference,
+                                          ),
+                                        }.withoutNulls,
+                                      );
                                     },
                                     child: Container(
                                       width: 331.0,

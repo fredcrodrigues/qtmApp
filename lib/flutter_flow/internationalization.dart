@@ -115,20 +115,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Pesquise por terapeutas...',
       'es': 'Búsqueda de terapeutas...',
     },
-    'vulo61iv': {
-      'pt': 'Solicitações',
+    '1qfza9l9': {
+      'pt': 'Pagamento',
       'es': 'Peticiones',
     },
-    'g8ac2992': {
+    'as6t486v': {
+      'pt': 'Atendimentos',
+      'es': 'Pacientes',
+    },
+    'mp0g2lhx': {
       'pt': 'Agenda',
       'es': 'Cronograma',
     },
-    'a1djrd9g': {
-      'pt': 'cartões',
-      'es': 'tarjetas',
-    },
     'p9v71rsx': {
-      'pt': 'Consultas marcadas',
+      'pt': 'Atendimentos  Agendados',
       'es': 'Citas programadas',
     },
     '52syrwx8': {
@@ -157,7 +157,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'cugvke5q': {
       'pt': 'QTM Healthtech',
-      'es': 'QTM Tecnología de la salud',
+      'es': 'QTM Healthtech',
     },
     'z1ky0jou': {
       'pt': 'Perfil',
@@ -208,7 +208,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '8k2o360h': {
       'pt': 'Histórico de pesquisa',
-      'es': 'Buscar Historia',
+      'es': 'Historial de búsqueda',
     },
     'ohf01m4t': {
       'pt': 'Veja aqui alguns profissionais',
@@ -254,12 +254,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Filtros',
     },
     'l41btxzv': {
-      'pt': 'preços',
-      'es': 'precios',
+      'pt': 'Preços',
+      'es': 'Precios',
     },
     'lz2lbeob': {
-      'pt': 'práticas',
-      'es': 'practicas',
+      'pt': 'Práticas',
+      'es': 'Practicas',
     },
     'tmbxizm7': {
       'pt': 'Home',
@@ -278,23 +278,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     't5c7m1ta': {
       'pt': 'Pendentes',
-      'es': 'Colgantes',
+      'es': 'Pendiente',
     },
-    'p8av1hc8': {
+    'szpcqnhy': {
       'pt': 'Gerenciar',
       'es': 'Administrar',
     },
-    '6nucau0k': {
-      'pt': 'Aceita',
-      'es': 'Aceptado',
+    'thpiheki': {
+      'pt': 'Atendimento aceito',
+      'es': '',
     },
-    'b5r0083q': {
-      'pt': 'Gerenciar',
-      'es': 'Administrar',
-    },
-    'aigw6sc1': {
-      'pt': 'Aguardando',
-      'es': 'Espera',
+    'xzatk9w7': {
+      'pt': 'Em andamento',
+      'es': '',
     },
     '3howpywt': {
       'pt': 'Home',
@@ -305,7 +301,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '4gc0gkq0': {
       'pt': 'Terapeuta especialista',
-      'es': 'Terapeuta especialista',
+      'es': 'Terapeuta especializado en',
     },
     'wmd5u41v': {
       'pt': 'Detalhes',
@@ -325,7 +321,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'wrg21qza': {
       'pt': '2.0',
-      'es': '2',
+      'es': '2.0',
     },
     'lj01k204': {
       'pt': 'Sobre mim',
@@ -336,8 +332,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Precio',
     },
     '685z9384': {
-      'pt': 'Seus Cowokings',
-      'es': 'Tus vaqueros',
+      'pt': 'Seus Coworkings',
+      'es': 'Su Coworking',
     },
     '9q26f8zg': {
       'pt': 'Ver',
@@ -349,15 +345,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '7olc934w': {
       'pt': 'Seus horários de atendimento',
-      'es': 'Tu horario de apertura',
+      'es': 'Su horario de apertura',
     },
     'y50bx6o6': {
       'pt': 'Nenhum horário disponível',
-      'es': 'No hay tiempo disponible',
+      'es': 'No hay horarios disponibles',
     },
     'p565rz4u': {
       'pt': 'Sua Localização',
-      'es': 'Tu ubicación',
+      'es': 'Su localización',
     },
     '4rju5i3w': {
       'pt': 'Home',
@@ -370,10 +366,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt':
           'Os serviços da QTM Healthtech são fornecidos pela pessoa jurídica com a seguinte Razão Social: Juliana dos Santos Nogueira, com nome fantasia: Quantum, inscrito no CNPJ sob o nº 36.729.683/0001-60, titular da propriedade intelectual sobre software, website, aplicativos, conteúdos e demais ativos relacionados do site ou aplicativo da QTM Healthtech.',
       'es':
-          'Los servicios de QTM Healthtech son prestados por la persona jurídica con la siguiente Razón Social: Juliana dos Santos Nogueira, con razón social: Quantum, registrada en el CNPJ con el nº 36.729.683/0001-60, titular de la propiedad intelectual sobre software, sitio web y aplicaciones. , contenido y otros activos relacionados del sitio web o aplicación de QTM Healthtech.',
+          'Los servicios de QTM Healthtech son prestados por la persona jurídica con la siguiente razón social: Juliana dos Santos Nogueira, con el nombre de fantasía: Quantum, registrada en el CNPJ con el nº 36.729.683/0001-60, titular de la propiedad intelectual sobre el software, sitio web, aplicaciones, contenidos y otros activos relacionados del sitio web o aplicación de QTM Healthtech.',
     },
     'frj37p98': {
-      'pt': '1.OBJETO',
+      'pt': '1. OBJETO',
       'es': '1. OBJETO',
     },
     'fqtjah37': {
@@ -441,9 +437,13 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt': 'Cartões cadastrados',
       'es': 'Tarjetas registradas',
     },
+    'ucqqrttv': {
+      'pt': 'Nenhum cartão cadastrado',
+      'es': '',
+    },
     'n5m4ofu1': {
       'pt': 'Adicionar',
-      'es': 'para agregar',
+      'es': 'Añadir ',
     },
     'ov7n3f4u': {
       'pt': 'Home',
@@ -457,8 +457,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Descripción',
     },
     '5221x7ja': {
-      'pt': 'Confirmar consulta',
-      'es': 'Confirmar cita',
+      'pt': 'Confirmar Atendimento',
+      'es': 'Confirmar Atención',
     },
     '1fxtcne3': {
       'pt': 'Tipo de tratamento',
@@ -469,24 +469,24 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Resumen',
     },
     '92p3tmqs': {
-      'pt': 'profissional',
-      'es': 'profesional',
+      'pt': 'Profissional',
+      'es': 'Profesional',
     },
     'k5gvuw8n': {
-      'pt': 'Tratament0',
-      'es': 'Tratamiento0',
+      'pt': 'Prática Integrativa',
+      'es': 'Práctica Integrativa',
     },
     '67xf0vwr': {
-      'pt': 'coworking',
-      'es': 'trabajo colaborativo',
+      'pt': 'Coworking',
+      'es': 'Cowrking',
     },
     'vgmro1dg': {
-      'pt': 'horário/data',
-      'es': 'hora Fecha',
+      'pt': 'Horário/Data',
+      'es': 'Hora/Fecha',
     },
     'jj41j9ci': {
-      'pt': 'preço',
-      'es': 'precio',
+      'pt': 'Preço',
+      'es': 'Precio',
     },
     'phieiqt6': {
       'pt':
@@ -495,7 +495,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'Una vez que hagas clic en “Continuar pago”, confirmo que he leído y reconozco todos',
     },
     'qh81p1q0': {
-      'pt': 'termos e condições',
+      'pt': 'Termos e condições',
       'es': 'términos y Condiciones',
     },
     '3zh57cd1': {
@@ -510,8 +510,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // choose_timers
   {
     '4qzh3y5j': {
-      'pt': 'Horário de consulta',
-      'es': 'Horario de consulta',
+      'pt': 'Horário do atendimento',
+      'es': 'Horarios de apertura',
     },
     'fompv3wg': {
       'pt': 'Cancelar',
@@ -530,7 +530,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'crlnlrq4': {
       'pt': 'Escolha o seu tratamento',
-      'es': 'Elige tu tratamiento',
+      'es': 'Elija su tratamiento',
     },
     'g4c45jmf': {
       'pt': 'Home',
@@ -541,7 +541,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'wy42h7g9': {
       'pt': 'Solicitações',
-      'es': 'Peticiones',
+      'es': 'Solicitudes',
     },
     'djklatrs': {
       'pt': 'Home',
@@ -555,28 +555,28 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Pago',
     },
     'fxsq8oa0': {
-      'pt': 'Option 1',
+      'pt': 'Opção 1',
       'es': 'Opción 1',
     },
     '02pwv44v': {
       'pt': 'Escolha um cartão',
-      'es': 'Elegir una tarjeta',
+      'es': 'Elija una tarjeta',
     },
     'anwzm6x2': {
-      'pt': 'Search for an item...',
+      'pt': 'Pesquise por um item...',
       'es': 'Buscar un artículo...',
     },
     'f0fqyz9g': {
-      'pt': 'cvc',
+      'pt': 'CVC',
       'es': 'CVC',
     },
     'fwx7sj78': {
-      'pt': 'validade',
-      'es': 'validez',
+      'pt': 'Validade',
+      'es': 'Validez',
     },
     '73pxq2nm': {
       'pt': 'Nenhum cartão selecionado',
-      'es': 'No hay tarjetas seleccionadas',
+      'es': 'No hay tarjeta seleccionada',
     },
     'zpcpx6i8': {
       'pt':
@@ -592,11 +592,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'v3urrfyw': {
       'pt': 'Pedido total',
-      'es': 'Orden total',
+      'es': 'Total pedido',
     },
     '0pr1u6gr': {
-      'pt': 'Confirmar consulta',
-      'es': 'Confirmar cita',
+      'pt': 'Confirmar Atendimento',
+      'es': 'Confirmar servicio',
     },
     'jfzy3b6v': {
       'pt': 'Home',
@@ -611,15 +611,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '2a8y721f': {
       'pt': 'Horário e data de consulta',
-      'es': 'Hora y fecha de consulta',
+      'es': 'Horario y fecha de consulta',
     },
     'sogc7t3h': {
       'pt': 'Local de atendimento',
-      'es': 'Ubicación del servicio',
+      'es': 'Localización del servicio',
     },
-    'tf0xv48v': {
-      'pt': 'Sem localização',
-      'es': 'Sin ubicación',
+    'f1fklqhw': {
+      'pt': '## São Luis, Turu, 65087-567, 56##',
+      'es': '## São Luis, Turú, 65087-567, 56##',
+    },
+    'vb8gmj0h': {
+      'pt': 'Coworking',
+      'es': 'Coworking',
     },
     'ie3mv7mo': {
       'pt': 'Solicitação realizada',
@@ -647,15 +651,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'lpvmdm5e': {
       'pt': 'Andamento da consulta',
-      'es': 'Avance de la consulta',
+      'es': 'Avances de la consulta',
     },
     'ir34x6or': {
       'pt': '****',
       'es': '****',
     },
     'l6vhyzow': {
-      'pt': 'Consulta finalizada',
-      'es': 'Consulta completada',
+      'pt': 'Atendimento finalizada',
+      'es': 'Servicio finalizado',
     },
     '849f1xnf': {
       'pt': '****',
@@ -663,10 +667,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'biyrkdp8': {
       'pt': 'Prescrição do terapeuta',
-      'es': 'prescripción del terapeuta',
+      'es': 'Prescripción del terapeuta',
     },
     'web6ru7h': {
-      'pt': 'abrir',
+      'pt': 'Abrir',
       'es': 'Abierto',
     },
     'e36x1efa': {
@@ -679,15 +683,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3hpzkbzq': {
       'pt': 'Status',
-      'es': 'Estado',
+      'es': 'Status',
     },
     'd9p1cy64': {
-      'pt': 'Valor da consulta',
-      'es': 'Valor de consulta',
+      'pt': 'Valor do Atendimento',
+      'es': 'Valor del servicio',
     },
     '2enrjzon': {
-      'pt': 'Cancelar consulta',
-      'es': 'Cancelar cita',
+      'pt': 'Cancelar Atendimento',
+      'es': 'Cancelar Servicio',
     },
     'n8wbg32q': {
       'pt': 'Ajuda',
@@ -702,11 +706,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'yp1tus0g': {
       'pt': 'Seja Bem-vindo',
-      'es': 'Sea bienvenido',
+      'es': 'Bienvenido',
     },
     'xjvabnxz': {
       'pt': 'Faça seu login  para continuar',
-      'es': 'Inicia sesión para continuar',
+      'es': 'Inicie sesión para continuar',
     },
     '7a6pzwk4': {
       'pt': 'Email',
@@ -722,7 +726,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3mersqfx': {
       'pt': 'Esqueceu senha?',
-      'es': '¿Has olvidado tu contraseña?',
+      'es': '¿Olvidó Contraseña ?',
     },
     '46xllrq1': {
       'pt': 'Não tem conta?',
@@ -730,15 +734,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6xbs66c9': {
       'pt': 'ou faça login com',
-      'es': 'o inicia sesión con',
+      'es': 'o inicie sesión con',
     },
     'aayndbx1': {
       'pt': 'Sign in with Google',
       'es': 'Inicia sesión con Google',
     },
-    'kzds2a32': {
-      'pt': 'Ao continuar você concorda com os  termos e',
-      'es': '',
+    'q2cksf5x': {
+      'pt': 'Ao continuar você concorda com ',
+      'es': 'Al continuar aceptas',
+    },
+    'nfxqihpw': {
+      'pt': 'Termos e Condições',
+      'es': 'Condiciones generales',
+    },
+    '7066luuh': {
+      'pt': 'Politicas de Privacidade',
+      'es': 'Políticas de privacidad',
+    },
+    'bdkaq22c': {
+      'pt': ' e ',
+      'es': 'Es',
+    },
+    'c7jsvs40': {
+      'pt': 'Uso Responsável',
+      'es': 'Uso responsable',
     },
     'ufcy7xgb': {
       'pt': 'Home',
@@ -785,7 +805,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6c4rw4k5': {
       'pt': 'Horário de atendimento:',
-      'es': 'Horario de atención:',
+      'es': 'Horario de apertura::',
     },
     'w6f16shi': {
       'pt': 'Hipnose',
@@ -793,7 +813,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'df36pr2r': {
       'pt': 'Coworking:',
-      'es': 'Trabajo colaborativo:',
+      'es': 'Coworking:',
     },
     '2s35cq56': {
       'pt': 'Nenhum',
@@ -840,7 +860,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'qdv5ftcv': {
       'pt': 'Agenda',
-      'es': 'Cronograma',
+      'es': 'Agenda',
     },
     'xvea05sq': {
       'pt': 'Faturamento',
@@ -852,15 +872,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6w4mzdgj': {
       'pt': 'Veja os seu principais interesses',
-      'es': 'Ver tus principales intereses',
+      'es': 'Ver sus principales intereses',
     },
     'wfng7rv5': {
       'pt': 'Ver',
-      'es': 'Para ver',
+      'es': 'Ver',
     },
     '17qrornm': {
       'pt': 'QTM Healthtech',
-      'es': 'QTM Tecnología de la salud',
+      'es': 'QTM  Healthtech',
     },
     '6zdie0jv': {
       'pt': 'Perfil',
@@ -892,7 +912,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'nkuwr61o': {
       'pt': 'Termos e Condições',
-      'es': 'Términos y Condiciones',
+      'es': 'Condiciones generales',
     },
     'souil05c': {
       'pt': 'Sair',
@@ -957,7 +977,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'x5sz2zc2': {
       'pt': 'status',
-      'es': 'estado',
+      'es': 'status',
     },
     'j30ft508': {
       'pt': 'Pacientes',
@@ -972,11 +992,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'njue9kg5': {
       'pt': 'Vamos iniciar?',
-      'es': '¿Empecemos?',
+      'es': '¿Comenzamos?',
     },
     'tsuzd6l6': {
       'pt': 'Insira seus dados de usuário',
-      'es': 'Introduce tus datos de usuario',
+      'es': 'Introduzca sus datos de usuario',
     },
     'orwi5isk': {
       'pt': 'Username',
@@ -996,15 +1016,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'f370rdf3': {
       'pt': 'Confirmar senha',
-      'es': 'confirmar seña',
+      'es': 'Confirmar contraseña',
     },
     'u12889ej': {
       'pt': 'A senha digitada é diferente do campo anterior',
-      'es': 'La contraseña ingresada es diferente al campo anterior',
+      'es': 'La contraseña introducida es diferente de la del campo anterior',
     },
     'uhwx3zjg': {
       'pt': 'Campo username obrigatório',
-      'es': 'Campo de nombre de usuario obligatorio',
+      'es': 'Nombre de usuario obligatorio',
     },
     'ki2gj19l': {
       'pt': 'Please choose an option from the dropdown',
@@ -1032,8 +1052,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ck7mnzmg': {
       'pt': 'A senha deve conter ao menos um número ou caractere especial',
-      'es':
-          'La contraseña debe contener al menos un número o carácter especial',
+      'es': 'La contraseña debe tener 8 caracteres',
     },
     'd9a5asqi': {
       'pt': 'Please choose an option from the dropdown',
@@ -1079,11 +1098,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'olrz3qmm': {
       'pt': 'Está quase Lá!',
-      'es': '¡Ya casi está allí!',
+      'es': '¡Ya casi está!',
     },
     '2s10qwmr': {
       'pt': 'Insira seus dados cadastrais',
-      'es': 'Introduce tus datos de registro',
+      'es': 'Introduzca sus datos de registro',
     },
     'wk0ep4gt': {
       'pt': 'CPF',
@@ -1091,7 +1110,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'qh7kpzti': {
       'pt': 'Buscar Meu Endereço',
-      'es': 'Encuentra mi dirección',
+      'es': 'Encontrar mi dirección',
     },
     'f906z9rg': {
       'pt': 'Complemento',
@@ -1134,19 +1153,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'sfr4boj6': {
       'pt': 'Homem cisgênero',
-      'es': 'hombre cisgénero',
+      'es': 'Hombre cisgénero',
     },
     'ja7zude2': {
       'pt': 'Mulher cisgênero',
-      'es': 'mujer cisgénero',
+      'es': 'Mujer cisgénero',
     },
     'bbaxh6u5': {
       'pt': 'Não binário',
-      'es': 'no binario',
+      'es': 'No binario',
     },
     'zzpzebzl': {
       'pt': 'Homem trans',
-      'es': 'hombre trans',
+      'es': 'Hombre trans',
     },
     'q92s7vf2': {
       'pt': 'Mulher trans',
@@ -1157,7 +1176,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Género',
     },
     '8s5u3dnd': {
-      'pt': 'Search for an item...',
+      'pt': 'Pesquisar um item...',
       'es': 'Buscar un artículo...',
     },
     'vhw0fvvq': {
@@ -1182,7 +1201,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '4rtu7b6t': {
       'pt': 'Tempo de  experiência',
-      'es': 'experiencia del tiempo',
+      'es': 'Duración de la experiencia',
     },
     '38hz3lxk': {
       'pt': 'Search for an item...',
@@ -1197,7 +1216,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': '(dd) 99999-9999',
     },
     '14lf6oa2': {
-      'pt': 'Campo Obirgatório',
+      'pt': 'Campo ObrIgatório',
       'es': 'Campo obligatorio',
     },
     'ujck3421': {
@@ -1205,7 +1224,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Por favor elija una opción del menú desplegable',
     },
     'g47nfjrv': {
-      'pt': 'Campo Obirgatório',
+      'pt': 'Campo ObrIgatório',
       'es': 'Campo obligatorio',
     },
     'fpm7l8yc': {
@@ -1213,7 +1232,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Por favor elija una opción del menú desplegable',
     },
     '0cbrhla6': {
-      'pt': 'Campo Obirgatório',
+      'pt': 'Campo Obrigatório',
       'es': 'Campo obligatorio',
     },
     '737lyfip': {
@@ -1241,15 +1260,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'kdtk9uxd': {
       'pt': 'Terça',
-      'es': 'Tercero',
+      'es': 'Martes',
     },
     'ubr6216k': {
       'pt': 'Quarta',
-      'es': 'Cuatro',
+      'es': 'Miércoles',
     },
     '7nv5ux2g': {
       'pt': 'Quinta',
-      'es': 'Quinto',
+      'es': 'Jueves',
     },
     'ryoy0y8l': {
       'pt': 'Sexta',
@@ -1277,7 +1296,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'fbki6oes': {
       'pt': 'Tempo da sessão',
-      'es': 'Tiempo de sesión',
+      'es': 'Hora de la sesión',
     },
     'snrfub63': {
       'pt': 'Search for an item...',
@@ -1289,7 +1308,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'imgevf99': {
       'pt': 'Adicionar Horários de Atendimento',
-      'es': 'Agregar horario de apertura',
+      'es': 'Añadir horarios de atención al cliente',
     },
     '85m6jiah': {
       'pt': 'Home',
@@ -1316,7 +1335,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'p952gb9d': {
       'pt': 'Coworking',
-      'es': 'Trabajo colaborativo',
+      'es': 'Coworking',
     },
     'x0cafbz9': {
       'pt': 'Domiciliar',
@@ -1332,11 +1351,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '8bkn5azx': {
       'pt': 'Eu tenho certificado desta prática integrativa',
-      'es': 'Tengo certificación de esta práctica integrativa.',
+      'es': 'He certificado esta práctica integrativa',
     },
     'vqpo9gzq': {
       'pt': 'Certificado de especilidade',
-      'es': 'certificado de especialidad',
+      'es': 'Certificado de especialización',
     },
     'h740lkqh': {
       'pt': 'Data de Conclusão',
@@ -1367,11 +1386,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'di9um6sr': {
       'pt': 'Buscar Endereço do Coworking',
-      'es': 'Buscar dirección de coworking',
+      'es': 'Buscar dirección de Coworking',
     },
     'zybhvmqt': {
       'pt': 'Endereço do coworking',
-      'es': 'dirección de coworking',
+      'es': 'Dirección de coworking',
     },
     'nnjzii1p': {
       'pt': 'Complemento',
@@ -1410,7 +1429,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'wzaynowo': {
       'pt': 'Estamos preparando tudo para você...',
-      'es': 'Estamos preparando todo para ti...',
+      'es': 'Lo hemos preparado todo para ti...',
     },
     '2zwajwxr': {
       'pt': 'Vamos lá!',
@@ -1433,22 +1452,22 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'g7rys9yr': {
       'pt': 'Homem cisgênero',
-      'es': 'hombre cisgénero',
+      'es': 'Hombre cisgénero',
     },
     'gn2e6b1n': {
       'pt': 'Mulher cisgênero',
-      'es': 'mujer cisgénero',
+      'es': 'Mujer cisgénero',
     },
     'zm83apis': {
       'pt': 'Não binário',
-      'es': 'no binario',
+      'es': 'No binario',
     },
     'tukni66s': {
       'pt': 'Homem transgênero',
-      'es': 'hombre transgénero',
+      'es': 'Hombre transgénero',
     },
     'jcnt9080': {
-      'pt': 'Mulher trangênero',
+      'pt': 'Mulher tranSgênero',
       'es': 'Mujer transgénero',
     },
     'fsd5u8aq': {
@@ -1472,7 +1491,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Por favor elija una opción del menú desplegable',
     },
     '7204lj8r': {
-      'pt': 'Campo Obirgatório',
+      'pt': 'Campo Obrigatório',
       'es': 'Campo obligatorio',
     },
     'owgh0uan': {
@@ -1508,7 +1527,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'jupxxyft': {
       'pt': 'QTM Healthtech',
-      'es': 'QTM Tecnología de la salud',
+      'es': 'QTM Healthtech',
     },
     '08a9fef0': {
       'pt': 'Perfil',
@@ -1578,7 +1597,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'kd0d57j1': {
       'pt': 'Coworking',
-      'es': 'Trabajo colaborativo',
+      'es': 'Coworking',
     },
     'xk16rgnt': {
       'pt': 'Domiciliar',
@@ -1606,11 +1625,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '7jceknok': {
       'pt': 'Eu tenho certificado desta prática integrativa',
-      'es': 'Tengo certificación de esta práctica integrativa.',
+      'es': 'Tengo un certificado para esta práctica integradora',
     },
     '87nao9f1': {
       'pt': 'Certificado de especilidade',
-      'es': 'certificado de especialidad',
+      'es': 'Certificado de especialización',
     },
     'ym90fsed': {
       'pt': 'Data de Conclusão',
@@ -1637,19 +1656,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'qgl6ti48': {
       'pt': 'Segunda',
-      'es': 'Segundo',
+      'es': 'Lunes',
     },
     '1zf39clt': {
       'pt': 'Terça',
-      'es': 'Tercero',
+      'es': 'Martes',
     },
     'shu0je7c': {
       'pt': 'Quarta',
-      'es': 'Cuatro',
+      'es': 'Miércoles',
     },
     'i68ewny4': {
       'pt': 'Quinta',
-      'es': 'Quinto',
+      'es': 'Jueves',
     },
     'npf2cvw2': {
       'pt': 'Sexta',
@@ -1665,7 +1684,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'g5t32vse': {
       'pt': 'Valor por Sessão',
-      'es': 'Precio por sesión',
+      'es': 'Importe por sesión',
     },
     'wlfs0f1p': {
       'pt': '50 min',
@@ -1677,7 +1696,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'i30awoo9': {
       'pt': 'Tempo da sessão',
-      'es': 'Tiempo de sesión',
+      'es': 'Hora de la sesión',
     },
     'sosex5re': {
       'pt': 'Search for an item...',
@@ -1715,7 +1734,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'xriakbtr': {
       'pt': 'Insira seus dados cadastrais',
-      'es': 'Introduce tus datos de registro',
+      'es': 'Introduzca sus datos de registro',
     },
     'lk6418gf': {
       'pt': 'CPF',
@@ -1770,7 +1789,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt':
           '1.1 A plataforma visa licenciar o uso de seu website, e demais ativos de propriedade intelectual, fornecendo ferramentas para auxiliar e dinamizar o dia a dia dos seus usuários.',
       'es':
-          '1.1 La plataforma tiene como objetivo otorgar licencia para el uso de su sitio web y otros activos de propiedad intelectual, proporcionando herramientas para ayudar y simplificar la vida diaria de sus usuarios.',
+          '1.1 La plataforma tiene como objetivo licenciar el uso de su sitio web y otros activos de propiedad intelectual, proporcionando herramientas para ayudar y simplificar la vida diaria de sus usuarios.',
     },
     'ck6rfojg': {
       'pt':
@@ -1842,7 +1861,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt':
           '7.1 O usuário poderá cancelar a contratação dos serviços de acordo com os termos que forem definidos no momento de sua contratação. Ainda, o usuário também poderá cancelar os serviços em até 7 (sete) dias após a contratação, mediante contato com com o SAC presente no site ou aplicativo QTM Healthtech, de acordo com o  Código de Defesa do Consumidor (Lei no. 8.078/90).\n7.2 O serviço poderá ser cancelado por:\na) parte do usuário: nessas condições os serviços somente cessarão quando concluído o ciclo vigente ao tempo do cancelamento;\nb) violação dos Termos de Uso: os serviços serão cessados imediatamente.',
       'es':
-          '7.1 El usuario podrá cancelar la contratación de servicios de acuerdo con los términos definidos en el momento de la contratación. Además, el usuario también podrá cancelar los servicios dentro de los 7 (siete) días posteriores a la contratación, contactando al SAC presente en el sitio web o aplicación de QTM Healthtech, de conformidad con el Código de Protección al Consumidor (Ley nº 8.078/90).\n 7.2 El servicio podrá ser cancelado por:\na) el usuario: bajo estas condiciones los servicios sólo cesarán cuando se haya completado el ciclo vigente al momento de la cancelación;\nb) violación de los Términos de Uso: los servicios cesarán inmediatamente.',
+          '7.1 El usuario podrá cancelar la contratación de servicios de acuerdo con los términos definidos en el momento de la contratación. Además, el usuario también podrá cancelar los servicios dentro de los 7 (siete) días posteriores a la contratación, contactando al SAC presente en el sitio web o en la aplicación de QTM Healthtech, de conformidad con el Código de Protección al Consumidor (Ley nº 8.078/90).\n 7.2 El servicio podrá ser cancelado por:\na) el usuario: bajo estas condiciones los servicios sólo cesarán cuando se haya completado el ciclo vigente al momento de la cancelación;\nb) violación de los Términos de Uso: los servicios cesarán inmediatamente.',
     },
     'jik2xxuq': {
       'pt': '8 DA TROCA OU DEVOLUÇÃO',
@@ -1932,19 +1951,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt':
           '16.1 Para a solução de controvérsias decorrentes do presente instrumento será aplicado integralmente o Direito brasileiro.\n16.2 Os eventuais litígios deverão ser apresentados no foro da comarca em que se encontra a sede da empresa.',
       'es':
-          '16.1 Para la resolución de disputas que surjan de este instrumento, se aplicará plenamente la ley brasileña.\n16.2 Cualquier disputa deberá ser presentada en el tribunal del distrito en el que se encuentra la sede de la empresa.',
+          '16.1 Para la resolución de disputas que surjan de este instrumento, se aplicará plenamente la ley brasileña.\n16.2 Cualquier disputa deberá ser presentada en el tribunal del distrito donde se encuentra la sede de la empresa.',
     },
-    'k0xmvlcd': {
-      'pt': 'Eu aceito so termos e condições gerais de uso ',
-      'es': 'Acepto los términos y condiciones generales de uso.',
-    },
-    'iiqon57i': {
-      'pt': 'Continuar',
-      'es': 'Continuar',
-    },
-    'wq78ty8s': {
-      'pt': 'Termos',
-      'es': 'Términos',
+    '1kf883h7': {
+      'pt': 'TERMOS E CONDIÇÕES',
+      'es': 'TÉRMINOS Y CONDICIONES',
     },
     '7x4js53n': {
       'pt': 'Home',
@@ -1954,8 +1965,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // politics_inital_privacy_page
   {
     'jq4isirm': {
-      'pt': 'Politica de Privacidade',
-      'es': 'Política de privacidad',
+      'pt': 'POLITICAS DE PRIVACIDADE',
+      'es': 'POLÍTICAS DE PRIVACIDAD',
     },
     'pxro3ic5': {
       'pt': '1. INFORMAÇÕES GERAIS',
@@ -2059,14 +2070,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es':
           '10.1 Para la resolución de disputas que surjan de este instrumento, se aplicará plenamente la ley brasileña.\n10.2 Cualquier disputa deberá ser presentada en el tribunal del distrito donde se encuentra la sede de la empresa.',
     },
-    'f5gr4d25': {
-      'pt': 'Eu aceito as Politicas de privacidade',
-      'es': 'Acepto las Políticas de Privacidad',
-    },
-    'b8eqmv5b': {
-      'pt': 'Continuar',
-      'es': 'Continuar',
-    },
     'fvpa5ekf': {
       'pt': 'Home',
       'es': 'Hogar',
@@ -2075,8 +2078,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // politic_general_use_page
   {
     'nukg3r3u': {
-      'pt': 'Politica geral de uso \nresponsável',
-      'es': 'Política general de \nuso responsable',
+      'pt': 'POLITICA GERAL DE USO\n RESPONSÁVEL ',
+      'es': 'POLÍTICA DE USO GENERAL\nRESPONSABLE',
     },
     '39g9o7oe': {
       'pt':
@@ -2127,14 +2130,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es':
           'No puede utilizar la Plataforma para anunciar o comercializar ningún Producto o Servicio cuyo contenido implique actividades fraudulentas o poco éticas. Ejemplos de estos Productos, sin perjuicio de otros, son:\n3.1. Productos o Servicios que induzcan, enseñen o de cualquier manera alienten a otros Usuarios a violar los Términos o Políticas de QTM Healhtech.\n3.2. Productos o Servicios cuyo contenido incite, indique o de cualquier forma promueva cualquier comportamiento ilegal.\n3.3. Productos o Servicios que no proporcionan información necesaria y adecuada sobre usted.\n3.4. Productos o Servicios cuyo contenido sea intencionadamente engañoso, capaz de causar daño a sus Usuarios o a terceros.\n3.5. Productos o Servicios cuyo contenido presente información deliberadamente falsa como si fuera cierta. Por ejemplo, no podrá anunciar ni vender en la Plataforma ningún Producto cuyo contenido difunda noticias, incluidos artículos de medios, informe de hechos como si fueran ciertos o sugiera que pueden ser ciertos, si existe evidencia inequívoca de que son falsos. QTM Healhtech podrá eliminar de la Plataforma cualquier Producto o Servicio que encuentre con contenido de esta naturaleza, cualquiera que sea la finalidad del uso del contenido falso. QTM Healthtech aplicará las medidas adecuadas con especial rigor si determina que el uso de información falsa tiene como objetivo interferir o influir indebidamente en una elección.\n3.6. Productos que promuevan esquemas piramidales o similares, cuyo funcionamiento depende principalmente del aporte de recursos financieros por parte de nuevos participantes para remunerar a los participantes anteriores.',
     },
-    'p0whulr5': {
-      'pt': 'Eu aceito as Politicas gerais de uso Responsável',
-      'es': 'Acepto las Políticas generales de Uso Responsable',
-    },
-    'aa7a7lnn': {
-      'pt': 'Continuar',
-      'es': 'Continuar',
-    },
     'nx8ob5rz': {
       'pt': 'Home',
       'es': 'Hogar',
@@ -2167,7 +2162,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '7vooqd4r': {
       'pt': 'Processando reembolso...',
-      'es': 'Procesando reembolso...',
+      'es': 'Tramitación de reembolsos...',
     },
     'blp427ok': {
       'pt': 'Home',
@@ -2197,7 +2192,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'qf5k9tye': {
       'pt': 'QTM Healthtech',
-      'es': 'QTM Tecnología de la salud',
+      'es': 'QTM Healthtech',
     },
     'yxcsre43': {
       'pt': 'Perfil',
@@ -2267,7 +2262,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '9v8ezel6': {
       'pt': 'Status',
-      'es': 'Estado',
+      'es': 'Status',
     },
     '2njm92nk': {
       'pt': 'Ver mais',
@@ -2275,7 +2270,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'u45hfui9': {
       'pt': 'QTM Healthtech',
-      'es': 'QTM Tecnología de la salud',
+      'es': 'QTM  Healthtech',
     },
     'pa7szoos': {
       'pt': 'Perfil',
@@ -2322,7 +2317,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'a5z5yxox': {
       'pt': 'Total de atendimentos realizados',
-      'es': 'Número total de servicios realizados',
+      'es': 'Total de atenciones realizadas',
     },
     'kqlguwo7': {
       'pt': 'A concluir',
@@ -2333,7 +2328,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Finalizado',
     },
     'd1eunopn': {
-      'pt': 'Active Users',
+      'pt': 'Usuario ativos',
       'es': 'Usuarios activos',
     },
     '05nclt2f': {
@@ -2420,7 +2415,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'tya6xo92': {
       'pt': 'Status',
-      'es': 'Estado',
+      'es': 'Status',
     },
     '8xfxosob': {
       'pt': 'Ver mais',
@@ -2428,7 +2423,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'fqhptszg': {
       'pt': 'QTM Healthtech',
-      'es': 'QTM Tecnología de la salud',
+      'es': 'QTM Healthtech',
     },
     'd07z5957': {
       'pt': 'Perfil',
@@ -2569,7 +2564,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt':
           '2.1 A plataforma realiza a venda à distância por meio eletrônico e presencial dos seguintes produtos ou serviços: Praticas Integrativas e Complementares, Blends de chá e Produtos Digitais.\n2.2 Ao utilizar a plataforma o usuário aceita integralmente as presentes normas e compromete-se a observá-las, sob o risco de aplicação das penalidade cabíveis.\n2.3 A aceitação do presente instrumento é imprescindível para o acesso e para a utilização de quaisquer serviços fornecidos pela empresa. Caso não concorde com as disposições deste instrumento, o usuário não deve utilizá-los.',
       'es':
-          '2.1 La plataforma realiza ventas a distancia, electrónica y presencial, de los siguientes productos o servicios: Prácticas Integrativas y Complementarias, Mezclas de Té y Productos Digitales.\n2.2 Al utilizar la plataforma, el usuario acepta plenamente estas reglas y se compromete a observar ellos, a riesgo de aplicar las sanciones aplicables.\n2.3 La aceptación de este instrumento es esencial para el acceso y uso de cualquier servicio proporcionado por la empresa. Si no está de acuerdo con las disposiciones de este instrumento, el usuario no deberá utilizarlas.',
+          '2.1 La plataforma comercializa de forma remota, electrónica y presencial, los siguientes productos o servicios: Prácticas Integrativas y Complementarias, Mezclas de Té y Productos Digitales.\n2.2 Al utilizar la plataforma, el usuario acepta plenamente estas reglas y se compromete a observarlas, bajo el riesgo de aplicación de sanciones aplicables.\n2.3 La aceptación de este instrumento es esencial para el acceso y uso de cualquier servicio proporcionado por la empresa. Si no está de acuerdo con las disposiciones de este instrumento, el usuario no deberá utilizarlas.',
     },
     '5i957km2': {
       'pt': '3 DO ACESSO DOS USUÁRIOS',
@@ -2589,7 +2584,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt':
           '4.1 O acesso às funcionalidades da plataforma exigirá a realização de um cadastro prévio e, a depender dos serviços ou produtos escolhidos, o pagamento de determinado valor.\n4.2 Ao se cadastrar o usuário deverá informar dados completos, recentes e válidos, sendo de sua exclusiva responsabilidade manter referidos dados atualizados, bem como o usuário se compromete com a veracidade dos dados fornecidos.\n4.3 O usuário se compromete a não informar seus dados cadastrais e/ou de acesso à plataforma a terceiros, responsabilizando-se integralmente pelo uso que deles seja feito.\n4.4 Menores de 18 anos e aqueles que não possuírem plena capacidade civil deverão obter previamente o consentimento expresso de seus responsáveis legais para utilização da plataforma e dos serviços ou produtos, sendo de responsabilidade exclusiva dos mesmos o eventual acesso por menores de idade e por aqueles que não possuem plena capacidade civil sem a prévia autorização.\n4.5 Mediante a realização do cadastro o usuário declara e garante expressamente ser plenamente capaz, podendo exercer e usufruir livremente dos serviços e produtos.\n4.6 O usuário deverá fornecer um endereço de e-mail válido, através do qual o site realizará comunicações necessárias.\n4.7 Após a confirmação do cadastro, o usuário possuirá um login e uma senha pessoal, a qual assegura ao usuário o acesso individual à mesma. Desta forma, compete ao usuário exclusivamente a manutenção de referida senha de maneira confidencial e segura, evitando o acesso indevido às informações pessoais.\n4.8 Toda e qualquer atividade realizada com o uso da senha será de responsabilidade do usuário, que deverá informar prontamente a plataforma em caso de uso indevido da respectiva senha.\n4.9 Não será permitido ceder, vender, alugar ou transferir, de qualquer forma, a conta, que é pessoal e intransferível.\n4.10 Caberá ao usuário assegurar que o seu equipamento seja compatível com as características técnicas que viabilize a utilização da plataforma e dos serviços ou produtos.\n4.11 O usuário poderá, a qualquer tempo, requerer o cancelamento de seu cadastro junto ao site ou aplicativo QTM Healthtech. O seu descadastramento será realizado o mais rapidamente possível, desde que não sejam verificados débitos em aberto.\n4.12 O usuário, ao aceitar os Termos e Política de Privacidade, autoriza expressamente a plataforma a coletar, usar, armazenar, tratar, ceder ou utilizar as informações derivadas do uso do site e quaisquer plataformas, incluindo todas as informações preenchidas pelo usuário no momento em que realizar ou atualizar seu cadastro, além de outras expressamente descritas na Política de Privacidade que deverá ser autorizada pelo usuário.',
       'es':
-          '4.1 El acceso a las funcionalidades de la plataforma requerirá el registro previo y, dependiendo de los servicios o productos elegidos, el pago de una determinada cantidad.\n4.2 Al registrarse, el usuario deberá proporcionar datos completos, recientes y válidos, siendo de su responsabilidad exclusiva de mantener dichos datos actualizados, comprometiéndose el usuario a garantizar la veracidad de los datos facilitados.\n4.3 El usuario se compromete a no revelar a terceros sus datos de registro y/o acceso a la plataforma, asumiendo la plena responsabilidad del uso que se haga de los mismos.\n4.4 Los menores de 18 años y aquellos que no tengan plena capacidad civil deberán obtener previamente el consentimiento expreso de sus tutores legales para utilizar la plataforma y los servicios o productos, siendo de su exclusiva responsabilidad cualquier eventual el acceso de menores de edad y de aquellos que no tengan plena capacidad civil sin autorización previa.\n4.5 Al registrarse, el usuario declara y garantiza expresamente que está en plena capacidad y puede libremente ejercer y disfrutar de los servicios y productos.<__FFNL__ >4.6 El El usuario deberá proporcionar una dirección de correo electrónico válida, a través de la cual el sitio realizará las comunicaciones necesarias.\n4.7 Luego de confirmar el registro, el usuario dispondrá de un login y una contraseña personal, que le garantiza el acceso individual al mismo. Por lo tanto, el usuario es el exclusivo responsable de mantener dicha contraseña de forma confidencial y segura, evitando el acceso indebido a información personal.\n4.8 Todas y cada una de las actividades que se realicen utilizando la contraseña serán responsabilidad del usuario, quien deberá informar oportunamente la plataforma en caso de mal uso de la respectiva contraseña.\n4.9 No se permitirá ceder, vender, alquilar o transferir, de cualquier forma, la cuenta, la cual es personal e intransferible.\n4.10 Corresponderá al usuario asegurarse de que su equipo sea compatible con las características técnicas que permitan el uso de la plataforma y de los servicios o productos.\n4.11 El usuario podrá, en cualquier momento, solicitar la cancelación de su registro en el QTM Healthtech sitio web o aplicación. Su baja se realizará a la mayor brevedad posible, siempre y cuando no existan deudas pendientes.\n4.12 El usuario, al aceptar los Términos y Política de Privacidad, autoriza expresamente a la plataforma a recopilar, utilizar, almacenar, procesar, transferir o utilizar información derivada del uso del sitio web y cualesquiera plataformas, incluyendo toda la información completada por el usuario al registrarse o actualizar su registro, además de otras expresamente descritas en la Política de Privacidad, las cuales deberán ser autorizadas por el usuario.',
+          '4.1 El acceso a las funcionalidades de la plataforma requerirá el registro previo y, dependiendo de los servicios o productos elegidos, el pago de una determinada cantidad.\n4.2 Al registrarse, el usuario deberá proporcionar datos completos, recientes y válidos, siendo de su responsabilidad exclusiva de mantener dichos datos actualizados, comprometiéndose el usuario a garantizar la veracidad de los datos facilitados.\n4.3 El usuario se compromete a no revelar a terceros sus datos de registro y/o acceso a la plataforma, asumiendo la plena responsabilidad del uso que se haga de los mismos.\n4.4 Los menores de 18 años y aquellos que no tengan plena capacidad civil deberán obtener previamente el consentimiento expreso de sus tutores legales para utilizar la plataforma y los servicios o productos, siendo de su exclusiva responsabilidad cualquier eventual el acceso de menores de edad y de quienes no tengan plena capacidad civil sin autorización previa.\n4.5 Al registrarse, el usuario declara y garantiza expresamente que está en plena capacidad y puede libremente ejercer y disfrutar de los servicios y productos.<__FFNL__ >4.6 El El usuario deberá proporcionar una dirección de correo electrónico válida, a través de la cual el sitio realizará las comunicaciones necesarias.\n4.7 Luego de confirmar el registro, el usuario dispondrá de un login y una contraseña personal, que le garantiza el acceso individual al mismo. Por lo tanto, el usuario es el exclusivo responsable de mantener dicha contraseña de forma confidencial y segura, evitando el acceso indebido a información personal.\n4.8 Todas y cada una de las actividades que se realicen utilizando la contraseña serán responsabilidad del usuario, quien deberá informar oportunamente la plataforma en caso de mal uso de la respectiva contraseña.\n4.9 No se permitirá ceder, vender, alquilar o transferir, de cualquier forma, la cuenta, la cual es personal e intransferible.\n4.10 Corresponderá al usuario asegurarse de que su equipo sea compatible con las características técnicas que permitan el uso de la plataforma y los servicios o productos.\n4.11 El usuario podrá, en cualquier momento, solicitar la cancelación de su registro en el QTM Healthtech sitio web o aplicación. Su baja se realizará a la mayor brevedad posible, siempre y cuando no existan deudas pendientes.\n4.12 El usuario, al aceptar los Términos y Política de Privacidad, autoriza expresamente a la plataforma a recopilar, utilizar, almacenar, procesar, transferir o utilizar información derivada del uso del sitio web y cualesquiera plataformas, incluyendo toda la información completada por el usuario al registrarse o actualizar su registro, además de otras expresamente descritas en la Política de Privacidad, las cuales deberán ser autorizadas por el usuario.',
     },
     'whg2qifc': {
       'pt': '5 DOS SERVIÇOS OU PRODUTOS',
@@ -2619,7 +2614,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt':
           '7.1 O usuário poderá cancelar a contratação dos serviços de acordo com os termos que forem definidos no momento de sua contratação. Ainda, o usuário também poderá cancelar os serviços em até 7 (sete) dias após a contratação, mediante contato com com o SAC presente no site ou aplicativo QTM Healthtech, de acordo com o  Código de Defesa do Consumidor (Lei no. 8.078/90).\n7.2 O serviço poderá ser cancelado por:\na) parte do usuário: nessas condições os serviços somente cessarão quando concluído o ciclo vigente ao tempo do cancelamento;\nb) violação dos Termos de Uso: os serviços serão cessados imediatamente.',
       'es':
-          '7.1 El usuario podrá cancelar la contratación de servicios de acuerdo con los términos definidos en el momento de la contratación. Además, el usuario también podrá cancelar los servicios dentro de los 7 (siete) días posteriores a la contratación, contactando al SAC presente en el sitio web o en la aplicación de QTM Healthtech, de conformidad con el Código de Protección al Consumidor (Ley nº 8.078/90).\n 7.2 El servicio podrá ser cancelado por:\na) el usuario: bajo estas condiciones los servicios sólo cesarán cuando se haya completado el ciclo vigente al momento de la cancelación;\nb) violación de los Términos de Uso: los servicios cesarán inmediatamente.',
+          '7.1 El usuario podrá cancelar la contratación de servicios de acuerdo con los términos definidos en el momento de la contratación. Además, el usuario también podrá cancelar los servicios dentro de los 7 (siete) días posteriores a la contratación, contactando al SAC presente en el sitio web o aplicación de QTM Healthtech, de conformidad con el Código de Protección al Consumidor (Ley nº 8.078/90).\n 7.2 El servicio podrá ser cancelado por:\na) el usuario: bajo estas condiciones los servicios sólo cesarán cuando se haya completado el ciclo vigente al momento de la cancelación;\nb) violación de los Términos de Uso: los servicios cesarán inmediatamente.',
     },
     '35pzc8vk': {
       'pt': '8 DA TROCA OU DEVOLUÇÃO',
@@ -2659,7 +2654,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt':
           '11.1 O presente Termo de Uso concede aos usuários uma licença não exclusiva, não transferível e não sublicenciável, para acessar e fazer uso da plataforma e dos serviços e produtos por ela disponibilizados.\n11.2 A estrutura do site ou aplicativo, as marcas, logotipos, nomes comerciais, layouts, gráficos e design de interface, imagens, ilustrações, fotografias, apresentações, vídeos, conteúdos escritos e de som e áudio, programas de computador, banco de dados, arquivos de transmissão e quaisquer outras informações e direitos de propriedade intelectual da razão social QTM Healthtech LTDA, observados os termos da  Lei da Propriedade Industrial (Lei nº 9.279/96),  Lei de Direitos Autorais (Lei nº 9.610/98) e  Lei do Software (Lei nº 9.609/98), estão devidamente reservados.\n11.3 Este Termos de Uso não cede ou transfere ao usuário qualquer direito, de modo que o acesso não gera qualquer direito de propriedade intelectual ao usuário, exceto pela licença limitada ora concedida.\n11.4 O uso da plataforma pelo usuário é pessoal, individual e intransferível, sendo vedado qualquer uso não autorizado, comercial ou não-comercial. Tais usos consistirão em violação dos direitos de propriedade intelectual da razão social QTM Healthtech LTDA, puníveis nos termos da legislação aplicável.\n',
       'es':
-          '11.1 Estos Términos de uso otorgan a los usuarios una licencia no exclusiva, intransferible y no sublicenciable para acceder y hacer uso de la plataforma y los servicios y productos puestos a disposición por ella.\n11.2 La estructura del sitio web o la aplicación, las marcas, logotipos, nombres comerciales, diseños, gráficos y diseño de interfaz, imágenes, ilustraciones, fotografías, presentaciones, videos, contenido escrito y de sonido y audio, programas de computadora, bases de datos, archivos de transmisión y cualquier otra información y derechos de propiedad intelectual de la razón social QTM Healthtech LTDA, en cumplimiento de los términos de la Ley de Propiedad Industrial (Ley nº 9.279/96), Ley de Derecho de Autor (Ley nº 9.610/98) y Ley de Software (Ley nº 9.609/98), quedan debidamente reservados.<__FFNL__ >11.3 Estos Términos de Uso no asignan ni transfieren ningún derecho al usuario, por lo que el acceso no genera ningún derecho de propiedad intelectual para el usuario, excepto la licencia limitada aquí otorgada.\n11.4 El uso de la plataforma por parte del usuario Es personal, individual e intransferible, quedando prohibido cualquier uso no autorizado, comercial o no. Dichos usos constituirán una violación de los derechos de propiedad intelectual de la razón social QTM Healthtech LTDA, sancionable según la legislación aplicable.',
+          '11.1 Estos Términos de uso otorgan a los usuarios una licencia no exclusiva, intransferible y no sublicenciable para acceder y hacer uso de la plataforma y los servicios y productos puestos a disposición por ella.\n11.2 La estructura del sitio web o la aplicación, las marcas, logotipos, nombres comerciales, diseños, gráficos y diseño de interfaz, imágenes, ilustraciones, fotografías, presentaciones, videos, contenido escrito y de sonido y audio, programas de computadora, bases de datos, archivos de transmisión y cualquier otra información y derechos de propiedad intelectual de la razón social QTM Healthtech LTDA, en cumplimiento de los términos de la Ley de Propiedad Industrial (Ley nº 9.279/96), Ley de Derecho de Autor (Ley nº 9.610/98) y Ley de Software (Ley nº 9.609/98), quedan debidamente reservados.<__FFNL__ >11.3 Estos Términos de Uso no otorgan ni transfieren ningún derecho al usuario, por lo que el acceso no genera ningún derecho de propiedad intelectual para el usuario, excepto la licencia limitada aquí otorgada.\n11.4 El uso de la plataforma por parte del usuario Es personal, individual e intransferible, quedando prohibido cualquier uso no autorizado, comercial o no. Dichos usos constituirán una violación de los derechos de propiedad intelectual de la razón social QTM Healthtech LTDA, sancionable según la legislación aplicable.',
     },
     'lu2kc8bh': {
       'pt': '12 DAS SANSÕES',
@@ -2709,7 +2704,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'pt':
           '16.1 Para a solução de controvérsias decorrentes do presente instrumento será aplicado integralmente o Direito brasileiro.\n16.2 Os eventuais litígios deverão ser apresentados no foro da comarca em que se encontra a sede da empresa.',
       'es':
-          '16.1 Para la resolución de disputas que surjan de este instrumento, se aplicará plenamente la ley brasileña.\n16.2 Cualquier disputa deberá ser presentada en el tribunal del distrito donde se encuentra la sede de la empresa.',
+          '16.1 Para la resolución de disputas que surjan de este instrumento, se aplicará plenamente la ley brasileña.\n16.2 Cualquier disputa deberá ser presentada en el tribunal del distrito en el que se encuentra la sede de la empresa.',
     },
     '3l91jahv': {
       'pt': 'Termos e condições',
@@ -2736,11 +2731,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '7o3l31ii': {
       'pt': 'Status',
-      'es': 'Estado',
+      'es': 'Status',
     },
     'vpsd5n9u': {
       'pt': 'Remarcar consulta',
-      'es': 'Re-agenda de citas',
+      'es': 'Reprogramar cita',
     },
     '23wd3wyd': {
       'pt': 'Home',
@@ -2751,7 +2746,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'k2o74xu8': {
       'pt': 'Estamos  preparando tudo para você...',
-      'es': 'Estamos preparando todo para ti...',
+      'es': 'Lo hemos preparado todo para ti...',
     },
     'o5wa2t0o': {
       'pt': 'Home',
@@ -2770,23 +2765,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '4q2g9t72': {
       'pt': 'Homem cisgênero',
-      'es': 'hombre cisgénero',
+      'es': 'Hombre cisgénero',
     },
     'aq1dkom8': {
       'pt': 'Mulher cisgênero',
-      'es': 'mujer cisgénero',
+      'es': 'Mujer cisgénero',
     },
     'my6qysvk': {
       'pt': 'Não binário',
-      'es': 'no binario',
+      'es': 'No binario',
     },
     'tr8wplk8': {
       'pt': 'Homem trans',
-      'es': 'hombre trans',
+      'es': 'Hombre trans',
     },
     'eukcbile': {
       'pt': 'Mulher trans',
-      'es': 'mujer trans',
+      'es': 'Mujer trans',
     },
     'ep44gc1v': {
       'pt': 'Gênero',
@@ -2818,14 +2813,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '326tais9': {
       'pt': 'Tempo de  experiência',
-      'es': 'experiencia del tiempo',
+      'es': 'Experiencia del tiempo',
     },
     'xozx3z0t': {
       'pt': 'Search for an item...',
       'es': 'Buscar un artículo...',
     },
     'syf3r2er': {
-      'pt': 'Campo Obirgatório',
+      'pt': 'Campo Obrigatório',
       'es': 'Campo obligatorio',
     },
     'qkttl4wu': {
@@ -2833,7 +2828,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Por favor elija una opción del menú desplegable',
     },
     'vufh32kt': {
-      'pt': 'Campo Obirgatório',
+      'pt': 'Campo Obrigatório',
       'es': 'Campo obligatorio',
     },
     'bhbr7irp': {
@@ -2865,7 +2860,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '838kj87w': {
       'pt': 'Estamos  preparando tudo para você...',
-      'es': 'Estamos preparando todo para ti...',
+      'es': 'Lo hemos preparado todo para ti...',
     },
     'h4c8v6a1': {
       'pt': 'Home',
@@ -2884,16 +2879,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '74fsl1g1': {
       'pt': 'Entre em contato e diga no que a QTM healthtech pode ajudar.',
-      'es':
-          'Póngase en contacto y háganos saber cómo QTM Healthtech puede ayudar.',
+      'es': 'Contáctenos y diga en qué puede ayudar QTM Healthtech.',
     },
     '8lhdzdnp': {
-      'pt': 'Consultas',
-      'es': 'Consultas',
+      'pt': 'Atendimentos',
+      'es': 'Servicio',
     },
     'movk9fsl': {
-      'pt': 'Entre em contato e nos diga o problema com a consulta',
-      'es': 'Ponte en contacto y cuéntanos el problema de la consulta',
+      'pt': 'Entre em contato e nos diga o problema com o atendimento',
+      'es': 'Contáctenos y díganos el problema con el servicio',
     },
     '7gyehhia': {
       'pt': 'Fale com nossa equipe',
@@ -2905,7 +2899,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '3y08353j': {
       'pt': 'Entre em contato e nos diga como podemos ajudar',
-      'es': 'Ponte en contacto y cuéntanos cómo podemos ayudarte',
+      'es': 'Contáctenos y díganos cómo podemos ayudar',
     },
     'v2msr5ib': {
       'pt': 'Obtenha suporte',
@@ -2920,7 +2914,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'n7ygovzy': {
       'pt': 'Ajuda e suporte',
-      'es': 'Ayuda y apoyo',
+      'es': 'Ayuda y soporte técnico',
     },
     'tstqr8sp': {
       'pt': 'Ajude a encaminhar a solicitação',
@@ -2929,7 +2923,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kiphmsna': {
       'pt': 'Entre em contato e diga no que a QTM healthtech pode ajudar.',
       'es':
-          'Póngase en contacto y háganos saber cómo QTM Healthtech puede ayudar.',
+          'Contáctenos en contacto y háganos saber cómo QTM Healthtech puede ayudar.',
     },
     'lah2d07q': {
       'pt': 'Fale sobre você',
@@ -2937,11 +2931,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '2aauw4d9': {
       'pt': 'Só precisamos de alguns dados',
-      'es': 'Solo necesitamos algunos datos',
+      'es': 'Sólo necesitamos algunos datos',
     },
     'c5h7vcxg': {
       'pt': 'E-mail comercial',
-      'es': 'Email de negocios',
+      'es': 'Correo electrónico comercial',
     },
     'r0qiba6d': {
       'pt': 'Telefone de contato',
@@ -2949,7 +2943,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'hfmdjwua': {
       'pt': 'Descreva o problema',
-      'es': 'Describe el problema',
+      'es': ' Describa el problema',
     },
     'eg31poa7': {
       'pt': 'Descreva o problema no campo abaixo',
@@ -2957,7 +2951,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'pmkngzfj': {
       'pt': 'Digite aqui',
-      'es': 'Digite aquí',
+      'es': 'introduzca aquí',
     },
     '0f8crkse': {
       'pt': 'Enviar',
@@ -3007,7 +3001,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'wruuv2et': {
       'pt': 'Selecione a consulta',
-      'es': 'Seleccionar consulta',
+      'es': 'Seleccione la consulta',
     },
     'dmus3ulf': {
       'pt': 'Selecione a consulta que está lhe causando problemas',
@@ -3067,7 +3061,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'got6x09f': {
       'pt': 'status',
-      'es': 'estado',
+      'es': 'status',
     },
     'f9ja24er': {
       'pt': 'Ativo',
@@ -3086,7 +3080,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '20rpljz9': {
       'pt': 'status',
-      'es': 'estado',
+      'es': 'status',
     },
     '2lgbe6uu': {
       'pt': 'Ativo',
@@ -3120,7 +3114,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'bnvdgo3h': {
       'pt': 'Quando entrou',
-      'es': 'cuando entraste',
+      'es': 'Cuando entraste',
     },
     'cicahtvd': {
       'pt': 'Há 1 ano atrás',
@@ -3148,7 +3142,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'nyc6d10o': {
       'pt': 'Estado',
-      'es': 'estado',
+      'es': 'Estado',
     },
     '1ehie318': {
       'pt': 'Bio',
@@ -3156,11 +3150,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'b32z9lvq': {
       'pt': 'Minha localização',
-      'es': 'Mi ubicacion',
+      'es': 'Mi ubicación',
     },
     'ei88qoor': {
       'pt': 'Alterar',
-      'es': 'alterar',
+      'es': 'Cambiar',
     },
     'hs1bk9q2': {
       'pt': 'Email e senha',
@@ -3221,8 +3215,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Filtros',
     },
     'neyf84np': {
-      'pt': 'preços',
-      'es': 'precios',
+      'pt': 'Preços',
+      'es': 'Precios',
     },
     'q8sw3sth': {
       'pt': 'práticas',
@@ -3264,7 +3258,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'imq09r6l': {
       'pt': 'Salvar',
-      'es': 'Ahorrar',
+      'es': 'Guardar',
     },
   },
   // avaliation_modal
@@ -3279,7 +3273,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'mna8x8dl': {
       'pt': 'Avaliar',
-      'es': 'para evaluar',
+      'es': 'Evalúe',
     },
   },
   // shared_modal
@@ -3321,7 +3315,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'urw36pnp': {
       'pt': 'Número do cartão',
-      'es': 'numero de tarjeta',
+      'es': 'Numero de tarjeta',
     },
     'xivo9rev': {
       'pt': 'Data de expiração',
@@ -3332,7 +3326,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'CVC\\CVV',
     },
     '0d6etvnp': {
-      'pt': 'Nome do  titular',
+      'pt': 'Apelido do cartão',
       'es': 'Nombre del titular de la tarjeta',
     },
     'hz1zjutt': {
@@ -3854,8 +3848,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Evento creado con',
     },
     'io7kfv3s': {
-      'pt': 'sucesso',
-      'es': 'éxito',
+      'pt': 'Sucesso',
+      'es': 'Éxito',
     },
     'j2a8zv3j': {
       'pt': 'Continuar',
@@ -3893,8 +3887,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Cancelación completada',
     },
     'aj93yx15': {
-      'pt': 'consulta cancelada',
-      'es': 'cita cancelada',
+      'pt': 'Atendimento cancelado',
+      'es': 'Atendimento  cancelada',
     },
     'rtkquj3h': {
       'pt': 'Tela inicial',
@@ -3959,7 +3953,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'fne2xy1i': {
       'pt': 'Tipo de cowoking',
-      'es': 'tipo de cocina',
+      'es': 'Tipo de cowoking',
     },
     '82eu962q': {
       'pt': 'Search for an item...',
@@ -3967,7 +3961,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'n5hik2d8': {
       'pt': ' Endereço do Coworking',
-      'es': 'dirección de coworking',
+      'es': 'Dirección de coworking',
     },
     'cdb33jq6': {
       'pt': 'Adicionar imagens do Coworking ',
@@ -4040,7 +4034,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ouimffp8': {
       'pt': 'Tipo de cowoking',
-      'es': 'tipo de cocina',
+      'es': 'Tipo de cocina',
     },
     'a2yxyk1c': {
       'pt': 'Search for an item...',
@@ -4289,7 +4283,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6g9xf8ok': {
       'pt': 'Tipo de cowoking',
-      'es': 'tipo de cocina',
+      'es': 'Tipo de coworking',
     },
     'cg63l3k7': {
       'pt': 'Search for an item...',
@@ -4353,8 +4347,8 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Evento eliminado con',
     },
     'v1n74mb3': {
-      'pt': 'sucesso',
-      'es': 'éxito',
+      'pt': 'Sucesso',
+      'es': 'Éxito',
     },
     '7qw76vbf': {
       'pt': 'Continuar',

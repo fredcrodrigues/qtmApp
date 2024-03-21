@@ -278,7 +278,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                     ),
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        '5221x7ja' /* Confirmar consulta */,
+                                        '5221x7ja' /* Confirmar Atendimento */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -496,7 +496,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                         ),
                                         Text(
                                           FFLocalizations.of(context).getText(
-                                            '92p3tmqs' /* profissional */,
+                                            '92p3tmqs' /* Profissional */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -561,7 +561,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
-                                          'k5gvuw8n' /* Tratament0 */,
+                                          'k5gvuw8n' /* Prática Integrativa */,
                                         ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -637,7 +637,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                         ),
                                         Text(
                                           FFLocalizations.of(context).getText(
-                                            '67xf0vwr' /* coworking */,
+                                            '67xf0vwr' /* Coworking */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -713,7 +713,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                         ),
                                         Text(
                                           FFLocalizations.of(context).getText(
-                                            'vgmro1dg' /* horário/data */,
+                                            'vgmro1dg' /* Horário/Data */,
                                           ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
@@ -767,7 +767,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                     ),
                                     Text(
                                       FFLocalizations.of(context).getText(
-                                        'jj41j9ci' /* preço */,
+                                        'jj41j9ci' /* Preço */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -785,62 +785,69 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                           ),
                         ),
                       ),
-                      Container(
-                        width: MediaQuery.sizeOf(context).width * 0.9,
-                        decoration: BoxDecoration(),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Expanded(
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'phieiqt6' /* Assim que clicar em “Continuar... */,
+                      if (responsiveVisibility(
+                        context: context,
+                        phone: false,
+                        tablet: false,
+                        tabletLandscape: false,
+                        desktop: false,
+                      ))
+                        Container(
+                          width: MediaQuery.sizeOf(context).width * 0.9,
+                          decoration: BoxDecoration(),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'phieiqt6' /* Assim que clicar em “Continuar... */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Raleway',
+                                            color: Color(0xFFAAAAAA),
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                     ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Raleway',
-                                          color: Color(0xFFAAAAAA),
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    context.pushNamed('terms_page');
-                                  },
-                                  child: Text(
-                                    FFLocalizations.of(context).getText(
-                                      'qh81p1q0' /* termos e condições */,
+                                ],
+                              ),
+                              Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('terms_page');
+                                    },
+                                    child: Text(
+                                      FFLocalizations.of(context).getText(
+                                        'qh81p1q0' /* Termos e condições */,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Raleway',
+                                            color: Color(0xFF85A2DB),
+                                            fontSize: 14.0,
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                     ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .override(
-                                          fontFamily: 'Raleway',
-                                          color: Color(0xFF85A2DB),
-                                          fontSize: 14.0,
-                                          fontWeight: FontWeight.bold,
-                                        ),
                                   ),
-                                ),
-                              ],
-                            ),
-                          ],
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
                       Align(
                         alignment: AlignmentDirectional(0.0, 1.0),
                         child: Container(

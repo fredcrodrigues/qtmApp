@@ -139,7 +139,7 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
                               ),
                               Text(
                                 FFLocalizations.of(context).getText(
-                                  'neyf84np' /* preços */,
+                                  'neyf84np' /* Preços */,
                                 ),
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium

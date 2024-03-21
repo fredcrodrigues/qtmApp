@@ -306,7 +306,7 @@ class _ModalAddCardWidgetState extends State<ModalAddCardWidget> {
                       obscureText: false,
                       decoration: InputDecoration(
                         labelText: FFLocalizations.of(context).getText(
-                          '0d6etvnp' /* Nome do  titular */,
+                          '0d6etvnp' /* Apelido do cartão */,
                         ),
                         labelStyle: FlutterFlowTheme.of(context).labelMedium,
                         hintStyle: FlutterFlowTheme.of(context).labelMedium,
@@ -432,7 +432,9 @@ class _ModalAddCardWidgetState extends State<ModalAddCardWidget> {
                                 padding: MediaQuery.viewInsetsOf(context),
                                 child: Container(
                                   height: 500.0,
-                                  child: LoadRequestWidget(),
+                                  child: LoadRequestWidget(
+                                    message: '',
+                                  ),
                                 ),
                               );
                             },

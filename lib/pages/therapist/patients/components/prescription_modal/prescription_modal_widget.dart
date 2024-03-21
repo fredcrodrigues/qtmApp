@@ -1,11 +1,9 @@
 import '/auth/firebase_auth/auth_util.dart';
-import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/backend/push_notifications/push_notifications_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/pages/therapist/patients/components/erro_finalized_modal/erro_finalized_modal_widget.dart';
 import '/pages/therapist/patients/components/information_modal/information_modal_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -556,242 +554,201 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                         await TheraphistRecord.getDocumentOnce(
                                             widget.refTheraphist!);
                                     _shouldSetState = true;
-                                    _model.responseApiFinished =
-                                        await StripeApiNodeGroup
-                                            .transferFundsAtTheEndOfTheAppointmentCall
-                                            .call(
-                                      paymentIntentId: widget.paymentId,
-                                      countryCode: 'BRL',
-                                      connectedAccountSellerId:
-                                          _model.theraphist?.accountConnectedId,
-                                    );
+                                    if (_model.formKey.currentState == null ||
+                                        !_model.formKey.currentState!
+                                            .validate()) {
+                                      return;
+                                    }
+
+                                    var prescriptionRecordReference =
+                                        PrescriptionRecord.collection.doc();
+                                    await prescriptionRecordReference
+                                        .set(createPrescriptionRecordData(
+                                      field: _model.textController.text,
+                                      fkPatient: widget.refPatient,
+                                      fkRequest: widget.refRequest,
+                                      fkTheraphist: FFAppState().refTheraphist,
+                                    ));
+                                    _model.collectionPrescription =
+                                        PrescriptionRecord.getDocumentFromData(
+                                            createPrescriptionRecordData(
+                                              field: _model.textController.text,
+                                              fkPatient: widget.refPatient,
+                                              fkRequest: widget.refRequest,
+                                              fkTheraphist:
+                                                  FFAppState().refTheraphist,
+                                            ),
+                                            prescriptionRecordReference);
                                     _shouldSetState = true;
-                                    if ((_model.responseApiFinished
-                                                ?.statusCode ??
-                                            200) ==
-                                        200) {
-                                      if (_model.formKey.currentState == null ||
-                                          !_model.formKey.currentState!
-                                              .validate()) {
-                                        return;
-                                      }
+                                    _model.singleRequest =
+                                        await RequestsRecord.getDocumentOnce(
+                                            widget.refRequest!);
+                                    _shouldSetState = true;
 
-                                      var prescriptionRecordReference =
-                                          PrescriptionRecord.collection.doc();
-                                      await prescriptionRecordReference
-                                          .set(createPrescriptionRecordData(
-                                        field: _model.textController.text,
-                                        fkPatient: widget.refPatient,
-                                        fkRequest: widget.refRequest,
-                                        fkTheraphist:
-                                            FFAppState().refTheraphist,
+                                    await InvoicingRecord.collection
+                                        .doc()
+                                        .set(createInvoicingRecordData(
+                                          fkRequest: widget.refRequest,
+                                          paymentId: widget.paymentId,
+                                          fkTheraphit: valueOrDefault<String>(
+                                            widget.refTheraphist?.id,
+                                            '0',
+                                          ),
+                                          totalAgain: valueOrDefault<double>(
+                                            functions.calculatePercente(_model
+                                                .singleRequest!.valueSession),
+                                            0.0,
+                                          ),
+                                          status: 'finished',
+                                        ));
+                                    if (_model.switchReturnValue == true) {
+                                      await widget.refRequest!
+                                          .update(createRequestsRecordData(
+                                        status: 'return',
+                                        dateOfRequest: _model.datePicked1,
+                                        timer: _model.datePicked2,
                                       ));
-                                      _model.collectionPrescription =
-                                          PrescriptionRecord
-                                              .getDocumentFromData(
-                                                  createPrescriptionRecordData(
-                                                    field: _model
-                                                        .textController.text,
-                                                    fkPatient:
-                                                        widget.refPatient,
-                                                    fkRequest:
-                                                        widget.refRequest,
-                                                    fkTheraphist: FFAppState()
-                                                        .refTheraphist,
-                                                  ),
-                                                  prescriptionRecordReference);
-                                      _shouldSetState = true;
-                                      _model.singleRequest =
-                                          await RequestsRecord.getDocumentOnce(
-                                              widget.refRequest!);
-                                      _shouldSetState = true;
 
-                                      await InvoicingRecord.collection
+                                      await NotificationsRecord.collection
                                           .doc()
-                                          .set(createInvoicingRecordData(
-                                            fkRequest: widget.refRequest,
-                                            paymentId: widget.paymentId,
-                                            fkTheraphit: valueOrDefault<String>(
-                                              widget.refTheraphist?.id,
-                                              '0',
-                                            ),
-                                            totalAgain: valueOrDefault<double>(
-                                              functions.calculatePercente(_model
-                                                  .singleRequest!.valueSession),
-                                              0.0,
-                                            ),
-                                            status: 'finished',
-                                          ));
-                                      if (_model.switchReturnValue == true) {
-                                        await widget.refRequest!
-                                            .update(createRequestsRecordData(
-                                          status: 'return',
-                                          dateOfRequest: _model.datePicked1,
-                                          timer: _model.datePicked2,
-                                        ));
-
-                                        await NotificationsRecord.collection
-                                            .doc()
-                                            .set(createNotificationsRecordData(
-                                              description:
-                                                  valueOrDefault<String>(
-                                                'Um retorno foi agendado para o dia ${valueOrDefault<String>(
-                                                  dateTimeFormat(
-                                                    'd/M/y',
-                                                    _model.datePicked1,
-                                                    locale: FFLocalizations.of(
-                                                            context)
-                                                        .languageCode,
-                                                  ),
-                                                  '0',
-                                                )}ás ${valueOrDefault<String>(
-                                                  dateTimeFormat(
-                                                    'jm',
-                                                    _model.datePicked2,
-                                                    locale: FFLocalizations.of(
-                                                            context)
-                                                        .languageCode,
-                                                  ),
-                                                  '0',
-                                                )} com o terapeuta ${valueOrDefault(currentUserDocument?.firstName, '')}',
+                                          .set(createNotificationsRecordData(
+                                            description: valueOrDefault<String>(
+                                              'Um retorno foi agendado para o dia ${valueOrDefault<String>(
+                                                dateTimeFormat(
+                                                  'd/M/y',
+                                                  _model.datePicked1,
+                                                  locale: FFLocalizations.of(
+                                                          context)
+                                                      .languageCode,
+                                                ),
                                                 '0',
-                                              ),
-                                              nameOfNotification:
-                                                  'Retorno agendado',
-                                              typeOfNotitfication: 'return',
-                                              fkRequest: widget.refRequest,
-                                              fkUserSend: widget.refPatientUser,
-                                              timer: getCurrentTimestamp,
-                                            ));
-                                        triggerPushNotification(
-                                          notificationTitle: 'Retorno ',
-                                          notificationText:
-                                              valueOrDefault<String>(
-                                            'Seu retorno foi agendado com${valueOrDefault<String>(
-                                              valueOrDefault(
-                                                  currentUserDocument
-                                                      ?.firstName,
-                                                  ''),
+                                              )}ás ${valueOrDefault<String>(
+                                                dateTimeFormat(
+                                                  'jm',
+                                                  _model.datePicked2,
+                                                  locale: FFLocalizations.of(
+                                                          context)
+                                                      .languageCode,
+                                                ),
+                                                '0',
+                                              )} com o terapeuta ${valueOrDefault(currentUserDocument?.firstName, '')}',
                                               '0',
-                                            )}para o dia ${valueOrDefault<String>(
-                                              dateTimeFormat(
-                                                'd/M/y',
-                                                _model.datePicked1,
-                                                locale:
-                                                    FFLocalizations.of(context)
-                                                        .languageCode,
-                                              ),
-                                              '0',
-                                            )} ás ${valueOrDefault<String>(
-                                              dateTimeFormat(
-                                                'Hm',
-                                                _model.datePicked2,
-                                                locale:
-                                                    FFLocalizations.of(context)
-                                                        .languageCode,
-                                              ),
-                                              '0',
-                                            )}',
+                                            ),
+                                            nameOfNotification:
+                                                'Retorno agendado',
+                                            typeOfNotitfication: 'return',
+                                            fkRequest: widget.refRequest,
+                                            fkUserSend: widget.refPatientUser,
+                                            timer: getCurrentTimestamp,
+                                          ));
+                                      triggerPushNotification(
+                                        notificationTitle: 'Retorno ',
+                                        notificationText:
+                                            valueOrDefault<String>(
+                                          'Seu retorno foi agendado com${valueOrDefault<String>(
+                                            valueOrDefault(
+                                                currentUserDocument?.firstName,
+                                                ''),
                                             '0',
-                                          ),
-                                          userRefs: [widget.refPatientUser!],
-                                          initialPageName:
-                                              'notification_patient_page',
-                                          parameterData: {},
-                                        );
-                                        await showDialog(
-                                          context: context,
-                                          builder: (dialogContext) {
-                                            return Dialog(
-                                              elevation: 0,
-                                              insetPadding: EdgeInsets.zero,
-                                              backgroundColor:
-                                                  Colors.transparent,
-                                              alignment:
-                                                  AlignmentDirectional(0.0, 0.0)
-                                                      .resolve(
-                                                          Directionality.of(
-                                                              context)),
-                                              child: InformationModalWidget(),
-                                            );
-                                          },
-                                        ).then((value) => setState(() {}));
-
-                                        if (_shouldSetState) setState(() {});
-                                        return;
-                                      } else {
-                                        await widget.refRequest!
-                                            .update(createRequestsRecordData(
-                                          status: 'finalized',
-                                        ));
-
-                                        await NotificationsRecord.collection
-                                            .doc()
-                                            .set(createNotificationsRecordData(
-                                              description:
-                                                  'Seu atendimento com o terapeuta ${valueOrDefault(currentUserDocument?.firstName, '')} foi finalizado com sucesso!',
-                                              nameOfNotification:
-                                                  'Atendimento Finalizado',
-                                              typeOfNotitfication:
-                                                  'request finished',
-                                              fkRequest: widget.refRequest,
-                                              fkUserSend: widget.refPatientUser,
-                                              timer: getCurrentTimestamp,
-                                            ));
-                                        triggerPushNotification(
-                                          notificationTitle:
-                                              'Atendimento Finalizado',
-                                          notificationText:
-                                              valueOrDefault<String>(
-                                            'Seu atendimento com  o terapeuta ${valueOrDefault<String>(
-                                              valueOrDefault(
-                                                  currentUserDocument
-                                                      ?.firstName,
-                                                  ''),
-                                              '0',
-                                            )}foi  concluido com sucesso',
+                                          )}para o dia ${valueOrDefault<String>(
+                                            dateTimeFormat(
+                                              'd/M/y',
+                                              _model.datePicked1,
+                                              locale:
+                                                  FFLocalizations.of(context)
+                                                      .languageCode,
+                                            ),
                                             '0',
-                                          ),
-                                          userRefs: [widget.refPatientUser!],
-                                          initialPageName:
-                                              'notification_patient_page',
-                                          parameterData: {},
-                                        );
-                                        await showDialog(
-                                          context: context,
-                                          builder: (dialogContext) {
-                                            return Dialog(
-                                              elevation: 0,
-                                              insetPadding: EdgeInsets.zero,
-                                              backgroundColor:
-                                                  Colors.transparent,
-                                              alignment:
-                                                  AlignmentDirectional(0.0, 0.0)
-                                                      .resolve(
-                                                          Directionality.of(
-                                                              context)),
-                                              child: InformationModalWidget(),
-                                            );
-                                          },
-                                        ).then((value) => setState(() {}));
-
-                                        if (_shouldSetState) setState(() {});
-                                        return;
-                                      }
-                                    } else {
-                                      await showModalBottomSheet(
-                                        isScrollControlled: true,
-                                        backgroundColor: Colors.transparent,
-                                        enableDrag: false,
+                                          )} ás ${valueOrDefault<String>(
+                                            dateTimeFormat(
+                                              'Hm',
+                                              _model.datePicked2,
+                                              locale:
+                                                  FFLocalizations.of(context)
+                                                      .languageCode,
+                                            ),
+                                            '0',
+                                          )}',
+                                          '0',
+                                        ),
+                                        userRefs: [widget.refPatientUser!],
+                                        initialPageName:
+                                            'notification_patient_page',
+                                        parameterData: {},
+                                      );
+                                      await showDialog(
                                         context: context,
-                                        builder: (context) {
-                                          return Padding(
-                                            padding: MediaQuery.viewInsetsOf(
-                                                context),
-                                            child: ErroFinalizedModalWidget(),
+                                        builder: (dialogContext) {
+                                          return Dialog(
+                                            elevation: 0,
+                                            insetPadding: EdgeInsets.zero,
+                                            backgroundColor: Colors.transparent,
+                                            alignment: AlignmentDirectional(
+                                                    0.0, 0.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                            child: InformationModalWidget(),
                                           );
                                         },
-                                      ).then((value) => safeSetState(() {}));
+                                      ).then((value) => setState(() {}));
+
+                                      if (_shouldSetState) setState(() {});
+                                      return;
+                                    } else {
+                                      await widget.refRequest!
+                                          .update(createRequestsRecordData(
+                                        status: 'finalized',
+                                      ));
+
+                                      await NotificationsRecord.collection
+                                          .doc()
+                                          .set(createNotificationsRecordData(
+                                            description:
+                                                'Seu atendimento com o terapeuta ${valueOrDefault(currentUserDocument?.firstName, '')} foi finalizado com sucesso!',
+                                            nameOfNotification:
+                                                'Atendimento Finalizado',
+                                            typeOfNotitfication:
+                                                'request finished',
+                                            fkRequest: widget.refRequest,
+                                            fkUserSend: widget.refPatientUser,
+                                            timer: getCurrentTimestamp,
+                                          ));
+                                      triggerPushNotification(
+                                        notificationTitle:
+                                            'Atendimento Finalizado',
+                                        notificationText:
+                                            valueOrDefault<String>(
+                                          'Seu atendimento com  o terapeuta ${valueOrDefault<String>(
+                                            valueOrDefault(
+                                                currentUserDocument?.firstName,
+                                                ''),
+                                            '0',
+                                          )}foi  concluido com sucesso',
+                                          '0',
+                                        ),
+                                        userRefs: [widget.refPatientUser!],
+                                        initialPageName:
+                                            'notification_patient_page',
+                                        parameterData: {},
+                                      );
+                                      await showDialog(
+                                        context: context,
+                                        builder: (dialogContext) {
+                                          return Dialog(
+                                            elevation: 0,
+                                            insetPadding: EdgeInsets.zero,
+                                            backgroundColor: Colors.transparent,
+                                            alignment: AlignmentDirectional(
+                                                    0.0, 0.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                            child: InformationModalWidget(),
+                                          );
+                                        },
+                                      ).then((value) => setState(() {}));
+
+                                      if (_shouldSetState) setState(() {});
+                                      return;
                                     }
 
                                     if (_shouldSetState) setState(() {});
