@@ -10,12 +10,10 @@ import '/pages/drawer/modal_languge/modal_languge_widget.dart';
 import '/pages/therapist/introduction/turorial_theraphist_06_page/turorial_theraphist06_page_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'home_theraphist_page_model.dart';
@@ -25,7 +23,7 @@ class HomeTheraphistPageWidget extends StatefulWidget {
   const HomeTheraphistPageWidget({
     super.key,
     bool? intro,
-  }) : this.intro = intro ?? false;
+  }) : intro = intro ?? false;
 
   final bool intro;
 
@@ -97,7 +95,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                   : FocusScope.of(context).unfocus(),
               child: Padding(
                 padding: MediaQuery.viewInsetsOf(context),
-                child: TurorialTheraphist06PageWidget(),
+                child: const TurorialTheraphist06PageWidget(),
               ),
             );
           },
@@ -143,11 +141,11 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFFA54EAF),
+        backgroundColor: const Color(0xFFA54EAF),
         drawer: Drawer(
           elevation: 16.0,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
@@ -155,12 +153,12 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
               children: [
                 Container(
                   height: 100.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -181,12 +179,12 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF121518),
+                                    color: const Color(0xFF121518),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                         ),
-                      ].divide(SizedBox(width: 10.0)),
+                      ].divide(const SizedBox(width: 10.0)),
                     ),
                   ),
                 ),
@@ -194,7 +192,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                      color: Color(0x9FA0A0A0),
+                      color: const Color(0x9FA0A0A0),
                     ),
                   ),
                   child: Column(
@@ -208,7 +206,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                         desktop: false,
                       ))
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.person_2,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -221,7 +219,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -237,7 +235,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                         desktop: false,
                       ))
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.switch_account,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -250,7 +248,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -272,7 +270,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                             );
                           },
                           child: ListTile(
-                            leading: Icon(
+                            leading: const Icon(
                               Icons.card_giftcard,
                               color: Color(0xC2000000),
                               size: 14.0,
@@ -285,7 +283,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                   .titleLarge
                                   .override(
                                     fontFamily: 'Outfit',
-                                    color: Color(0xFF121518),
+                                    color: const Color(0xFF121518),
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -304,7 +302,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                           context.pushNamed('profile_patient');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.location_history,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -317,7 +315,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -345,14 +343,14 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                     : FocusScope.of(context).unfocus(),
                                 child: Padding(
                                   padding: MediaQuery.viewInsetsOf(context),
-                                  child: ModalLangugeWidget(),
+                                  child: const ModalLangugeWidget(),
                                 ),
                               );
                             },
                           ).then((value) => safeSetState(() {}));
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.language_rounded,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -365,7 +363,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -383,7 +381,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                           await launchURL('https://qtmhealthtech.com.br/');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.computer_sharp,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -396,7 +394,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -412,7 +410,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                      color: Color(0x68B4B4B4),
+                      color: const Color(0x68B4B4B4),
                     ),
                   ),
                   child: Column(
@@ -427,7 +425,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                           context.pushNamed('politics_drawer_page');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.content_paste,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -440,7 +438,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -458,7 +456,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                           context.pushNamed('terms_drawer_page');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.switch_account,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -471,7 +469,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -493,7 +491,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                           context.pushNamedAuth('login_page', context.mounted);
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.output_outlined,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -506,7 +504,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -530,16 +528,16 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
             children: [
               Expanded(
                 child: Stack(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color.fromARGB(255, 111, 243, 3),
+                          color: const Color(0xFFA54EAF),
                           borderRadius: BorderRadius.circular(50.0),
                           border: Border.all(
-                            color: Color.fromARGB(255, 13, 193, 58),
+                            color: const Color(0xFFA54EAF),
                             width: 9.0,
                           ),
                         ),
@@ -547,15 +545,15 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 5.0, 0.0, 0.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -566,7 +564,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                           scaffoldKey.currentState!
                                               .openDrawer();
                                         },
-                                        child: Icon(
+                                        child: const Icon(
                                           Icons.menu,
                                           color: Colors.white,
                                           size: 35.0,
@@ -578,7 +576,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 12.0, 50.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -587,7 +585,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
@@ -597,7 +595,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: AuthUserStreamWidget(
                                             builder: (context) => Text(
                                               'Olá, ${valueOrDefault(currentUserDocument?.firstName, '')}',
@@ -614,7 +612,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(height: 5.0)),
+                                      ].divide(const SizedBox(height: 5.0)),
                                     ),
                                   ),
                                   AuthUserStreamWidget(
@@ -622,7 +620,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                       width: 70.0,
                                       height: 70.0,
                                       clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                       ),
                                       child: Image.network(
@@ -639,19 +637,19 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 180.0, 0.0, 0.0),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(25.0),
                             topRight: Radius.circular(25.0),
                           ),
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(0.0),
@@ -661,9 +659,9 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                               ),
                               shape: BoxShape.rectangle,
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: SingleChildScrollView(
                                 primary: false,
                                 child: Column(
@@ -680,8 +678,8 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                             children: [
                                               Container(
                                                 width: double.infinity,
-                                                decoration: BoxDecoration(),
-                                                child: Container(
+                                                decoration: const BoxDecoration(),
+                                                child: SizedBox(
                                                   width: double.infinity,
                                                   height: 132.0,
                                                   child: CarouselSlider(
@@ -692,7 +690,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child:
                                                                 FFButtonWidget(
@@ -715,7 +713,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                 );
                                                               },
                                                               text: '',
-                                                              icon: Icon(
+                                                              icon: const Icon(
                                                                 Icons
                                                                     .check_circle,
                                                                 size: 40.0,
@@ -724,20 +722,20 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                   FFButtonOptions(
                                                                 width: 91.0,
                                                                 height: 91.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFFA54EAF),
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
@@ -750,7 +748,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -787,7 +785,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child:
                                                                 FFButtonWidget(
@@ -797,7 +795,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     'patients_page_theraphist');
                                                               },
                                                               text: '',
-                                                              icon: Icon(
+                                                              icon: const Icon(
                                                                 Icons
                                                                     .people_alt_rounded,
                                                                 size: 40.0,
@@ -806,20 +804,20 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                   FFButtonOptions(
                                                                 width: 91.0,
                                                                 height: 91.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFFA54EAF),
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
@@ -832,7 +830,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -869,7 +867,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child:
                                                                 FFButtonWidget(
@@ -879,7 +877,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     'praticals_theraphist_page');
                                                               },
                                                               text: '',
-                                                              icon: Icon(
+                                                              icon: const Icon(
                                                                 Icons
                                                                     .home_repair_service,
                                                                 size: 40.0,
@@ -888,20 +886,20 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                   FFButtonOptions(
                                                                 width: 91.0,
                                                                 height: 91.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFFA54EAF),
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
@@ -914,7 +912,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -951,7 +949,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child:
                                                                 FFButtonWidget(
@@ -961,7 +959,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     'calendar_theraphist_page');
                                                               },
                                                               text: '',
-                                                              icon: Icon(
+                                                              icon: const Icon(
                                                                 Icons
                                                                     .calendar_month,
                                                                 size: 40.0,
@@ -970,20 +968,20 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                   FFButtonOptions(
                                                                 width: 91.0,
                                                                 height: 91.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFFA54EAF),
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
@@ -996,7 +994,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -1033,7 +1031,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child:
                                                                 FFButtonWidget(
@@ -1043,7 +1041,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     'invoincing_theraphist_page');
                                                               },
                                                               text: '',
-                                                              icon: Icon(
+                                                              icon: const Icon(
                                                                 Icons
                                                                     .attach_money_sharp,
                                                                 size: 40.0,
@@ -1052,20 +1050,20 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                   FFButtonOptions(
                                                                 width: 91.0,
                                                                 height: 91.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFFA54EAF),
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
@@ -1078,7 +1076,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -1115,7 +1113,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child:
                                                                 FFButtonWidget(
@@ -1125,7 +1123,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     'coworking_theraphist_page');
                                                               },
                                                               text: '',
-                                                              icon: Icon(
+                                                              icon: const Icon(
                                                                 Icons.home_work,
                                                                 size: 40.0,
                                                               ),
@@ -1133,20 +1131,20 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                   FFButtonOptions(
                                                                 width: 91.0,
                                                                 height: 91.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFFA54EAF),
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
@@ -1159,7 +1157,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -1214,7 +1212,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 30.0, 5.0, 0.0),
                                                 child: Row(
@@ -1226,17 +1224,17 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                   children: [
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               1.0, 0.0),
                                                       child:
                                                           FlutterFlowIconButton(
                                                         borderColor:
-                                                            Color(0x60E4E4E4),
+                                                            const Color(0x60E4E4E4),
                                                         borderRadius: 20.0,
                                                         borderWidth: 1.0,
                                                         buttonSize: 40.0,
                                                         fillColor:
-                                                            Color(0x60E4E4E4),
+                                                            const Color(0x60E4E4E4),
                                                         icon: Icon(
                                                           Icons
                                                               .arrow_back_ios_new,
@@ -1249,7 +1247,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                           await _model
                                                               .carouselController
                                                               ?.previousPage(
-                                                            duration: Duration(
+                                                            duration: const Duration(
                                                                 milliseconds:
                                                                     300),
                                                             curve: Curves.ease,
@@ -1259,18 +1257,18 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child:
                                                           FlutterFlowIconButton(
                                                         borderColor:
-                                                            Color(0x60E4E4E4),
+                                                            const Color(0x60E4E4E4),
                                                         borderRadius: 20.0,
                                                         borderWidth: 1.0,
                                                         buttonSize: 40.0,
                                                         fillColor:
-                                                            Color(0x60E4E4E4),
-                                                        icon: Icon(
+                                                            const Color(0x60E4E4E4),
+                                                        icon: const Icon(
                                                           Icons
                                                               .arrow_forward_ios,
                                                           color:
@@ -1281,7 +1279,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                           await _model
                                                               .carouselController
                                                               ?.nextPage(
-                                                            duration: Duration(
+                                                            duration: const Duration(
                                                                 milliseconds:
                                                                     300),
                                                             curve: Curves.ease,
@@ -1298,7 +1296,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                       ],
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           20.0, 0.0, 20.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -1313,7 +1311,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF121518),
+                                                  color: const Color(0xFF121518),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -1322,7 +1320,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Builder(
                                         builder: (context) {
@@ -1348,7 +1346,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           gradient:
-                                                              LinearGradient(
+                                                              const LinearGradient(
                                                             colors: [
                                                               Color(0xFFE9E9E9),
                                                               Color(0xFFCBCBCB)
@@ -1375,7 +1373,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           gradient:
-                                                              LinearGradient(
+                                                              const LinearGradient(
                                                             colors: [
                                                               Color(0xFFE9E9E9),
                                                               Color(0xFFCBCBCB)
@@ -1397,14 +1395,14 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                           animationsMap[
                                                               'containerOnPageLoadAnimation2']!),
                                                     ].divide(
-                                                        SizedBox(width: 20.0)),
+                                                        const SizedBox(width: 20.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 15.0)),
+                                              ].divide(const SizedBox(height: 15.0)),
                                             );
                                           } else {
                                             return Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Builder(
                                                 builder: (context) {
@@ -1432,7 +1430,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                 interestsCollectionIndex];
                                                         return Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       8.0,
@@ -1445,7 +1443,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                 BoxDecoration(
                                                               color:
                                                                   Colors.white,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       8.0,
@@ -1463,7 +1461,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                           12.0),
                                                               border:
                                                                   Border.all(
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFFF1F4F8),
                                                                 width: 1.0,
                                                               ),
@@ -1481,7 +1479,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                   child:
                                                                       ClipRRect(
                                                                     borderRadius:
-                                                                        BorderRadius
+                                                                        const BorderRadius
                                                                             .only(
                                                                       bottomLeft:
                                                                           Radius.circular(
@@ -1510,7 +1508,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           12.0,
@@ -1533,33 +1531,33 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                               CrossAxisAlignment.start,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 interestsCollectionItem.title,
                                                                                 style: FlutterFlowTheme.of(context).bodyLarge.override(
                                                                                       fontFamily: 'Plus Jakarta Sans',
-                                                                                      color: Color(0xFF14181B),
+                                                                                      color: const Color(0xFF14181B),
                                                                                       fontSize: 16.0,
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
                                                                               ),
                                                                             ),
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                 children: [
                                                                                   Expanded(
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                       child: SelectionArea(
                                                                                           child: AutoSizeText(
                                                                                         interestsCollectionItem.description,
                                                                                         textAlign: TextAlign.justify,
                                                                                         style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                               fontFamily: 'Plus Jakarta Sans',
-                                                                                              color: Color(0xFF14181B),
+                                                                                              color: const Color(0xFF14181B),
                                                                                               fontSize: 5.0,
                                                                                               fontWeight: FontWeight.normal,
                                                                                             ),
@@ -1606,19 +1604,19 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                       FFButtonOptions(
                                                                     height:
                                                                         40.0,
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        EdgeInsetsDirectional.fromSTEB(
+                                                                        const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFFA92ACC),
                                                                     textStyle: FlutterFlowTheme.of(
                                                                             context)
@@ -1632,7 +1630,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        BorderSide(
+                                                                        const BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -1657,7 +1655,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                                         },
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 30.0)),
+                                  ].divide(const SizedBox(height: 30.0)),
                                 ),
                               ),
                             ),
@@ -1669,11 +1667,11 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: wrapWithModel(
                   model: _model.bottomNavigationBarTheraphistModel,
                   updateCallback: () => setState(() {}),
-                  child: BottomNavigationBarTheraphistWidget(),
+                  child: const BottomNavigationBarTheraphistWidget(),
                 ),
               ),
             ],

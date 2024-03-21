@@ -12,12 +12,9 @@ import '/pages/therapist/schedules/components/erro_moda_refund_theraphist/erro_m
 import '/pages/therapist/schedules/components/reject_modal_theraphist/reject_modal_theraphist_widget.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'schedules_theraphist_page_model.dart';
 export 'schedules_theraphist_page_model.dart';
@@ -148,18 +145,18 @@ class _SchedulesTheraphistPageWidgetState
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
-            backgroundColor: Color(0xFFA54EAF),
+            backgroundColor: const Color(0xFFA54EAF),
             automaticallyImplyLeading: false,
             leading: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_ios,
                   color: Colors.white,
                   size: 30.0,
@@ -170,7 +167,7 @@ class _SchedulesTheraphistPageWidgetState
               ),
             ),
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'syd8y5qd' /* Solicitações */,
@@ -182,7 +179,7 @@ class _SchedulesTheraphistPageWidgetState
                     ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
           ),
         ),
@@ -199,7 +196,7 @@ class _SchedulesTheraphistPageWidgetState
                   builder: (context) {
                     if (FFAppState().loadrequestTheraphist) {
                       return Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 0.0),
                         child: ListView(
                           padding: EdgeInsets.zero,
@@ -214,7 +211,7 @@ class _SchedulesTheraphistPageWidgetState
                                     width: 100.0,
                                     height: 272.0,
                                     decoration: BoxDecoration(
-                                      gradient: LinearGradient(
+                                      gradient: const LinearGradient(
                                         colors: [
                                           Color(0xFFE9E9E9),
                                           Color(0xFFCBCBCB)
@@ -238,7 +235,7 @@ class _SchedulesTheraphistPageWidgetState
                                     width: 100.0,
                                     height: 272.0,
                                     decoration: BoxDecoration(
-                                      gradient: LinearGradient(
+                                      gradient: const LinearGradient(
                                         colors: [
                                           Color(0xFFE9E9E9),
                                           Color(0xFFCBCBCB)
@@ -262,7 +259,7 @@ class _SchedulesTheraphistPageWidgetState
                                     width: 100.0,
                                     height: 272.0,
                                     decoration: BoxDecoration(
-                                      gradient: LinearGradient(
+                                      gradient: const LinearGradient(
                                         colors: [
                                           Color(0xFFE9E9E9),
                                           Color(0xFFCBCBCB)
@@ -278,7 +275,7 @@ class _SchedulesTheraphistPageWidgetState
                                 ),
                               ],
                             ),
-                          ].divide(SizedBox(height: 15.0)),
+                          ].divide(const SizedBox(height: 15.0)),
                         ),
                       );
                     } else {
@@ -287,14 +284,14 @@ class _SchedulesTheraphistPageWidgetState
                         children: [
                           Builder(
                             builder: (context) {
-                              if (_model.collectionRequests?.length == 0) {
+                              if (_model.collectionRequests.isEmpty) {
                                 return Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 150.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -312,7 +309,7 @@ class _SchedulesTheraphistPageWidgetState
                                 );
                               } else {
                                 return Align(
-                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Builder(
                                     builder: (context) {
                                       final listofrequests =
@@ -327,7 +324,7 @@ class _SchedulesTheraphistPageWidgetState
                                               listofrequests[
                                                   listofrequestsIndex];
                                           return Padding(
-                                            padding: EdgeInsets.all(12.0),
+                                            padding: const EdgeInsets.all(12.0),
                                             child:
                                                 StreamBuilder<PatientsRecord>(
                                               stream:
@@ -357,14 +354,14 @@ class _SchedulesTheraphistPageWidgetState
                                                 final containerPatientsRecord =
                                                     snapshot.data!;
                                                 return AnimatedContainer(
-                                                  duration: Duration(
+                                                  duration: const Duration(
                                                       milliseconds: 90),
                                                   curve: Curves.easeIn,
                                                   width: 389.0,
                                                   height: 356.0,
                                                   decoration: BoxDecoration(
                                                     color: Colors.white,
-                                                    boxShadow: [
+                                                    boxShadow: const [
                                                       BoxShadow(
                                                         blurRadius: 6.0,
                                                         color:
@@ -379,7 +376,7 @@ class _SchedulesTheraphistPageWidgetState
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(12.0),
+                                                        const EdgeInsets.all(12.0),
                                                     child: StreamBuilder<
                                                         UsersRecord>(
                                                       stream: UsersRecord
@@ -487,7 +484,7 @@ class _SchedulesTheraphistPageWidgetState
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           4.0,
@@ -502,7 +499,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                     .override(
                                                                       fontFamily:
                                                                           'Plus Jakarta Sans',
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF14181B),
                                                                       fontSize:
                                                                           14.0,
@@ -514,7 +511,7 @@ class _SchedulesTheraphistPageWidgetState
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -533,7 +530,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                         MainAxisSize
                                                                             .max,
                                                                     children: [
-                                                                      Icon(
+                                                                      const Icon(
                                                                         Icons
                                                                             .place,
                                                                         color: Color(
@@ -548,11 +545,11 @@ class _SchedulesTheraphistPageWidgetState
                                                                             .bodyMedium
                                                                             .override(
                                                                               fontFamily: 'Readex Pro',
-                                                                              color: Color(0xFF171B1E),
+                                                                              color: const Color(0xFF171B1E),
                                                                               fontSize: 12.0,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             5.0)),
                                                                   ),
@@ -561,7 +558,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                         MainAxisSize
                                                                             .max,
                                                                     children: [
-                                                                      Icon(
+                                                                      const Icon(
                                                                         Icons
                                                                             .person_2_sharp,
                                                                         color: Color(
@@ -576,16 +573,16 @@ class _SchedulesTheraphistPageWidgetState
                                                                             .labelSmall
                                                                             .override(
                                                                               fontFamily: 'Plus Jakarta Sans',
-                                                                              color: Color(0xFF171B1E),
+                                                                              color: const Color(0xFF171B1E),
                                                                               fontSize: 12.0,
                                                                               fontWeight: FontWeight.w500,
                                                                             ),
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         width:
                                                                             3.0)),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
@@ -599,7 +596,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                       .start,
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -652,7 +649,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF171B1E),
+                                                                                      color: const Color(0xFF171B1E),
                                                                                       fontSize: 12.0,
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
@@ -668,7 +665,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF171B1E),
+                                                                                      color: const Color(0xFF171B1E),
                                                                                       fontSize: 12.0,
                                                                                     ),
                                                                               ),
@@ -684,7 +681,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF171B1E),
+                                                                                      color: const Color(0xFF171B1E),
                                                                                       fontSize: 12.0,
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
@@ -693,7 +690,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                                 columnPracticeRecord.name,
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF171B1E),
+                                                                                      color: const Color(0xFF171B1E),
                                                                                       fontSize: 12.0,
                                                                                     ),
                                                                               ),
@@ -709,7 +706,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF171B1E),
+                                                                                      color: const Color(0xFF171B1E),
                                                                                       fontSize: 12.0,
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
@@ -718,7 +715,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                                 columnPracticeRecord.speciliaty,
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF171B1E),
+                                                                                      color: const Color(0xFF171B1E),
                                                                                       fontSize: 12.0,
                                                                                     ),
                                                                               ),
@@ -734,7 +731,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF171B1E),
+                                                                                      color: const Color(0xFF171B1E),
                                                                                       fontSize: 12.0,
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
@@ -750,25 +747,25 @@ class _SchedulesTheraphistPageWidgetState
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF171B1E),
+                                                                                      color: const Color(0xFF171B1E),
                                                                                       fontSize: 12.0,
                                                                                     ),
                                                                               ),
                                                                             ],
                                                                           ),
-                                                                          Row(
+                                                                          const Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
                                                                             children: [],
                                                                           ),
-                                                                        ].divide(SizedBox(height: 4.0)),
+                                                                        ].divide(const SizedBox(height: 4.0)),
                                                                       );
                                                                     },
                                                                   ),
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           1.0,
                                                                           0.0),
                                                                   child: Row(
@@ -781,7 +778,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                             MainAxisSize.max,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 0.0,
                                                                                 10.0,
@@ -793,7 +790,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Readex Pro',
-                                                                                    color: Color(0xFF171B1E),
+                                                                                    color: const Color(0xFF171B1E),
                                                                                     fontSize: 12.0,
                                                                                     fontWeight: FontWeight.bold,
                                                                                   ),
@@ -801,10 +798,10 @@ class _SchedulesTheraphistPageWidgetState
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(-1.0, 0.0),
+                                                                                const AlignmentDirectional(-1.0, 0.0),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                               child: Text(
                                                                                 formatNumber(
                                                                                   listofrequestsItem.valueSession,
@@ -814,7 +811,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF484747),
+                                                                                      color: const Color(0xFF484747),
                                                                                       fontSize: 17.0,
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
@@ -826,13 +823,13 @@ class _SchedulesTheraphistPageWidgetState
                                                                     ],
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 20.0)),
                                                             ),
                                                             Expanded(
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsets
+                                                                    const EdgeInsets
                                                                         .all(
                                                                             10.0),
                                                                 child: Row(
@@ -863,7 +860,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                 child: Padding(
                                                                                   padding: MediaQuery.viewInsetsOf(context),
-                                                                                  child: Container(
+                                                                                  child: SizedBox(
                                                                                     height: 342.0,
                                                                                     child: RejectModalTheraphistWidget(
                                                                                       refRequest: listofrequestsItem.reference,
@@ -886,12 +883,12 @@ class _SchedulesTheraphistPageWidgetState
                                                                             FFButtonOptions(
                                                                           height:
                                                                               40.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
                                                                               0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -902,12 +899,12 @@ class _SchedulesTheraphistPageWidgetState
                                                                               .titleSmall
                                                                               .override(
                                                                                 fontFamily: 'Readex Pro',
-                                                                                color: Color(0xFF95489D),
+                                                                                color: const Color(0xFF95489D),
                                                                                 fontSize: 14.0,
                                                                                 fontWeight: FontWeight.normal,
                                                                               ),
                                                                           borderSide:
-                                                                              BorderSide(
+                                                                              const BorderSide(
                                                                             color:
                                                                                 Color(0xFF95489D),
                                                                             width:
@@ -925,7 +922,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                           FFButtonWidget(
                                                                         onPressed:
                                                                             () async {
-                                                                          var _shouldSetState =
+                                                                          var shouldSetState =
                                                                               false;
                                                                           _model.responseAccept = await StripeApiNodeGroup
                                                                               .confirmPaymentIntentCall
@@ -933,7 +930,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                             paymentIntentId:
                                                                                 listofrequestsItem.paymentId,
                                                                           );
-                                                                          _shouldSetState =
+                                                                          shouldSetState =
                                                                               true;
                                                                           if ((_model.responseAccept?.statusCode ?? 200) ==
                                                                               200) {
@@ -942,15 +939,15 @@ class _SchedulesTheraphistPageWidgetState
                                                                             ));
                                                                             _model.collectionPatients =
                                                                                 await PatientsRecord.getDocumentOnce(listofrequestsItem.fkPatients!);
-                                                                            _shouldSetState =
+                                                                            shouldSetState =
                                                                                 true;
                                                                             _model.collectionUser =
                                                                                 await UsersRecord.getDocumentOnce(_model.collectionPatients!.fkUser!);
-                                                                            _shouldSetState =
+                                                                            shouldSetState =
                                                                                 true;
                                                                             _model.collectionPratice =
                                                                                 await PracticeRecord.getDocumentOnce(listofrequestsItem.fkPractice!);
-                                                                            _shouldSetState =
+                                                                            shouldSetState =
                                                                                 true;
 
                                                                             await CalendarRecord.collection.doc().set(createCalendarRecordData(
@@ -998,7 +995,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                                   onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                   child: Padding(
                                                                                     padding: MediaQuery.viewInsetsOf(context),
-                                                                                    child: Container(
+                                                                                    child: const SizedBox(
                                                                                       height: 342.0,
                                                                                       child: AcepptModalTheraphistWidget(),
                                                                                     ),
@@ -1008,8 +1005,9 @@ class _SchedulesTheraphistPageWidgetState
                                                                             ).then((value) =>
                                                                                 safeSetState(() {}));
 
-                                                                            if (_shouldSetState)
+                                                                            if (shouldSetState) {
                                                                               setState(() {});
+                                                                            }
                                                                             return;
                                                                           } else {
                                                                             await showModalBottomSheet(
@@ -1022,20 +1020,22 @@ class _SchedulesTheraphistPageWidgetState
                                                                                   onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                   child: Padding(
                                                                                     padding: MediaQuery.viewInsetsOf(context),
-                                                                                    child: ErroModaRefundTheraphistWidget(),
+                                                                                    child: const ErroModaRefundTheraphistWidget(),
                                                                                   ),
                                                                                 );
                                                                               },
                                                                             ).then((value) =>
                                                                                 safeSetState(() {}));
 
-                                                                            if (_shouldSetState)
+                                                                            if (shouldSetState) {
                                                                               setState(() {});
+                                                                            }
                                                                             return;
                                                                           }
 
-                                                                          if (_shouldSetState)
+                                                                          if (shouldSetState) {
                                                                             setState(() {});
+                                                                          }
                                                                         },
                                                                         text: FFLocalizations.of(context)
                                                                             .getText(
@@ -1045,18 +1045,18 @@ class _SchedulesTheraphistPageWidgetState
                                                                             FFButtonOptions(
                                                                           height:
                                                                               40.0,
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               24.0,
                                                                               0.0,
                                                                               24.0,
                                                                               0.0),
-                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
                                                                               0.0),
                                                                           color:
-                                                                              Color(0xFF95489D),
+                                                                              const Color(0xFF95489D),
                                                                           textStyle: FlutterFlowTheme.of(context)
                                                                               .titleSmall
                                                                               .override(
@@ -1068,7 +1068,7 @@ class _SchedulesTheraphistPageWidgetState
                                                                           elevation:
                                                                               3.0,
                                                                           borderSide:
-                                                                              BorderSide(
+                                                                              const BorderSide(
                                                                             color:
                                                                                 Colors.transparent,
                                                                             width:
@@ -1081,13 +1081,13 @@ class _SchedulesTheraphistPageWidgetState
                                                                             false,
                                                                       ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           10.0)),
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 5.0)),
                                                         );
                                                       },

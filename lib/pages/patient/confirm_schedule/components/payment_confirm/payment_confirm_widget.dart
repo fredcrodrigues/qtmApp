@@ -2,7 +2,6 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/backend/push_notifications/push_notifications_util.dart';
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -12,12 +11,9 @@ import '/pages/patient/confirm_schedule/components/load_request/load_request_wid
 import '/pages/patient/confirm_schedule/components/modal_success_request/modal_success_request_widget.dart';
 import '/pages/patient/confirm_schedule/components/payment_method_not_choosed/payment_method_not_choosed_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'payment_confirm_model.dart';
 export 'payment_confirm_model.dart';
 
@@ -88,7 +84,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
           top: true,
           child: Container(
             height: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
@@ -100,7 +96,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -124,7 +120,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                   },
                                 );
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.arrow_back_outlined,
                                 color: Color(0xFF657DCA),
                                 size: 24.0,
@@ -142,7 +138,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                     fontWeight: FontWeight.bold,
                                   ),
                             ),
-                            Icon(
+                            const Icon(
                               Icons.help,
                               color: Color(0xFF657DCA),
                               size: 24.0,
@@ -150,9 +146,9 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                           ],
                         ),
                       ),
-                      if (_model.allCards.length != 0)
+                      if (_model.allCards.isNotEmpty)
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 40.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -217,7 +213,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                         FlutterFlowTheme.of(context).alternate,
                                     borderWidth: 2.0,
                                     borderRadius: 8.0,
-                                    margin: EdgeInsetsDirectional.fromSTEB(
+                                    margin: const EdgeInsetsDirectional.fromSTEB(
                                         16.0, 4.0, 16.0, 4.0),
                                     hidesUnderline: true,
                                     isSearchable: false,
@@ -229,7 +225,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                           ),
                         ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             45.0, 20.0, 45.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -241,7 +237,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                     return Container(
                                       height: 145.0,
                                       decoration: BoxDecoration(
-                                        color: Color(0x7E657DCA),
+                                        color: const Color(0x7E657DCA),
                                         borderRadius:
                                             BorderRadius.circular(10.0),
                                       ),
@@ -251,10 +247,10 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                             MainAxisAlignment.start,
                                         children: [
                                           Align(
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                 -1.0, -1.0),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 10.0, 0.0, 0.0),
                                               child: Text(
@@ -276,7 +272,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                           ),
                                           Expanded(
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       20.0, 10.0, 20.0, 10.0),
                                               child: Column(
@@ -291,7 +287,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                                 .of(context)
                                                             .secondaryBackground,
                                                         borderRadius:
-                                                            BorderRadius.only(
+                                                            const BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   0.0),
@@ -308,7 +304,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                       ),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -323,12 +319,12 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                           children: [
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       -1.0,
                                                                       0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             0.0,
@@ -379,7 +375,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                                     .of(context)
                                                                 .secondaryBackground,
                                                             borderRadius:
-                                                                BorderRadius
+                                                                const BorderRadius
                                                                     .only(
                                                               bottomLeft: Radius
                                                                   .circular(
@@ -398,11 +394,11 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                           ),
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           5.0,
@@ -467,7 +463,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                                     .of(context)
                                                                 .secondaryBackground,
                                                             borderRadius:
-                                                                BorderRadius
+                                                                const BorderRadius
                                                                     .only(
                                                               bottomLeft: Radius
                                                                   .circular(
@@ -486,11 +482,11 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                           ),
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           5.0,
@@ -541,9 +537,9 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 3.0)),
+                                                        const SizedBox(width: 3.0)),
                                                   ),
-                                                ].divide(SizedBox(height: 3.0)),
+                                                ].divide(const SizedBox(height: 3.0)),
                                               ),
                                             ),
                                           ),
@@ -554,11 +550,11 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                     return Container(
                                       height: 145.0,
                                       decoration: BoxDecoration(
-                                        color: Color(0x7EFFFFFF),
+                                        color: const Color(0x7EFFFFFF),
                                         borderRadius:
                                             BorderRadius.circular(10.0),
                                         border: Border.all(
-                                          color: Color(0x26000000),
+                                          color: const Color(0x26000000),
                                         ),
                                       ),
                                       child: Column(
@@ -582,7 +578,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                   fontFamily: 'Roboto',
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 10.0)),
+                                        ].divide(const SizedBox(height: 10.0)),
                                       ),
                                     );
                                   }
@@ -593,7 +589,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             40.0, 20.0, 40.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -612,17 +608,17 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF7F8081),
+                                      color: const Color(0xFF7F8081),
                                       fontSize: 12.0,
                                       fontWeight: FontWeight.w500,
                                     ),
                               ),
                             ),
-                          ].divide(SizedBox(width: 10.0)),
+                          ].divide(const SizedBox(width: 10.0)),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             40.0, 20.0, 40.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -631,16 +627,16 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                               child: Container(
                                 width: 100.0,
                                 decoration: BoxDecoration(
-                                  color: Color(0x1EE56363),
+                                  color: const Color(0x1EE56363),
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 10.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      Align(
+                                      const Align(
                                         alignment:
                                             AlignmentDirectional(0.0, -1.0),
                                         child: Icon(
@@ -652,7 +648,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, -1.0),
+                                              const AlignmentDirectional(0.0, -1.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
                                               'cts04jk2' /* Nossa política de cancelamento... */,
@@ -661,13 +657,13 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Raleway',
-                                                  color: Color(0xFF626262),
+                                                  color: const Color(0xFF626262),
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
                                         ),
                                       ),
-                                    ].divide(SizedBox(width: 10.0)),
+                                    ].divide(const SizedBox(width: 10.0)),
                                   ),
                                 ),
                               ),
@@ -685,12 +681,12 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               30.0, 0.0, 30.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -704,7 +700,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Raleway',
-                                      color: Color(0xFF657DCA),
+                                      color: const Color(0xFF657DCA),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -715,7 +711,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Raleway',
-                                      color: Color(0xFF657DCA),
+                                      color: const Color(0xFF657DCA),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -724,7 +720,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 20.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -890,7 +886,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                 padding:
                                                     MediaQuery.viewInsetsOf(
                                                         context),
-                                                child: Container(
+                                                child: SizedBox(
                                                   height: 500.0,
                                                   child:
                                                       ModalSuccessRequestWidget(
@@ -920,7 +916,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                                 padding:
                                                     MediaQuery.viewInsetsOf(
                                                         context),
-                                                child: Container(
+                                                child: const SizedBox(
                                                   height: 500.0,
                                                   child: LoadRequestWidget(),
                                                 ),
@@ -947,7 +943,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                             child: Padding(
                                               padding: MediaQuery.viewInsetsOf(
                                                   context),
-                                              child: Container(
+                                              child: const SizedBox(
                                                 height: 400.0,
                                                 child:
                                                     PaymentMethodNotChoosedWidget(),
@@ -964,17 +960,17 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                                     '0pr1u6gr' /* Confirmar Atendimento */,
                                   ),
                                   options: FFButtonOptions(
-                                    padding: EdgeInsets.all(24.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsets.all(24.0),
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFF3F92D4),
+                                    color: const Color(0xFF3F92D4),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
                                           fontFamily: 'Readex Pro',
                                           color: Colors.white,
                                         ),
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                     ),
                                     borderRadius: BorderRadius.circular(14.0),
@@ -984,7 +980,7 @@ class _PaymentConfirmWidgetState extends State<PaymentConfirmWidget> {
                             ],
                           ),
                         ),
-                      ].divide(SizedBox(height: 25.0)),
+                      ].divide(const SizedBox(height: 25.0)),
                     ),
                   ),
                 ),

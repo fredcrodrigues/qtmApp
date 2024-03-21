@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'alert_delete_modal_model.dart';
 export 'alert_delete_modal_model.dart';
 
@@ -49,7 +46,7 @@ class _AlertDeleteModalWidgetState extends State<AlertDeleteModalWidget> {
     return Container(
       width: double.infinity,
       height: 270.0,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(
@@ -66,9 +63,9 @@ class _AlertDeleteModalWidgetState extends State<AlertDeleteModalWidget> {
         ),
       ),
       child: Align(
-        alignment: AlignmentDirectional(0.0, 0.0),
+        alignment: const AlignmentDirectional(0.0, 0.0),
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -78,7 +75,7 @@ class _AlertDeleteModalWidgetState extends State<AlertDeleteModalWidget> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'a3b2u4t7' /* Deseja deletar essa prática
@@ -88,7 +85,7 @@ class _AlertDeleteModalWidgetState extends State<AlertDeleteModalWidget> {
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
-                            color: Color(0xFF14181B),
+                            color: const Color(0xFF14181B),
                             fontSize: 20.0,
                             fontWeight: FontWeight.w600,
                           ),
@@ -103,7 +100,7 @@ class _AlertDeleteModalWidgetState extends State<AlertDeleteModalWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           Navigator.pop(context);
@@ -114,20 +111,20 @@ class _AlertDeleteModalWidgetState extends State<AlertDeleteModalWidget> {
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 48.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: Colors.white,
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Lexend Deca',
-                                    color: Color(0xFFA54EAF),
+                                    color: const Color(0xFFA54EAF),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.normal,
                                   ),
                           elevation: 0.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0xFFA54EAF),
                             width: 0.0,
                           ),
@@ -138,7 +135,7 @@ class _AlertDeleteModalWidgetState extends State<AlertDeleteModalWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           await widget.refPratical!.delete();
@@ -150,18 +147,18 @@ class _AlertDeleteModalWidgetState extends State<AlertDeleteModalWidget> {
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 48.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: Color(0xFFA54EAF),
+                          color: const Color(0xFFA54EAF),
                           textStyle:
                               FlutterFlowTheme.of(context).bodyLarge.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFFFCFCFC),
+                                    color: const Color(0xFFFCFCFC),
                                   ),
                           elevation: 2.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),
@@ -169,7 +166,7 @@ class _AlertDeleteModalWidgetState extends State<AlertDeleteModalWidget> {
                       ),
                     ),
                   ),
-                ].divide(SizedBox(width: 20.0)),
+                ].divide(const SizedBox(width: 20.0)),
               ),
             ],
           ),

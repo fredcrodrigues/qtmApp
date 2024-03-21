@@ -1,25 +1,8 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/firebase_storage/storage.dart';
-import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_place_picker.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/flutter_flow/place.dart';
-import '/flutter_flow/upload_data.dart';
-import '/pages/therapist/coworkings/components/alert_update_coworking_modal/alert_update_coworking_modal_widget.dart';
-import 'dart:io';
 import 'coworkig_update_modal_widget.dart' show CoworkigUpdateModalWidget;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class CoworkigUpdateModalModel
     extends FlutterFlowModel<CoworkigUpdateModalWidget> {
@@ -47,7 +30,7 @@ class CoworkigUpdateModalModel
   String? dropDownValue;
   FormFieldController<String>? dropDownValueController;
   // State field(s) for PlacePickercoworkinup widget.
-  var placePickercoworkinupValue = FFPlace();
+  var placePickercoworkinupValue = const FFPlace();
   bool isDataUploading1 = false;
   FFUploadedFile uploadedLocalFile1 =
       FFUploadedFile(bytes: Uint8List.fromList([]));

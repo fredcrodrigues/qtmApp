@@ -7,10 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/therapist/schedules/components/alert_reject_theraphist/alert_reject_theraphist_widget.dart';
 import '/pages/therapist/schedules/components/erro_moda_refund_theraphist/erro_moda_refund_theraphist_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'reject_modal_theraphist_model.dart';
 export 'reject_modal_theraphist_model.dart';
 
@@ -61,11 +58,11 @@ class _RejectModalTheraphistWidgetState
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Material(
         color: Colors.transparent,
         elevation: 5.0,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
@@ -76,7 +73,7 @@ class _RejectModalTheraphistWidgetState
         child: Container(
           width: double.infinity,
           height: 560.0,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
@@ -95,7 +92,7 @@ class _RejectModalTheraphistWidgetState
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'pt0k86si' /* Tem certeza que deseja */,
@@ -114,7 +111,7 @@ class _RejectModalTheraphistWidgetState
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         '1or7boai' /* recusar esta solicitação?! */,
@@ -129,7 +126,7 @@ class _RejectModalTheraphistWidgetState
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -147,9 +144,9 @@ class _RejectModalTheraphistWidgetState
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -157,9 +154,9 @@ class _RejectModalTheraphistWidgetState
                     children: [
                       Flexible(
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: FFButtonWidget(
                               onPressed: () async {
@@ -171,20 +168,20 @@ class _RejectModalTheraphistWidgetState
                               options: FFButtonOptions(
                                 width: double.infinity,
                                 height: 49.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: Colors.white,
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFFA54EAF),
+                                      color: const Color(0xFFA54EAF),
                                       fontWeight: FontWeight.w500,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Color(0xFF95489D),
                                   width: 1.0,
                                 ),
@@ -196,21 +193,21 @@ class _RejectModalTheraphistWidgetState
                       ),
                       Flexible(
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Builder(
                             builder: (context) => Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
-                                  var _shouldSetState = false;
+                                  var shouldSetState = false;
                                   _model.responseApiRefund =
                                       await StripeApiNodeGroup
                                           .cancelPaymentIntentCall
                                           .call(
                                     paymentIntentId: widget.paymentId,
                                   );
-                                  _shouldSetState = true;
+                                  shouldSetState = true;
                                   if ((_model.responseApiRefund?.statusCode ??
                                           200) ==
                                       200) {
@@ -250,11 +247,11 @@ class _RejectModalTheraphistWidgetState
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: AlignmentDirectional(
+                                          alignment: const AlignmentDirectional(
                                                   0.0, 0.0)
                                               .resolve(
                                                   Directionality.of(context)),
-                                          child: AlertRejectTheraphistWidget(),
+                                          child: const AlertRejectTheraphistWidget(),
                                         );
                                       },
                                     ).then((value) => setState(() {}));
@@ -269,7 +266,7 @@ class _RejectModalTheraphistWidgetState
                                       }.withoutNulls,
                                     );
 
-                                    if (_shouldSetState) setState(() {});
+                                    if (shouldSetState) setState(() {});
                                     return;
                                   } else {
                                     await showModalBottomSheet(
@@ -282,16 +279,16 @@ class _RejectModalTheraphistWidgetState
                                           padding:
                                               MediaQuery.viewInsetsOf(context),
                                           child:
-                                              ErroModaRefundTheraphistWidget(),
+                                              const ErroModaRefundTheraphistWidget(),
                                         );
                                       },
                                     ).then((value) => safeSetState(() {}));
 
-                                    if (_shouldSetState) setState(() {});
+                                    if (shouldSetState) setState(() {});
                                     return;
                                   }
 
-                                  if (_shouldSetState) setState(() {});
+                                  if (shouldSetState) setState(() {});
                                 },
                                 text: FFLocalizations.of(context).getText(
                                   'tk0nvp15' /* Recusar */,
@@ -299,11 +296,11 @@ class _RejectModalTheraphistWidgetState
                                 options: FFButtonOptions(
                                   width: double.infinity,
                                   height: 49.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFF95489D),
+                                  color: const Color(0xFF95489D),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
@@ -311,7 +308,7 @@ class _RejectModalTheraphistWidgetState
                                         color: Colors.white,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
@@ -322,7 +319,7 @@ class _RejectModalTheraphistWidgetState
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(width: 6.0)),
+                    ].divide(const SizedBox(width: 6.0)),
                   ),
                 ),
               ),

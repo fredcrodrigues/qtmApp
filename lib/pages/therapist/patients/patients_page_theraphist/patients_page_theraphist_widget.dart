@@ -1,19 +1,14 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/therapist/patients/components/cancel_schedule_modal/cancel_schedule_modal_widget.dart';
 import '/pages/therapist/patients/components/prescription_modal/prescription_modal_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'patients_page_theraphist_model.dart';
 export 'patients_page_theraphist_model.dart';
@@ -130,8 +125,8 @@ class _PatientsPageTheraphistWidgetState
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 100.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 100.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -197,18 +192,18 @@ class _PatientsPageTheraphistWidgetState
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
-            backgroundColor: Color(0xFFA54EAF),
+            backgroundColor: const Color(0xFFA54EAF),
             automaticallyImplyLeading: false,
             leading: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_ios,
                   color: Colors.white,
                   size: 30.0,
@@ -219,7 +214,7 @@ class _PatientsPageTheraphistWidgetState
               ),
             ),
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'j30ft508' /* Pacientes */,
@@ -231,7 +226,7 @@ class _PatientsPageTheraphistWidgetState
                     ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -247,11 +242,11 @@ class _PatientsPageTheraphistWidgetState
                 width: 0.0,
               ),
             ),
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Align(
-              alignment: AlignmentDirectional(0.0, -1.0),
+              alignment: const AlignmentDirectional(0.0, -1.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -259,7 +254,7 @@ class _PatientsPageTheraphistWidgetState
                       builder: (context) {
                         if (FFAppState().loadrequestTheraphist) {
                           return Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 20.0, 0.0),
                             child: ListView(
                               padding: EdgeInsets.zero,
@@ -274,7 +269,7 @@ class _PatientsPageTheraphistWidgetState
                                         width: 100.0,
                                         height: 121.0,
                                         decoration: BoxDecoration(
-                                          gradient: LinearGradient(
+                                          gradient: const LinearGradient(
                                             colors: [
                                               Color(0xFFE9E9E9),
                                               Color(0xFFCBCBCB)
@@ -300,7 +295,7 @@ class _PatientsPageTheraphistWidgetState
                                         width: 100.0,
                                         height: 121.0,
                                         decoration: BoxDecoration(
-                                          gradient: LinearGradient(
+                                          gradient: const LinearGradient(
                                             colors: [
                                               Color(0xFFE9E9E9),
                                               Color(0xFFCBCBCB)
@@ -326,7 +321,7 @@ class _PatientsPageTheraphistWidgetState
                                         width: 100.0,
                                         height: 121.0,
                                         decoration: BoxDecoration(
-                                          gradient: LinearGradient(
+                                          gradient: const LinearGradient(
                                             colors: [
                                               Color(0xFFE9E9E9),
                                               Color(0xFFCBCBCB)
@@ -352,7 +347,7 @@ class _PatientsPageTheraphistWidgetState
                                         width: 100.0,
                                         height: 121.0,
                                         decoration: BoxDecoration(
-                                          gradient: LinearGradient(
+                                          gradient: const LinearGradient(
                                             colors: [
                                               Color(0xFFE9E9E9),
                                               Color(0xFFCBCBCB)
@@ -378,7 +373,7 @@ class _PatientsPageTheraphistWidgetState
                                         width: 100.0,
                                         height: 121.0,
                                         decoration: BoxDecoration(
-                                          gradient: LinearGradient(
+                                          gradient: const LinearGradient(
                                             colors: [
                                               Color(0xFFE9E9E9),
                                               Color(0xFFCBCBCB)
@@ -404,7 +399,7 @@ class _PatientsPageTheraphistWidgetState
                                         width: 100.0,
                                         height: 121.0,
                                         decoration: BoxDecoration(
-                                          gradient: LinearGradient(
+                                          gradient: const LinearGradient(
                                             colors: [
                                               Color(0xFFE9E9E9),
                                               Color(0xFFCBCBCB)
@@ -422,7 +417,7 @@ class _PatientsPageTheraphistWidgetState
                                     ),
                                   ],
                                 ),
-                              ].divide(SizedBox(height: 15.0)),
+                              ].divide(const SizedBox(height: 15.0)),
                             ),
                           );
                         } else {
@@ -431,7 +426,7 @@ class _PatientsPageTheraphistWidgetState
                             children: [
                               Builder(
                                 builder: (context) {
-                                  if (_model.resquestsPatients.length == 0) {
+                                  if (_model.resquestsPatients.isEmpty) {
                                     return Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -439,7 +434,7 @@ class _PatientsPageTheraphistWidgetState
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 150.0, 0.0, 0.0),
                                           child: ClipRRect(
                                             borderRadius:
@@ -476,7 +471,7 @@ class _PatientsPageTheraphistWidgetState
                                               builder: (context, snapshot) {
                                                 // Customize what your widget looks like when it's loading.
                                                 if (!snapshot.hasData) {
-                                                  return Center(
+                                                  return const Center(
                                                     child: Padding(
                                                       padding:
                                                           EdgeInsetsDirectional
@@ -509,7 +504,7 @@ class _PatientsPageTheraphistWidgetState
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     12.0,
@@ -608,7 +603,7 @@ class _PatientsPageTheraphistWidgetState
                                                                     BoxDecoration(
                                                                   color: Colors
                                                                       .white,
-                                                                  boxShadow: [
+                                                                  boxShadow: const [
                                                                     BoxShadow(
                                                                       blurRadius:
                                                                           4.0,
@@ -659,7 +654,7 @@ class _PatientsPageTheraphistWidgetState
                                                                       children: [
                                                                         ClipRRect(
                                                                           borderRadius:
-                                                                              BorderRadius.only(
+                                                                              const BorderRadius.only(
                                                                             bottomLeft:
                                                                                 Radius.circular(12.0),
                                                                             bottomRight:
@@ -681,7 +676,7 @@ class _PatientsPageTheraphistWidgetState
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               130.0,
                                                                               0.0,
                                                                               12.0,
@@ -699,13 +694,13 @@ class _PatientsPageTheraphistWidgetState
                                                                                 videoCardUsersRecord.firstName,
                                                                                 style: FlutterFlowTheme.of(context).bodyLarge.override(
                                                                                       fontFamily: 'Readex Pro',
-                                                                                      color: Color(0xFF484848),
+                                                                                      color: const Color(0xFF484848),
                                                                                       fontSize: 14.0,
                                                                                       fontWeight: FontWeight.normal,
                                                                                     ),
                                                                               ),
                                                                               Align(
-                                                                                alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -713,18 +708,18 @@ class _PatientsPageTheraphistWidgetState
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
-                                                                                        Icon(
+                                                                                        const Icon(
                                                                                           Icons.assignment_sharp,
                                                                                           color: Color(0xFFA54EAF),
                                                                                           size: 10.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
                                                                                           child: Text(
                                                                                             stackPracticeRecord.name,
                                                                                             style: FlutterFlowTheme.of(context).labelSmall.override(
                                                                                                   fontFamily: 'Readex Pro',
-                                                                                                  color: Color(0xFF57636C),
+                                                                                                  color: const Color(0xFF57636C),
                                                                                                   fontSize: 10.0,
                                                                                                   fontWeight: FontWeight.normal,
                                                                                                 ),
@@ -735,13 +730,13 @@ class _PatientsPageTheraphistWidgetState
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
-                                                                                        Icon(
+                                                                                        const Icon(
                                                                                           Icons.date_range,
                                                                                           color: Color(0xFFA54EAF),
                                                                                           size: 10.0,
                                                                                         ),
                                                                                         Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 4.0),
                                                                                           child: Text(
                                                                                             valueOrDefault<String>(
                                                                                               dateTimeFormat(
@@ -753,7 +748,7 @@ class _PatientsPageTheraphistWidgetState
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).labelSmall.override(
                                                                                                   fontFamily: 'Readex Pro',
-                                                                                                  color: Color(0xFF57636C),
+                                                                                                  color: const Color(0xFF57636C),
                                                                                                   fontSize: 10.0,
                                                                                                   fontWeight: FontWeight.normal,
                                                                                                 ),
@@ -761,11 +756,11 @@ class _PatientsPageTheraphistWidgetState
                                                                                         ),
                                                                                       ],
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 20.0)),
+                                                                                  ].divide(const SizedBox(width: 20.0)),
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
@@ -775,7 +770,7 @@ class _PatientsPageTheraphistWidgetState
                                                                                       ),
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                             fontFamily: 'Readex Pro',
-                                                                                            color: Color(0xFFA54EAF),
+                                                                                            color: const Color(0xFFA54EAF),
                                                                                             fontSize: 10.0,
                                                                                             fontWeight: FontWeight.w600,
                                                                                           ),
@@ -784,12 +779,12 @@ class _PatientsPageTheraphistWidgetState
                                                                                       listofrequestsItem.status == 'accept' ? 'em andamento' : 'finalizado',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                             fontFamily: 'Readex Pro',
-                                                                                            color: Color(0xFF484848),
+                                                                                            color: const Color(0xFF484848),
                                                                                             fontSize: 10.0,
                                                                                             fontWeight: FontWeight.w500,
                                                                                           ),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 5.0)),
+                                                                                  ].divide(const SizedBox(width: 5.0)),
                                                                                 ),
                                                                               ),
                                                                               Row(
@@ -802,17 +797,17 @@ class _PatientsPageTheraphistWidgetState
                                                                                       color: Colors.white,
                                                                                       borderRadius: BorderRadius.circular(100.0),
                                                                                       border: Border.all(
-                                                                                        color: Color(0x75ACAAAA),
+                                                                                        color: const Color(0x75ACAAAA),
                                                                                         width: 0.5,
                                                                                       ),
                                                                                     ),
                                                                                     child: Align(
-                                                                                      alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                                      alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                                       child: Container(
                                                                                         width: 100.0,
                                                                                         height: 5.0,
                                                                                         decoration: BoxDecoration(
-                                                                                          color: Color(0xFFA54EAF),
+                                                                                          color: const Color(0xFFA54EAF),
                                                                                           borderRadius: BorderRadius.circular(100.0),
                                                                                         ),
                                                                                       ),
@@ -830,19 +825,19 @@ class _PatientsPageTheraphistWidgetState
                                                                               MainAxisAlignment.end,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                               child: Container(
                                                                                 width: 68.0,
                                                                                 height: 19.0,
-                                                                                decoration: BoxDecoration(
+                                                                                decoration: const BoxDecoration(
                                                                                   color: Colors.white,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                                                                   child: Transform.rotate(
                                                                                     angle: 4.7124,
                                                                                     child: Padding(
-                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                                                                                       child: InkWell(
                                                                                         splashColor: Colors.transparent,
                                                                                         focusColor: Colors.transparent,
@@ -869,7 +864,7 @@ class _PatientsPageTheraphistWidgetState
                                                                                             },
                                                                                           ).then((value) => safeSetState(() {}));
                                                                                         },
-                                                                                        child: Icon(
+                                                                                        child: const Icon(
                                                                                           Icons.keyboard_control,
                                                                                           color: Color(0xFFABABB4),
                                                                                           size: 20.0,

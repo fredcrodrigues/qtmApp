@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'screen_support_model.dart';
 export 'screen_support_model.dart';
 
@@ -42,11 +39,11 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF1DA4D4),
+        backgroundColor: const Color(0xFF1DA4D4),
         body: SafeArea(
           top: true,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFFF6F9FC),
             ),
             child: Column(
@@ -55,7 +52,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                 Container(
                   width: double.infinity,
                   height: 100.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFF1DA4D4),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(14.0),
@@ -76,7 +73,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                         onTap: () async {
                           context.safePop();
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.arrow_back_ios_new,
                           color: Colors.white,
                           size: 30.0,
@@ -92,7 +89,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                               fontSize: 20.0,
                             ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.support_agent_outlined,
                         color: Colors.white,
                         size: 34.0,
@@ -106,7 +103,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               25.0, 30.0, 25.0, 20.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -119,7 +116,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Raleway',
-                                      color: Color(0xFF4C7BA7),
+                                      color: const Color(0xFF4C7BA7),
                                       fontSize: 28.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -128,7 +125,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               25.0, 0.0, 25.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -150,7 +147,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               25.0, 30.0, 25.0, 30.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -169,13 +166,13 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                     Container(
                                       width: double.infinity,
                                       height: 220.0,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 320.0,
                                       ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 10.0,
                                             color: Color(0x33000000),
@@ -186,7 +183,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 25.0, 30.0, 25.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -196,7 +193,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Icon(
+                                                const Icon(
                                                   Icons.home_work,
                                                   color: Color(0xFF8466B4),
                                                   size: 34.0,
@@ -213,13 +210,13 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                                         .override(
                                                           fontFamily: 'Poppins',
                                                           color:
-                                                              Color(0xFF0A2540),
+                                                              const Color(0xFF0A2540),
                                                           fontWeight:
                                                               FontWeight.w600,
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 15.0)),
+                                              ].divide(const SizedBox(width: 15.0)),
                                             ),
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -256,14 +253,14 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                                   child: Container(
                                                     height: 40.0,
                                                     decoration: BoxDecoration(
-                                                      color: Color(0xFF8466B4),
+                                                      color: const Color(0xFF8466B4),
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               24.0),
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   15.0,
                                                                   0.0,
@@ -294,13 +291,13 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                                                           .w600,
                                                                 ),
                                                           ),
-                                                          Icon(
+                                                          const Icon(
                                                             Icons
                                                                 .arrow_forward_ios_sharp,
                                                             color: Colors.white,
                                                             size: 14.0,
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 10.0)),
                                                       ),
                                                     ),
@@ -315,13 +312,13 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                     Container(
                                       width: double.infinity,
                                       height: 220.0,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 320.0,
                                       ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 10.0,
                                             color: Color(0x33000000),
@@ -332,7 +329,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 25.0, 30.0, 25.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -342,7 +339,7 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Icon(
+                                                const Icon(
                                                   Icons.headset_mic,
                                                   color: Color(0xFF8466B4),
                                                   size: 34.0,
@@ -359,13 +356,13 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                                         .override(
                                                           fontFamily: 'Poppins',
                                                           color:
-                                                              Color(0xFF0A2540),
+                                                              const Color(0xFF0A2540),
                                                           fontWeight:
                                                               FontWeight.w600,
                                                         ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(width: 15.0)),
+                                              ].divide(const SizedBox(width: 15.0)),
                                             ),
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -402,14 +399,14 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                                   child: Container(
                                                     height: 40.0,
                                                     decoration: BoxDecoration(
-                                                      color: Color(0xFF8466B4),
+                                                      color: const Color(0xFF8466B4),
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               24.0),
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   15.0,
                                                                   0.0,
@@ -440,13 +437,13 @@ class _ScreenSupportWidgetState extends State<ScreenSupportWidget> {
                                                                           .w600,
                                                                 ),
                                                           ),
-                                                          Icon(
+                                                          const Icon(
                                                             Icons
                                                                 .arrow_forward_ios_sharp,
                                                             color: Colors.white,
                                                             size: 14.0,
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 10.0)),
                                                       ),
                                                     ),

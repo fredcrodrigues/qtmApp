@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
-import 'backend/api_requests/api_manager.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:csv/csv.dart';
 import 'package:synchronized/synchronized.dart';
@@ -21,7 +19,7 @@ class FFAppState extends ChangeNotifier {
   }
 
   Future initializePersistedState() async {
-    secureStorage = FlutterSecureStorage();
+    secureStorage = const FlutterSecureStorage();
     await _safeInitAsync(() async {
       _tableHistoryLastId =
           await secureStorage.getInt('ff_tableHistoryLastId') ??
@@ -52,9 +50,9 @@ class FFAppState extends ChangeNotifier {
 
   int _tableHistoryLastId = 0;
   int get tableHistoryLastId => _tableHistoryLastId;
-  set tableHistoryLastId(int _value) {
-    _tableHistoryLastId = _value;
-    secureStorage.setInt('ff_tableHistoryLastId', _value);
+  set tableHistoryLastId(int value) {
+    _tableHistoryLastId = value;
+    secureStorage.setInt('ff_tableHistoryLastId', value);
   }
 
   void deleteTableHistoryLastId() {
@@ -63,172 +61,172 @@ class FFAppState extends ChangeNotifier {
 
   List<ItemStruct> _tableHistory = [];
   List<ItemStruct> get tableHistory => _tableHistory;
-  set tableHistory(List<ItemStruct> _value) {
-    _tableHistory = _value;
+  set tableHistory(List<ItemStruct> value) {
+    _tableHistory = value;
     secureStorage.setStringList(
-        'ff_tableHistory', _value.map((x) => x.serialize()).toList());
+        'ff_tableHistory', value.map((x) => x.serialize()).toList());
   }
 
   void deleteTableHistory() {
     secureStorage.delete(key: 'ff_tableHistory');
   }
 
-  void addToTableHistory(ItemStruct _value) {
-    _tableHistory.add(_value);
+  void addToTableHistory(ItemStruct value) {
+    _tableHistory.add(value);
     secureStorage.setStringList(
         'ff_tableHistory', _tableHistory.map((x) => x.serialize()).toList());
   }
 
-  void removeFromTableHistory(ItemStruct _value) {
-    _tableHistory.remove(_value);
+  void removeFromTableHistory(ItemStruct value) {
+    _tableHistory.remove(value);
     secureStorage.setStringList(
         'ff_tableHistory', _tableHistory.map((x) => x.serialize()).toList());
   }
 
-  void removeAtIndexFromTableHistory(int _index) {
-    _tableHistory.removeAt(_index);
+  void removeAtIndexFromTableHistory(int index) {
+    _tableHistory.removeAt(index);
     secureStorage.setStringList(
         'ff_tableHistory', _tableHistory.map((x) => x.serialize()).toList());
   }
 
   void updateTableHistoryAtIndex(
-    int _index,
+    int index,
     ItemStruct Function(ItemStruct) updateFn,
   ) {
-    _tableHistory[_index] = updateFn(_tableHistory[_index]);
+    _tableHistory[index] = updateFn(_tableHistory[index]);
     secureStorage.setStringList(
         'ff_tableHistory', _tableHistory.map((x) => x.serialize()).toList());
   }
 
-  void insertAtIndexInTableHistory(int _index, ItemStruct _value) {
-    _tableHistory.insert(_index, _value);
+  void insertAtIndexInTableHistory(int index, ItemStruct value) {
+    _tableHistory.insert(index, value);
     secureStorage.setStringList(
         'ff_tableHistory', _tableHistory.map((x) => x.serialize()).toList());
   }
 
   List<CardStruct> _cards = [];
   List<CardStruct> get cards => _cards;
-  set cards(List<CardStruct> _value) {
-    _cards = _value;
+  set cards(List<CardStruct> value) {
+    _cards = value;
   }
 
-  void addToCards(CardStruct _value) {
-    _cards.add(_value);
+  void addToCards(CardStruct value) {
+    _cards.add(value);
   }
 
-  void removeFromCards(CardStruct _value) {
-    _cards.remove(_value);
+  void removeFromCards(CardStruct value) {
+    _cards.remove(value);
   }
 
-  void removeAtIndexFromCards(int _index) {
-    _cards.removeAt(_index);
+  void removeAtIndexFromCards(int index) {
+    _cards.removeAt(index);
   }
 
   void updateCardsAtIndex(
-    int _index,
+    int index,
     CardStruct Function(CardStruct) updateFn,
   ) {
-    _cards[_index] = updateFn(_cards[_index]);
+    _cards[index] = updateFn(_cards[index]);
   }
 
-  void insertAtIndexInCards(int _index, CardStruct _value) {
-    _cards.insert(_index, _value);
+  void insertAtIndexInCards(int index, CardStruct value) {
+    _cards.insert(index, value);
   }
 
   bool _isOptionExpanded = false;
   bool get isOptionExpanded => _isOptionExpanded;
-  set isOptionExpanded(bool _value) {
-    _isOptionExpanded = _value;
+  set isOptionExpanded(bool value) {
+    _isOptionExpanded = value;
   }
 
   bool _loadRequests = false;
   bool get loadRequests => _loadRequests;
-  set loadRequests(bool _value) {
-    _loadRequests = _value;
+  set loadRequests(bool value) {
+    _loadRequests = value;
   }
 
   bool _loadrequestTheraphist = false;
   bool get loadrequestTheraphist => _loadrequestTheraphist;
-  set loadrequestTheraphist(bool _value) {
-    _loadrequestTheraphist = _value;
+  set loadrequestTheraphist(bool value) {
+    _loadrequestTheraphist = value;
   }
 
   String _gif = '';
   String get gif => _gif;
-  set gif(String _value) {
-    _gif = _value;
+  set gif(String value) {
+    _gif = value;
   }
 
   DocumentReference? _refTheraphist;
   DocumentReference? get refTheraphist => _refTheraphist;
-  set refTheraphist(DocumentReference? _value) {
-    _refTheraphist = _value;
+  set refTheraphist(DocumentReference? value) {
+    _refTheraphist = value;
   }
 
   bool _isOptionExpandedTheraphist = false;
   bool get isOptionExpandedTheraphist => _isOptionExpandedTheraphist;
-  set isOptionExpandedTheraphist(bool _value) {
-    _isOptionExpandedTheraphist = _value;
+  set isOptionExpandedTheraphist(bool value) {
+    _isOptionExpandedTheraphist = value;
   }
 
   DocumentReference? _refCoworking;
   DocumentReference? get refCoworking => _refCoworking;
-  set refCoworking(DocumentReference? _value) {
-    _refCoworking = _value;
+  set refCoworking(DocumentReference? value) {
+    _refCoworking = value;
   }
 
   bool _coworkingUpdate = false;
   bool get coworkingUpdate => _coworkingUpdate;
-  set coworkingUpdate(bool _value) {
-    _coworkingUpdate = _value;
+  set coworkingUpdate(bool value) {
+    _coworkingUpdate = value;
   }
 
   bool _createBank = false;
   bool get createBank => _createBank;
-  set createBank(bool _value) {
-    _createBank = _value;
+  set createBank(bool value) {
+    _createBank = value;
   }
 
   bool _stateHistoryPatient = false;
   bool get stateHistoryPatient => _stateHistoryPatient;
-  set stateHistoryPatient(bool _value) {
-    _stateHistoryPatient = _value;
+  set stateHistoryPatient(bool value) {
+    _stateHistoryPatient = value;
   }
 
   bool _stateHomePatient = false;
   bool get stateHomePatient => _stateHomePatient;
-  set stateHomePatient(bool _value) {
-    _stateHomePatient = _value;
+  set stateHomePatient(bool value) {
+    _stateHomePatient = value;
   }
 
   bool _stateNotificationPatient = false;
   bool get stateNotificationPatient => _stateNotificationPatient;
-  set stateNotificationPatient(bool _value) {
-    _stateNotificationPatient = _value;
+  set stateNotificationPatient(bool value) {
+    _stateNotificationPatient = value;
   }
 
   bool _stateHomeTheraphist = false;
   bool get stateHomeTheraphist => _stateHomeTheraphist;
-  set stateHomeTheraphist(bool _value) {
-    _stateHomeTheraphist = _value;
+  set stateHomeTheraphist(bool value) {
+    _stateHomeTheraphist = value;
   }
 
   bool _stateNotificationTheraphit = false;
   bool get stateNotificationTheraphit => _stateNotificationTheraphit;
-  set stateNotificationTheraphit(bool _value) {
-    _stateNotificationTheraphit = _value;
+  set stateNotificationTheraphit(bool value) {
+    _stateNotificationTheraphit = value;
   }
 
   bool _stateHistoryTheraphit = false;
   bool get stateHistoryTheraphit => _stateHistoryTheraphit;
-  set stateHistoryTheraphit(bool _value) {
-    _stateHistoryTheraphit = _value;
+  set stateHistoryTheraphit(bool value) {
+    _stateHistoryTheraphit = value;
   }
 
   String _TermosLink = 'Termos e Condições';
   String get TermosLink => _TermosLink;
-  set TermosLink(String _value) {
-    _TermosLink = _value;
+  set TermosLink(String value) {
+    _TermosLink = value;
   }
 }
 
@@ -277,12 +275,12 @@ extension FlutterSecureStorageExtensions on FlutterSecureStorage {
         if (result == null || result.isEmpty) {
           return null;
         }
-        return CsvToListConverter()
+        return const CsvToListConverter()
             .convert(result)
             .first
             .map((e) => e.toString())
             .toList();
       });
   Future<void> setStringList(String key, List<String> value) async =>
-      await writeSync(key: key, value: ListToCsvConverter().convert([value]));
+      await writeSync(key: key, value: const ListToCsvConverter().convert([value]));
 }

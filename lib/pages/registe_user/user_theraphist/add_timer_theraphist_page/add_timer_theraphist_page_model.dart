@@ -1,26 +1,11 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/pages/registe_user/components/alert_register_user_theraphist_modal/alert_register_user_theraphist_modal_widget.dart';
-import '/pages/registe_user/user_theraphist/introduction/turorial_theraphist_03_page/turorial_theraphist03_page_widget.dart';
-import '/pages/registe_user/user_theraphist/introduction/turorial_theraphist_05_page/turorial_theraphist05_page_widget.dart';
-import '/pages/registe_user/user_theraphist/introduction/turorial_theraphist_06_intro_page/turorial_theraphist06_intro_page_widget.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'add_timer_theraphist_page_widget.dart'
     show AddTimerTheraphistPageWidget;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expandable/expandable.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:provider/provider.dart';
 
 class AddTimerTheraphistPageModel
     extends FlutterFlowModel<AddTimerTheraphistPageWidget> {

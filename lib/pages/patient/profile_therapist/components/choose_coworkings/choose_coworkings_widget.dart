@@ -1,17 +1,13 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/patient/profile_therapist/components/coworking_image_modal/coworking_image_modal_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'choose_coworkings_model.dart';
 export 'choose_coworkings_model.dart';
 
@@ -132,7 +128,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
               borderRadius: BorderRadius.circular(0.0),
             ),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -143,7 +139,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                         child: Container(
                           width: 100.0,
                           height: 100.0,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFF1DA4D4),
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(14.0),
@@ -164,7 +160,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                 onTap: () async {
                                   context.safePop();
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.arrow_back,
                                   color: Colors.white,
                                   size: 28.0,
@@ -183,7 +179,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                       fontWeight: FontWeight.bold,
                                     ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.home_work,
                                 color: Colors.white,
                                 size: 30.0,
@@ -203,7 +199,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                             builder: (context) {
                               if (_model.loadCoworking) {
                                 return Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 15.0, 20.0, 15.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -217,7 +213,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                               width: 100.0,
                                               height: 180.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -244,7 +240,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                               width: 100.0,
                                               height: 180.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -271,7 +267,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                               width: 100.0,
                                               height: 180.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -290,14 +286,14 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                           ),
                                         ],
                                       ),
-                                    ].divide(SizedBox(height: 10.0)),
+                                    ].divide(const SizedBox(height: 10.0)),
                                   ),
                                 );
                               } else {
                                 return Align(
-                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         15.0, 15.0, 15.0, 15.0),
                                     child: Builder(
                                       builder: (context) {
@@ -321,7 +317,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryBackground,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 4.0,
                                                       color: Color(0x33000000),
@@ -338,14 +334,14 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                   mainAxisAlignment:
                                                       MainAxisAlignment.start,
                                                   children: [
-                                                    Container(
+                                                    SizedBox(
                                                       width: 140.0,
                                                       height: 190.0,
                                                       child: Stack(
                                                         children: [
                                                           ClipRRect(
                                                             borderRadius:
-                                                                BorderRadius
+                                                                const BorderRadius
                                                                     .only(
                                                               bottomLeft: Radius
                                                                   .circular(
@@ -370,19 +366,19 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                               fit: BoxFit.cover,
                                                             ),
                                                           ),
-                                                          Container(
+                                                          SizedBox(
                                                             width: 140.0,
                                                             height: 190.0,
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               children: [
                                                                 Container(
                                                                   width: 140.0,
                                                                   height: 190.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     color: Color(
                                                                         0xB38466B4),
                                                                     borderRadius:
@@ -468,7 +464,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                               fontWeight: FontWeight.bold,
                                                                             ),
                                                                       ),
-                                                                      Icon(
+                                                                      const Icon(
                                                                         Icons
                                                                             .ads_click_sharp,
                                                                         color: Colors
@@ -476,7 +472,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                         size:
                                                                             34.0,
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             10.0)),
                                                                   ),
@@ -490,7 +486,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     10.0,
@@ -520,7 +516,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                       .override(
                                                                         fontFamily:
                                                                             'Raleway',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF6982DE),
                                                                         fontSize:
                                                                             14.0,
@@ -530,7 +526,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                 ),
                                                                 Stack(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   children: [
@@ -543,8 +539,8 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                           BoxDecoration(
                                                                         color: listOfCoworkingsItem.reference ==
                                                                                 _model.choosedCowoking?.reference
-                                                                            ? Color(0xFF8466B4)
-                                                                            : Color(0xFFD9D9D9),
+                                                                            ? const Color(0xFF8466B4)
+                                                                            : const Color(0xFFD9D9D9),
                                                                         shape: BoxShape
                                                                             .circle,
                                                                       ),
@@ -554,7 +550,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                         _model
                                                                             .choosedCowoking
                                                                             ?.reference)
-                                                                      Icon(
+                                                                      const Icon(
                                                                         Icons
                                                                             .check,
                                                                         color: Colors
@@ -564,7 +560,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                       ),
                                                                   ],
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                             Row(
@@ -591,7 +587,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           8.0,
@@ -618,13 +614,13 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                   width: double
                                                                       .infinity,
                                                                   height: 40.0,
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
-                                                                  iconPadding: EdgeInsetsDirectional
+                                                                  iconPadding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -635,9 +631,9 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                           _model
                                                                               .choosedCowoking
                                                                               ?.reference
-                                                                      ? Color(
+                                                                      ? const Color(
                                                                           0xFF8466B4)
-                                                                      : Color(
+                                                                      : const Color(
                                                                           0xFFD9D9D9),
                                                                   textStyle: FlutterFlowTheme.of(
                                                                           context)
@@ -648,10 +644,10 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                         color: listOfCoworkingsItem.reference ==
                                                                                 _model.choosedCowoking?.reference
                                                                             ? Colors.white
-                                                                            : Color(0xFF5F6370),
+                                                                            : const Color(0xFF5F6370),
                                                                       ),
                                                                   borderSide:
-                                                                      BorderSide(
+                                                                      const BorderSide(
                                                                     color: Colors
                                                                         .transparent,
                                                                   ),
@@ -662,7 +658,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               height: 10.0)),
                                                         ),
                                                       ),
@@ -670,7 +666,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                                                   ],
                                                 ),
                                               );
-                                            }).divide(SizedBox(height: 10.0)),
+                                            }).divide(const SizedBox(height: 10.0)),
                                           ),
                                         );
                                       },
@@ -686,7 +682,7 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: (_model.choosedCowoking == null)
                           ? null
@@ -735,23 +731,23 @@ class _ChooseCoworkingsWidgetState extends State<ChooseCoworkingsWidget>
                       options: FFButtonOptions(
                         width: double.infinity,
                         height: 60.0,
-                        padding: EdgeInsets.all(0.0),
+                        padding: const EdgeInsets.all(0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFF4F90DB),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: const Color(0xFF4F90DB),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                 ),
                         elevation: 3.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(24.0),
                         disabledColor: FlutterFlowTheme.of(context).accent4,
-                        disabledTextColor: Color(0xFF363636),
+                        disabledTextColor: const Color(0xFF363636),
                       ),
                     ),
                   ),

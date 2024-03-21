@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:typed_data';
-import '../schema/structs/index.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
 import 'api_manager.dart';
@@ -41,11 +39,11 @@ class ValidateCardCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "number": "${number}",
-  "exp_year": "${expYear}",
-  "exp_month": "${expMonth}",
-  "cvc": "${cvc}",
-  "jwt": "${jwt}"
+  "number": "$number",
+  "exp_year": "$expYear",
+  "exp_month": "$expMonth",
+  "cvc": "$cvc",
+  "jwt": "$jwt"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'validate card',
@@ -94,16 +92,16 @@ class CreatePaymentIntentCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "countryPayment": "${countryPayment}",
-  "amount": ${amount},
-  "email": "${email}",
+  "countryPayment": "$countryPayment",
+  "amount": $amount,
+  "email": "$email",
   "card": {
-    "number": "${numberCard}",
-    "cvc": "${cvc}",
-    "exp_month": "${expMonth}",
-    "exp_year": "${expYear}"
+    "number": "$numberCard",
+    "cvc": "$cvc",
+    "exp_month": "$expMonth",
+    "exp_year": "$expYear"
   },
-  "jwt": "${jwt}"
+  "jwt": "$jwt"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'create payment intent',
@@ -198,9 +196,9 @@ class TransferFundsAtTheEndOfTheAppointmentCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "paymentIntentId": "${paymentIntentId}",
-  "countryCode": "${countryCode}",
-  "connectedAccountSellerId": "${connectedAccountSellerId}"
+  "paymentIntentId": "$paymentIntentId",
+  "countryCode": "$countryCode",
+  "connectedAccountSellerId": "$connectedAccountSellerId"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'transfer funds at the end of the appointment',
@@ -235,8 +233,8 @@ class RefundPaymentCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "paymentIntentId": "${paymentIntentId}",
-  "connectedAccountSellerId": "${connectedAccountSellerId}"
+  "paymentIntentId": "$paymentIntentId",
+  "connectedAccountSellerId": "$connectedAccountSellerId"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'refund payment',
@@ -272,9 +270,9 @@ class CreateAccountConnectedCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "email": "${email}",
-  "countryCode": "${countryCode}",
-  "name": "${name}"
+  "email": "$email",
+  "countryCode": "$countryCode",
+  "name": "$name"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'create account connected',
@@ -300,7 +298,7 @@ class CreateAccountConnectedCall {
         response,
         r'''$.status''',
       ));
-  dynamic? responseAccount(dynamic response) => getJsonField(
+  dynamic responseAccount(dynamic response) => getJsonField(
         response,
         r'''$.responseAccount''',
       );
@@ -393,7 +391,7 @@ class CidadesCall {
     return ApiManager.instance.makeApiCall(
       callName: 'cidades',
       apiUrl:
-          '${LocalidadesBrGroup.baseUrl}/api/v1/localidades/estados/${cidade}/distritos',
+          '${LocalidadesBrGroup.baseUrl}/api/v1/localidades/estados/$cidade/distritos',
       callType: ApiCallType.GET,
       headers: {},
       params: {},

@@ -1,14 +1,10 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/custom_code/actions/index.dart' as actions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'modal_filters_model.dart';
 export 'modal_filters_model.dart';
 
@@ -63,7 +59,7 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
     return Container(
       width: MediaQuery.sizeOf(context).width * 1.0,
       height: MediaQuery.sizeOf(context).height * 1.0,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xFFF2F2F2),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
@@ -79,7 +75,7 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
           Container(
             width: MediaQuery.sizeOf(context).width * 1.0,
             height: 60.0,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFF1DA4D4),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(0.0),
@@ -92,7 +88,7 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
+                const Icon(
                   Icons.filter_list,
                   color: Colors.white,
                   size: 28.0,
@@ -108,7 +104,7 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
                         fontWeight: FontWeight.w600,
                       ),
                 ),
-              ].divide(SizedBox(width: 10.0)),
+              ].divide(const SizedBox(width: 10.0)),
             ),
           ),
           Expanded(
@@ -127,12 +123,12 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 5.0, 5.0, 5.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.price_change,
                                 color: Color(0xFF0083B1),
                                 size: 24.0,
@@ -145,17 +141,17 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Raleway',
-                                      color: Color(0xFF0083B1),
+                                      color: const Color(0xFF0083B1),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             10.0, 0.0, 10.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -170,7 +166,7 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
                             ),
                             Expanded(
                               child: SliderTheme(
-                                data: SliderThemeData(
+                                data: const SliderThemeData(
                                   showValueIndicator: ShowValueIndicator.always,
                                 ),
                                 child: Slider(
@@ -212,12 +208,12 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
                               FlutterFlowTheme.of(context).secondaryBackground,
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 5.0, 5.0, 5.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.person,
                                 color: Color(0xFF0083B1),
                                 size: 24.0,
@@ -230,17 +226,17 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Raleway',
-                                      color: Color(0xFF0083B1),
+                                      color: const Color(0xFF0083B1),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 0.0, 20.0, 0.0),
                         child: StreamBuilder<List<SpecialtyRecord>>(
                           stream: querySpecialtyRecord(),
@@ -314,7 +310,7 @@ class _ModalFiltersWidgetState extends State<ModalFiltersWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium,
                                     ),
-                                  ].divide(SizedBox(width: 5.0)),
+                                  ].divide(const SizedBox(width: 5.0)),
                                 );
                               }),
                             );

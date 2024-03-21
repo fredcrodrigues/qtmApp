@@ -2,11 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'type_user_page_model.dart';
 export 'type_user_page_model.dart';
 
@@ -58,7 +54,7 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                 ).image,
               ),
             ),
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -68,7 +64,7 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -89,7 +85,7 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Poppins',
-                                  color: Color(0xD42D2D2D),
+                                  color: const Color(0xD42D2D2D),
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -105,7 +101,7 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                   children: [
                     Expanded(
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             10.0, 0.0, 10.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -116,7 +112,7 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
                                     focusColor: Colors.transparent,
@@ -165,12 +161,12 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                                         borderRadius:
                                             BorderRadius.circular(100.0),
                                         border: Border.all(
-                                          color: Color(0xFF9420AF),
+                                          color: const Color(0xFF9420AF),
                                         ),
                                       ),
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
                                             'qq091ig0' /* Terapeuta */,
@@ -179,7 +175,7 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color: Color(0xFF9420AF),
+                                                color: const Color(0xFF9420AF),
                                               ),
                                         ),
                                       ),
@@ -193,7 +189,7 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
                                     focusColor: Colors.transparent,
@@ -223,12 +219,12 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                                         borderRadius:
                                             BorderRadius.circular(100.0),
                                         border: Border.all(
-                                          color: Color(0xFF9420AF),
+                                          color: const Color(0xFF9420AF),
                                         ),
                                       ),
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
                                             'u7elkki4' /* Paciente */,
@@ -237,7 +233,7 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color: Color(0xFF9420AF),
+                                                color: const Color(0xFF9420AF),
                                               ),
                                         ),
                                       ),
@@ -246,18 +242,18 @@ class _TypeUserPageWidgetState extends State<TypeUserPageWidget> {
                                 ),
                               ],
                             ),
-                            Row(
+                            const Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [],
                             ),
-                          ].divide(SizedBox(height: 20.0)),
+                          ].divide(const SizedBox(height: 20.0)),
                         ),
                       ),
                     ),
                   ],
                 ),
-                Row(
+                const Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [],

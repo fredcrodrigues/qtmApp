@@ -2,8 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'cancel_modal_theraphist_model.dart';
 export 'cancel_modal_theraphist_model.dart';
 
@@ -45,7 +43,7 @@ class _CancelModalTheraphistWidgetState
     return Container(
       width: double.infinity,
       height: 270.0,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(
@@ -62,9 +60,9 @@ class _CancelModalTheraphistWidgetState
         ),
       ),
       child: Align(
-        alignment: AlignmentDirectional(0.0, 0.0),
+        alignment: const AlignmentDirectional(0.0, 0.0),
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -74,14 +72,14 @@ class _CancelModalTheraphistWidgetState
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'vi4nqlpl' /* Deseja cancelar o atendimento? */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
-                            color: Color(0xFF14181B),
+                            color: const Color(0xFF14181B),
                             fontSize: 20.0,
                             fontWeight: FontWeight.w600,
                           ),
@@ -96,7 +94,7 @@ class _CancelModalTheraphistWidgetState
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () async {
                           context.pop();
@@ -107,20 +105,20 @@ class _CancelModalTheraphistWidgetState
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 48.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
                           color: Colors.white,
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Lexend Deca',
-                                    color: Color(0xFFA54EAF),
+                                    color: const Color(0xFFA54EAF),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.normal,
                                   ),
                           elevation: 0.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0xFFA54EAF),
                             width: 0.0,
                           ),
@@ -131,7 +129,7 @@ class _CancelModalTheraphistWidgetState
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                       child: FFButtonWidget(
                         onPressed: () {
                           print('Button pressed ...');
@@ -142,18 +140,18 @@ class _CancelModalTheraphistWidgetState
                         options: FFButtonOptions(
                           width: double.infinity,
                           height: 48.0,
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          iconPadding: EdgeInsetsDirectional.fromSTEB(
+                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 0.0),
-                          color: Color(0xFFA54EAF),
+                          color: const Color(0xFFA54EAF),
                           textStyle:
                               FlutterFlowTheme.of(context).bodyLarge.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFFFCFCFC),
+                                    color: const Color(0xFFFCFCFC),
                                   ),
                           elevation: 2.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Colors.transparent,
                             width: 1.0,
                           ),
@@ -161,7 +159,7 @@ class _CancelModalTheraphistWidgetState
                       ),
                     ),
                   ),
-                ].divide(SizedBox(width: 20.0)),
+                ].divide(const SizedBox(width: 20.0)),
               ),
             ],
           ),

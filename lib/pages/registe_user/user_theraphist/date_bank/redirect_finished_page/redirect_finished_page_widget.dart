@@ -1,13 +1,10 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/registe_user/components/alert_register_user_theraphist_modal/alert_register_user_theraphist_modal_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'redirect_finished_page_model.dart';
 export 'redirect_finished_page_model.dart';
 
@@ -59,7 +56,7 @@ class _RedirectFinishedPageWidgetState extends State<RedirectFinishedPageWidget>
                 : FocusScope.of(context).unfocus(),
             child: Padding(
               padding: MediaQuery.viewInsetsOf(context),
-              child: AlertRegisterUserTheraphistModalWidget(
+              child: const AlertRegisterUserTheraphistModalWidget(
                 refValueSession: 0.0,
               ),
             ),
@@ -96,7 +93,7 @@ class _RedirectFinishedPageWidgetState extends State<RedirectFinishedPageWidget>
             children: [
               Expanded(
                 child: Container(
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     minWidth: 1000.0,
                     minHeight: 1000.0,
                   ),
@@ -109,15 +106,15 @@ class _RedirectFinishedPageWidgetState extends State<RedirectFinishedPageWidget>
                       ).image,
                     ),
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -132,11 +129,11 @@ class _RedirectFinishedPageWidgetState extends State<RedirectFinishedPageWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Container(
                                   width: 284.0,
                                   height: 25.0,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
                                   ),
                                   child: Text(

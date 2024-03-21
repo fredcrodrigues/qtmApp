@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'support_form_model.dart';
 export 'support_form_model.dart';
 
@@ -51,11 +48,11 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF1DA4D4),
+        backgroundColor: const Color(0xFF1DA4D4),
         body: SafeArea(
           top: true,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFFF6F9FC),
             ),
             child: Column(
@@ -64,7 +61,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                 Container(
                   width: double.infinity,
                   height: 100.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFF1DA4D4),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(14.0),
@@ -75,7 +72,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -88,7 +85,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                           onTap: () async {
                             context.safePop();
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.arrow_back_ios_new,
                             color: Colors.white,
                             size: 30.0,
@@ -105,7 +102,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                     fontSize: 20.0,
                                   ),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.support_agent_outlined,
                           color: Colors.white,
                           size: 34.0,
@@ -120,7 +117,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               25.0, 30.0, 25.0, 20.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -134,7 +131,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Raleway',
-                                        color: Color(0xFF4C7BA7),
+                                        color: const Color(0xFF4C7BA7),
                                         fontSize: 28.0,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -144,7 +141,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               25.0, 0.0, 25.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -158,7 +155,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF5B587B),
+                                        color: const Color(0xFF5B587B),
                                         fontWeight: FontWeight.w500,
                                       ),
                                 ),
@@ -167,7 +164,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               25.0, 30.0, 25.0, 20.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -186,14 +183,14 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                     Container(
                                       width: double.infinity,
                                       height: 320.0,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 380.0,
                                         maxHeight: 500.0,
                                       ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 10.0,
                                             color: Color(0x33000000),
@@ -204,7 +201,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 25.0, 30.0, 30.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -231,7 +228,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                             .override(
                                                               fontFamily:
                                                                   'Poppins',
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFF0A2540),
                                                               fontSize: 20.0,
                                                               fontWeight:
@@ -242,7 +239,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                     ),
                                                     Stack(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       children: [
                                                         Container(
@@ -251,16 +248,12 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                           decoration:
                                                               BoxDecoration(
                                                             color: (_model.emailController.text !=
-                                                                            null &&
-                                                                        _model.emailController.text !=
                                                                             '') &&
                                                                     (_model.telephoneController.text !=
-                                                                            null &&
-                                                                        _model.telephoneController.text !=
                                                                             '')
-                                                                ? Color(
+                                                                ? const Color(
                                                                     0xFF8466B4)
-                                                                : Color(
+                                                                : const Color(
                                                                     0xFFDCDCDC),
                                                             shape:
                                                                 BoxShape.circle,
@@ -268,17 +261,11 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                         ),
                                                         if ((_model.emailController
                                                                         .text !=
-                                                                    null &&
-                                                                _model.emailController
-                                                                        .text !=
                                                                     '') &&
                                                             (_model.telephoneController
                                                                         .text !=
-                                                                    null &&
-                                                                _model.telephoneController
-                                                                        .text !=
                                                                     ''))
-                                                          Icon(
+                                                          const Icon(
                                                             Icons.check_sharp,
                                                             color: Colors.white,
                                                             size: 24.0,
@@ -286,7 +273,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                       ],
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 15.0)),
+                                                      const SizedBox(width: 15.0)),
                                                 ),
                                                 Row(
                                                   mainAxisSize:
@@ -295,7 +282,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     5.0,
@@ -344,7 +331,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              Color(0xFFF6F9FC),
+                                                              const Color(0xFFF6F9FC),
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
@@ -352,7 +339,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -430,7 +417,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                                         .circular(
                                                                             8.0),
                                                               ),
-                                                              prefixIcon: Icon(
+                                                              prefixIcon: const Icon(
                                                                 Icons
                                                                     .alternate_email,
                                                               ),
@@ -446,7 +433,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 5.0)),
+                                                        const SizedBox(height: 5.0)),
                                                   ),
                                                 ),
                                               ],
@@ -478,7 +465,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              Color(0xFFF6F9FC),
+                                                              const Color(0xFFF6F9FC),
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
@@ -486,7 +473,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -564,7 +551,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                                         .circular(
                                                                             8.0),
                                                               ),
-                                                              prefixIcon: Icon(
+                                                              prefixIcon: const Icon(
                                                                 Icons
                                                                     .phone_rounded,
                                                               ),
@@ -580,7 +567,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 5.0)),
+                                                        const SizedBox(height: 5.0)),
                                                   ),
                                                 ),
                                               ],
@@ -592,14 +579,14 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                     Container(
                                       width: double.infinity,
                                       height: 320.0,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 380.0,
                                         maxHeight: 500.0,
                                       ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 10.0,
                                             color: Color(0x33000000),
@@ -610,7 +597,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                             BorderRadius.circular(8.0),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 25.0, 30.0, 30.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -637,7 +624,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                             .override(
                                                               fontFamily:
                                                                   'Poppins',
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFF0A2540),
                                                               fontSize: 20.0,
                                                               fontWeight:
@@ -648,7 +635,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                     ),
                                                     Stack(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       children: [
                                                         Container(
@@ -658,13 +645,10 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                               BoxDecoration(
                                                             color: _model.descriptionController
                                                                             .text !=
-                                                                        null &&
-                                                                    _model.descriptionController
-                                                                            .text !=
                                                                         ''
-                                                                ? Color(
+                                                                ? const Color(
                                                                     0xFF8466B4)
-                                                                : Color(
+                                                                : const Color(
                                                                     0xFFDCDCDC),
                                                             shape:
                                                                 BoxShape.circle,
@@ -672,11 +656,8 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                         ),
                                                         if (_model.descriptionController
                                                                     .text !=
-                                                                null &&
-                                                            _model.descriptionController
-                                                                    .text !=
                                                                 '')
-                                                          Icon(
+                                                          const Icon(
                                                             Icons.check_sharp,
                                                             color: Colors.white,
                                                             size: 24.0,
@@ -684,7 +665,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                       ],
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 15.0)),
+                                                      const SizedBox(width: 15.0)),
                                                 ),
                                                 Row(
                                                   mainAxisSize:
@@ -693,7 +674,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                     Expanded(
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     5.0,
@@ -743,7 +724,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                                 double.infinity,
                                                             decoration:
                                                                 BoxDecoration(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFFF6F9FC),
                                                               borderRadius:
                                                                   BorderRadius
@@ -752,7 +733,7 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           8.0,
                                                                           0.0,
@@ -798,14 +779,14 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                                             ),
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           height: 5.0)),
                                                     ),
                                                   ),
                                                 ],
                                               ),
                                             ),
-                                          ].divide(SizedBox(height: 20.0)),
+                                          ].divide(const SizedBox(height: 20.0)),
                                         ),
                                       ),
                                     ),
@@ -821,25 +802,22 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: (_model.emailController.text != null &&
-                                      _model.emailController.text != '') &&
-                                  (_model.telephoneController.text != null &&
-                                      _model.telephoneController.text != '') &&
-                                  (_model.descriptionController.text != null &&
-                                      _model.descriptionController.text != '')
-                              ? Color(0xFF3F92D4)
-                              : Color(0xFFCCCCCC),
+                          color: (_model.emailController.text != '') &&
+                                  (_model.telephoneController.text != '') &&
+                                  (_model.descriptionController.text != '')
+                              ? const Color(0xFF3F92D4)
+                              : const Color(0xFFCCCCCC),
                           borderRadius: BorderRadius.circular(24.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               50.0, 20.0, 50.0, 20.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -857,18 +835,15 @@ class _SupportFormWidgetState extends State<SupportFormWidget> {
                                       fontWeight: FontWeight.bold,
                                     ),
                               ),
-                              if ((_model.emailController.text != null &&
-                                      _model.emailController.text != '') &&
-                                  (_model.telephoneController.text != null &&
-                                      _model.telephoneController.text != '') &&
-                                  (_model.descriptionController.text != null &&
-                                      _model.descriptionController.text != ''))
-                                Icon(
+                              if ((_model.emailController.text != '') &&
+                                  (_model.telephoneController.text != '') &&
+                                  (_model.descriptionController.text != ''))
+                                const Icon(
                                   Icons.arrow_forward_ios_sharp,
                                   color: Colors.white,
                                   size: 18.0,
                                 ),
-                            ].divide(SizedBox(width: 20.0)),
+                            ].divide(const SizedBox(width: 20.0)),
                           ),
                         ),
                       ),

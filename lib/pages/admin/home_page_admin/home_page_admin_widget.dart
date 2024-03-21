@@ -7,10 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'home_page_admin_model.dart';
 export 'home_page_admin_model.dart';
 
@@ -87,10 +84,10 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
             children: [
               Expanded(
                 child: Stack(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -104,15 +101,15 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 5.0, 0.0, 0.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -123,7 +120,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                           scaffoldKey.currentState!
                                               .openDrawer();
                                         },
-                                        child: Icon(
+                                        child: const Icon(
                                           Icons.menu,
                                           color: Color(0xFF373737),
                                           size: 35.0,
@@ -135,7 +132,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 12.0, 50.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -144,7 +141,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
@@ -154,7 +151,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: AuthUserStreamWidget(
                                             builder: (context) => Text(
                                               'Olá, ${valueOrDefault(currentUserDocument?.firstName, '')}',
@@ -164,13 +161,13 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF373737),
+                                                    color: const Color(0xFF373737),
                                                     fontSize: 18.0,
                                                   ),
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(height: 5.0)),
+                                      ].divide(const SizedBox(height: 5.0)),
                                     ),
                                   ),
                                   AuthUserStreamWidget(
@@ -178,7 +175,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                       width: 70.0,
                                       height: 70.0,
                                       clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                       ),
                                       child: Image.network(
@@ -195,19 +192,19 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 180.0, 0.0, 0.0),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(25.0),
                             topRight: Radius.circular(25.0),
                           ),
                           child: Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(0.0),
@@ -217,9 +214,9 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                               ),
                               shape: BoxShape.rectangle,
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: SingleChildScrollView(
                                 primary: false,
                                 child: Column(
@@ -236,8 +233,8 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                             children: [
                                               Container(
                                                 width: double.infinity,
-                                                decoration: BoxDecoration(),
-                                                child: Container(
+                                                decoration: const BoxDecoration(),
+                                                child: SizedBox(
                                                   width: double.infinity,
                                                   height: 132.0,
                                                   child: CarouselSlider(
@@ -248,7 +245,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child:
                                                                 FFButtonWidget(
@@ -257,7 +254,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                     'Button pressed ...');
                                                               },
                                                               text: '',
-                                                              icon: Icon(
+                                                              icon: const Icon(
                                                                 Icons
                                                                     .person_sharp,
                                                                 color: Color(
@@ -268,14 +265,14 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                   FFButtonOptions(
                                                                 width: 91.0,
                                                                 height: 91.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -294,7 +291,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Color(
                                                                       0x11373737),
                                                                   width: 1.0,
@@ -331,7 +328,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child:
                                                                 FFButtonWidget(
@@ -341,7 +338,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                     'patients_page_theraphist');
                                                               },
                                                               text: '',
-                                                              icon: Icon(
+                                                              icon: const Icon(
                                                                 Icons
                                                                     .people_alt_rounded,
                                                                 color: Color(
@@ -352,14 +349,14 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                   FFButtonOptions(
                                                                 width: 91.0,
                                                                 height: 91.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -378,7 +375,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Color(
                                                                       0x11373737),
                                                                   width: 1.0,
@@ -415,7 +412,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child:
                                                                 FFButtonWidget(
@@ -425,7 +422,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                     'patients_page_theraphist');
                                                               },
                                                               text: '',
-                                                              icon: Icon(
+                                                              icon: const Icon(
                                                                 Icons.groups_3,
                                                                 color: Color(
                                                                     0xFF373737),
@@ -435,14 +432,14 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                   FFButtonOptions(
                                                                 width: 91.0,
                                                                 height: 91.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -461,7 +458,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Color(
                                                                       0x11373737),
                                                                   width: 1.0,
@@ -516,7 +513,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         5.0, 30.0, 5.0, 0.0),
                                                 child: Row(
@@ -528,18 +525,18 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                   children: [
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               1.0, 0.0),
                                                       child:
                                                           FlutterFlowIconButton(
                                                         borderColor:
-                                                            Color(0xFF373737),
+                                                            const Color(0xFF373737),
                                                         borderRadius: 20.0,
                                                         borderWidth: 1.0,
                                                         buttonSize: 40.0,
                                                         fillColor:
-                                                            Color(0xD6373737),
-                                                        icon: Icon(
+                                                            const Color(0xD6373737),
+                                                        icon: const Icon(
                                                           Icons
                                                               .arrow_back_ios_new,
                                                           color: Colors.white,
@@ -549,7 +546,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                           await _model
                                                               .carouselController
                                                               ?.previousPage(
-                                                            duration: Duration(
+                                                            duration: const Duration(
                                                                 milliseconds:
                                                                     300),
                                                             curve: Curves.ease,
@@ -559,18 +556,18 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child:
                                                           FlutterFlowIconButton(
                                                         borderColor:
-                                                            Color(0xFF373737),
+                                                            const Color(0xFF373737),
                                                         borderRadius: 20.0,
                                                         borderWidth: 1.0,
                                                         buttonSize: 40.0,
                                                         fillColor:
-                                                            Color(0xD5373737),
-                                                        icon: Icon(
+                                                            const Color(0xD5373737),
+                                                        icon: const Icon(
                                                           Icons
                                                               .arrow_forward_ios,
                                                           color: Colors.white,
@@ -580,7 +577,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                           await _model
                                                               .carouselController
                                                               ?.nextPage(
-                                                            duration: Duration(
+                                                            duration: const Duration(
                                                                 milliseconds:
                                                                     300),
                                                             curve: Curves.ease,
@@ -597,7 +594,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                       ],
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           20.0, 0.0, 20.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -612,7 +609,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF121518),
+                                                  color: const Color(0xFF121518),
                                                   fontSize: 14.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -621,7 +618,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 0.0, 0.0),
                                       child: Builder(
                                         builder: (context) {
@@ -647,7 +644,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           gradient:
-                                                              LinearGradient(
+                                                              const LinearGradient(
                                                             colors: [
                                                               Color(0xFFE9E9E9),
                                                               Color(0xFFCBCBCB)
@@ -674,7 +671,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           gradient:
-                                                              LinearGradient(
+                                                              const LinearGradient(
                                                             colors: [
                                                               Color(0xFFE9E9E9),
                                                               Color(0xFFCBCBCB)
@@ -696,14 +693,14 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                           animationsMap[
                                                               'containerOnPageLoadAnimation2']!),
                                                     ].divide(
-                                                        SizedBox(width: 20.0)),
+                                                        const SizedBox(width: 20.0)),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 15.0)),
+                                              ].divide(const SizedBox(height: 15.0)),
                                             );
                                           } else {
                                             return Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: SingleChildScrollView(
                                                 scrollDirection:
@@ -719,7 +716,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   16.0,
                                                                   8.0,
@@ -731,7 +728,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                         decoration:
                                                             BoxDecoration(
                                                           color: Colors.white,
-                                                          boxShadow: [
+                                                          boxShadow: const [
                                                             BoxShadow(
                                                               blurRadius: 8.0,
                                                               color: Color(
@@ -745,7 +742,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                   .circular(
                                                                       12.0),
                                                           border: Border.all(
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFFF1F4F8),
                                                             width: 1.0,
                                                           ),
@@ -760,7 +757,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                   true,
                                                               child: ClipRRect(
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -788,7 +785,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           12.0,
@@ -813,7 +810,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                               .start,
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               8.0,
                                                                               0.0,
                                                                               0.0,
@@ -825,14 +822,14 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyLarge.override(
                                                                                   fontFamily: 'Plus Jakarta Sans',
-                                                                                  color: Color(0xFF14181B),
+                                                                                  color: const Color(0xFF14181B),
                                                                                   fontSize: 16.0,
                                                                                   fontWeight: FontWeight.bold,
                                                                                 ),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               8.0,
                                                                               0.0,
@@ -846,7 +843,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                             children: [
                                                                               Expanded(
                                                                                 child: Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                                                                                   child: SelectionArea(
                                                                                       child: AutoSizeText(
                                                                                     FFLocalizations.of(context).getText(
@@ -855,7 +852,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                                     textAlign: TextAlign.justify,
                                                                                     style: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                           fontFamily: 'Plus Jakarta Sans',
-                                                                                          color: Color(0xFF14181B),
+                                                                                          color: const Color(0xFF14181B),
                                                                                           fontSize: 5.0,
                                                                                           fontWeight: FontWeight.normal,
                                                                                         ),
@@ -884,20 +881,20 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                               options:
                                                                   FFButtonOptions(
                                                                 height: 40.0,
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                                 iconPadding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFFA92ACC),
                                                                 textStyle: FlutterFlowTheme.of(
                                                                         context)
@@ -910,7 +907,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                                                     ),
                                                                 elevation: 3.0,
                                                                 borderSide:
-                                                                    BorderSide(
+                                                                    const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
@@ -933,7 +930,7 @@ class _HomePageAdminWidgetState extends State<HomePageAdminWidget>
                                         },
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 30.0)),
+                                  ].divide(const SizedBox(height: 30.0)),
                                 ),
                               ),
                             ),

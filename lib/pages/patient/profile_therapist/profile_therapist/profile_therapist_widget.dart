@@ -1,6 +1,4 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -9,13 +7,9 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/patient/profile_therapist/components/coworking_image_modal/coworking_image_modal_widget.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'profile_therapist_model.dart';
 export 'profile_therapist_model.dart';
 
@@ -136,7 +130,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
           isEqualTo: widget.theraphist?.fkUser,
         ),
       );
-      _model.horariesFormated = await actions.formatHoraries(
+      _model.horariesFormated = actions.formatHoraries(
         _model.horaryDoc!,
         _model.requestsOfTheraphist!.toList(),
       );
@@ -171,11 +165,11 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
       child: Scaffold(
         key: scaffoldKey,
         resizeToAvoidBottomInset: false,
-        backgroundColor: Color(0xFF1DA4D4),
+        backgroundColor: const Color(0xFF1DA4D4),
         body: SafeArea(
           top: true,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFFF2F2F2),
             ),
             child: StreamBuilder<UsersRecord>(
@@ -199,14 +193,14 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                 return Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 200.0,
                       child: Stack(
                         children: [
                           Container(
                             width: double.infinity,
                             height: 160.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFF1DA4D4),
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(24.0),
@@ -217,7 +211,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: Material(
                               color: Colors.transparent,
                               elevation: 2.0,
@@ -227,12 +221,12 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.8,
                                 height: 100.0,
-                                constraints: BoxConstraints(
+                                constraints: const BoxConstraints(
                                   maxWidth: 500.0,
                                 ),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x0E000000),
@@ -243,7 +237,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                   borderRadius: BorderRadius.circular(18.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 10.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -263,7 +257,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Raleway',
-                                                  color: Color(0xFF6085B0),
+                                                  color: const Color(0xFF6085B0),
                                                   fontSize: 20.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -276,12 +270,12 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Raleway',
-                                                  color: Color(0xFFC4C2C8),
+                                                  color: const Color(0xFFC4C2C8),
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 7.0)),
+                                        ].divide(const SizedBox(height: 7.0)),
                                       ),
                                       ClipRRect(
                                         borderRadius:
@@ -300,9 +294,9 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 30.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -321,9 +315,9 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(-1.0, -1.0),
+                            alignment: const AlignmentDirectional(-1.0, -1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 30.0, 0.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -333,7 +327,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                 onTap: () async {
                                   context.pushNamed('home_patient_page');
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.arrow_back_ios,
                                   color: Colors.white,
                                   size: 24.0,
@@ -347,13 +341,13 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                     Expanded(
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                         child: SingleChildScrollView(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 40.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -363,17 +357,17 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                     Expanded(
                                       child: Container(
                                         height: 90.0,
-                                        constraints: BoxConstraints(
+                                        constraints: const BoxConstraints(
                                           minWidth: 90.0,
                                           maxWidth: 200.0,
                                         ),
                                         decoration: BoxDecoration(
-                                          color: Color(0xFFE2E2E7),
+                                          color: const Color(0xFFE2E2E7),
                                           borderRadius:
                                               BorderRadius.circular(10.0),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(10.0),
+                                          padding: const EdgeInsets.all(10.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -390,7 +384,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFFAEAFCA),
+                                                              const Color(0xFFAEAFCA),
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -410,13 +404,13 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF002950),
+                                                              const Color(0xFF002950),
                                                           fontSize: 18.0,
                                                           fontWeight:
                                                               FontWeight.w800,
                                                         ),
                                               ),
-                                            ].divide(SizedBox(height: 5.0)),
+                                            ].divide(const SizedBox(height: 5.0)),
                                           ),
                                         ),
                                       ),
@@ -424,17 +418,17 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                     Expanded(
                                       child: Container(
                                         height: 90.0,
-                                        constraints: BoxConstraints(
+                                        constraints: const BoxConstraints(
                                           minWidth: 90.0,
                                           maxWidth: 200.0,
                                         ),
                                         decoration: BoxDecoration(
-                                          color: Color(0xFFE2E2E7),
+                                          color: const Color(0xFFE2E2E7),
                                           borderRadius:
                                               BorderRadius.circular(10.0),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(10.0),
+                                          padding: const EdgeInsets.all(10.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -451,7 +445,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFFAEAFCA),
+                                                              const Color(0xFFAEAFCA),
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -468,13 +462,13 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF002950),
+                                                              const Color(0xFF002950),
                                                           fontSize: 18.0,
                                                           fontWeight:
                                                               FontWeight.w800,
                                                         ),
                                               ),
-                                            ].divide(SizedBox(height: 5.0)),
+                                            ].divide(const SizedBox(height: 5.0)),
                                           ),
                                         ),
                                       ),
@@ -489,17 +483,17 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                       Expanded(
                                         child: Container(
                                           height: 90.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             minWidth: 90.0,
                                             maxWidth: 200.0,
                                           ),
                                           decoration: BoxDecoration(
-                                            color: Color(0xFFE2E2E7),
+                                            color: const Color(0xFFE2E2E7),
                                             borderRadius:
                                                 BorderRadius.circular(10.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(10.0),
+                                            padding: const EdgeInsets.all(10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -516,7 +510,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                       .override(
                                                         fontFamily: 'Raleway',
                                                         color:
-                                                            Color(0xFFAEAFCA),
+                                                            const Color(0xFFAEAFCA),
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                             FontWeight.bold,
@@ -533,22 +527,22 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                       .override(
                                                         fontFamily: 'Raleway',
                                                         color:
-                                                            Color(0xFF002950),
+                                                            const Color(0xFF002950),
                                                         fontSize: 18.0,
                                                         fontWeight:
                                                             FontWeight.w800,
                                                       ),
                                                 ),
-                                              ].divide(SizedBox(height: 5.0)),
+                                              ].divide(const SizedBox(height: 5.0)),
                                             ),
                                           ),
                                         ),
                                       ),
-                                  ].divide(SizedBox(width: 10.0)),
+                                  ].divide(const SizedBox(width: 10.0)),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 40.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -567,7 +561,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Raleway',
-                                                  color: Color(0xFF6085B0),
+                                                  color: const Color(0xFF6085B0),
                                                   fontSize: 18.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -578,18 +572,18 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Raleway',
-                                                  color: Color(0xFFA7A8C5),
+                                                  color: const Color(0xFFA7A8C5),
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(height: 10.0)),
+                                        ].divide(const SizedBox(height: 10.0)),
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 40.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -598,12 +592,12 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                       child: Container(
                                         width: 100.0,
                                         decoration: BoxDecoration(
-                                          color: Color(0xFFE2E2E7),
+                                          color: const Color(0xFFE2E2E7),
                                           borderRadius:
                                               BorderRadius.circular(8.0),
                                         ),
                                         child: Padding(
-                                          padding: EdgeInsets.all(10.0),
+                                          padding: const EdgeInsets.all(10.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -612,7 +606,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  Icon(
+                                                  const Icon(
                                                     Icons.price_check_sharp,
                                                     color: Color(0xFF6085B0),
                                                     size: 24.0,
@@ -628,12 +622,12 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF6085B0),
+                                                              const Color(0xFF6085B0),
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 5.0)),
+                                                ].divide(const SizedBox(width: 5.0)),
                                               ),
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -650,14 +644,14 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                           fontFamily:
                                                               'Readex Pro',
                                                           color:
-                                                              Color(0xFF414446),
+                                                              const Color(0xFF414446),
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
                                                   ),
                                                 ],
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
                                         ),
                                       ),
@@ -666,7 +660,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 40.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -693,7 +687,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF6085B0),
+                                                              const Color(0xFF6085B0),
                                                           fontSize: 18.0,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -726,7 +720,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                             decoration:
                                                                 BoxDecoration(
                                                               gradient:
-                                                                  LinearGradient(
+                                                                  const LinearGradient(
                                                                 colors: [
                                                                   Color(
                                                                       0xFFE9E9E9),
@@ -759,7 +753,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                             decoration:
                                                                 BoxDecoration(
                                                               gradient:
-                                                                  LinearGradient(
+                                                                  const LinearGradient(
                                                                 colors: [
                                                                   Color(
                                                                       0xFFE9E9E9),
@@ -786,22 +780,21 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                           ).animateOnPageLoad(
                                                               animationsMap[
                                                                   'containerOnPageLoadAnimation2']!),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 20.0)),
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 15.0)),
+                                                      const SizedBox(height: 15.0)),
                                                 );
                                               } else {
                                                 return Builder(
                                                   builder: (context) {
                                                     if (_model
-                                                            .horaries.length !=
-                                                        0) {
+                                                            .horaries.isNotEmpty) {
                                                       return Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -831,7 +824,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                       listCowokings[
                                                                           listCowokingsIndex];
                                                                   return Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -896,7 +889,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                               BoxDecoration(
                                                                             color:
                                                                                 Colors.white,
-                                                                            boxShadow: [
+                                                                            boxShadow: const [
                                                                               BoxShadow(
                                                                                 blurRadius: 4.0,
                                                                                 color: Color(0x33000000),
@@ -913,7 +906,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                             children:
                                                                                 [
                                                                               ClipRRect(
-                                                                                borderRadius: BorderRadius.only(
+                                                                                borderRadius: const BorderRadius.only(
                                                                                   bottomLeft: Radius.circular(0.0),
                                                                                   bottomRight: Radius.circular(0.0),
                                                                                   topLeft: Radius.circular(8.0),
@@ -930,19 +923,19 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                                                                                 child: Text(
                                                                                   'Localizado em ${listCowokingsItem.adress}',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Readex Pro',
-                                                                                        color: Color(0xFF57636C),
+                                                                                        color: const Color(0xFF57636C),
                                                                                         fontSize: 12.0,
                                                                                         fontWeight: FontWeight.w500,
                                                                                       ),
                                                                                 ),
                                                                               ),
                                                                               Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 10.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 10.0),
                                                                                 child: FFButtonWidget(
                                                                                   onPressed: () async {
                                                                                     await showModalBottomSheet(
@@ -969,15 +962,15 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                                   options: FFButtonOptions(
                                                                                     width: 150.0,
                                                                                     height: 42.0,
-                                                                                    padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                    color: Color(0xFF0DA0D4),
+                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                    color: const Color(0xFF0DA0D4),
                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                           fontFamily: 'Readex Pro',
                                                                                           color: Colors.white,
                                                                                         ),
                                                                                     elevation: 3.0,
-                                                                                    borderSide: BorderSide(
+                                                                                    borderSide: const BorderSide(
                                                                                       color: Colors.transparent,
                                                                                       width: 1.0,
                                                                                     ),
@@ -985,13 +978,13 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 10.0)),
+                                                                            ].divide(const SizedBox(height: 10.0)),
                                                                           ),
                                                                         ),
                                                                       ),
                                                                     ),
                                                                   );
-                                                                }).divide(SizedBox(
+                                                                }).divide(const SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
@@ -1013,7 +1006,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   10.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -1047,7 +1040,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                               .bold,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 15.0)),
                                                           ),
                                                         ),
@@ -1058,14 +1051,14 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                               }
                                             },
                                           ),
-                                        ].divide(SizedBox(height: 16.0)),
+                                        ].divide(const SizedBox(height: 16.0)),
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 40.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1092,7 +1085,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF6085B0),
+                                                              const Color(0xFF6085B0),
                                                           fontSize: 18.0,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -1120,7 +1113,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                             decoration:
                                                                 BoxDecoration(
                                                               gradient:
-                                                                  LinearGradient(
+                                                                  const LinearGradient(
                                                                 colors: [
                                                                   Color(
                                                                       0xFFE9E9E9),
@@ -1161,7 +1154,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                             decoration:
                                                                 BoxDecoration(
                                                               gradient:
-                                                                  LinearGradient(
+                                                                  const LinearGradient(
                                                                 colors: [
                                                                   Color(
                                                                       0xFFE9E9E9),
@@ -1202,7 +1195,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                             decoration:
                                                                 BoxDecoration(
                                                               gradient:
-                                                                  LinearGradient(
+                                                                  const LinearGradient(
                                                                 colors: [
                                                                   Color(
                                                                       0xFFE9E9E9),
@@ -1233,14 +1226,13 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                       ],
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 15.0)),
+                                                      const SizedBox(height: 15.0)),
                                                 );
                                               } else {
                                                 return Builder(
                                                   builder: (context) {
                                                     if (_model
-                                                            .horaries.length !=
-                                                        0) {
+                                                            .horaries.isNotEmpty) {
                                                       return Builder(
                                                         builder: (context) {
                                                           final listHoraries =
@@ -1324,7 +1316,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                     child:
                                                                         Padding(
                                                                       padding:
-                                                                          EdgeInsets.all(
+                                                                          const EdgeInsets.all(
                                                                               10.0),
                                                                       child:
                                                                           Row(
@@ -1334,12 +1326,12 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                           Container(
                                                                             decoration:
                                                                                 BoxDecoration(
-                                                                              color: Color(0x32828282),
+                                                                              color: const Color(0x32828282),
                                                                               borderRadius: BorderRadius.circular(10.0),
                                                                             ),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 10.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 20.0, 10.0),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
@@ -1351,7 +1343,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Raleway',
-                                                                                          color: Color(0x99657DCA),
+                                                                                          color: const Color(0x99657DCA),
                                                                                           fontSize: 16.0,
                                                                                           fontWeight: FontWeight.w900,
                                                                                         ),
@@ -1364,17 +1356,17 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Raleway',
-                                                                                          color: Color(0x99657DCA),
+                                                                                          color: const Color(0x99657DCA),
                                                                                           fontSize: 18.0,
                                                                                           fontWeight: FontWeight.w900,
                                                                                         ),
                                                                                   ),
-                                                                                ].divide(SizedBox(height: 10.0)),
+                                                                                ].divide(const SizedBox(height: 10.0)),
                                                                               ),
                                                                             ),
                                                                           ),
                                                                           Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 20.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -1404,7 +1396,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                                         fontWeight: FontWeight.normal,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 6.0)),
+                                                                              ].divide(const SizedBox(height: 6.0)),
                                                                             ),
                                                                           ),
                                                                         ],
@@ -1413,7 +1405,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                   ),
                                                                 );
                                                               }).divide(
-                                                                  SizedBox(
+                                                                  const SizedBox(
                                                                       height:
                                                                           8.0)),
                                                             ),
@@ -1434,7 +1426,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsets.all(
+                                                              const EdgeInsets.all(
                                                                   10.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -1469,7 +1461,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                                               .bold,
                                                                     ),
                                                               ),
-                                                            ].divide(SizedBox(
+                                                            ].divide(const SizedBox(
                                                                 width: 15.0)),
                                                           ),
                                                         ),
@@ -1480,14 +1472,14 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                               }
                                             },
                                           ),
-                                        ].divide(SizedBox(height: 16.0)),
+                                        ].divide(const SizedBox(height: 16.0)),
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     40.0, 0.0, 40.0, 30.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -1506,7 +1498,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Raleway',
-                                                  color: Color(0xFF6085B0),
+                                                  color: const Color(0xFF6085B0),
                                                   fontSize: 16.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
@@ -1516,7 +1508,7 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                 BorderRadius.circular(14.0),
                                             child: Container(
                                               width: double.infinity,
-                                              constraints: BoxConstraints(
+                                              constraints: const BoxConstraints(
                                                 minHeight: 300.0,
                                               ),
                                               decoration: BoxDecoration(
@@ -1524,11 +1516,11 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                 borderRadius:
                                                     BorderRadius.circular(14.0),
                                               ),
-                                              child: Container(
+                                              child: SizedBox(
                                                 height: 200.0,
                                                 child:
                                                     Builder(builder: (context) {
-                                                  final _googleMapMarker =
+                                                  final googleMapMarker =
                                                       columnUsersRecord.ltd;
                                                   return FlutterFlowGoogleMap(
                                                     controller: _model
@@ -1540,12 +1532,12 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                                             .googleMapsCenter ??=
                                                         columnUsersRecord.ltd!,
                                                     markers: [
-                                                      if (_googleMapMarker !=
+                                                      if (googleMapMarker !=
                                                           null)
                                                         FlutterFlowMarker(
-                                                          _googleMapMarker
+                                                          googleMapMarker
                                                               .serialize(),
-                                                          _googleMapMarker,
+                                                          googleMapMarker,
                                                         ),
                                                     ],
                                                     markerColor:
@@ -1568,13 +1560,13 @@ class _ProfileTherapistWidgetState extends State<ProfileTherapistWidget>
                                               ),
                                             ),
                                           ),
-                                        ].divide(SizedBox(height: 10.0)),
+                                        ].divide(const SizedBox(height: 10.0)),
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
-                            ].divide(SizedBox(height: 30.0)),
+                            ].divide(const SizedBox(height: 30.0)),
                           ),
                         ),
                       ),

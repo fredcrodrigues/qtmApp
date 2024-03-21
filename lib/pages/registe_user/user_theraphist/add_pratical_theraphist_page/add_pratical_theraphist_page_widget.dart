@@ -10,12 +10,9 @@ import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import '/pages/registe_user/components/coworkig_create_regiter_modal/coworkig_create_regiter_modal_widget.dart';
 import '/pages/registe_user/user_theraphist/introduction/turorial_theraphist_01_page/turorial_theraphist01_page_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:provider/provider.dart';
 import 'add_pratical_theraphist_page_model.dart';
 export 'add_pratical_theraphist_page_model.dart';
@@ -53,7 +50,7 @@ class _AddPraticalTheraphistPageWidgetState
                 : FocusScope.of(context).unfocus(),
             child: Padding(
               padding: MediaQuery.viewInsetsOf(context),
-              child: TurorialTheraphist01PageWidget(),
+              child: const TurorialTheraphist01PageWidget(),
             ),
           );
         },
@@ -91,14 +88,14 @@ class _AddPraticalTheraphistPageWidgetState
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
-            backgroundColor: Color(0xFFA54EAF),
+            backgroundColor: const Color(0xFFA54EAF),
             automaticallyImplyLeading: false,
             title: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     '45gf82gl' /* Adicionar prática integrativa */,
@@ -112,7 +109,7 @@ class _AddPraticalTheraphistPageWidgetState
                 ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -124,7 +121,7 @@ class _AddPraticalTheraphistPageWidgetState
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                 ),
                 child: Column(
@@ -135,7 +132,7 @@ class _AddPraticalTheraphistPageWidgetState
                       children: [
                         Expanded(
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 20.0, 8.0, 0.0),
                             child: TextFormField(
                               controller: _model.textController1,
@@ -168,7 +165,7 @@ class _AddPraticalTheraphistPageWidgetState
                                   borderRadius: BorderRadius.circular(100.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0xFFA954B2),
                                     width: 0.0,
                                   ),
@@ -193,7 +190,7 @@ class _AddPraticalTheraphistPageWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF161A1D),
+                                    color: const Color(0xFF161A1D),
                                   ),
                               validator: _model.textController1Validator
                                   .asValidator(context),
@@ -201,7 +198,7 @@ class _AddPraticalTheraphistPageWidgetState
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: StreamBuilder<List<SpecialtyRecord>>(
                             stream: querySpecialtyRecord(),
@@ -255,7 +252,7 @@ class _AddPraticalTheraphistPageWidgetState
                                     FlutterFlowTheme.of(context).alternate,
                                 borderWidth: 1.0,
                                 borderRadius: 100.0,
-                                margin: EdgeInsetsDirectional.fromSTEB(
+                                margin: const EdgeInsetsDirectional.fromSTEB(
                                     16.0, 4.0, 16.0, 4.0),
                                 hidesUnderline: true,
                                 isSearchable: false,
@@ -268,7 +265,7 @@ class _AddPraticalTheraphistPageWidgetState
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -291,7 +288,7 @@ class _AddPraticalTheraphistPageWidgetState
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF161A1D),
+                                    color: const Color(0xFF161A1D),
                                     fontSize: 12.0,
                                   ),
                               hintText: FFLocalizations.of(context).getText(
@@ -309,7 +306,7 @@ class _AddPraticalTheraphistPageWidgetState
                                   FlutterFlowTheme.of(context).alternate,
                               borderWidth: 0.0,
                               borderRadius: 100.0,
-                              margin: EdgeInsetsDirectional.fromSTEB(
+                              margin: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 4.0, 16.0, 4.0),
                               hidesUnderline: true,
                               isSearchable: false,
@@ -318,12 +315,12 @@ class _AddPraticalTheraphistPageWidgetState
                                   () => _model.dropdownSelectValue = val),
                             ),
                           ),
-                        ].divide(SizedBox(width: 5.0)),
+                        ].divide(const SizedBox(width: 5.0)),
                       ),
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -347,7 +344,7 @@ class _AddPraticalTheraphistPageWidgetState
                                 setState(
                                     () => _model.checkboxValue = newValue!);
                               },
-                              activeColor: Color(0xFFA92ACC),
+                              activeColor: const Color(0xFFA92ACC),
                               checkColor: FlutterFlowTheme.of(context).info,
                             ),
                           ),
@@ -368,7 +365,7 @@ class _AddPraticalTheraphistPageWidgetState
                     if (_model.checkboxValue ?? true)
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -404,7 +401,7 @@ class _AddPraticalTheraphistPageWidgetState
                                     borderRadius: BorderRadius.circular(100.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFFA954B2),
                                       width: 0.0,
                                     ),
@@ -429,7 +426,7 @@ class _AddPraticalTheraphistPageWidgetState
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF161A1D),
+                                      color: const Color(0xFF161A1D),
                                       fontSize: 12.0,
                                     ),
                                 validator: _model.textController2Validator
@@ -464,7 +461,7 @@ class _AddPraticalTheraphistPageWidgetState
                                     borderRadius: BorderRadius.circular(100.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFFA954B2),
                                       width: 0.0,
                                     ),
@@ -489,7 +486,7 @@ class _AddPraticalTheraphistPageWidgetState
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF161A1D),
+                                      color: const Color(0xFF161A1D),
                                     ),
                                 keyboardType: TextInputType.datetime,
                                 validator: _model.textController3Validator
@@ -497,12 +494,12 @@ class _AddPraticalTheraphistPageWidgetState
                                 inputFormatters: [_model.textFieldMask3],
                               ),
                             ),
-                          ].divide(SizedBox(width: 4.0)),
+                          ].divide(const SizedBox(width: 4.0)),
                         ),
                       ),
                     if (_model.checkboxValue ?? true)
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             17.0, 12.0, 17.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -593,15 +590,15 @@ class _AddPraticalTheraphistPageWidgetState
                                           context: context,
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
-                                              title: Text('Alerta'),
+                                              title: const Text('Alerta'),
                                               content:
-                                                  Text('O arquivo foi enviado'),
+                                                  const Text('O arquivo foi enviado'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
                                                       Navigator.pop(
                                                           alertDialogContext),
-                                                  child: Text('ok'),
+                                                  child: const Text('ok'),
                                                 ),
                                               ],
                                             );
@@ -612,15 +609,15 @@ class _AddPraticalTheraphistPageWidgetState
                                           context: context,
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
-                                              title: Text('Aviso'),
-                                              content: Text(
+                                              title: const Text('Aviso'),
+                                              content: const Text(
                                                   'Um arquivo já foi anexado'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
                                                       Navigator.pop(
                                                           alertDialogContext),
-                                                  child: Text('ok'),
+                                                  child: const Text('ok'),
                                                 ),
                                               ],
                                             );
@@ -631,11 +628,11 @@ class _AddPraticalTheraphistPageWidgetState
                                     child: Container(
                                       height: 80.0,
                                       decoration: BoxDecoration(
-                                        color: Color(0x1F0DA0D4),
+                                        color: const Color(0x1F0DA0D4),
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                         border: Border.all(
-                                          color: Color(0x710DA0D4),
+                                          color: const Color(0x710DA0D4),
                                         ),
                                       ),
                                       child: Row(
@@ -678,7 +675,7 @@ class _AddPraticalTheraphistPageWidgetState
                           ],
                         ),
                       ),
-                  ].divide(SizedBox(height: 20.0)),
+                  ].divide(const SizedBox(height: 20.0)),
                 ),
               ),
               Row(
@@ -687,15 +684,14 @@ class _AddPraticalTheraphistPageWidgetState
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                     child: FFButtonWidget(
-                      onPressed: ((_model.textController1.text == null ||
-                                  _model.textController1.text == '') ||
+                      onPressed: ((_model.textController1.text == '') ||
                               (_model.dropDownValue == null ||
                                   _model.dropDownValue == ''))
                           ? null
                           : () async {
-                              var _shouldSetState = false;
+                              var shouldSetState = false;
                               if ((_model.dropdownSelectValue?.first ==
                                       'Coworking') ||
                                   (_model.dropdownSelectValue?.last ==
@@ -720,7 +716,7 @@ class _AddPraticalTheraphistPageWidgetState
                                           fkUser: currentUserReference,
                                         ),
                                         certificateRecordReference1);
-                                _shouldSetState = true;
+                                shouldSetState = true;
 
                                 var practiceRecordReference1 =
                                     PracticeRecord.collection.doc();
@@ -755,7 +751,7 @@ class _AddPraticalTheraphistPageWidgetState
                                     },
                                   ),
                                 }, practiceRecordReference1);
-                                _shouldSetState = true;
+                                shouldSetState = true;
                                 _model.singleTheraphistc =
                                     await queryTheraphistRecordOnce(
                                   queryBuilder: (theraphistRecord) =>
@@ -765,7 +761,7 @@ class _AddPraticalTheraphistPageWidgetState
                                   ),
                                   singleRecord: true,
                                 ).then((s) => s.firstOrNull);
-                                _shouldSetState = true;
+                                shouldSetState = true;
 
                                 await _model.singleTheraphistc!.reference
                                     .update({
@@ -796,13 +792,13 @@ class _AddPraticalTheraphistPageWidgetState
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
                                         child:
-                                            CoworkigCreateRegiterModalWidget(),
+                                            const CoworkigCreateRegiterModalWidget(),
                                       ),
                                     );
                                   },
                                 ).then((value) => safeSetState(() {}));
 
-                                if (_shouldSetState) setState(() {});
+                                if (shouldSetState) setState(() {});
                                 return;
                               } else {
                                 var certificateRecordReference2 =
@@ -825,7 +821,7 @@ class _AddPraticalTheraphistPageWidgetState
                                           fkUser: currentUserReference,
                                         ),
                                         certificateRecordReference2);
-                                _shouldSetState = true;
+                                shouldSetState = true;
 
                                 var practiceRecordReference2 =
                                     PracticeRecord.collection.doc();
@@ -860,7 +856,7 @@ class _AddPraticalTheraphistPageWidgetState
                                     },
                                   ),
                                 }, practiceRecordReference2);
-                                _shouldSetState = true;
+                                shouldSetState = true;
                                 _model.singleTheraphist =
                                     await queryTheraphistRecordOnce(
                                   queryBuilder: (theraphistRecord) =>
@@ -870,7 +866,7 @@ class _AddPraticalTheraphistPageWidgetState
                                   ),
                                   singleRecord: true,
                                 ).then((s) => s.firstOrNull);
-                                _shouldSetState = true;
+                                shouldSetState = true;
 
                                 await _model.singleTheraphist!.reference
                                     .update({
@@ -888,11 +884,11 @@ class _AddPraticalTheraphistPageWidgetState
 
                                 context.pushNamed('add_timer_theraphist_page');
 
-                                if (_shouldSetState) setState(() {});
+                                if (shouldSetState) setState(() {});
                                 return;
                               }
 
-                              if (_shouldSetState) setState(() {});
+                              if (shouldSetState) setState(() {});
                             },
                       text: FFLocalizations.of(context).getText(
                         'fborw7wr' /* Continuar */,
@@ -901,10 +897,10 @@ class _AddPraticalTheraphistPageWidgetState
                         width: 352.0,
                         height: 50.0,
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFFA954B2),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: const Color(0xFFA954B2),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Lexend Deca',
@@ -913,17 +909,17 @@ class _AddPraticalTheraphistPageWidgetState
                                   fontWeight: FontWeight.normal,
                                 ),
                         elevation: 0.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                         ),
-                        disabledColor: Color(0xFFB0B0B0),
-                        disabledTextColor: Color(0xE0FFFFFF),
+                        disabledColor: const Color(0xFFB0B0B0),
+                        disabledTextColor: const Color(0xE0FFFFFF),
                       ),
                     ),
                   ),
                 ],
               ),
-            ].divide(SizedBox(height: 10.0)),
+            ].divide(const SizedBox(height: 10.0)),
           ),
         ),
       ),

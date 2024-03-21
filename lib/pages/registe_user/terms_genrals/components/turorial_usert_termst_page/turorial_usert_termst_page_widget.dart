@@ -3,10 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'turorial_usert_termst_page_model.dart';
 export 'turorial_usert_termst_page_model.dart';
 
@@ -61,11 +58,11 @@ class _TurorialUsertTermstPageWidgetState
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(-1.0, -1.0),
+      alignment: const AlignmentDirectional(-1.0, -1.0),
       child: Container(
         width: 286.0,
         height: 279.0,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xFFA954B2),
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(1000.0),
@@ -75,12 +72,12 @@ class _TurorialUsertTermstPageWidgetState
           ),
         ),
         child: Align(
-          alignment: AlignmentDirectional(0.0, 0.0),
+          alignment: const AlignmentDirectional(0.0, 0.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Align(
+              const Align(
                 alignment: AlignmentDirectional(-1.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
@@ -89,7 +86,7 @@ class _TurorialUsertTermstPageWidgetState
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'hie9dsm7' /* Leia e aceite os termos e cond... */,
@@ -103,9 +100,9 @@ class _TurorialUsertTermstPageWidgetState
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       Navigator.pop(context);
@@ -117,9 +114,9 @@ class _TurorialUsertTermstPageWidgetState
                       width: 97.0,
                       height: 40.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: Colors.white,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
@@ -129,7 +126,7 @@ class _TurorialUsertTermstPageWidgetState
                             fontSize: 12.0,
                           ),
                       elevation: 3.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

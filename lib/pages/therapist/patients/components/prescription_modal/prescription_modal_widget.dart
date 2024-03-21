@@ -6,11 +6,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/therapist/patients/components/information_modal/information_modal_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'prescription_modal_model.dart';
 export 'prescription_modal_model.dart';
@@ -70,7 +67,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
     return Material(
       color: Colors.transparent,
       elevation: 5.0,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -81,7 +78,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
       child: Container(
         width: double.infinity,
         height: 445.0,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xFFFEFEFE),
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
@@ -90,7 +87,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
             topRight: Radius.circular(16.0),
           ),
         ),
-        alignment: AlignmentDirectional(0.0, 0.0),
+        alignment: const AlignmentDirectional(0.0, 0.0),
         child: SingleChildScrollView(
           primary: false,
           child: Column(
@@ -99,9 +96,9 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -111,7 +108,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 12.0, 0.0, 0.0),
                             child: Container(
                               width: 50.0,
@@ -125,14 +122,14 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             10.0, 0.0, 10.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -142,13 +139,13 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                     .headlineMedium
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF14181B),
+                                      color: const Color(0xFF14181B),
                                       fontWeight: FontWeight.w500,
                                     ),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 20.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -158,7 +155,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                 onTap: () async {
                                   Navigator.pop(context);
                                 },
-                                child: FaIcon(
+                                child: const FaIcon(
                                   FontAwesomeIcons.times,
                                   color: Color(0xC357636C),
                                   size: 25.0,
@@ -169,14 +166,14 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -186,7 +183,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF484848),
+                                      color: const Color(0xFF484848),
                                     ),
                               ),
                             ),
@@ -194,25 +191,25 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                               value: _model.switchPatientValue ??= false,
                               onChanged: (newValue) async {
                                 setState(() =>
-                                    _model.switchPatientValue = newValue!);
+                                    _model.switchPatientValue = newValue);
                               },
-                              activeColor: Color(0xFF95489D),
-                              activeTrackColor: Color(0xAB95489D),
+                              activeColor: const Color(0xFF95489D),
+                              activeTrackColor: const Color(0xAB95489D),
                               inactiveTrackColor:
                                   FlutterFlowTheme.of(context).alternate,
-                              inactiveThumbColor: Color(0xFFB0B0B0),
+                              inactiveThumbColor: const Color(0xFFB0B0B0),
                             ),
                           ],
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 12.0, 0.0),
                         child: Form(
                           key: _model.formKey,
                           autovalidateMode: AutovalidateMode.always,
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 8.0, 0.0, 8.0, 0.0),
                             child: TextFormField(
                               controller: _model.textController,
@@ -237,7 +234,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                   borderRadius: BorderRadius.circular(100.0),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0xFF95489D),
                                     width: 1.0,
                                   ),
@@ -257,7 +254,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                   ),
                                   borderRadius: BorderRadius.circular(100.0),
                                 ),
-                                prefixIcon: Icon(
+                                prefixIcon: const Icon(
                                   Icons.assignment_rounded,
                                   color: Color(0xFF95489D),
                                   size: 14.0,
@@ -267,7 +264,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF484848),
+                                    color: const Color(0xFF484848),
                                   ),
                               validator: _model.textControllerValidator
                                   .asValidator(context),
@@ -276,14 +273,14 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   6.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -293,21 +290,21 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF484848),
+                                      color: const Color(0xFF484848),
                                     ),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   38.0, 0.0, 0.0, 0.0),
                               child: Switch.adaptive(
                                 value: _model.switchReturnValue ??= false,
                                 onChanged: (newValue) async {
                                   setState(() =>
-                                      _model.switchReturnValue = newValue!);
+                                      _model.switchReturnValue = newValue);
                                 },
-                                activeColor: Color(0xFF95489D),
-                                activeTrackColor: Color(0x8995489D),
+                                activeColor: const Color(0xFF95489D),
+                                activeTrackColor: const Color(0x8995489D),
                                 inactiveTrackColor:
                                     FlutterFlowTheme.of(context).alternate,
                                 inactiveThumbColor:
@@ -319,9 +316,9 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                       ),
                       if (_model.switchReturnValue == true)
                         Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
@@ -335,7 +332,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      final _datePicked1Date =
+                                      final datePicked1Date =
                                           await showDatePicker(
                                         context: context,
                                         initialDate: getCurrentTimestamp,
@@ -343,18 +340,18 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                         lastDate: DateTime(2050),
                                       );
 
-                                      if (_datePicked1Date != null) {
+                                      if (datePicked1Date != null) {
                                         safeSetState(() {
                                           _model.datePicked1 = DateTime(
-                                            _datePicked1Date.year,
-                                            _datePicked1Date.month,
-                                            _datePicked1Date.day,
+                                            datePicked1Date.year,
+                                            datePicked1Date.month,
+                                            datePicked1Date.day,
                                           );
                                         });
                                       }
                                     },
                                     child: AnimatedContainer(
-                                      duration: Duration(milliseconds: 300),
+                                      duration: const Duration(milliseconds: 300),
                                       curve: Curves.easeIn,
                                       width: 442.0,
                                       height: 54.0,
@@ -363,18 +360,18 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                         borderRadius:
                                             BorderRadius.circular(100.0),
                                         border: Border.all(
-                                          color: Color(0xFFE0E3E7),
+                                          color: const Color(0xFFE0E3E7),
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             20.0, 0.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
                                           children: [
-                                            Icon(
+                                            const Icon(
                                               Icons.calendar_month,
                                               color: Color(0xFF95489D),
                                               size: 14.0,
@@ -395,10 +392,10 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF484848),
+                                                    color: const Color(0xFF484848),
                                                   ),
                                             ),
-                                          ].divide(SizedBox(width: 10.0)),
+                                          ].divide(const SizedBox(width: 10.0)),
                                         ),
                                       ),
                                     ),
@@ -411,26 +408,26 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      final _datePicked2Time =
+                                      final datePicked2Time =
                                           await showTimePicker(
                                         context: context,
                                         initialTime: TimeOfDay.fromDateTime(
                                             getCurrentTimestamp),
                                       );
-                                      if (_datePicked2Time != null) {
+                                      if (datePicked2Time != null) {
                                         safeSetState(() {
                                           _model.datePicked2 = DateTime(
                                             getCurrentTimestamp.year,
                                             getCurrentTimestamp.month,
                                             getCurrentTimestamp.day,
-                                            _datePicked2Time.hour,
-                                            _datePicked2Time.minute,
+                                            datePicked2Time.hour,
+                                            datePicked2Time.minute,
                                           );
                                         });
                                       }
                                     },
                                     child: AnimatedContainer(
-                                      duration: Duration(milliseconds: 300),
+                                      duration: const Duration(milliseconds: 300),
                                       curve: Curves.easeIn,
                                       width: 442.0,
                                       height: 54.0,
@@ -439,18 +436,18 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                         borderRadius:
                                             BorderRadius.circular(100.0),
                                         border: Border.all(
-                                          color: Color(0xFFE0E3E7),
+                                          color: const Color(0xFFE0E3E7),
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             20.0, 0.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
                                               MainAxisAlignment.start,
                                           children: [
-                                            Icon(
+                                            const Icon(
                                               Icons.access_time_filled,
                                               color: Color(0xFF95489D),
                                               size: 14.0,
@@ -471,22 +468,22 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF484848),
+                                                    color: const Color(0xFF484848),
                                                   ),
                                             ),
-                                          ].divide(SizedBox(width: 10.0)),
+                                          ].divide(const SizedBox(width: 10.0)),
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(width: 10.0)),
+                              ].divide(const SizedBox(width: 10.0)),
                             ),
                           ),
                         ),
                       if (_model.switchReturnValue == false)
                         Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: const AlignmentDirectional(0.0, 1.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -504,14 +501,14 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                     ),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
                                       children: <Widget>[]
-                                          .divide(SizedBox(width: 10.0)),
+                                          .divide(const SizedBox(width: 10.0)),
                                     ),
                                   ),
                                 ),
@@ -520,7 +517,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                 child: Container(
                                   width: 347.0,
                                   height: 49.0,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
                                   ),
                                 ),
@@ -528,14 +525,14 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                             ],
                           ),
                         ),
-                    ].divide(SizedBox(height: 7.0)),
+                    ].divide(const SizedBox(height: 7.0)),
                   ),
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -544,16 +541,15 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                       Expanded(
                         child: Builder(
                           builder: (context) => FFButtonWidget(
-                            onPressed: ((_model.textController.text == null ||
-                                        _model.textController.text == '') &&
+                            onPressed: ((_model.textController.text == '') &&
                                     (_model.switchPatientValue == false))
                                 ? null
                                 : () async {
-                                    var _shouldSetState = false;
+                                    var shouldSetState = false;
                                     _model.theraphist =
                                         await TheraphistRecord.getDocumentOnce(
                                             widget.refTheraphist!);
-                                    _shouldSetState = true;
+                                    shouldSetState = true;
                                     if (_model.formKey.currentState == null ||
                                         !_model.formKey.currentState!
                                             .validate()) {
@@ -579,11 +575,11 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                                   FFAppState().refTheraphist,
                                             ),
                                             prescriptionRecordReference);
-                                    _shouldSetState = true;
+                                    shouldSetState = true;
                                     _model.singleRequest =
                                         await RequestsRecord.getDocumentOnce(
                                             widget.refRequest!);
-                                    _shouldSetState = true;
+                                    shouldSetState = true;
 
                                     await InvoicingRecord.collection
                                         .doc()
@@ -683,16 +679,16 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                             elevation: 0,
                                             insetPadding: EdgeInsets.zero,
                                             backgroundColor: Colors.transparent,
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                     0.0, 0.0)
                                                 .resolve(
                                                     Directionality.of(context)),
-                                            child: InformationModalWidget(),
+                                            child: const InformationModalWidget(),
                                           );
                                         },
                                       ).then((value) => setState(() {}));
 
-                                      if (_shouldSetState) setState(() {});
+                                      if (shouldSetState) setState(() {});
                                       return;
                                     } else {
                                       await widget.refRequest!
@@ -738,20 +734,20 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                             elevation: 0,
                                             insetPadding: EdgeInsets.zero,
                                             backgroundColor: Colors.transparent,
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                     0.0, 0.0)
                                                 .resolve(
                                                     Directionality.of(context)),
-                                            child: InformationModalWidget(),
+                                            child: const InformationModalWidget(),
                                           );
                                         },
                                       ).then((value) => setState(() {}));
 
-                                      if (_shouldSetState) setState(() {});
+                                      if (shouldSetState) setState(() {});
                                       return;
                                     }
 
-                                    if (_shouldSetState) setState(() {});
+                                    if (shouldSetState) setState(() {});
                                   },
                             text: FFLocalizations.of(context).getText(
                               'azn33tsk' /* Finalizar */,
@@ -759,11 +755,11 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                             options: FFButtonOptions(
                               width: 279.0,
                               height: 48.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF95489D),
+                              color: const Color(0xFF95489D),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -771,13 +767,13 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                                     color: Colors.white,
                                   ),
                               elevation: 3.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(10.0),
-                              disabledColor: Color(0xFFB0B0B0),
-                              disabledTextColor: Color(0xCAFFFFFF),
+                              disabledColor: const Color(0xFFB0B0B0),
+                              disabledTextColor: const Color(0xCAFFFFFF),
                             ),
                           ),
                         ),
@@ -786,7 +782,7 @@ class _PrescriptionModalWidgetState extends State<PrescriptionModalWidget> {
                   ),
                 ),
               ),
-            ].divide(SizedBox(height: 10.0)),
+            ].divide(const SizedBox(height: 10.0)),
           ),
         ),
       ),

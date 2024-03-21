@@ -7,10 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'profile_patient_page_model.dart';
 export 'profile_patient_page_model.dart';
 
@@ -78,7 +75,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                   fontWeight: FontWeight.w500,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -99,28 +96,28 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                       ).image,
                     ),
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(1.0, 1.0),
+                                    alignment: const AlignmentDirectional(1.0, 1.0),
                                     child: Stack(
                                       alignment:
-                                          AlignmentDirectional(1.0, -1.0),
+                                          const AlignmentDirectional(1.0, -1.0),
                                       children: [
                                         Material(
                                           color: Colors.transparent,
@@ -136,7 +133,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                               color: Colors.white,
                                               image: DecorationImage(
                                                 fit: BoxFit.none,
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 image: Image.network(
                                                   'https://img.icons8.com/cotton/64/000000/image-file-add--v2.png',
@@ -159,7 +156,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                                 width: 30.0,
                                                 height: 18.0,
                                                 fit: BoxFit.contain,
-                                                alignment: Alignment(0.0, 0.0),
+                                                alignment: const Alignment(0.0, 0.0),
                                               ),
                                             ),
                                           ),
@@ -287,7 +284,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                                   }
                                                 }
                                               },
-                                              child: Icon(
+                                              child: const Icon(
                                                 Icons.mode_edit_outline,
                                                 color: Color(0xFF0DA0D4),
                                                 size: 15.0,
@@ -316,11 +313,11 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Container(
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Colors.white,
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: TextFormField(
                                         controller: _model.textController1,
@@ -345,7 +342,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFBBB8B8),
                                               width: 1.0,
                                             ),
@@ -353,7 +350,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                                 BorderRadius.circular(100.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFF9420AF),
                                               width: 1.0,
                                             ),
@@ -386,7 +383,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF161A1D),
+                                              color: const Color(0xFF161A1D),
                                             ),
                                         validator: _model
                                             .textController1Validator
@@ -395,11 +392,11 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                     ),
                                   ),
                                   Container(
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Colors.white,
                                     ),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: TextFormField(
                                         controller: _model.textController2,
@@ -424,7 +421,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFBBB8B8),
                                               width: 1.0,
                                             ),
@@ -432,7 +429,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                                 BorderRadius.circular(100.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFF9420AF),
                                               width: 1.0,
                                             ),
@@ -465,7 +462,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF161A1D),
+                                              color: const Color(0xFF161A1D),
                                             ),
                                         validator: _model
                                             .textController2Validator
@@ -474,9 +471,9 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                     ),
                                   ),
                                   Container(
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: FlutterFlowDropDown<String>(
                                         controller: _model
@@ -521,10 +518,10 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                         ),
                                         fillColor: Colors.white,
                                         elevation: 1.0,
-                                        borderColor: Color(0xFFBBB8B8),
+                                        borderColor: const Color(0xFFBBB8B8),
                                         borderWidth: 1.0,
                                         borderRadius: 100.0,
-                                        margin: EdgeInsetsDirectional.fromSTEB(
+                                        margin: const EdgeInsetsDirectional.fromSTEB(
                                             16.0, 4.0, 16.0, 4.0),
                                         hidesUnderline: true,
                                         isSearchable: false,
@@ -533,9 +530,9 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                     ),
                                   ),
                                   Container(
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: TextFormField(
                                         controller: _model.textController3,
@@ -554,7 +551,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium,
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFBBB8B8),
                                               width: 1.0,
                                             ),
@@ -562,7 +559,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                                 BorderRadius.circular(1000.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFF9420AF),
                                               width: 1.0,
                                             ),
@@ -595,7 +592,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF161A1D),
+                                              color: const Color(0xFF161A1D),
                                             ),
                                         validator: _model
                                             .textController3Validator
@@ -603,14 +600,14 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                       ),
                                     ),
                                   ),
-                                ].divide(SizedBox(height: 25.0)),
+                                ].divide(const SizedBox(height: 25.0)),
                               ),
                             ),
                           ),
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             10.0, 0.0, 10.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -618,22 +615,16 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 20.0, 0.0, 20.0),
                                 child: FFButtonWidget(
                                   onPressed: ((_model.textController1.text ==
-                                                  null ||
-                                              _model.textController1.text ==
                                                   '') ||
                                           (_model.textController2.text ==
-                                                  null ||
-                                              _model.textController2.text ==
                                                   '') ||
                                           (_model.dropDownValue == null ||
                                               _model.dropDownValue == '') ||
                                           (_model.textController3.text ==
-                                                  null ||
-                                              _model.textController3.text ==
                                                   '') ||
                                           (_model.uploadedFileUrl == ''))
                                       ? null
@@ -646,7 +637,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                           }
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(
-                                            SnackBar(
+                                            const SnackBar(
                                               content: Text(
                                                 'Estamos validando seus dados',
                                                 style: TextStyle(
@@ -687,11 +678,11 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                   options: FFButtonOptions(
                                     width: 352.0,
                                     height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFF0FB4ED),
+                                    color: const Color(0xFF0FB4ED),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
@@ -701,12 +692,12 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                           fontWeight: FontWeight.normal,
                                         ),
                                     elevation: 0.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
-                                    disabledColor: Color(0xFFB0B0B0),
-                                    disabledTextColor: Color(0x82FFFFFF),
+                                    disabledColor: const Color(0xFFB0B0B0),
+                                    disabledTextColor: const Color(0x82FFFFFF),
                                   ),
                                 ),
                               ),

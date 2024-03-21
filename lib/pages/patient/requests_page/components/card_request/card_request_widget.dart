@@ -1,13 +1,9 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'card_request_model.dart';
 export 'card_request_model.dart';
 
@@ -58,13 +54,13 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 0.9,
         height: 218.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               blurRadius: 4.0,
               color: Color(0x33000000),
@@ -74,7 +70,7 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
           borderRadius: BorderRadius.circular(20.0),
         ),
         child: Padding(
-          padding: EdgeInsets.all(14.0),
+          padding: const EdgeInsets.all(14.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -86,7 +82,7 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                     width: 50.0,
                     height: 50.0,
                     clipBehavior: Clip.antiAlias,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       shape: BoxShape.circle,
                     ),
                     child: Image.network(
@@ -106,7 +102,7 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Raleway',
-                                    color: Color(0xFF6085B0),
+                                    color: const Color(0xFF6085B0),
                                     fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -138,17 +134,17 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Raleway',
-                                    color: Color(0xFFC4C2C8),
+                                    color: const Color(0xFFC4C2C8),
                                     fontSize: 10.0,
                                     fontWeight: FontWeight.bold,
                                   ),
                             );
                           },
                         ),
-                      ].divide(SizedBox(height: 5.0)),
+                      ].divide(const SizedBox(height: 5.0)),
                     ),
                   ),
-                ].divide(SizedBox(width: 10.0)),
+                ].divide(const SizedBox(width: 10.0)),
               ),
               Row(
                 mainAxisSize: MainAxisSize.max,
@@ -158,11 +154,11 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                       width: 100.0,
                       height: 60.0,
                       decoration: BoxDecoration(
-                        color: Color(0xFFF2F2F2),
+                        color: const Color(0xFFF2F2F2),
                         borderRadius: BorderRadius.circular(14.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             10.0, 0.0, 10.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -170,7 +166,7 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                             Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.event_note,
                                   color: Color(0xFF5686E1),
                                   size: 24.0,
@@ -186,17 +182,17 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Raleway',
-                                        color: Color(0xFF5686E1),
+                                        color: const Color(0xFF5686E1),
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),
-                              ].divide(SizedBox(width: 5.0)),
+                              ].divide(const SizedBox(width: 5.0)),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Icon(
+                                const Icon(
                                   Icons.access_time,
                                   color: Color(0xFF5686E1),
                                   size: 24.0,
@@ -212,14 +208,14 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Raleway',
-                                        color: Color(0xFF5686E1),
+                                        color: const Color(0xFF5686E1),
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),
-                              ].divide(SizedBox(width: 5.0)),
+                              ].divide(const SizedBox(width: 5.0)),
                             ),
-                          ].divide(SizedBox(width: 5.0)),
+                          ].divide(const SizedBox(width: 5.0)),
                         ),
                       ),
                     ),
@@ -240,19 +236,19 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                     options: FFButtonOptions(
                       width: 140.0,
                       height: 40.0,
-                      padding: EdgeInsets.all(0.0),
+                      padding: const EdgeInsets.all(0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: Color(0x004B39EF),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: const Color(0x004B39EF),
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Raleway',
-                                color: Color(0xFFB6B6B6),
+                                color: const Color(0xFFB6B6B6),
                                 fontSize: 12.0,
                                 fontWeight: FontWeight.bold,
                               ),
                       elevation: 0.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF9A9A9A),
                         width: 1.0,
                       ),
@@ -270,19 +266,19 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                       options: FFButtonOptions(
                         width: 160.0,
                         height: 40.0,
-                        padding: EdgeInsets.all(0.0),
+                        padding: const EdgeInsets.all(0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFFECECEC),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: const Color(0xFFECECEC),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Raleway',
-                                  color: Color(0xFFA8A7A7),
+                                  color: const Color(0xFFA8A7A7),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.bold,
                                 ),
                         elevation: 0.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),
@@ -290,7 +286,7 @@ class _CardRequestWidgetState extends State<CardRequestWidget> {
                       ),
                     ),
                   ),
-                ].divide(SizedBox(width: 5.0)),
+                ].divide(const SizedBox(width: 5.0)),
               ),
             ],
           ),

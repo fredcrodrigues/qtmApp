@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'confirm_schedule_model.dart';
 export 'confirm_schedule_model.dart';
 
@@ -56,12 +54,12 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF1DA4D4),
+        backgroundColor: const Color(0xFF1DA4D4),
         body: SafeArea(
           top: true,
           child: Container(
             height: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFFF2F2F2),
             ),
             child: StreamBuilder<UsersRecord>(
@@ -91,7 +89,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                           Container(
                             width: double.infinity,
                             height: 120.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFF1DA4D4),
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(14.0),
@@ -102,15 +100,15 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 50.0, 0.0, 0.0),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.9,
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -120,7 +118,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                   borderRadius: BorderRadius.circular(14.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsets.all(15.0),
+                                  padding: const EdgeInsets.all(15.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
@@ -154,14 +152,14 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                                       .override(
                                                         fontFamily: 'Raleway',
                                                         color:
-                                                            Color(0xFF6085B0),
+                                                            const Color(0xFF6085B0),
                                                         fontSize: 18.0,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 0.0),
                                                   child: Text(
@@ -172,7 +170,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF6085B0),
+                                                              const Color(0xFF6085B0),
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -182,12 +180,12 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                               ],
                                             ),
                                           ),
-                                        ].divide(SizedBox(width: 10.0)),
+                                        ].divide(const SizedBox(width: 10.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Icon(
+                                          const Icon(
                                             Icons.view_list_rounded,
                                             color: Color(0x83B2B1B1),
                                             size: 24.0,
@@ -200,7 +198,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Poppins',
-                                                  color: Color(0xB3676669),
+                                                  color: const Color(0xB3676669),
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.w600,
                                                 ),
@@ -222,7 +220,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                                               0.0),
                                                       border: Border.all(
                                                         color:
-                                                            Color(0x30000000),
+                                                            const Color(0x30000000),
                                                       ),
                                                     ),
                                                   ),
@@ -230,7 +228,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                               ],
                                             ),
                                           ),
-                                        ].divide(SizedBox(width: 5.0)),
+                                        ].divide(const SizedBox(width: 5.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -244,7 +242,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Roboto',
-                                                    color: Color(0xFFAFAFAF),
+                                                    color: const Color(0xFFAFAFAF),
                                                     fontSize: 12.0,
                                                     fontWeight: FontWeight.bold,
                                                   ),
@@ -252,26 +250,26 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                           ),
                                         ],
                                       ),
-                                    ].divide(SizedBox(height: 10.0)),
+                                    ].divide(const SizedBox(height: 10.0)),
                                   ),
                                 ),
                               ),
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Container(
                                 width: 180.0,
                                 height: 30.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.task_alt_outlined,
                                       color: Colors.white,
                                       size: 24.0,
@@ -288,13 +286,13 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                             fontWeight: FontWeight.bold,
                                           ),
                                     ),
-                                  ].divide(SizedBox(width: 10.0)),
+                                  ].divide(const SizedBox(width: 10.0)),
                                 ),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 0.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -304,7 +302,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                               onTap: () async {
                                 context.pushNamed('home_patient_page');
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.close_rounded,
                                 color: Colors.white,
                                 size: 24.0,
@@ -317,7 +315,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                         width: MediaQuery.sizeOf(context).width * 0.9,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 4.0,
                               color: Color(0x33000000),
@@ -327,7 +325,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                           borderRadius: BorderRadius.circular(14.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -342,7 +340,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Raleway',
-                                          color: Color(0xFF676669),
+                                          color: const Color(0xFF676669),
                                           fontSize: 12.0,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -357,7 +355,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                       width: 100.0,
                                       height: 1.5,
                                       decoration: BoxDecoration(
-                                        color: Color(0x30000000),
+                                        color: const Color(0x30000000),
                                         borderRadius:
                                             BorderRadius.circular(10.0),
                                       ),
@@ -366,13 +364,13 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                 ],
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 10.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.person,
                                       color: Color(0xFF6982DE),
                                       size: 24.0,
@@ -386,15 +384,15 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
-                                            color: Color(0xFF6982DE),
+                                            color: const Color(0xFF6982DE),
                                             fontSize: 16.0,
                                             fontWeight: FontWeight.bold,
                                           ),
                                     ),
-                                  ].divide(SizedBox(width: 10.0)),
+                                  ].divide(const SizedBox(width: 10.0)),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ),
@@ -402,7 +400,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                         width: MediaQuery.sizeOf(context).width * 0.9,
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               blurRadius: 4.0,
                               color: Color(0x33000000),
@@ -412,13 +410,13 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                           borderRadius: BorderRadius.circular(14.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 10.0, 15.0, 10.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 5.0, 0.0, 5.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -431,7 +429,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
-                                            color: Color(0xFF676669),
+                                            color: const Color(0xFF676669),
                                             fontSize: 12.0,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -440,7 +438,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -452,7 +450,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                           child: Container(
                                             width: 100.0,
                                             height: 1.0,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Color(0x34000000),
                                             ),
                                           ),
@@ -487,12 +485,12 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Raleway',
-                                                    color: Color(0xFF575757),
+                                                    color: const Color(0xFF575757),
                                                     fontSize: 12.0,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                             ),
-                                          ].divide(SizedBox(width: 10.0)),
+                                          ].divide(const SizedBox(width: 10.0)),
                                         ),
                                         Text(
                                           FFLocalizations.of(context).getText(
@@ -502,14 +500,14 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Raleway',
-                                                color: Color(0xFFC2C2C2),
+                                                color: const Color(0xFFC2C2C2),
                                                 fontSize: 12.0,
                                                 fontWeight: FontWeight.bold,
                                               ),
                                         ),
                                       ],
                                     ),
-                                  ].divide(SizedBox(height: 10.0)),
+                                  ].divide(const SizedBox(height: 10.0)),
                                 ),
                               ),
                               Column(
@@ -522,7 +520,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                         child: Container(
                                           width: 100.0,
                                           height: 1.0,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Color(0x34000000),
                                           ),
                                         ),
@@ -552,12 +550,12 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Raleway',
-                                                  color: Color(0xFF575757),
+                                                  color: const Color(0xFF575757),
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(width: 10.0)),
+                                        ].divide(const SizedBox(width: 10.0)),
                                       ),
                                       Text(
                                         FFLocalizations.of(context).getText(
@@ -567,7 +565,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Raleway',
-                                              color: Color(0xFFC2C2C2),
+                                              color: const Color(0xFFC2C2C2),
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -581,17 +579,17 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                         child: Container(
                                           width: 100.0,
                                           height: 1.0,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Color(0x34000000),
                                           ),
                                         ),
                                       ),
                                     ],
                                   ),
-                                ].divide(SizedBox(height: 10.0)),
+                                ].divide(const SizedBox(height: 10.0)),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -628,12 +626,12 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Raleway',
-                                                    color: Color(0xFF575757),
+                                                    color: const Color(0xFF575757),
                                                     fontSize: 12.0,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                             ),
-                                          ].divide(SizedBox(width: 10.0)),
+                                          ].divide(const SizedBox(width: 10.0)),
                                         ),
                                         Text(
                                           FFLocalizations.of(context).getText(
@@ -643,7 +641,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Raleway',
-                                                color: Color(0xFFC2C2C2),
+                                                color: const Color(0xFFC2C2C2),
                                                 fontSize: 12.0,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -657,18 +655,18 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                           child: Container(
                                             width: 100.0,
                                             height: 1.0,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Color(0x34000000),
                                             ),
                                           ),
                                         ),
                                       ],
                                     ),
-                                  ].divide(SizedBox(height: 10.0)),
+                                  ].divide(const SizedBox(height: 10.0)),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -704,12 +702,12 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Raleway',
-                                                    color: Color(0xFF575757),
+                                                    color: const Color(0xFF575757),
                                                     fontSize: 12.0,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                             ),
-                                          ].divide(SizedBox(width: 10.0)),
+                                          ].divide(const SizedBox(width: 10.0)),
                                         ),
                                         Text(
                                           FFLocalizations.of(context).getText(
@@ -719,7 +717,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Raleway',
-                                                color: Color(0xFFC2C2C2),
+                                                color: const Color(0xFFC2C2C2),
                                                 fontSize: 12.0,
                                                 fontWeight: FontWeight.bold,
                                               ),
@@ -733,18 +731,18 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                           child: Container(
                                             width: 100.0,
                                             height: 1.0,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Color(0x34000000),
                                             ),
                                           ),
                                         ),
                                       ],
                                     ),
-                                  ].divide(SizedBox(height: 10.0)),
+                                  ].divide(const SizedBox(height: 10.0)),
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 15.0, 0.0, 15.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -761,7 +759,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
-                                            color: Color(0xFF686868),
+                                            color: const Color(0xFF686868),
                                             fontWeight: FontWeight.bold,
                                           ),
                                     ),
@@ -773,7 +771,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
-                                            color: Color(0xFFC2C2C2),
+                                            color: const Color(0xFFC2C2C2),
                                             fontSize: 12.0,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -794,7 +792,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                       ))
                         Container(
                           width: MediaQuery.sizeOf(context).width * 0.9,
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -810,7 +808,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
-                                            color: Color(0xFFAAAAAA),
+                                            color: const Color(0xFFAAAAAA),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -837,7 +835,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
-                                            color: Color(0xFF85A2DB),
+                                            color: const Color(0xFF85A2DB),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -849,13 +847,13 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                           ),
                         ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 0.9,
                           height: 100.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
@@ -865,7 +863,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                             borderRadius: BorderRadius.circular(14.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 10.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -904,11 +902,11 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                       '3zh57cd1' /* Continuar pagamento */,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsets.all(24.0),
+                                      padding: const EdgeInsets.all(24.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xFF3F92D4),
+                                      color: const Color(0xFF3F92D4),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -916,7 +914,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                                             color: Colors.white,
                                           ),
                                       elevation: 3.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -929,7 +927,7 @@ class _ConfirmScheduleWidgetState extends State<ConfirmScheduleWidget> {
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(height: 10.0)),
+                    ].divide(const SizedBox(height: 10.0)),
                   ),
                 );
               },

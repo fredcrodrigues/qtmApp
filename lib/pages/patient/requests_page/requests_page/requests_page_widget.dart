@@ -5,13 +5,10 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'requests_page_model.dart';
 export 'requests_page_model.dart';
 
@@ -19,7 +16,7 @@ class RequestsPageWidget extends StatefulWidget {
   const RequestsPageWidget({
     super.key,
     bool? filterParam,
-  }) : this.filterParam = filterParam ?? true;
+  }) : filterParam = filterParam ?? true;
 
   final bool filterParam;
 
@@ -80,8 +77,8 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 100.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 100.0),
+          end: const Offset(0.0, 0.0),
         ),
         FadeEffect(
           curve: Curves.easeInOut,
@@ -157,26 +154,26 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF1DA4D4),
+        backgroundColor: const Color(0xFF1DA4D4),
         body: SafeArea(
           top: true,
           child: Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Container(
+                SizedBox(
                   height: 190.0,
                   child: Stack(
                     children: [
                       Container(
                         width: double.infinity,
                         height: 160.0,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xFF1DA4D4),
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(24.0),
@@ -186,7 +183,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 40.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -207,12 +204,12 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                       fontWeight: FontWeight.bold,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             30.0, 40.0, 0.0, 0.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
@@ -222,7 +219,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                           onTap: () async {
                             context.safePop();
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.arrow_back_ios,
                             color: Colors.white,
                             size: 24.0,
@@ -230,14 +227,14 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         child: Container(
                           width: 300.0,
                           height: 90.0,
                           decoration: BoxDecoration(
                             color: FlutterFlowTheme.of(context)
                                 .secondaryBackground,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
@@ -247,18 +244,18 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                             borderRadius: BorderRadius.circular(44.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 15.0, 0.0, 15.0, 0.0),
                             child: Stack(
                               children: [
                                 if (_model.filter)
                                   Align(
-                                    alignment: AlignmentDirectional(1.0, 0.0),
+                                    alignment: const AlignmentDirectional(1.0, 0.0),
                                     child: Container(
                                       width: 140.0,
                                       height: 70.0,
                                       decoration: BoxDecoration(
-                                        color: Color(0xFF4F90DB),
+                                        color: const Color(0xFF4F90DB),
                                         borderRadius:
                                             BorderRadius.circular(34.0),
                                       ),
@@ -266,21 +263,21 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                   ),
                                 if (!_model.filter)
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment: const AlignmentDirectional(-1.0, 0.0),
                                     child: Container(
                                       width: 140.0,
                                       height: 70.0,
                                       decoration: BoxDecoration(
-                                        color: Color(0xFF4F90DB),
+                                        color: const Color(0xFF4F90DB),
                                         borderRadius:
                                             BorderRadius.circular(34.0),
                                       ),
                                     ),
                                   ),
                                 Align(
-                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 10.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -301,22 +298,22 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                         '5uzr7lmh' /* Aceitas */,
                                       ),
                                       options: FFButtonOptions(
-                                        padding: EdgeInsets.all(30.0),
+                                        padding: const EdgeInsets.all(30.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0x00FFFFFF),
+                                        color: const Color(0x00FFFFFF),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
                                               fontFamily: 'Raleway',
                                               color: _model.filter
                                                   ? Colors.white
-                                                  : Color(0xFFB6B6B6),
+                                                  : const Color(0xFFB6B6B6),
                                               fontWeight: FontWeight.bold,
                                             ),
                                         elevation: 0.0,
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -327,7 +324,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       setState(() {
@@ -346,17 +343,17 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                       't5c7m1ta' /* Pendentes */,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsets.all(30.0),
+                                      padding: const EdgeInsets.all(30.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0x00FFFFFF),
+                                      color: const Color(0x00FFFFFF),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
                                             fontFamily: 'Raleway',
                                             color: _model.filter
-                                                ? Color(0xFFB6B6B6)
+                                                ? const Color(0xFFB6B6B6)
                                                 : Colors.white,
                                             fontSize: () {
                                               if (MediaQuery.sizeOf(context)
@@ -380,7 +377,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                             fontWeight: FontWeight.bold,
                                           ),
                                       elevation: 0.0,
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -405,7 +402,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                           builder: (context) {
                             if (_model.loadRequests) {
                               return Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 20.0, 0.0),
                                 child: ListView(
                                   padding: EdgeInsets.zero,
@@ -420,7 +417,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                             width: 100.0,
                                             height: 218.0,
                                             decoration: BoxDecoration(
-                                              gradient: LinearGradient(
+                                              gradient: const LinearGradient(
                                                 colors: [
                                                   Color(0xFFE9E9E9),
                                                   Color(0xFFCBCBCB)
@@ -447,7 +444,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                             width: 100.0,
                                             height: 218.0,
                                             decoration: BoxDecoration(
-                                              gradient: LinearGradient(
+                                              gradient: const LinearGradient(
                                                 colors: [
                                                   Color(0xFFE9E9E9),
                                                   Color(0xFFCBCBCB)
@@ -474,7 +471,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                             width: 100.0,
                                             height: 218.0,
                                             decoration: BoxDecoration(
-                                              gradient: LinearGradient(
+                                              gradient: const LinearGradient(
                                                 colors: [
                                                   Color(0xFFE9E9E9),
                                                   Color(0xFFCBCBCB)
@@ -493,20 +490,20 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                         ),
                                       ],
                                     ),
-                                  ].divide(SizedBox(height: 15.0)),
+                                  ].divide(const SizedBox(height: 15.0)),
                                 ),
                               );
                             } else {
                               return Builder(
                                 builder: (context) {
-                                  if (_model.requests.length > 0) {
+                                  if (_model.requests.isNotEmpty) {
                                     return SingleChildScrollView(
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 10.0, 20.0, 20.0),
                                             child: Builder(
                                               builder: (context) {
@@ -533,7 +530,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                             listOfRequestsIndex];
                                                     return Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: StreamBuilder<
                                                           TheraphistRecord>(
@@ -570,7 +567,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                 double.infinity,
                                                             height: 250.0,
                                                             constraints:
-                                                                BoxConstraints(
+                                                                const BoxConstraints(
                                                               maxWidth: 450.0,
                                                             ),
                                                             decoration:
@@ -578,7 +575,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                               color: FlutterFlowTheme
                                                                       .of(context)
                                                                   .secondaryBackground,
-                                                              boxShadow: [
+                                                              boxShadow: const [
                                                                 BoxShadow(
                                                                   blurRadius:
                                                                       4.0,
@@ -597,7 +594,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                             ),
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsets
+                                                                  const EdgeInsets
                                                                       .all(
                                                                           14.0),
                                                               child: StreamBuilder<
@@ -652,7 +649,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                             clipBehavior:
                                                                                 Clip.antiAlias,
                                                                             decoration:
-                                                                                BoxDecoration(
+                                                                                const BoxDecoration(
                                                                               shape: BoxShape.circle,
                                                                             ),
                                                                             child:
@@ -671,7 +668,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                   'Dr ${columnUsersRecord.firstName}',
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Raleway',
-                                                                                        color: Color(0xFF6085B0),
+                                                                                        color: const Color(0xFF6085B0),
                                                                                         fontSize: 18.0,
                                                                                         fontWeight: FontWeight.bold,
                                                                                       ),
@@ -698,17 +695,17 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                       'Especialista em ${textPracticeRecord.speciliaty}',
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                             fontFamily: 'Raleway',
-                                                                                            color: Color(0xFFC4C2C8),
+                                                                                            color: const Color(0xFFC4C2C8),
                                                                                             fontSize: 10.0,
                                                                                             fontWeight: FontWeight.bold,
                                                                                           ),
                                                                                     );
                                                                                   },
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 5.0)),
+                                                                              ].divide(const SizedBox(height: 5.0)),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(width: 10.0)),
+                                                                        ].divide(const SizedBox(width: 10.0)),
                                                                       ),
                                                                       Row(
                                                                         mainAxisSize:
@@ -720,18 +717,18 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                               width: 100.0,
                                                                               height: 60.0,
                                                                               decoration: BoxDecoration(
-                                                                                color: Color(0xFFF2F2F2),
+                                                                                color: const Color(0xFFF2F2F2),
                                                                                 borderRadius: BorderRadius.circular(14.0),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                                                                                 child: Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: [
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
-                                                                                        Icon(
+                                                                                        const Icon(
                                                                                           Icons.event_note,
                                                                                           color: Color(0xFF5686E1),
                                                                                           size: 24.0,
@@ -744,17 +741,17 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                           ),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                 fontFamily: 'Raleway',
-                                                                                                color: Color(0xFF5686E1),
+                                                                                                color: const Color(0xFF5686E1),
                                                                                                 fontSize: 12.0,
                                                                                                 fontWeight: FontWeight.bold,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 5.0)),
+                                                                                      ].divide(const SizedBox(width: 5.0)),
                                                                                     ),
                                                                                     Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
-                                                                                        Icon(
+                                                                                        const Icon(
                                                                                           Icons.access_time,
                                                                                           color: Color(0xFF5686E1),
                                                                                           size: 24.0,
@@ -767,14 +764,14 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                           ),
                                                                                           style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                 fontFamily: 'Raleway',
-                                                                                                color: Color(0xFF5686E1),
+                                                                                                color: const Color(0xFF5686E1),
                                                                                                 fontSize: 12.0,
                                                                                                 fontWeight: FontWeight.bold,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 5.0)),
+                                                                                      ].divide(const SizedBox(width: 5.0)),
                                                                                     ),
-                                                                                  ].divide(SizedBox(width: 5.0)),
+                                                                                  ].divide(const SizedBox(width: 5.0)),
                                                                                 ),
                                                                               ),
                                                                             ),
@@ -817,9 +814,9 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                 options: FFButtonOptions(
                                                                                   width: 140.0,
                                                                                   height: 40.0,
-                                                                                  padding: EdgeInsets.all(0.0),
-                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                                  color: Color(0xFF657DCA),
+                                                                                  padding: const EdgeInsets.all(0.0),
+                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                  color: const Color(0xFF657DCA),
                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                         fontFamily: 'Raleway',
                                                                                         color: Colors.white,
@@ -827,7 +824,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                         fontWeight: FontWeight.bold,
                                                                                       ),
                                                                                   elevation: 0.0,
-                                                                                  borderSide: BorderSide(
+                                                                                  borderSide: const BorderSide(
                                                                                     color: Color(0xFF9A9A9A),
                                                                                     width: 1.0,
                                                                                   ),
@@ -841,7 +838,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
                                                                                         Stack(
-                                                                                          alignment: AlignmentDirectional(1.0, 1.0),
+                                                                                          alignment: const AlignmentDirectional(1.0, 1.0),
                                                                                           children: [
                                                                                             Icon(
                                                                                               Icons.library_add_check_rounded,
@@ -852,7 +849,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                               width: 10.0,
                                                                                               height: 10.0,
                                                                                               decoration: BoxDecoration(
-                                                                                                color: Color(0xFF85E777),
+                                                                                                color: const Color(0xFF85E777),
                                                                                                 shape: BoxShape.circle,
                                                                                                 border: Border.all(
                                                                                                   color: Colors.white,
@@ -871,14 +868,14 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                                 fontWeight: FontWeight.w600,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 5.0)),
+                                                                                      ].divide(const SizedBox(width: 5.0)),
                                                                                     );
                                                                                   } else {
                                                                                     return Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
                                                                                         Stack(
-                                                                                          alignment: AlignmentDirectional(1.0, 1.0),
+                                                                                          alignment: const AlignmentDirectional(1.0, 1.0),
                                                                                           children: [
                                                                                             Icon(
                                                                                               Icons.access_time_sharp,
@@ -889,7 +886,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                               width: 10.0,
                                                                                               height: 10.0,
                                                                                               decoration: BoxDecoration(
-                                                                                                color: Color(0xFFDAC366),
+                                                                                                color: const Color(0xFFDAC366),
                                                                                                 shape: BoxShape.circle,
                                                                                                 border: Border.all(
                                                                                                   color: Colors.white,
@@ -908,16 +905,16 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                                                                                                 fontWeight: FontWeight.w600,
                                                                                               ),
                                                                                         ),
-                                                                                      ].divide(SizedBox(width: 5.0)),
+                                                                                      ].divide(const SizedBox(width: 5.0)),
                                                                                     );
                                                                                   }
                                                                                 },
                                                                               ),
-                                                                            ].divide(SizedBox(width: 5.0)),
+                                                                            ].divide(const SizedBox(width: 5.0)),
                                                                           ),
                                                                         ],
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             20.0)),
                                                                   );
@@ -965,7 +962,7 @@ class _RequestsPageWidgetState extends State<RequestsPageWidget>
                     ],
                   ),
                 ),
-              ].divide(SizedBox(height: 20.0)),
+              ].divide(const SizedBox(height: 20.0)),
             ),
           ),
         ),

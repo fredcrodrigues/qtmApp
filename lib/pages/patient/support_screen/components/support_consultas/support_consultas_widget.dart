@@ -2,10 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'support_consultas_model.dart';
 export 'support_consultas_model.dart';
 
@@ -44,7 +41,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF1DA4D4),
+        backgroundColor: const Color(0xFF1DA4D4),
         body: SafeArea(
           top: true,
           child: StreamBuilder<List<PatientsRecord>>(
@@ -80,7 +77,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                       ? containerPatientsRecordList.first
                       : null;
               return Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xFFF6F9FC),
                 ),
                 child: Column(
@@ -89,7 +86,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                     Container(
                       width: double.infinity,
                       height: 100.0,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xFF1DA4D4),
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(14.0),
@@ -99,7 +96,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                         ),
                       ),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             30.0, 0.0, 30.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -113,7 +110,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                               onTap: () async {
                                 context.safePop();
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.arrow_back_ios_new,
                                 color: Colors.white,
                                 size: 30.0,
@@ -131,7 +128,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                     fontSize: 20.0,
                                   ),
                             ),
-                            Icon(
+                            const Icon(
                               Icons.support_agent_outlined,
                               color: Colors.white,
                               size: 34.0,
@@ -146,7 +143,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   25.0, 30.0, 25.0, 20.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -160,7 +157,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
-                                            color: Color(0xFF4C7BA7),
+                                            color: const Color(0xFF4C7BA7),
                                             fontSize: 28.0,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -170,7 +167,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   25.0, 0.0, 25.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -184,7 +181,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            color: Color(0xFF5B587B),
+                                            color: const Color(0xFF5B587B),
                                             fontWeight: FontWeight.w500,
                                           ),
                                     ),
@@ -193,7 +190,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   25.0, 30.0, 25.0, 20.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -277,7 +274,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                 return Container(
                                                   width: double.infinity,
                                                   height: 320.0,
-                                                  constraints: BoxConstraints(
+                                                  constraints: const BoxConstraints(
                                                     maxWidth: 380.0,
                                                     maxHeight: 500.0,
                                                   ),
@@ -285,7 +282,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryBackground,
-                                                    boxShadow: [
+                                                    boxShadow: const [
                                                       BoxShadow(
                                                         blurRadius: 10.0,
                                                         color:
@@ -300,7 +297,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 30.0,
                                                                 25.0,
@@ -333,7 +330,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                           fontFamily:
                                                                               'Poppins',
                                                                           color:
-                                                                              Color(0xFF0A2540),
+                                                                              const Color(0xFF0A2540),
                                                                           fontSize:
                                                                               16.0,
                                                                           fontWeight:
@@ -343,7 +340,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                 ),
                                                                 Stack(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   children: [
@@ -356,8 +353,8 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                           BoxDecoration(
                                                                         color: (_model.choosedRequest != null) &&
                                                                                 (_model.choosedRequest?.reference == wrapRequestsRecord.reference)
-                                                                            ? Color(0xFF8466B4)
-                                                                            : Color(0xFFDCDCDC),
+                                                                            ? const Color(0xFF8466B4)
+                                                                            : const Color(0xFFDCDCDC),
                                                                         shape: BoxShape
                                                                             .circle,
                                                                       ),
@@ -366,7 +363,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                             null) &&
                                                                         (_model.choosedRequest?.reference ==
                                                                             wrapRequestsRecord.reference))
-                                                                      Icon(
+                                                                      const Icon(
                                                                         Icons
                                                                             .check_sharp,
                                                                         color: Colors
@@ -376,7 +373,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                       ),
                                                                   ],
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   width: 15.0)),
                                                             ),
                                                           ],
@@ -398,13 +395,13 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                               8.0),
                                                                   border: Border
                                                                       .all(
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0x19000000),
                                                                     width: 1.0,
                                                                   ),
                                                                 ),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -416,7 +413,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -438,11 +435,11 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -464,11 +461,11 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -490,11 +487,11 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium,
                                                                             ),
-                                                                          ].divide(SizedBox(width: 10.0)),
+                                                                          ].divide(const SizedBox(width: 10.0)),
                                                                         ),
                                                                       ),
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             15.0,
                                                                             0.0,
@@ -507,12 +504,12 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                             Container(
                                                                               height: 30.0,
                                                                               decoration: BoxDecoration(
-                                                                                color: Color(0xFFF9F5F5),
+                                                                                color: const Color(0xFFF9F5F5),
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                               ),
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                                                                                 child: Text(
                                                                                   () {
                                                                                     if (wrapRequestsRecord.status == 'refused') {
@@ -527,7 +524,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                                   }(),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Raleway',
-                                                                                        color: (wrapRequestsRecord.status == 'canceled') || (wrapRequestsRecord.status == 'refused') ? Color(0xFFE05D5D) : Color(0xFF6E8EBE),
+                                                                                        color: (wrapRequestsRecord.status == 'canceled') || (wrapRequestsRecord.status == 'refused') ? const Color(0xFFE05D5D) : const Color(0xFF6E8EBE),
                                                                                         fontSize: 12.0,
                                                                                         fontWeight: FontWeight.bold,
                                                                                       ),
@@ -573,9 +570,9 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                           (_model.choosedRequest?.reference ==
                                                                               wrapRequestsRecord
                                                                                   .reference)
-                                                                      ? Color(
+                                                                      ? const Color(
                                                                           0xFF8466B4)
-                                                                      : Color(
+                                                                      : const Color(
                                                                           0xFFD9D9D9),
                                                                   borderRadius:
                                                                       BorderRadius
@@ -583,7 +580,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                               24.0),
                                                                 ),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           0.0,
@@ -603,7 +600,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                                                             .bodyMedium
                                                                             .override(
                                                                               fontFamily: 'Poppins',
-                                                                              color: (_model.choosedRequest != null) && (_model.choosedRequest?.reference == wrapRequestsRecord.reference) ? Colors.white : Color(0xFF5F6370),
+                                                                              color: (_model.choosedRequest != null) && (_model.choosedRequest?.reference == wrapRequestsRecord.reference) ? Colors.white : const Color(0xFF5F6370),
                                                                               fontWeight: FontWeight.w600,
                                                                             ),
                                                                       ),
@@ -633,7 +630,7 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           10.0, 10.0, 10.0, 10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
@@ -642,12 +639,12 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                           Container(
                             decoration: BoxDecoration(
                               color: _model.choosedRequest != null
-                                  ? Color(0xFF3F92D4)
-                                  : Color(0xFFD9D9D9),
+                                  ? const Color(0xFF3F92D4)
+                                  : const Color(0xFFD9D9D9),
                               borderRadius: BorderRadius.circular(24.0),
                             ),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   50.0, 20.0, 50.0, 20.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -662,17 +659,17 @@ class _SupportConsultasWidgetState extends State<SupportConsultasWidget> {
                                           fontFamily: 'Readex Pro',
                                           color: _model.choosedRequest != null
                                               ? Colors.white
-                                              : Color(0xFF5F6370),
+                                              : const Color(0xFF5F6370),
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.bold,
                                         ),
                                   ),
-                                  Icon(
+                                  const Icon(
                                     Icons.arrow_forward_ios_sharp,
                                     color: Colors.white,
                                     size: 18.0,
                                   ),
-                                ].divide(SizedBox(width: 20.0)),
+                                ].divide(const SizedBox(width: 20.0)),
                               ),
                             ),
                           ),

@@ -1,13 +1,10 @@
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'choose_timers_model.dart';
 export 'choose_timers_model.dart';
 
@@ -17,7 +14,7 @@ class ChooseTimersWidget extends StatefulWidget {
     required this.theraphist,
     required this.timer,
     int? numberCowokrings,
-  }) : this.numberCowokrings = numberCowokrings ?? 0;
+  }) : numberCowokrings = numberCowokrings ?? 0;
 
   final TheraphistRecord? theraphist;
   final DateTime? timer;
@@ -73,13 +70,13 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
               borderRadius: BorderRadius.circular(0.0),
             ),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -94,7 +91,7 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           40.0, 0.0, 40.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -113,7 +110,7 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                                   ),
                                 ],
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -122,7 +119,7 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -139,13 +136,13 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                                         width: double.infinity,
                                         height: 50.0,
                                         decoration: BoxDecoration(
-                                          color: Color(0xFF657DCA),
+                                          color: const Color(0xFF657DCA),
                                           borderRadius:
                                               BorderRadius.circular(14.0),
                                         ),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 20.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -155,7 +152,7 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  Icon(
+                                                  const Icon(
                                                     Icons.access_time_filled,
                                                     color: Colors.white,
                                                     size: 24.0,
@@ -180,7 +177,7 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                                                               FontWeight.bold,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 10.0)),
+                                                ].divide(const SizedBox(width: 10.0)),
                                               ),
                                             ],
                                           ),
@@ -199,12 +196,12 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                                         options: FFButtonOptions(
                                           height: 50.0,
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   24.0, 0.0, 24.0, 0.0),
                                           iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
-                                          color: Color(0xFFF85C5E),
+                                          color: const Color(0xFFF85C5E),
                                           textStyle:
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
@@ -213,7 +210,7 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                                                     color: Colors.white,
                                                   ),
                                           elevation: 3.0,
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -222,7 +219,7 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 5.0)),
+                                  ].divide(const SizedBox(width: 5.0)),
                                 ),
                                 FlutterFlowCalendar(
                                   color: FlutterFlowTheme.of(context).primary,
@@ -249,7 +246,7 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                                   locale:
                                       FFLocalizations.of(context).languageCode,
                                 ),
-                              ].divide(SizedBox(height: 10.0)),
+                              ].divide(const SizedBox(height: 10.0)),
                             ),
                           ),
                         ],
@@ -258,7 +255,7 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         context.pushNamed(
@@ -288,17 +285,17 @@ class _ChooseTimersWidgetState extends State<ChooseTimersWidget> {
                       options: FFButtonOptions(
                         width: double.infinity,
                         height: 60.0,
-                        padding: EdgeInsets.all(0.0),
+                        padding: const EdgeInsets.all(0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFF4F90DB),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: const Color(0xFF4F90DB),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                 ),
                         elevation: 3.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),

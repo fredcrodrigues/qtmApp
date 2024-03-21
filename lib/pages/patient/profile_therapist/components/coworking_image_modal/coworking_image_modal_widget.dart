@@ -5,9 +5,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 import 'coworking_image_modal_model.dart';
 export 'coworking_image_modal_model.dart';
 
@@ -51,7 +48,7 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: 296.0,
         height: 254.0,
@@ -60,7 +57,7 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
           borderRadius: BorderRadius.circular(8.0),
         ),
         child: Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,8 +68,8 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                        child: Container(
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        child: SizedBox(
                           width: double.infinity,
                           height: 180.0,
                           child: CarouselSlider(
@@ -90,14 +87,14 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                                       child: FlutterFlowExpandedImageView(
                                         image: Image.network(
                                           valueOrDefault<String>(
-                                            widget.refCoworking?.image?.path1,
+                                            widget.refCoworking?.image.path1,
                                             '0',
                                           ),
                                           fit: BoxFit.contain,
                                         ),
                                         allowRotation: false,
                                         tag: valueOrDefault<String>(
-                                          widget.refCoworking?.image?.path1,
+                                          widget.refCoworking?.image.path1,
                                           '0',
                                         ),
                                         useHeroAnimation: true,
@@ -107,7 +104,7 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                                 },
                                 child: Hero(
                                   tag: valueOrDefault<String>(
-                                    widget.refCoworking?.image?.path1,
+                                    widget.refCoworking?.image.path1,
                                     '0',
                                   ),
                                   transitionOnUserGestures: true,
@@ -115,7 +112,7 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.network(
                                       valueOrDefault<String>(
-                                        widget.refCoworking?.image?.path1,
+                                        widget.refCoworking?.image.path1,
                                         '0',
                                       ),
                                       width: double.infinity,
@@ -138,14 +135,14 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                                       child: FlutterFlowExpandedImageView(
                                         image: Image.network(
                                           valueOrDefault<String>(
-                                            widget.refCoworking?.image?.path3,
+                                            widget.refCoworking?.image.path3,
                                             '0',
                                           ),
                                           fit: BoxFit.contain,
                                         ),
                                         allowRotation: false,
                                         tag: valueOrDefault<String>(
-                                          widget.refCoworking?.image?.path3,
+                                          widget.refCoworking?.image.path3,
                                           '0',
                                         ),
                                         useHeroAnimation: true,
@@ -155,7 +152,7 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                                 },
                                 child: Hero(
                                   tag: valueOrDefault<String>(
-                                    widget.refCoworking?.image?.path3,
+                                    widget.refCoworking?.image.path3,
                                     '0',
                                   ),
                                   transitionOnUserGestures: true,
@@ -163,7 +160,7 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.network(
                                       valueOrDefault<String>(
-                                        widget.refCoworking?.image?.path3,
+                                        widget.refCoworking?.image.path3,
                                         '0',
                                       ),
                                       width: double.infinity,
@@ -186,14 +183,14 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                                       child: FlutterFlowExpandedImageView(
                                         image: Image.network(
                                           valueOrDefault<String>(
-                                            widget.refCoworking?.image?.path2,
+                                            widget.refCoworking?.image.path2,
                                             '0',
                                           ),
                                           fit: BoxFit.contain,
                                         ),
                                         allowRotation: false,
                                         tag: valueOrDefault<String>(
-                                          widget.refCoworking?.image?.path2,
+                                          widget.refCoworking?.image.path2,
                                           '0',
                                         ),
                                         useHeroAnimation: true,
@@ -203,7 +200,7 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                                 },
                                 child: Hero(
                                   tag: valueOrDefault<String>(
-                                    widget.refCoworking?.image?.path2,
+                                    widget.refCoworking?.image.path2,
                                     '0',
                                   ),
                                   transitionOnUserGestures: true,
@@ -211,7 +208,7 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.network(
                                       valueOrDefault<String>(
-                                        widget.refCoworking?.image?.path2,
+                                        widget.refCoworking?.image.path2,
                                         '0',
                                       ),
                                       width: 300.0,
@@ -240,9 +237,9 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 90.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -250,37 +247,37 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               FlutterFlowIconButton(
-                                borderColor: Color(0xFF0DA0D4),
+                                borderColor: const Color(0xFF0DA0D4),
                                 borderRadius: 20.0,
                                 borderWidth: 1.0,
                                 buttonSize: 30.0,
-                                fillColor: Color(0xA50DA0D4),
-                                icon: Icon(
+                                fillColor: const Color(0xA50DA0D4),
+                                icon: const Icon(
                                   Icons.arrow_back_ios_new,
                                   color: Colors.white,
                                   size: 16.0,
                                 ),
                                 onPressed: () async {
                                   await _model.carouselController?.previousPage(
-                                    duration: Duration(milliseconds: 300),
+                                    duration: const Duration(milliseconds: 300),
                                     curve: Curves.ease,
                                   );
                                 },
                               ),
                               FlutterFlowIconButton(
-                                borderColor: Color(0xFF0DA0D4),
+                                borderColor: const Color(0xFF0DA0D4),
                                 borderRadius: 20.0,
                                 borderWidth: 1.0,
                                 buttonSize: 30.0,
-                                fillColor: Color(0xA50DA0D4),
-                                icon: Icon(
+                                fillColor: const Color(0xA50DA0D4),
+                                icon: const Icon(
                                   Icons.arrow_forward_ios,
                                   color: Colors.white,
                                   size: 16.0,
                                 ),
                                 onPressed: () async {
                                   await _model.carouselController?.nextPage(
-                                    duration: Duration(milliseconds: 300),
+                                    duration: const Duration(milliseconds: 300),
                                     curve: Curves.ease,
                                   );
                                 },
@@ -296,12 +293,12 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(1.0, -1.0),
+                        alignment: const AlignmentDirectional(1.0, -1.0),
                         child: FlutterFlowIconButton(
                           borderRadius: 20.0,
                           borderWidth: 1.0,
                           buttonSize: 30.0,
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.close_rounded,
                             color: Color(0xFF949495),
                             size: 16.0,
@@ -337,7 +334,7 @@ class _CoworkingImageModalWidgetState extends State<CoworkingImageModalWidget> {
                           fontSize: 10.0,
                         ),
                   ),
-                ].divide(SizedBox(height: 5.0)),
+                ].divide(const SizedBox(height: 5.0)),
               ),
             ],
           ),

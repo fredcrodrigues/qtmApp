@@ -1,17 +1,12 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'invoincing_theraphist_page_model.dart';
@@ -47,8 +42,8 @@ class _InvoincingTheraphistPageWidgetState
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 90.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 90.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -66,8 +61,8 @@ class _InvoincingTheraphistPageWidgetState
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 90.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 90.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -138,16 +133,16 @@ class _InvoincingTheraphistPageWidgetState
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
-            backgroundColor: Color(0xFFA54EAF),
+            backgroundColor: const Color(0xFFA54EAF),
             automaticallyImplyLeading: false,
             leading: FlutterFlowIconButton(
               borderColor: Colors.transparent,
               borderRadius: 30.0,
               borderWidth: 1.0,
               buttonSize: 60.0,
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_ios,
                 color: Colors.white,
                 size: 30.0,
@@ -157,7 +152,7 @@ class _InvoincingTheraphistPageWidgetState
               },
             ),
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 25.0, 0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'zdykdxop' /* Faturamento */,
@@ -169,7 +164,7 @@ class _InvoincingTheraphistPageWidgetState
                     ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -192,7 +187,7 @@ class _InvoincingTheraphistPageWidgetState
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   4.0, 4.0, 8.0, 4.0),
                               child: Container(
                                 height: 256.0,
@@ -203,7 +198,7 @@ class _InvoincingTheraphistPageWidgetState
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -212,9 +207,9 @@ class _InvoincingTheraphistPageWidgetState
                                   ],
                                   borderRadius: BorderRadius.circular(16.0),
                                 ),
-                                alignment: AlignmentDirectional(0.0, -1.0),
+                                alignment: const AlignmentDirectional(0.0, -1.0),
                                 child: Padding(
-                                  padding: EdgeInsets.all(16.0),
+                                  padding: const EdgeInsets.all(16.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -234,7 +229,7 @@ class _InvoincingTheraphistPageWidgetState
                                       ),
                                       Expanded(
                                         child: Padding(
-                                          padding: EdgeInsets.all(16.0),
+                                          padding: const EdgeInsets.all(16.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -257,13 +252,13 @@ class _InvoincingTheraphistPageWidgetState
                                                       animateFromLastPercent:
                                                           true,
                                                       progressColor:
-                                                          Color(0xFF2876DC),
+                                                          const Color(0xFF2876DC),
                                                       center: Text(
                                                         valueOrDefault<String>(
                                                           _model
                                                               .collectionrequestsinprogress
                                                               ?.length
-                                                              ?.toString(),
+                                                              .toString(),
                                                           '0',
                                                         ),
                                                         style:
@@ -285,7 +280,7 @@ class _InvoincingTheraphistPageWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Readex Pro',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF676767),
                                                               ),
                                                     ),
@@ -307,13 +302,13 @@ class _InvoincingTheraphistPageWidgetState
                                                       animateFromLastPercent:
                                                           true,
                                                       progressColor:
-                                                          Color(0xFF9D1CB4),
+                                                          const Color(0xFF9D1CB4),
                                                       center: Text(
                                                         valueOrDefault<String>(
                                                           _model
                                                               .collectionrequestsfinalized
                                                               ?.length
-                                                              ?.toString(),
+                                                              .toString(),
                                                           '0',
                                                         ),
                                                         style:
@@ -335,7 +330,7 @@ class _InvoincingTheraphistPageWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Readex Pro',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF676767),
                                                               ),
                                                     ),
@@ -359,22 +354,22 @@ class _InvoincingTheraphistPageWidgetState
                           ))
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 4.0, 4.0, 4.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 16.0),
                                       child: Container(
                                         width: double.infinity,
-                                        constraints: BoxConstraints(
+                                        constraints: const BoxConstraints(
                                           maxWidth: 570.0,
                                         ),
                                         decoration: BoxDecoration(
-                                          color: Color(0xFF2F19FF),
-                                          boxShadow: [
+                                          color: const Color(0xFF2F19FF),
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 0.0,
                                               color: Colors.black,
@@ -385,9 +380,9 @@ class _InvoincingTheraphistPageWidgetState
                                               BorderRadius.circular(16.0),
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
-                                          padding: EdgeInsets.all(16.0),
+                                          padding: const EdgeInsets.all(16.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
@@ -404,11 +399,11 @@ class _InvoincingTheraphistPageWidgetState
                                                         .override(
                                                           fontFamily: 'Outfit',
                                                           color:
-                                                              Color(0xFF040404),
+                                                              const Color(0xFF040404),
                                                         ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 0.0),
                                                 child: Text(
@@ -427,7 +422,7 @@ class _InvoincingTheraphistPageWidgetState
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 12.0, 0.0, 0.0),
                                                 child: Row(
@@ -445,11 +440,11 @@ class _InvoincingTheraphistPageWidgetState
                                                       animateFromLastPercent:
                                                           true,
                                                       progressColor:
-                                                          Color(0xFF040404),
+                                                          const Color(0xFF040404),
                                                       backgroundColor:
                                                           Colors.black,
                                                       barRadius:
-                                                          Radius.circular(50.0),
+                                                          const Radius.circular(50.0),
                                                       padding: EdgeInsets.zero,
                                                     ),
                                                   ],
@@ -461,13 +456,13 @@ class _InvoincingTheraphistPageWidgetState
                                       ),
                                     ),
                                     Container(
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 570.0,
                                       ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -478,9 +473,9 @@ class _InvoincingTheraphistPageWidgetState
                                             BorderRadius.circular(16.0),
                                       ),
                                       alignment:
-                                          AlignmentDirectional(0.0, -1.0),
+                                          const AlignmentDirectional(0.0, -1.0),
                                       child: Padding(
-                                        padding: EdgeInsets.all(16.0),
+                                        padding: const EdgeInsets.all(16.0),
                                         child: SingleChildScrollView(
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -498,7 +493,7 @@ class _InvoincingTheraphistPageWidgetState
                                                         .headlineSmall,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 12.0),
                                                 child: Text(
@@ -540,7 +535,7 @@ class _InvoincingTheraphistPageWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   16.0,
                                                                   0.0,
@@ -580,7 +575,7 @@ class _InvoincingTheraphistPageWidgetState
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   4.0, 4.0, 8.0, 4.0),
                               child: Container(
                                 height: 162.0,
@@ -591,7 +586,7 @@ class _InvoincingTheraphistPageWidgetState
                                 decoration: BoxDecoration(
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
-                                  boxShadow: [
+                                  boxShadow: const [
                                     BoxShadow(
                                       blurRadius: 4.0,
                                       color: Color(0x33000000),
@@ -600,9 +595,9 @@ class _InvoincingTheraphistPageWidgetState
                                   ],
                                   borderRadius: BorderRadius.circular(16.0),
                                 ),
-                                alignment: AlignmentDirectional(0.0, -1.0),
+                                alignment: const AlignmentDirectional(0.0, -1.0),
                                 child: Padding(
-                                  padding: EdgeInsets.all(16.0),
+                                  padding: const EdgeInsets.all(16.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -611,7 +606,7 @@ class _InvoincingTheraphistPageWidgetState
                                     children: [
                                       Expanded(
                                         child: Padding(
-                                          padding: EdgeInsets.all(16.0),
+                                          padding: const EdgeInsets.all(16.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
                                             mainAxisAlignment:
@@ -630,7 +625,7 @@ class _InvoincingTheraphistPageWidgetState
                                                   children: [
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               -1.0, -1.0),
                                                       child: Text(
                                                         FFLocalizations.of(
@@ -646,7 +641,7 @@ class _InvoincingTheraphistPageWidgetState
                                                             .override(
                                                               fontFamily:
                                                                   'Readex Pro',
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFF676767),
                                                               fontSize: 12.0,
                                                             ),
@@ -656,7 +651,7 @@ class _InvoincingTheraphistPageWidgetState
                                                       mainAxisSize:
                                                           MainAxisSize.max,
                                                       children: [
-                                                        Icon(
+                                                        const Icon(
                                                           Icons.trending_up,
                                                           color:
                                                               Color(0xFF9D1CB4),
@@ -679,7 +674,7 @@ class _InvoincingTheraphistPageWidgetState
                                                               .override(
                                                                 fontFamily:
                                                                     'Readex Pro',
-                                                                color: Color(
+                                                                color: const Color(
                                                                     0xFF676767),
                                                                 fontSize: 45.0,
                                                               ),
@@ -706,23 +701,23 @@ class _InvoincingTheraphistPageWidgetState
                           ))
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 4.0, 4.0, 4.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 0.0, 16.0),
                                       child: Container(
                                         width: double.infinity,
-                                        constraints: BoxConstraints(
+                                        constraints: const BoxConstraints(
                                           maxWidth: 570.0,
                                         ),
                                         decoration: BoxDecoration(
                                           color: FlutterFlowTheme.of(context)
                                               .primary,
-                                          boxShadow: [
+                                          boxShadow: const [
                                             BoxShadow(
                                               blurRadius: 0.0,
                                               color: Colors.black,
@@ -733,9 +728,9 @@ class _InvoincingTheraphistPageWidgetState
                                               BorderRadius.circular(16.0),
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
-                                          padding: EdgeInsets.all(16.0),
+                                          padding: const EdgeInsets.all(16.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             crossAxisAlignment:
@@ -752,11 +747,11 @@ class _InvoincingTheraphistPageWidgetState
                                                         .override(
                                                           fontFamily: 'Outfit',
                                                           color:
-                                                              Color(0xFF040404),
+                                                              const Color(0xFF040404),
                                                         ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 4.0, 0.0, 0.0),
                                                 child: Text(
@@ -775,7 +770,7 @@ class _InvoincingTheraphistPageWidgetState
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 12.0, 0.0, 0.0),
                                                 child: Row(
@@ -793,11 +788,11 @@ class _InvoincingTheraphistPageWidgetState
                                                       animateFromLastPercent:
                                                           true,
                                                       progressColor:
-                                                          Color(0xFF333333),
+                                                          const Color(0xFF333333),
                                                       backgroundColor:
                                                           Colors.black,
                                                       barRadius:
-                                                          Radius.circular(50.0),
+                                                          const Radius.circular(50.0),
                                                       padding: EdgeInsets.zero,
                                                     ),
                                                   ],
@@ -809,13 +804,13 @@ class _InvoincingTheraphistPageWidgetState
                                       ),
                                     ),
                                     Container(
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 570.0,
                                       ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 4.0,
                                             color: Color(0x33000000),
@@ -826,9 +821,9 @@ class _InvoincingTheraphistPageWidgetState
                                             BorderRadius.circular(16.0),
                                       ),
                                       alignment:
-                                          AlignmentDirectional(0.0, -1.0),
+                                          const AlignmentDirectional(0.0, -1.0),
                                       child: Padding(
-                                        padding: EdgeInsets.all(16.0),
+                                        padding: const EdgeInsets.all(16.0),
                                         child: SingleChildScrollView(
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -846,7 +841,7 @@ class _InvoincingTheraphistPageWidgetState
                                                         .headlineSmall,
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 0.0, 12.0),
                                                 child: Text(
@@ -888,7 +883,7 @@ class _InvoincingTheraphistPageWidgetState
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   16.0,
                                                                   0.0,
@@ -924,12 +919,12 @@ class _InvoincingTheraphistPageWidgetState
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsets.all(4.0),
+                        padding: const EdgeInsets.all(4.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   5.0, 0.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -939,7 +934,7 @@ class _InvoincingTheraphistPageWidgetState
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF676767),
+                                      color: const Color(0xFF676767),
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),
@@ -949,7 +944,7 @@ class _InvoincingTheraphistPageWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 4.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(4.0, 0.0, 4.0, 0.0),
                         child: Builder(
                           builder: (context) {
                             final listresquest =
@@ -963,7 +958,7 @@ class _InvoincingTheraphistPageWidgetState
                                   final listresquestItem =
                                       listresquest[listresquestIndex];
                                   return Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         4.0, 0.0, 4.0, 0.0),
                                     child: StreamBuilder<PracticeRecord>(
                                       stream: PracticeRecord.getDocument(
@@ -994,7 +989,7 @@ class _InvoincingTheraphistPageWidgetState
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 4.0,
                                                 color: Color(0x33000000),
@@ -1015,7 +1010,7 @@ class _InvoincingTheraphistPageWidgetState
                                                     MainAxisAlignment
                                                         .spaceEvenly,
                                                 children: [
-                                                  Icon(
+                                                  const Icon(
                                                     Icons.assessment,
                                                     color: Color(0xFF9D1CB4),
                                                     size: 30.0,
@@ -1032,7 +1027,7 @@ class _InvoincingTheraphistPageWidgetState
                                                           fontSize: 25.0,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 15.0)),
+                                                ].divide(const SizedBox(width: 15.0)),
                                               ),
                                             ],
                                           ),
@@ -1040,7 +1035,7 @@ class _InvoincingTheraphistPageWidgetState
                                       },
                                     ),
                                   );
-                                }).divide(SizedBox(height: 6.0)),
+                                }).divide(const SizedBox(height: 6.0)),
                               ),
                             );
                           },

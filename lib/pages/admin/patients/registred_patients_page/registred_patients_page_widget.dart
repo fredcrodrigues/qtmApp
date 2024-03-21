@@ -4,15 +4,10 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/admin/components/actions_users_modal/actions_users_modal_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'registred_patients_page_model.dart';
 export 'registred_patients_page_model.dart';
 
@@ -45,8 +40,8 @@ class _RegistredPatientsPageWidgetState
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 100.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 100.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -90,18 +85,18 @@ class _RegistredPatientsPageWidgetState
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(120.0),
+          preferredSize: const Size.fromHeight(120.0),
           child: AppBar(
             backgroundColor: Colors.white,
             automaticallyImplyLeading: false,
             leading: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_ios_new,
                   color: Color(0xFF373737),
                   size: 30.0,
@@ -111,24 +106,24 @@ class _RegistredPatientsPageWidgetState
                 },
               ),
             ),
-            actions: [],
+            actions: const [],
             flexibleSpace: FlexibleSpaceBar(
               title: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                 child: Text(
                   FFLocalizations.of(context).getText(
                     'f5vffp5w' /* Pacientes Registrados */,
                   ),
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
                         fontFamily: 'Outfit',
-                        color: Color(0xFF373737),
+                        color: const Color(0xFF373737),
                         fontSize: 18.0,
                       ),
                 ),
               ),
               centerTitle: true,
               expandedTitleScale: 1.0,
-              titlePadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
+              titlePadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
             ),
             elevation: 1.0,
           ),
@@ -150,14 +145,14 @@ class _RegistredPatientsPageWidgetState
                       final listUserPatientsItem =
                           listUserPatients[listUserPatientsIndex];
                       return Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 16.0, 12.0),
                         child: Container(
                           width: double.infinity,
                           height: 100.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x230E151B),
@@ -169,7 +164,7 @@ class _RegistredPatientsPageWidgetState
                           child: Stack(
                             children: [
                               ClipRRect(
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   bottomLeft: Radius.circular(12.0),
                                   bottomRight: Radius.circular(0.0),
                                   topLeft: Radius.circular(12.0),
@@ -183,7 +178,7 @@ class _RegistredPatientsPageWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     130.0, 0.0, 12.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -196,13 +191,13 @@ class _RegistredPatientsPageWidgetState
                                           .bodyLarge
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            color: Color(0xFF484848),
+                                            color: const Color(0xFF484848),
                                             fontSize: 14.0,
                                             fontWeight: FontWeight.normal,
                                           ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 5.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -215,7 +210,7 @@ class _RegistredPatientsPageWidgetState
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF16A3C4),
+                                                  color: const Color(0xFF16A3C4),
                                                   fontSize: 10.0,
                                                   fontWeight: FontWeight.w600,
                                                 ),
@@ -228,12 +223,12 @@ class _RegistredPatientsPageWidgetState
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Readex Pro',
-                                                  color: Color(0xFF484848),
+                                                  color: const Color(0xFF484848),
                                                   fontSize: 10.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(width: 5.0)),
+                                        ].divide(const SizedBox(width: 5.0)),
                                       ),
                                     ),
                                   ],
@@ -244,22 +239,22 @@ class _RegistredPatientsPageWidgetState
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 5.0, 0.0, 0.0),
                                     child: Container(
                                       width: 68.0,
                                       height: 19.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Colors.white,
                                       ),
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(1.0, 0.0),
+                                            const AlignmentDirectional(1.0, 0.0),
                                         child: Transform.rotate(
                                           angle: 4.7124,
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 10.0, 0.0),
                                             child: InkWell(
                                               splashColor: Colors.transparent,
@@ -301,7 +296,7 @@ class _RegistredPatientsPageWidgetState
                                                 ).then((value) =>
                                                     safeSetState(() {}));
                                               },
-                                              child: Icon(
+                                              child: const Icon(
                                                 Icons.keyboard_control,
                                                 color: Color(0xFFABABB4),
                                                 size: 20.0,

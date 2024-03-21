@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'bottomnavigationbar_patient_model.dart';
 export 'bottomnavigationbar_patient_model.dart';
@@ -45,18 +43,18 @@ class _BottomnavigationbarPatientWidgetState
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.0, 1.0),
+      alignment: const AlignmentDirectional(0.0, 1.0),
       child: Material(
         color: Colors.transparent,
         elevation: 2.0,
         child: Container(
           width: double.infinity,
           height: 80.0,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Colors.white,
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,15 +65,15 @@ class _BottomnavigationbarPatientWidgetState
                   borderWidth: 1.0,
                   buttonSize: 40.0,
                   fillColor: FFAppState().stateNotificationPatient
-                      ? Color(0xFF0DA0D4)
-                      : Color(0x00000000),
-                  hoverColor: Color(0x8F2876DC),
+                      ? const Color(0xFF0DA0D4)
+                      : const Color(0x00000000),
+                  hoverColor: const Color(0x8F2876DC),
                   hoverIconColor: Colors.white,
                   icon: Icon(
                     Icons.notifications,
                     color: FFAppState().stateNotificationPatient
                         ? Colors.white
-                        : Color(0xFF0DA0D4),
+                        : const Color(0xFF0DA0D4),
                     size: 24.0,
                   ),
                   onPressed: () async {
@@ -88,7 +86,7 @@ class _BottomnavigationbarPatientWidgetState
                     context.pushNamed(
                       'notification_patient_page',
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
+                        kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.fade,
                           duration: Duration(milliseconds: 0),
@@ -103,15 +101,15 @@ class _BottomnavigationbarPatientWidgetState
                   borderWidth: 1.0,
                   buttonSize: 40.0,
                   fillColor: FFAppState().stateHomePatient
-                      ? Color(0xFF0DA0D4)
-                      : Color(0x00000000),
-                  hoverColor: Color(0x8F2876DC),
+                      ? const Color(0xFF0DA0D4)
+                      : const Color(0x00000000),
+                  hoverColor: const Color(0x8F2876DC),
                   hoverIconColor: Colors.white,
                   icon: Icon(
                     Icons.home,
                     color: FFAppState().stateHomePatient
                         ? Colors.white
-                        : Color(0xFF0DA0D4),
+                        : const Color(0xFF0DA0D4),
                     size: 24.0,
                   ),
                   onPressed: () async {
@@ -124,7 +122,7 @@ class _BottomnavigationbarPatientWidgetState
                     context.pushNamed(
                       'home_patient_page',
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: TransitionInfo(
+                        kTransitionInfoKey: const TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.fade,
                           duration: Duration(milliseconds: 0),
@@ -139,15 +137,15 @@ class _BottomnavigationbarPatientWidgetState
                   borderWidth: 1.0,
                   buttonSize: 40.0,
                   fillColor: FFAppState().stateHistoryPatient
-                      ? Color(0xFF0DA0D4)
-                      : Color(0x00000000),
-                  hoverColor: Color(0x8F2876DC),
+                      ? const Color(0xFF0DA0D4)
+                      : const Color(0x00000000),
+                  hoverColor: const Color(0x8F2876DC),
                   hoverIconColor: Colors.white,
                   icon: Icon(
                     Icons.work_history,
                     color: FFAppState().stateHistoryPatient
                         ? Colors.white
-                        : Color(0xFF0DA0D4),
+                        : const Color(0xFF0DA0D4),
                     size: 24.0,
                   ),
                   onPressed: () async {

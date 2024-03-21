@@ -7,15 +7,10 @@ import '/flutter_flow/flutter_flow_place_picker.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/upload_data.dart';
 import '/pages/registe_user/user_theraphist/introduction/turorial_theraphist_03_page/turorial_theraphist03_page_widget.dart';
-import 'dart:io';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'add_place_theraphist_page_model.dart';
 export 'add_place_theraphist_page_model.dart';
 
@@ -53,14 +48,14 @@ class _AddPlaceTheraphistPageWidgetState
                 : FocusScope.of(context).unfocus(),
             child: Padding(
               padding: MediaQuery.viewInsetsOf(context),
-              child: TurorialTheraphist03PageWidget(),
+              child: const TurorialTheraphist03PageWidget(),
             ),
           );
         },
       ).then((value) => safeSetState(() {}));
     });
 
-    getCurrentUserLocation(defaultLocation: LatLng(0.0, 0.0), cached: true)
+    getCurrentUserLocation(defaultLocation: const LatLng(0.0, 0.0), cached: true)
         .then((loc) => setState(() => currentUserLocationValue = loc));
     _model.textController1 ??= TextEditingController();
     _model.textFieldFocusNode1 ??= FocusNode();
@@ -106,12 +101,12 @@ class _AddPlaceTheraphistPageWidgetState
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
-            backgroundColor: Color(0xFFA954B2),
+            backgroundColor: const Color(0xFFA954B2),
             automaticallyImplyLeading: false,
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   '4z4jp1ys' /* Adicionar Coworking de Atendim... */,
@@ -124,7 +119,7 @@ class _AddPlaceTheraphistPageWidgetState
                     ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -142,7 +137,7 @@ class _AddPlaceTheraphistPageWidgetState
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 14.0, 8.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 14.0, 8.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -162,14 +157,14 @@ class _AddPlaceTheraphistPageWidgetState
                                   hintStyle:
                                       FlutterFlowTheme.of(context).labelMedium,
                                   enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFFBBB8B8),
                                       width: 1.0,
                                     ),
                                     borderRadius: BorderRadius.circular(100.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFF9420AF),
                                       width: 1.0,
                                     ),
@@ -194,7 +189,7 @@ class _AddPlaceTheraphistPageWidgetState
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF14181B),
+                                      color: const Color(0xFF14181B),
                                     ),
                                 validator: _model.textController1Validator
                                     .asValidator(context),
@@ -205,7 +200,7 @@ class _AddPlaceTheraphistPageWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -242,12 +237,12 @@ class _AddPlaceTheraphistPageWidgetState
                                       .titleSmall
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF57636C),
+                                        color: const Color(0xFF57636C),
                                         fontSize: 12.0,
                                         fontWeight: FontWeight.w500,
                                       ),
                                   elevation: 0.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Color(0xFFE0E3E7),
                                     width: 1.0,
                                   ),
@@ -260,7 +255,7 @@ class _AddPlaceTheraphistPageWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -269,7 +264,7 @@ class _AddPlaceTheraphistPageWidgetState
                               child: Container(
                                 width: 363.0,
                                 height: 243.0,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Colors.white,
                                 ),
                                 child: Column(
@@ -277,7 +272,7 @@ class _AddPlaceTheraphistPageWidgetState
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           5.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -357,7 +352,7 @@ class _AddPlaceTheraphistPageWidgetState
                                                       .first
                                                   : null;
                                           return Builder(builder: (context) {
-                                            final _googleMapMarker = _model
+                                            final googleMapMarker = _model
                                                 .placePickercoworkinValue
                                                 .latLng;
                                             return FlutterFlowGoogleMap(
@@ -369,12 +364,11 @@ class _AddPlaceTheraphistPageWidgetState
                                                   _model.googleMapsCenter ??=
                                                       currentUserLocationValue!,
                                               markers: [
-                                                if (_googleMapMarker != null)
-                                                  FlutterFlowMarker(
-                                                    _googleMapMarker
-                                                        .serialize(),
-                                                    _googleMapMarker,
-                                                  ),
+                                                FlutterFlowMarker(
+                                                  googleMapMarker
+                                                      .serialize(),
+                                                  googleMapMarker,
+                                                ),
                                               ],
                                               markerColor:
                                                   GoogleMarkerColor.violet,
@@ -394,7 +388,7 @@ class _AddPlaceTheraphistPageWidgetState
                                         },
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 8.0)),
+                                  ].divide(const SizedBox(height: 8.0)),
                                 ),
                               ),
                             ),
@@ -403,7 +397,7 @@ class _AddPlaceTheraphistPageWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -412,7 +406,7 @@ class _AddPlaceTheraphistPageWidgetState
                               child: Container(
                                 width: 364.0,
                                 height: 100.0,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Colors.white,
                                 ),
                                 child: Column(
@@ -435,7 +429,7 @@ class _AddPlaceTheraphistPageWidgetState
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .labelMedium,
                                         enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Color(0xFFBBB8B8),
                                             width: 1.0,
                                           ),
@@ -443,7 +437,7 @@ class _AddPlaceTheraphistPageWidgetState
                                               BorderRadius.circular(100.0),
                                         ),
                                         focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Color(0xFF9420AF),
                                             width: 1.0,
                                           ),
@@ -473,30 +467,30 @@ class _AddPlaceTheraphistPageWidgetState
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            color: Color(0xFF14181B),
+                                            color: const Color(0xFF14181B),
                                           ),
                                       validator: _model.textController2Validator
                                           .asValidator(context),
                                     ),
-                                  ].divide(SizedBox(height: 20.0)),
+                                  ].divide(const SizedBox(height: 20.0)),
                                 ),
                               ),
                             ),
                           ],
                         ),
                       ),
-                    ].divide(SizedBox(height: 20.0)),
+                    ].divide(const SizedBox(height: 20.0)),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 8.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
@@ -515,7 +509,7 @@ class _AddPlaceTheraphistPageWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                         child: SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(
@@ -528,7 +522,7 @@ class _AddPlaceTheraphistPageWidgetState
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(8.0),
                                   border: Border.all(
-                                    color: Color(0x2B8B8A8A),
+                                    color: const Color(0x2B8B8A8A),
                                     width: 2.0,
                                   ),
                                 ),
@@ -546,8 +540,8 @@ class _AddPlaceTheraphistPageWidgetState
                                                   builder:
                                                       (alertDialogContext) {
                                                     return AlertDialog(
-                                                      title: Text('Alerta'),
-                                                      content: Text(
+                                                      title: const Text('Alerta'),
+                                                      content: const Text(
                                                           'Deseja Remover esta imagem?'),
                                                       actions: [
                                                         TextButton(
@@ -555,7 +549,7 @@ class _AddPlaceTheraphistPageWidgetState
                                                               Navigator.pop(
                                                                   alertDialogContext,
                                                                   false),
-                                                          child: Text('Cancel'),
+                                                          child: const Text('Cancel'),
                                                         ),
                                                         TextButton(
                                                           onPressed: () =>
@@ -563,7 +557,7 @@ class _AddPlaceTheraphistPageWidgetState
                                                                   alertDialogContext,
                                                                   true),
                                                           child:
-                                                              Text('Confirm'),
+                                                              const Text('Confirm'),
                                                         ),
                                                       ],
                                                     );
@@ -600,15 +594,15 @@ class _AddPlaceTheraphistPageWidgetState
                                         children: [
                                           if (_model.isDataUploading1 != true)
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: FlutterFlowIconButton(
                                                 borderColor: Colors.transparent,
                                                 borderRadius: 20.0,
                                                 borderWidth: 1.0,
                                                 buttonSize: 40.0,
-                                                fillColor: Color(0xFF0DA0D4),
-                                                icon: Icon(
+                                                fillColor: const Color(0xFF0DA0D4),
+                                                icon: const Icon(
                                                   Icons.cloud_upload,
                                                   color: Colors.white,
                                                   size: 24.0,
@@ -706,7 +700,7 @@ class _AddPlaceTheraphistPageWidgetState
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                     fontSize: 10.0,
                                                   ),
                                             ),
@@ -720,14 +714,14 @@ class _AddPlaceTheraphistPageWidgetState
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: FlutterFlowIconButton(
                                               borderColor: Colors.transparent,
                                               borderRadius: 20.0,
                                               borderWidth: 1.0,
                                               buttonSize: 40.0,
-                                              fillColor: Color(0xD3BC0407),
-                                              icon: Icon(
+                                              fillColor: const Color(0xD3BC0407),
+                                              icon: const Icon(
                                                 Icons.delete_sharp,
                                                 color: Colors.white,
                                                 size: 22.0,
@@ -757,7 +751,7 @@ class _AddPlaceTheraphistPageWidgetState
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(8.0),
                                   border: Border.all(
-                                    color: Color(0x2B8B8A8A),
+                                    color: const Color(0x2B8B8A8A),
                                     width: 2.0,
                                   ),
                                 ),
@@ -775,8 +769,8 @@ class _AddPlaceTheraphistPageWidgetState
                                                   builder:
                                                       (alertDialogContext) {
                                                     return AlertDialog(
-                                                      title: Text('Alerta'),
-                                                      content: Text(
+                                                      title: const Text('Alerta'),
+                                                      content: const Text(
                                                           'Deseja Remover esta imagem?'),
                                                       actions: [
                                                         TextButton(
@@ -784,7 +778,7 @@ class _AddPlaceTheraphistPageWidgetState
                                                               Navigator.pop(
                                                                   alertDialogContext,
                                                                   false),
-                                                          child: Text('Cancel'),
+                                                          child: const Text('Cancel'),
                                                         ),
                                                         TextButton(
                                                           onPressed: () =>
@@ -792,7 +786,7 @@ class _AddPlaceTheraphistPageWidgetState
                                                                   alertDialogContext,
                                                                   true),
                                                           child:
-                                                              Text('Confirm'),
+                                                              const Text('Confirm'),
                                                         ),
                                                       ],
                                                     );
@@ -829,15 +823,15 @@ class _AddPlaceTheraphistPageWidgetState
                                         children: [
                                           if (_model.isDataUploading2 != true)
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: FlutterFlowIconButton(
                                                 borderColor: Colors.transparent,
                                                 borderRadius: 20.0,
                                                 borderWidth: 1.0,
                                                 buttonSize: 40.0,
-                                                fillColor: Color(0xFF0DA0D4),
-                                                icon: Icon(
+                                                fillColor: const Color(0xFF0DA0D4),
+                                                icon: const Icon(
                                                   Icons.cloud_upload,
                                                   color: Colors.white,
                                                   size: 24.0,
@@ -935,7 +929,7 @@ class _AddPlaceTheraphistPageWidgetState
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                     fontSize: 10.0,
                                                   ),
                                             ),
@@ -949,14 +943,14 @@ class _AddPlaceTheraphistPageWidgetState
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: FlutterFlowIconButton(
                                               borderColor: Colors.transparent,
                                               borderRadius: 20.0,
                                               borderWidth: 1.0,
                                               buttonSize: 40.0,
-                                              fillColor: Color(0xD3BC0407),
-                                              icon: Icon(
+                                              fillColor: const Color(0xD3BC0407),
+                                              icon: const Icon(
                                                 Icons.delete_sharp,
                                                 color: Colors.white,
                                                 size: 22.0,
@@ -986,7 +980,7 @@ class _AddPlaceTheraphistPageWidgetState
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(8.0),
                                   border: Border.all(
-                                    color: Color(0x2B8B8A8A),
+                                    color: const Color(0x2B8B8A8A),
                                     width: 2.0,
                                   ),
                                 ),
@@ -1004,8 +998,8 @@ class _AddPlaceTheraphistPageWidgetState
                                                   builder:
                                                       (alertDialogContext) {
                                                     return AlertDialog(
-                                                      title: Text('Alerta'),
-                                                      content: Text(
+                                                      title: const Text('Alerta'),
+                                                      content: const Text(
                                                           'Deseja Remover esta imagem?'),
                                                       actions: [
                                                         TextButton(
@@ -1013,7 +1007,7 @@ class _AddPlaceTheraphistPageWidgetState
                                                               Navigator.pop(
                                                                   alertDialogContext,
                                                                   false),
-                                                          child: Text('Cancel'),
+                                                          child: const Text('Cancel'),
                                                         ),
                                                         TextButton(
                                                           onPressed: () =>
@@ -1021,7 +1015,7 @@ class _AddPlaceTheraphistPageWidgetState
                                                                   alertDialogContext,
                                                                   true),
                                                           child:
-                                                              Text('Confirm'),
+                                                              const Text('Confirm'),
                                                         ),
                                                       ],
                                                     );
@@ -1053,7 +1047,7 @@ class _AddPlaceTheraphistPageWidgetState
                                     if (_model.uploadedFileUrl3 == '')
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -1061,7 +1055,7 @@ class _AddPlaceTheraphistPageWidgetState
                                           children: [
                                             if (_model.isDataUploading3 != true)
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: FlutterFlowIconButton(
                                                   borderColor:
@@ -1069,8 +1063,8 @@ class _AddPlaceTheraphistPageWidgetState
                                                   borderRadius: 20.0,
                                                   borderWidth: 1.0,
                                                   buttonSize: 40.0,
-                                                  fillColor: Color(0xFF0DA0D4),
-                                                  icon: Icon(
+                                                  fillColor: const Color(0xFF0DA0D4),
+                                                  icon: const Icon(
                                                     Icons.cloud_upload_sharp,
                                                     color: Colors.white,
                                                     size: 24.0,
@@ -1169,7 +1163,7 @@ class _AddPlaceTheraphistPageWidgetState
                                                     .bodyMedium
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xFF57636C),
+                                                      color: const Color(0xFF57636C),
                                                       fontSize: 10.0,
                                                     ),
                                               ),
@@ -1184,14 +1178,14 @@ class _AddPlaceTheraphistPageWidgetState
                                         children: [
                                           Align(
                                             alignment:
-                                                AlignmentDirectional(0.0, 0.0),
+                                                const AlignmentDirectional(0.0, 0.0),
                                             child: FlutterFlowIconButton(
                                               borderColor: Colors.transparent,
                                               borderRadius: 20.0,
                                               borderWidth: 1.0,
                                               buttonSize: 40.0,
-                                              fillColor: Color(0xD3BC0407),
-                                              icon: Icon(
+                                              fillColor: const Color(0xD3BC0407),
+                                              icon: const Icon(
                                                 Icons.delete_sharp,
                                                 color: Colors.white,
                                                 size: 22.0,
@@ -1214,29 +1208,26 @@ class _AddPlaceTheraphistPageWidgetState
                                   ],
                                 ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(height: 5.0)),
+                    ].divide(const SizedBox(height: 5.0)),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 10.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 10.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 10.0),
                           child: FFButtonWidget(
-                            onPressed: ((_model.uploadedFileUrl1 == null ||
-                                        _model.uploadedFileUrl1 == '') ||
-                                    (_model.uploadedFileUrl2 == null ||
-                                        _model.uploadedFileUrl2 == '') ||
-                                    (_model.uploadedFileUrl3 == null ||
-                                        _model.uploadedFileUrl3 == ''))
+                            onPressed: ((_model.uploadedFileUrl1 == '') ||
+                                    (_model.uploadedFileUrl2 == '') ||
+                                    (_model.uploadedFileUrl3 == ''))
                                 ? null
                                 : () async {
                                     var placeRecordReference =
@@ -1301,11 +1292,11 @@ class _AddPlaceTheraphistPageWidgetState
                             ),
                             options: FFButtonOptions(
                               height: 50.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFFA954B2),
+                              color: const Color(0xFFA954B2),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -1313,13 +1304,13 @@ class _AddPlaceTheraphistPageWidgetState
                                     color: Colors.white,
                                   ),
                               elevation: 3.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
-                              disabledColor: Color(0xFFB0B0B0),
-                              disabledTextColor: Color(0x82FFFFFF),
+                              disabledColor: const Color(0xFFB0B0B0),
+                              disabledTextColor: const Color(0x82FFFFFF),
                             ),
                           ),
                         ),
@@ -1327,7 +1318,7 @@ class _AddPlaceTheraphistPageWidgetState
                     ],
                   ),
                 ),
-              ].divide(SizedBox(height: 10.0)),
+              ].divide(const SizedBox(height: 10.0)),
             ),
           ),
         ),

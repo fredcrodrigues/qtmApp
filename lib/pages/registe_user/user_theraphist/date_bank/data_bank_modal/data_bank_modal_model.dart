@@ -1,14 +1,7 @@
 import '/backend/api_requests/api_calls.dart';
-import '/backend/backend.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/pages/registe_user/components/alert_register_user_theraphist_modal/alert_register_user_theraphist_modal_widget.dart';
-import '/pages/registe_user/user_theraphist/date_bank/components/alert_erro_register_modal/alert_erro_register_modal_widget.dart';
 import 'data_bank_modal_widget.dart' show DataBankModalWidget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class DataBankModalModel extends FlutterFlowModel<DataBankModalWidget> {
   ///  State fields for stateful widgets in this component.

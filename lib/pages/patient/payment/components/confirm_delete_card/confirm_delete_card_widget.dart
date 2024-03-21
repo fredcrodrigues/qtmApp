@@ -1,15 +1,11 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'confirm_delete_card_model.dart';
 export 'confirm_delete_card_model.dart';
 
@@ -56,7 +52,7 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
       width: double.infinity,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
           topLeft: Radius.circular(14.0),
@@ -67,7 +63,7 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -76,7 +72,7 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
                   width: 50.0,
                   height: 4.0,
                   decoration: BoxDecoration(
-                    color: Color(0xFFD9D9D9),
+                    color: const Color(0xFFD9D9D9),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                 ),
@@ -85,7 +81,7 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -101,7 +97,7 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Raleway',
-                              color: Color(0xFF383C3E),
+                              color: const Color(0xFF383C3E),
                               fontSize: 16.0,
                               fontWeight: FontWeight.bold,
                             ),
@@ -110,7 +106,7 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 40.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 40.0, 20.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -125,11 +121,11 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
                             ),
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF1DA4D4),
+                              color: const Color(0xFF1DA4D4),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -137,7 +133,7 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
                                     color: Colors.white,
                                   ),
                               elevation: 3.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -187,11 +183,11 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
                             ),
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFFAE525C),
+                              color: const Color(0xFFAE525C),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -199,7 +195,7 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
                                     color: Colors.white,
                                   ),
                               elevation: 3.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -207,7 +203,7 @@ class _ConfirmDeleteCardWidgetState extends State<ConfirmDeleteCardWidget> {
                             ),
                           ),
                         ),
-                      ].divide(SizedBox(width: 6.0)),
+                      ].divide(const SizedBox(width: 6.0)),
                     ),
                   ),
                 ],

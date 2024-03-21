@@ -7,12 +7,9 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'profile_theraphist_page_model.dart';
 export 'profile_theraphist_page_model.dart';
 
@@ -111,7 +108,7 @@ class _ProfileTheraphistPageWidgetState
                   fontWeight: FontWeight.w500,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -132,28 +129,28 @@ class _ProfileTheraphistPageWidgetState
                       ).image,
                     ),
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(1.0, 1.0),
+                                    alignment: const AlignmentDirectional(1.0, 1.0),
                                     child: Stack(
                                       alignment:
-                                          AlignmentDirectional(1.0, -1.0),
+                                          const AlignmentDirectional(1.0, -1.0),
                                       children: [
                                         Material(
                                           color: Colors.transparent,
@@ -169,7 +166,7 @@ class _ProfileTheraphistPageWidgetState
                                               color: Colors.white,
                                               image: DecorationImage(
                                                 fit: BoxFit.none,
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 image: Image.network(
                                                   'https://img.icons8.com/cotton/64/000000/image-file-add--v2.png',
@@ -198,7 +195,7 @@ class _ProfileTheraphistPageWidgetState
                                                   height: 18.0,
                                                   fit: BoxFit.contain,
                                                   alignment:
-                                                      Alignment(0.0, 0.0),
+                                                      const Alignment(0.0, 0.0),
                                                 ),
                                               ),
                                             ),
@@ -327,7 +324,7 @@ class _ProfileTheraphistPageWidgetState
                                                   }
                                                 }
                                               },
-                                              child: Icon(
+                                              child: const Icon(
                                                 Icons.mode_edit_outline,
                                                 color: Color(0xFF0DA0D4),
                                                 size: 15.0,
@@ -357,11 +354,11 @@ class _ProfileTheraphistPageWidgetState
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Container(
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Colors.white,
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 0.0, 15.0, 0.0),
                                         child: TextFormField(
                                           controller:
@@ -390,7 +387,7 @@ class _ProfileTheraphistPageWidgetState
                                                 FlutterFlowTheme.of(context)
                                                     .labelMedium,
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Color(0xFFBBB8B8),
                                                 width: 1.0,
                                               ),
@@ -398,7 +395,7 @@ class _ProfileTheraphistPageWidgetState
                                                   BorderRadius.circular(100.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Color(0xFF9420AF),
                                                 width: 1.0,
                                               ),
@@ -431,7 +428,7 @@ class _ProfileTheraphistPageWidgetState
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color: Color(0xFF161A1D),
+                                                color: const Color(0xFF161A1D),
                                               ),
                                           validator: _model
                                               .texfieldNameControllerValidator
@@ -440,11 +437,11 @@ class _ProfileTheraphistPageWidgetState
                                       ),
                                     ),
                                     Container(
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Colors.white,
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 0.0, 15.0, 0.0),
                                         child: TextFormField(
                                           controller: _model
@@ -473,7 +470,7 @@ class _ProfileTheraphistPageWidgetState
                                                 FlutterFlowTheme.of(context)
                                                     .labelMedium,
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Color(0xFFBBB8B8),
                                                 width: 1.0,
                                               ),
@@ -481,7 +478,7 @@ class _ProfileTheraphistPageWidgetState
                                                   BorderRadius.circular(100.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Color(0xFF9420AF),
                                                 width: 1.0,
                                               ),
@@ -514,7 +511,7 @@ class _ProfileTheraphistPageWidgetState
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color: Color(0xFF161A1D),
+                                                color: const Color(0xFF161A1D),
                                               ),
                                           validator: _model
                                               .lastNameTextfieldControllerValidator
@@ -523,9 +520,9 @@ class _ProfileTheraphistPageWidgetState
                                       ),
                                     ),
                                     Container(
-                                      decoration: BoxDecoration(),
+                                      decoration: const BoxDecoration(),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 0.0, 15.0, 0.0),
                                         child: FlutterFlowDropDown<String>(
                                           controller: _model
@@ -572,11 +569,11 @@ class _ProfileTheraphistPageWidgetState
                                           ),
                                           fillColor: Colors.white,
                                           elevation: 1.0,
-                                          borderColor: Color(0xFFBBB8B8),
+                                          borderColor: const Color(0xFFBBB8B8),
                                           borderWidth: 1.0,
                                           borderRadius: 100.0,
                                           margin:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 4.0, 16.0, 4.0),
                                           hidesUnderline: true,
                                           isSearchable: false,
@@ -585,9 +582,9 @@ class _ProfileTheraphistPageWidgetState
                                       ),
                                     ),
                                     Container(
-                                      decoration: BoxDecoration(),
+                                      decoration: const BoxDecoration(),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 0.0, 15.0, 0.0),
                                         child: TextFormField(
                                           controller: _model
@@ -609,7 +606,7 @@ class _ProfileTheraphistPageWidgetState
                                                 FlutterFlowTheme.of(context)
                                                     .labelMedium,
                                             enabledBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Color(0xFFBBB8B8),
                                                 width: 1.0,
                                               ),
@@ -617,7 +614,7 @@ class _ProfileTheraphistPageWidgetState
                                                   BorderRadius.circular(1000.0),
                                             ),
                                             focusedBorder: OutlineInputBorder(
-                                              borderSide: BorderSide(
+                                              borderSide: const BorderSide(
                                                 color: Color(0xFF9420AF),
                                                 width: 1.0,
                                               ),
@@ -650,7 +647,7 @@ class _ProfileTheraphistPageWidgetState
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color: Color(0xFF161A1D),
+                                                color: const Color(0xFF161A1D),
                                               ),
                                           validator: _model
                                               .descriptionTextfieldControllerValidator
@@ -659,9 +656,9 @@ class _ProfileTheraphistPageWidgetState
                                       ),
                                     ),
                                     Container(
-                                      decoration: BoxDecoration(),
+                                      decoration: const BoxDecoration(),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 0.0, 15.0, 0.0),
                                         child: FlutterFlowDropDown<String>(
                                           controller: _model
@@ -690,7 +687,7 @@ class _ProfileTheraphistPageWidgetState
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                   ),
                                           hintText: FFLocalizations.of(context)
                                               .getText(
@@ -712,7 +709,7 @@ class _ProfileTheraphistPageWidgetState
                                           borderWidth: 2.0,
                                           borderRadius: 100.0,
                                           margin:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 4.0, 16.0, 4.0),
                                           hidesUnderline: true,
                                           isOverButton: true,
@@ -721,7 +718,7 @@ class _ProfileTheraphistPageWidgetState
                                         ),
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 20.0)),
+                                  ].divide(const SizedBox(height: 20.0)),
                                 ),
                               ),
                             ),
@@ -729,26 +726,20 @@ class _ProfileTheraphistPageWidgetState
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Expanded(
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 10.0),
                                 child: FFButtonWidget(
-                                  onPressed: ((_model
-                                                      .texfieldNameController.text ==
-                                                  null ||
-                                              _model.texfieldNameController
+                                  onPressed: ((_model.texfieldNameController
                                                       .text ==
                                                   '') ||
-                                          (_model.lastNameTextfieldController
-                                                      .text ==
-                                                  null ||
-                                              _model
+                                          (_model
                                                       .lastNameTextfieldController
                                                       .text ==
                                                   '') ||
@@ -758,9 +749,6 @@ class _ProfileTheraphistPageWidgetState
                                                       .genderTextfieldValue ==
                                                   '') ||
                                           (_model.descriptionTextfieldController
-                                                      .text ==
-                                                  null ||
-                                              _model.descriptionTextfieldController
                                                       .text ==
                                                   '') ||
                                           (_model.uploadedFileUrl == ''))
@@ -774,7 +762,7 @@ class _ProfileTheraphistPageWidgetState
                                           }
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(
-                                            SnackBar(
+                                            const SnackBar(
                                               content: Text(
                                                 'Estamos validando seus dados',
                                                 style: TextStyle(
@@ -832,11 +820,11 @@ class _ProfileTheraphistPageWidgetState
                                   options: FFButtonOptions(
                                     width: 352.0,
                                     height: 50.0,
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xDB0FB4ED),
+                                    color: const Color(0xDB0FB4ED),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
@@ -846,12 +834,12 @@ class _ProfileTheraphistPageWidgetState
                                           fontWeight: FontWeight.normal,
                                         ),
                                     elevation: 0.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),
-                                    disabledColor: Color(0xFFB0B0B0),
-                                    disabledTextColor: Color(0x82FFFFFF),
+                                    disabledColor: const Color(0xFFB0B0B0),
+                                    disabledTextColor: const Color(0x82FFFFFF),
                                   ),
                                 ),
                               ),

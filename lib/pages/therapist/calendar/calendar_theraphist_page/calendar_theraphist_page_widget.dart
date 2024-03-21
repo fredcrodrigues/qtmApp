@@ -4,16 +4,11 @@ import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/therapist/calendar/components/actions_event_modal/actions_event_modal_widget.dart';
 import '/pages/therapist/calendar/components/event_modal/event_modal_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'calendar_theraphist_page_model.dart';
 export 'calendar_theraphist_page_model.dart';
 
@@ -83,7 +78,7 @@ class _CalendarTheraphistPageWidgetState
                       : FocusScope.of(context).unfocus(),
                   child: Padding(
                     padding: MediaQuery.viewInsetsOf(context),
-                    child: Container(
+                    child: const SizedBox(
                       height: 429.0,
                       child: EventModalWidget(),
                     ),
@@ -92,26 +87,26 @@ class _CalendarTheraphistPageWidgetState
               },
             ).then((value) => safeSetState(() {}));
           },
-          backgroundColor: Color(0xFF95489D),
+          backgroundColor: const Color(0xFF95489D),
           elevation: 8.0,
-          child: Icon(
+          child: const Icon(
             Icons.add,
             color: Colors.white,
             size: 24.0,
           ),
         ),
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
-            backgroundColor: Color(0xFFA54EAF),
+            backgroundColor: const Color(0xFFA54EAF),
             automaticallyImplyLeading: false,
             leading: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 100.0,
                 borderWidth: 1.0,
-                icon: Icon(
+                icon: const Icon(
                   Icons.keyboard_arrow_left,
                   color: Colors.white,
                   size: 30.0,
@@ -122,7 +117,7 @@ class _CalendarTheraphistPageWidgetState
               ),
             ),
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   '23ie4hjz' /* Agenda */,
@@ -134,7 +129,7 @@ class _CalendarTheraphistPageWidgetState
                     ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -146,11 +141,11 @@ class _CalendarTheraphistPageWidgetState
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               FlutterFlowCalendar(
-                color: Color(0xFF95489D),
-                iconColor: Color(0xFF57636C),
+                color: const Color(0xFF95489D),
+                iconColor: const Color(0xFF57636C),
                 weekFormat: true,
                 weekStartsMonday: true,
-                initialDate: _model.listCollectionCalendar.length != 0
+                initialDate: _model.listCollectionCalendar.isNotEmpty
                     ? _model.listCollectionCalendar.first.date
                     : getCurrentTimestamp,
                 rowHeight: 64.0,
@@ -170,27 +165,27 @@ class _CalendarTheraphistPageWidgetState
                 },
                 titleStyle: FlutterFlowTheme.of(context).headlineSmall.override(
                       fontFamily: 'Outfit',
-                      color: Color(0xFF171B1E),
+                      color: const Color(0xFF171B1E),
                     ),
                 dayOfWeekStyle:
                     FlutterFlowTheme.of(context).labelLarge.override(
                           fontFamily: 'Readex Pro',
-                          color: Color(0xFF848484),
+                          color: const Color(0xFF848484),
                         ),
                 dateStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'Readex Pro',
-                      color: Color(0xFF171B1E),
+                      color: const Color(0xFF171B1E),
                     ),
                 selectedDateStyle: FlutterFlowTheme.of(context).titleSmall,
                 inactiveDateStyle:
                     FlutterFlowTheme.of(context).labelMedium.override(
                           fontFamily: 'Readex Pro',
-                          color: Color(0xFF7F7F7F),
+                          color: const Color(0xFF7F7F7F),
                         ),
                 locale: FFLocalizations.of(context).languageCode,
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
                 child: Builder(
                   builder: (context) {
                     final listofcalendar =
@@ -200,7 +195,7 @@ class _CalendarTheraphistPageWidgetState
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       itemCount: listofcalendar.length,
-                      separatorBuilder: (_, __) => SizedBox(height: 5.0),
+                      separatorBuilder: (_, __) => const SizedBox(height: 5.0),
                       itemBuilder: (context, listofcalendarIndex) {
                         final listofcalendarItem =
                             listofcalendar[listofcalendarIndex];
@@ -209,7 +204,7 @@ class _CalendarTheraphistPageWidgetState
                           height: 100.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3.0,
                                 color: Color(0x411D2429),
@@ -219,13 +214,13 @@ class _CalendarTheraphistPageWidgetState
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 4.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -240,7 +235,7 @@ class _CalendarTheraphistPageWidgetState
                                               .titleMedium
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color: Color(0xFF090F13),
+                                                color: const Color(0xFF090F13),
                                                 fontSize: 20.0,
                                                 fontWeight: FontWeight.w500,
                                               ),
@@ -248,7 +243,7 @@ class _CalendarTheraphistPageWidgetState
                                         Expanded(
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 8.0, 0.0),
                                             child: AutoSizeText(
                                               listofcalendarItem.infoAdd
@@ -263,7 +258,7 @@ class _CalendarTheraphistPageWidgetState
                                                       .override(
                                                         fontFamily: 'Outfit',
                                                         color:
-                                                            Color(0xFF7C8791),
+                                                            const Color(0xFF7C8791),
                                                         fontSize: 14.0,
                                                         fontWeight:
                                                             FontWeight.normal,
@@ -323,7 +318,7 @@ class _CalendarTheraphistPageWidgetState
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 4.0, 0.0),
                                       child: Text(
                                         'Dia ${valueOrDefault<String>(
@@ -348,7 +343,7 @@ class _CalendarTheraphistPageWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Outfit',
-                                              color: Color(0xFF484747),
+                                              color: const Color(0xFF484747),
                                               fontSize: 16.0,
                                               fontWeight: FontWeight.w500,
                                             ),

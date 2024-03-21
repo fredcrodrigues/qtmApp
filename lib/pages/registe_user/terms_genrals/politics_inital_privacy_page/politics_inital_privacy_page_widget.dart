@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'politics_inital_privacy_page_model.dart';
 export 'politics_inital_privacy_page_model.dart';
 
@@ -47,18 +44,18 @@ class _PoliticsInitalPrivacyPageWidgetState
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
             backgroundColor: Colors.white,
             automaticallyImplyLeading: false,
             leading: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 10.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 10.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_ios,
                   color: Color(0xFF1C1C1C),
                   size: 30.0,
@@ -69,7 +66,7 @@ class _PoliticsInitalPrivacyPageWidgetState
               ),
             ),
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 20.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 0.0, 20.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'jq4isirm' /* POLITICAS DE PRIVACIDADE */,
@@ -77,13 +74,13 @@ class _PoliticsInitalPrivacyPageWidgetState
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
-                      color: Color(0xFF313030),
+                      color: const Color(0xFF313030),
                       fontSize: 20.0,
                       fontWeight: FontWeight.w600,
                     ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -93,11 +90,11 @@ class _PoliticsInitalPrivacyPageWidgetState
           child: Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
@@ -118,7 +115,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF3C3B3B),
+                                      color: const Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -132,10 +129,10 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -156,7 +153,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF3C3B3B),
+                                      color: const Color(0xFF3C3B3B),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -170,10 +167,10 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -194,7 +191,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF313030),
+                                      color: const Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -208,10 +205,10 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -232,7 +229,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF313030),
+                                      color: const Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -246,10 +243,10 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -270,7 +267,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF313030),
+                                      color: const Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -284,10 +281,10 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -308,7 +305,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF313030),
+                                      color: const Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -322,10 +319,10 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -346,7 +343,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF313030),
+                                      color: const Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -360,10 +357,10 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -384,7 +381,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF313030),
+                                      color: const Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -398,10 +395,10 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -422,7 +419,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF313030),
+                                      color: const Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -436,10 +433,10 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -460,7 +457,7 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF313030),
+                                      color: const Color(0xFF313030),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -474,15 +471,15 @@ class _PoliticsInitalPrivacyPageWidgetState
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
             ),

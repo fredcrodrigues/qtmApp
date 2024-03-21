@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/registe_user/user_theraphist/date_bank/data_bank_modal/data_bank_modal_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'alert_redirect_modal_model.dart';
 export 'alert_redirect_modal_model.dart';
 
@@ -12,7 +10,7 @@ class AlertRedirectModalWidget extends StatefulWidget {
   const AlertRedirectModalWidget({
     super.key,
     double? refValueSession,
-  }) : this.refValueSession = refValueSession ?? 0.0;
+  }) : refValueSession = refValueSession ?? 0.0;
 
   final double refValueSession;
 
@@ -48,13 +46,13 @@ class _AlertRedirectModalWidgetState extends State<AlertRedirectModalWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 12.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 12.0),
         child: Container(
           width: 400.0,
           height: 385.0,
-          constraints: BoxConstraints(
+          constraints: const BoxConstraints(
             maxWidth: 530.0,
           ),
           decoration: BoxDecoration(
@@ -65,7 +63,7 @@ class _AlertRedirectModalWidgetState extends State<AlertRedirectModalWidget> {
                 'assets/images/Design_sem_nome_(3).gif',
               ).image,
             ),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 blurRadius: 3.0,
                 color: Color(0x33000000),
@@ -79,9 +77,9 @@ class _AlertRedirectModalWidgetState extends State<AlertRedirectModalWidget> {
             ),
           ),
           child: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 12.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 12.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -94,9 +92,9 @@ class _AlertRedirectModalWidgetState extends State<AlertRedirectModalWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 12.0, 10.0, 50.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -107,7 +105,7 @@ class _AlertRedirectModalWidgetState extends State<AlertRedirectModalWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF2A2929),
+                                      color: const Color(0xFF2A2929),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -115,9 +113,9 @@ class _AlertRedirectModalWidgetState extends State<AlertRedirectModalWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: FFButtonWidget(
                                 onPressed: () async {
@@ -131,7 +129,7 @@ class _AlertRedirectModalWidgetState extends State<AlertRedirectModalWidget> {
                                       return Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: DataBankModalWidget(),
+                                        child: const DataBankModalWidget(),
                                       );
                                     },
                                   ).then((value) => safeSetState(() {}));
@@ -142,11 +140,11 @@ class _AlertRedirectModalWidgetState extends State<AlertRedirectModalWidget> {
                                 options: FFButtonOptions(
                                   width: 185.0,
                                   height: 44.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFF9C48AF),
+                                  color: const Color(0xFF9C48AF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
@@ -154,7 +152,7 @@ class _AlertRedirectModalWidgetState extends State<AlertRedirectModalWidget> {
                                         color: Colors.white,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),

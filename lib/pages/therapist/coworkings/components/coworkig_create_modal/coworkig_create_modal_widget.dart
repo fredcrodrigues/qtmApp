@@ -8,13 +8,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/upload_data.dart';
-import 'dart:io';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'coworkig_create_modal_model.dart';
 export 'coworkig_create_modal_model.dart';
@@ -69,10 +65,10 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
     return Container(
       width: double.infinity,
       height: 548.0,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Colors.white,
       ),
-      alignment: AlignmentDirectional(0.0, 1.0),
+      alignment: const AlignmentDirectional(0.0, 1.0),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -83,7 +79,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                 child: Container(
                   width: 50.0,
                   height: 4.0,
@@ -96,30 +92,30 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
             ],
           ),
           Align(
-            alignment: AlignmentDirectional(1.0, -1.0),
+            alignment: const AlignmentDirectional(1.0, -1.0),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'torez6go' /* Criar um coworking */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
-                            color: Color(0xFF191E22),
+                            color: const Color(0xFF191E22),
                             fontSize: 18.0,
                             fontWeight: FontWeight.w500,
                           ),
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(1.0, -1.0),
+                    alignment: const AlignmentDirectional(1.0, -1.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -128,7 +124,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                       onTap: () async {
                         Navigator.pop(context);
                       },
-                      child: FaIcon(
+                      child: const FaIcon(
                         FontAwesomeIcons.times,
                         color: Color(0xC357636C),
                         size: 25.0,
@@ -140,13 +136,13 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                     child: TextFormField(
                       controller: _model.textController1,
                       focusNode: _model.textFieldFocusNode1,
@@ -159,13 +155,13 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                         labelStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xFF56626B),
+                                  color: const Color(0xFF56626B),
                                   fontSize: 10.0,
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).labelMedium.override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xFF58656E),
+                                  color: const Color(0xFF58656E),
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -175,7 +171,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                           borderRadius: BorderRadius.circular(100.0),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0xFFA954B2),
                             width: 1.0,
                           ),
@@ -198,7 +194,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
-                            color: Color(0xFF181D21),
+                            color: const Color(0xFF181D21),
                             fontSize: 10.0,
                           ),
                       validator:
@@ -210,14 +206,14 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
             ),
           ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Expanded(
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                     child: TextFormField(
                       controller: _model.textController2,
                       focusNode: _model.textFieldFocusNode2,
@@ -241,7 +237,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                           borderRadius: BorderRadius.circular(100.0),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0xFFA954B2),
                             width: 1.0,
                           ),
@@ -288,7 +284,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                   height: 50.0,
                   textStyle: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Readex Pro',
-                        color: Color(0xFF57636C),
+                        color: const Color(0xFF57636C),
                         fontSize: 10.0,
                       ),
                   hintText: FFLocalizations.of(context).getText(
@@ -304,7 +300,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                   borderColor: FlutterFlowTheme.of(context).alternate,
                   borderWidth: 0.0,
                   borderRadius: 100.0,
-                  margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                  margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                   hidesUnderline: true,
                   isSearchable: false,
                   isMultiSelect: false,
@@ -314,7 +310,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
           ),
           if (!FFAppState().coworkingUpdate)
             Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -351,12 +347,12 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                           textStyle:
                               FlutterFlowTheme.of(context).titleSmall.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF57636C),
+                                    color: const Color(0xFF57636C),
                                     fontSize: 10.0,
                                     fontWeight: FontWeight.w500,
                                   ),
                           elevation: 0.0,
-                          borderSide: BorderSide(
+                          borderSide: const BorderSide(
                             color: Color(0xFFE0E3E7),
                             width: 1.0,
                           ),
@@ -369,15 +365,15 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
               ),
             ),
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(-1.0, 0.0),
+                  alignment: const AlignmentDirectional(-1.0, 0.0),
                   child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                    padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'cdb33jq6' /* Adicionar imagens do Coworking... */,
@@ -391,7 +387,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -404,7 +400,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8.0),
                             border: Border.all(
-                              color: Color(0x2B8B8A8A),
+                              color: const Color(0x2B8B8A8A),
                               width: 2.0,
                             ),
                           ),
@@ -432,14 +428,14 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                                     if (_model.isDataUploading1 != true)
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: FlutterFlowIconButton(
                                           borderColor: Colors.transparent,
                                           borderRadius: 20.0,
                                           borderWidth: 1.0,
                                           buttonSize: 40.0,
-                                          fillColor: Color(0xFF0DA0D4),
-                                          icon: Icon(
+                                          fillColor: const Color(0xFF0DA0D4),
+                                          icon: const Icon(
                                             Icons.cloud_upload,
                                             color: Colors.white,
                                             size: 24.0,
@@ -527,7 +523,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF57636C),
+                                              color: const Color(0xFF57636C),
                                               fontSize: 10.0,
                                             ),
                                       ),
@@ -539,14 +535,14 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: FlutterFlowIconButton(
                                         borderColor: Colors.transparent,
                                         borderRadius: 20.0,
                                         borderWidth: 1.0,
                                         buttonSize: 40.0,
-                                        fillColor: Color(0xD3BC0407),
-                                        icon: Icon(
+                                        fillColor: const Color(0xD3BC0407),
+                                        icon: const Icon(
                                           Icons.delete_sharp,
                                           color: Colors.white,
                                           size: 22.0,
@@ -575,7 +571,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8.0),
                             border: Border.all(
-                              color: Color(0x2B8B8A8A),
+                              color: const Color(0x2B8B8A8A),
                               width: 2.0,
                             ),
                           ),
@@ -600,14 +596,14 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                                     if (_model.isDataUploading2 != true)
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: FlutterFlowIconButton(
                                           borderColor: Colors.transparent,
                                           borderRadius: 20.0,
                                           borderWidth: 1.0,
                                           buttonSize: 40.0,
-                                          fillColor: Color(0xFF0DA0D4),
-                                          icon: Icon(
+                                          fillColor: const Color(0xFF0DA0D4),
+                                          icon: const Icon(
                                             Icons.cloud_upload,
                                             color: Colors.white,
                                             size: 24.0,
@@ -695,7 +691,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF57636C),
+                                              color: const Color(0xFF57636C),
                                               fontSize: 10.0,
                                             ),
                                       ),
@@ -707,14 +703,14 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: FlutterFlowIconButton(
                                         borderColor: Colors.transparent,
                                         borderRadius: 20.0,
                                         borderWidth: 1.0,
                                         buttonSize: 40.0,
-                                        fillColor: Color(0xD3BC0407),
-                                        icon: Icon(
+                                        fillColor: const Color(0xD3BC0407),
+                                        icon: const Icon(
                                           Icons.delete_sharp,
                                           color: Colors.white,
                                           size: 22.0,
@@ -743,7 +739,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(8.0),
                             border: Border.all(
-                              color: Color(0x2B8B8A8A),
+                              color: const Color(0x2B8B8A8A),
                               width: 2.0,
                             ),
                           ),
@@ -766,7 +762,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                               if (!FFAppState().coworkingUpdate &&
                                   (_model.uploadedFileUrl3 == ''))
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -774,14 +770,14 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                                       if (_model.isDataUploading3 != true)
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: FlutterFlowIconButton(
                                             borderColor: Colors.transparent,
                                             borderRadius: 20.0,
                                             borderWidth: 1.0,
                                             buttonSize: 40.0,
-                                            fillColor: Color(0xFF0DA0D4),
-                                            icon: Icon(
+                                            fillColor: const Color(0xFF0DA0D4),
+                                            icon: const Icon(
                                               Icons.cloud_upload_sharp,
                                               color: Colors.white,
                                               size: 24.0,
@@ -871,7 +867,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'Readex Pro',
-                                                color: Color(0xFF57636C),
+                                                color: const Color(0xFF57636C),
                                                 fontSize: 10.0,
                                               ),
                                         ),
@@ -884,14 +880,14 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: FlutterFlowIconButton(
                                         borderColor: Colors.transparent,
                                         borderRadius: 20.0,
                                         borderWidth: 1.0,
                                         buttonSize: 40.0,
-                                        fillColor: Color(0xD3BC0407),
-                                        icon: Icon(
+                                        fillColor: const Color(0xD3BC0407),
+                                        icon: const Icon(
                                           Icons.delete_sharp,
                                           color: Colors.white,
                                           size: 22.0,
@@ -913,41 +909,36 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                             ],
                           ),
                         ),
-                      ].divide(SizedBox(width: 10.0)),
+                      ].divide(const SizedBox(width: 10.0)),
                     ),
                   ),
                 ),
-              ].divide(SizedBox(height: 5.0)),
+              ].divide(const SizedBox(height: 5.0)),
             ),
           ),
           Flexible(
             child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Padding(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: FFButtonWidget(
-                            onPressed: ((_model.textController1.text == null ||
-                                        _model.textController1.text == '') ||
-                                    (_model.textController2.text == null ||
-                                        _model.textController2.text == '') ||
+                            onPressed: ((_model.textController1.text == '') ||
+                                    (_model.textController2.text == '') ||
                                     (_model.dropDownValue == null ||
                                         _model.dropDownValue == '') ||
-                                    (_model.uploadedFileUrl1 == null ||
-                                        _model.uploadedFileUrl1 == '') ||
-                                    (_model.uploadedFileUrl2 == null ||
-                                        _model.uploadedFileUrl2 == '') ||
-                                    (_model.uploadedFileUrl3 == null ||
-                                        _model.uploadedFileUrl3 == ''))
+                                    (_model.uploadedFileUrl1 == '') ||
+                                    (_model.uploadedFileUrl2 == '') ||
+                                    (_model.uploadedFileUrl3 == ''))
                                 ? null
                                 : () async {
                                     await CoworkingRecord.collection
@@ -998,23 +989,23 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
                             options: FFButtonOptions(
                               width: double.infinity,
                               height: 63.0,
-                              padding: EdgeInsets.all(16.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsets.all(16.0),
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF95489D),
+                              color: const Color(0xFF95489D),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
                                     fontFamily: 'Readex Pro',
                                     color: Colors.white,
                                   ),
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
                               borderRadius: BorderRadius.circular(8.0),
-                              disabledColor: Color(0xFFB0B0B0),
-                              disabledTextColor: Color(0x82FFFFFF),
+                              disabledColor: const Color(0xFFB0B0B0),
+                              disabledTextColor: const Color(0x82FFFFFF),
                             ),
                           ),
                         ),
@@ -1025,7 +1016,7 @@ class _CoworkigCreateModalWidgetState extends State<CoworkigCreateModalWidget> {
               ),
             ),
           ),
-        ].divide(SizedBox(height: 2.0)),
+        ].divide(const SizedBox(height: 2.0)),
       ),
     );
   }

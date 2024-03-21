@@ -10,12 +10,8 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import '/pages/therapist/praticals/components/alert_service_modal/alert_service_modal_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:provider/provider.dart';
 import 'add_praticals_page_model.dart';
 export 'add_praticals_page_model.dart';
 
@@ -65,18 +61,18 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
-            backgroundColor: Color(0xFFA54EAF),
+            backgroundColor: const Color(0xFFA54EAF),
             automaticallyImplyLeading: false,
             leading: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 30.0,
                 borderWidth: 1.0,
                 buttonSize: 60.0,
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_back_ios,
                   color: Colors.white,
                   size: 30.0,
@@ -87,7 +83,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
               ),
             ),
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'ojorr4f9' /* Adicionar Prática */,
@@ -100,7 +96,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                     ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -112,7 +108,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
                 ),
                 child: Column(
@@ -120,7 +116,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                   children: [
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(8.0, 20.0, 8.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(8.0, 20.0, 8.0, 0.0),
                       child: TextFormField(
                         controller: _model.textController1,
                         focusNode: _model.textFieldFocusNode1,
@@ -138,7 +134,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                           hintStyle:
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF161A1D),
+                                    color: const Color(0xFF161A1D),
                                   ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
@@ -148,7 +144,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                             borderRadius: BorderRadius.circular(100.0),
                           ),
                           focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Color(0xFFA954B2),
                               width: 0.0,
                             ),
@@ -171,7 +167,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Readex Pro',
-                              color: Color(0xFF161A1D),
+                              color: const Color(0xFF161A1D),
                             ),
                         validator: _model.textController1Validator
                             .asValidator(context),
@@ -179,7 +175,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: FlutterFlowDropDown<String>(
                         controller: _model.dropDownValueController1 ??=
                             FormFieldController<String>(null),
@@ -197,7 +193,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                         textStyle:
                             FlutterFlowTheme.of(context).bodyMedium.override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xFF161A1D),
+                                  color: const Color(0xFF161A1D),
                                   fontSize: 12.0,
                                 ),
                         hintText: FFLocalizations.of(context).getText(
@@ -213,7 +209,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                         borderColor: FlutterFlowTheme.of(context).alternate,
                         borderWidth: 0.0,
                         borderRadius: 1000.0,
-                        margin: EdgeInsetsDirectional.fromSTEB(
+                        margin: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 4.0, 16.0, 4.0),
                         hidesUnderline: true,
                         isSearchable: false,
@@ -222,7 +218,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                       child: StreamBuilder<List<SpecialtyRecord>>(
                         stream: querySpecialtyRecord(),
                         builder: (context, snapshot) {
@@ -255,7 +251,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xFF161A1D),
+                                  color: const Color(0xFF161A1D),
                                   fontSize: 12.0,
                                 ),
                             hintText: FFLocalizations.of(context).getText(
@@ -271,7 +267,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                             borderColor: FlutterFlowTheme.of(context).alternate,
                             borderWidth: 0.0,
                             borderRadius: 1000.0,
-                            margin: EdgeInsetsDirectional.fromSTEB(
+                            margin: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 4.0, 16.0, 4.0),
                             hidesUnderline: true,
                             isSearchable: false,
@@ -282,7 +278,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.start,
@@ -306,7 +302,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                 setState(
                                     () => _model.checkboxValue = newValue!);
                               },
-                              activeColor: Color(0xFFA92ACC),
+                              activeColor: const Color(0xFFA92ACC),
                               checkColor: FlutterFlowTheme.of(context).info,
                             ),
                           ),
@@ -327,7 +323,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                     if (_model.checkboxValue ?? true)
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -363,7 +359,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                     borderRadius: BorderRadius.circular(100.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFFA954B2),
                                       width: 0.0,
                                     ),
@@ -388,7 +384,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF161A1D),
+                                      color: const Color(0xFF161A1D),
                                       fontSize: 12.0,
                                     ),
                                 validator: _model.textController2Validator
@@ -423,7 +419,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                     borderRadius: BorderRadius.circular(100.0),
                                   ),
                                   focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Color(0xFFA954B2),
                                       width: 0.0,
                                     ),
@@ -448,7 +444,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF161A1D),
+                                      color: const Color(0xFF161A1D),
                                     ),
                                 keyboardType: TextInputType.datetime,
                                 validator: _model.textController3Validator
@@ -456,12 +452,12 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                 inputFormatters: [_model.textFieldMask3],
                               ),
                             ),
-                          ].divide(SizedBox(width: 4.0)),
+                          ].divide(const SizedBox(width: 4.0)),
                         ),
                       ),
                     if (_model.checkboxValue ?? true)
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             17.0, 12.0, 17.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
@@ -552,15 +548,15 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                           context: context,
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
-                                              title: Text('Alerta'),
+                                              title: const Text('Alerta'),
                                               content:
-                                                  Text('O arquivo foi enviado'),
+                                                  const Text('O arquivo foi enviado'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
                                                       Navigator.pop(
                                                           alertDialogContext),
-                                                  child: Text('Entendido'),
+                                                  child: const Text('Entendido'),
                                                 ),
                                               ],
                                             );
@@ -571,15 +567,15 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                           context: context,
                                           builder: (alertDialogContext) {
                                             return AlertDialog(
-                                              title: Text('Aviso'),
-                                              content: Text(
+                                              title: const Text('Aviso'),
+                                              content: const Text(
                                                   'Um arquivo já foi anexado'),
                                               actions: [
                                                 TextButton(
                                                   onPressed: () =>
                                                       Navigator.pop(
                                                           alertDialogContext),
-                                                  child: Text('Entendido'),
+                                                  child: const Text('Entendido'),
                                                 ),
                                               ],
                                             );
@@ -590,11 +586,11 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                     child: Container(
                                       height: 80.0,
                                       decoration: BoxDecoration(
-                                        color: Color(0x1F0DA0D4),
+                                        color: const Color(0x1F0DA0D4),
                                         borderRadius:
                                             BorderRadius.circular(8.0),
                                         border: Border.all(
-                                          color: Color(0x710DA0D4),
+                                          color: const Color(0x710DA0D4),
                                         ),
                                       ),
                                       child: Row(
@@ -637,7 +633,7 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                           ],
                         ),
                       ),
-                  ].divide(SizedBox(height: 20.0)),
+                  ].divide(const SizedBox(height: 20.0)),
                 ),
               ),
               Row(
@@ -646,10 +642,9 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                     child: FFButtonWidget(
-                      onPressed: ((_model.textController1.text == null ||
-                                  _model.textController1.text == '') ||
+                      onPressed: ((_model.textController1.text == '') ||
                               (_model.dropDownValue1 != null &&
                                   _model.dropDownValue1 != ''))
                           ? null
@@ -743,10 +738,10 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                         width: 352.0,
                         height: 50.0,
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFFA954B2),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: const Color(0xFFA954B2),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Lexend Deca',
@@ -755,16 +750,16 @@ class _AddPraticalsPageWidgetState extends State<AddPraticalsPageWidget> {
                                   fontWeight: FontWeight.normal,
                                 ),
                         elevation: 0.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                         ),
-                        disabledColor: Color(0xFFB0B0B0),
+                        disabledColor: const Color(0xFFB0B0B0),
                       ),
                     ),
                   ),
                 ],
               ),
-            ].divide(SizedBox(height: 10.0)),
+            ].divide(const SizedBox(height: 10.0)),
           ),
         ),
       ),

@@ -3,9 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'refused_modal_model.dart';
 export 'refused_modal_model.dart';
@@ -62,9 +60,9 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Container(
           width: 411.0,
           decoration: BoxDecoration(
@@ -75,7 +73,7 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
                 'assets/images/Design_sem_nome_(2).gif',
               ).image,
             ),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 blurRadius: 4.0,
                 color: Color(0x33000000),
@@ -85,7 +83,7 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
             borderRadius: BorderRadius.circular(12.0),
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -94,9 +92,9 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             12.0, 12.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
@@ -106,7 +104,7 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF14181B),
+                                    color: const Color(0xFF14181B),
                                     fontSize: 20.0,
                                     fontWeight: FontWeight.w800,
                                   ),
@@ -114,10 +112,10 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 8.0),
+                            const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 8.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'ehf106ny' /* com sucesso! */,
@@ -126,7 +124,7 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
                           style:
                               FlutterFlowTheme.of(context).labelMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF14181B),
+                                    color: const Color(0xFF14181B),
                                     fontSize: 20.0,
                                     fontWeight: FontWeight.w800,
                                   ),
@@ -136,7 +134,7 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
                     Container(
                       width: 159.0,
                       height: 100.0,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                       ),
                       child: ClipRRect(
@@ -153,14 +151,14 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(12.0, 10.0, 12.0, 8.0),
+                      const EdgeInsetsDirectional.fromSTEB(12.0, 10.0, 12.0, 8.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Flexible(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               4.0, 0.0, 0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -187,11 +185,11 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
                                 options: FFButtonOptions(
                                   width: 164.0,
                                   height: 48.0,
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  color: Color(0xFFA54EAF),
+                                  color: const Color(0xFFA54EAF),
                                   textStyle: FlutterFlowTheme.of(context)
                                       .titleSmall
                                       .override(
@@ -201,7 +199,7 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
                                         fontWeight: FontWeight.normal,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
@@ -218,62 +216,62 @@ class _RefusedModalWidgetState extends State<RefusedModalWidget>
                 MouseRegion(
                   opaque: false,
                   cursor: MouseCursor.defer ?? MouseCursor.defer,
-                  child: AnimatedContainer(
-                    duration: Duration(milliseconds: 150),
-                    curve: Curves.easeInOut,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: _model.mouseRegionHovered1!
-                          ? FlutterFlowTheme.of(context).primaryBackground
-                          : FlutterFlowTheme.of(context).secondaryBackground,
-                    ),
-                  ),
                   onEnter: ((event) async {
                     setState(() => _model.mouseRegionHovered1 = true);
                   }),
                   onExit: ((event) async {
                     setState(() => _model.mouseRegionHovered1 = false);
                   }),
-                ),
-                MouseRegion(
-                  opaque: false,
-                  cursor: SystemMouseCursors.basic ?? MouseCursor.defer,
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 150),
+                    duration: const Duration(milliseconds: 150),
                     curve: Curves.easeInOut,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: _model.mouseRegionHovered2!
+                      color: _model.mouseRegionHovered1
                           ? FlutterFlowTheme.of(context).primaryBackground
                           : FlutterFlowTheme.of(context).secondaryBackground,
                     ),
                   ),
+                ),
+                MouseRegion(
+                  opaque: false,
+                  cursor: SystemMouseCursors.basic ?? MouseCursor.defer,
                   onEnter: ((event) async {
                     setState(() => _model.mouseRegionHovered2 = true);
                   }),
                   onExit: ((event) async {
                     setState(() => _model.mouseRegionHovered2 = false);
                   }),
-                ),
-                MouseRegion(
-                  opaque: false,
-                  cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                   child: AnimatedContainer(
-                    duration: Duration(milliseconds: 150),
+                    duration: const Duration(milliseconds: 150),
                     curve: Curves.easeInOut,
                     width: double.infinity,
                     decoration: BoxDecoration(
-                      color: _model.mouseRegionHovered3!
+                      color: _model.mouseRegionHovered2
                           ? FlutterFlowTheme.of(context).primaryBackground
                           : FlutterFlowTheme.of(context).secondaryBackground,
                     ),
                   ),
+                ),
+                MouseRegion(
+                  opaque: false,
+                  cursor: SystemMouseCursors.click ?? MouseCursor.defer,
                   onEnter: ((event) async {
                     setState(() => _model.mouseRegionHovered3 = true);
                   }),
                   onExit: ((event) async {
                     setState(() => _model.mouseRegionHovered3 = false);
                   }),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 150),
+                    curve: Curves.easeInOut,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: _model.mouseRegionHovered3
+                          ? FlutterFlowTheme.of(context).primaryBackground
+                          : FlutterFlowTheme.of(context).secondaryBackground,
+                    ),
+                  ),
                 ),
               ],
             ),

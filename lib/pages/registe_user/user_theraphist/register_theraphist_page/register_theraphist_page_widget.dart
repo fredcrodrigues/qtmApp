@@ -6,14 +6,8 @@ import '/flutter_flow/flutter_flow_place_picker.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/flutter_flow/place.dart';
-import 'dart:io';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:provider/provider.dart';
 import 'register_theraphist_page_model.dart';
 export 'register_theraphist_page_model.dart';
 
@@ -52,7 +46,7 @@ class _RegisterTheraphistPageWidgetState
       }
     });
 
-    getCurrentUserLocation(defaultLocation: LatLng(0.0, 0.0), cached: true)
+    getCurrentUserLocation(defaultLocation: const LatLng(0.0, 0.0), cached: true)
         .then((loc) => setState(() => currentUserLocationValue = loc));
     _model.cpfController ??= TextEditingController();
     _model.cpfFocusNode ??= FocusNode();
@@ -109,9 +103,9 @@ class _RegisterTheraphistPageWidgetState
                 ).image,
               ),
             ),
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -140,7 +134,7 @@ class _RegisterTheraphistPageWidgetState
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Poppins',
-                                  color: Color(0xD42D2D2D),
+                                  color: const Color(0xD42D2D2D),
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -153,7 +147,7 @@ class _RegisterTheraphistPageWidgetState
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xD42D2D2D),
+                                  color: const Color(0xD42D2D2D),
                                 ),
                           ),
                         ],
@@ -175,13 +169,13 @@ class _RegisterTheraphistPageWidgetState
                               children: [
                                 Container(
                                   width: double.infinity,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 15.0, 0.0),
-                                    child: Container(
+                                    child: SizedBox(
                                       width: double.infinity,
                                       child: TextFormField(
                                         controller: _model.cpfController,
@@ -198,10 +192,10 @@ class _RegisterTheraphistPageWidgetState
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                   ),
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFBBB8B8),
                                               width: 1.0,
                                             ),
@@ -209,7 +203,7 @@ class _RegisterTheraphistPageWidgetState
                                                 BorderRadius.circular(1000.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFF9420AF),
                                               width: 1.0,
                                             ),
@@ -242,7 +236,7 @@ class _RegisterTheraphistPageWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF161A1D),
+                                              color: const Color(0xFF161A1D),
                                             ),
                                         validator: _model.cpfControllerValidator
                                             .asValidator(context),
@@ -254,7 +248,7 @@ class _RegisterTheraphistPageWidgetState
                                 Container(
                                   width: 340.0,
                                   height: 61.0,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
                                   ),
                                   child: Row(
@@ -297,13 +291,13 @@ class _RegisterTheraphistPageWidgetState
                                                     .titleSmall
                                                     .override(
                                                       fontFamily: 'Readex Pro',
-                                                      color: Color(0xFF57636C),
+                                                      color: const Color(0xFF57636C),
                                                       fontSize: 12.0,
                                                       fontWeight:
                                                           FontWeight.w500,
                                                     ),
                                             elevation: 0.0,
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFBBB8B8),
                                               width: 1.0,
                                             ),
@@ -317,13 +311,13 @@ class _RegisterTheraphistPageWidgetState
                                 ),
                                 Container(
                                   width: double.infinity,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         15.0, 10.0, 15.0, 0.0),
-                                    child: Container(
+                                    child: SizedBox(
                                       width: double.infinity,
                                       child: TextFormField(
                                         controller: _model.complemntController,
@@ -340,10 +334,10 @@ class _RegisterTheraphistPageWidgetState
                                                   .bodyMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF57636C),
+                                                    color: const Color(0xFF57636C),
                                                   ),
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFBBB8B8),
                                               width: 1.0,
                                             ),
@@ -351,7 +345,7 @@ class _RegisterTheraphistPageWidgetState
                                                 BorderRadius.circular(1000.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFF9420AF),
                                               width: 1.0,
                                             ),
@@ -384,7 +378,7 @@ class _RegisterTheraphistPageWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF161A1D),
+                                              color: const Color(0xFF161A1D),
                                             ),
                                         validator: _model
                                             .complemntControllerValidator
@@ -393,7 +387,7 @@ class _RegisterTheraphistPageWidgetState
                                     ),
                                   ),
                                 ),
-                              ].divide(SizedBox(height: 20.0)),
+                              ].divide(const SizedBox(height: 20.0)),
                             ),
                           ),
                         ),
@@ -407,14 +401,14 @@ class _RegisterTheraphistPageWidgetState
                         child: Container(
                           width: 100.0,
                           height: 165.0,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 10.0, 0.0),
                             child: Builder(builder: (context) {
-                              final _googleMapMarker =
+                              final googleMapMarker =
                                   _model.placePickerValue.latLng;
                               return FlutterFlowGoogleMap(
                                 controller: _model.googleMapsController,
@@ -423,11 +417,10 @@ class _RegisterTheraphistPageWidgetState
                                 initialLocation: _model.googleMapsCenter ??=
                                     currentUserLocationValue!,
                                 markers: [
-                                  if (_googleMapMarker != null)
-                                    FlutterFlowMarker(
-                                      _googleMapMarker.serialize(),
-                                      _googleMapMarker,
-                                    ),
+                                  FlutterFlowMarker(
+                                    googleMapMarker.serialize(),
+                                    googleMapMarker,
+                                  ),
                                 ],
                                 markerColor: GoogleMarkerColor.red,
                                 mapType: MapType.normal,
@@ -450,24 +443,20 @@ class _RegisterTheraphistPageWidgetState
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 10.0),
                           child: FFButtonWidget(
                             onPressed: ((_model.complemntController.text ==
-                                            null ||
-                                        _model.complemntController.text ==
                                             '') ||
-                                    (_model.placePickerValue.address == null ||
-                                        _model.placePickerValue.address ==
+                                    (_model.placePickerValue.address ==
                                             '') ||
-                                    (_model.cpfController.text == null ||
-                                        _model.cpfController.text == ''))
+                                    (_model.cpfController.text == ''))
                                 ? null
                                 : () async {
                                     if (_model.formKey.currentState == null ||
@@ -476,7 +465,7 @@ class _RegisterTheraphistPageWidgetState
                                       return;
                                     }
                                     ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
+                                      const SnackBar(
                                         content: Text(
                                           'Estamos validando seu dados',
                                           style: TextStyle(
@@ -516,11 +505,11 @@ class _RegisterTheraphistPageWidgetState
                             options: FFButtonOptions(
                               width: 352.0,
                               height: 50.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF0DA0D4),
+                              color: const Color(0xFF0DA0D4),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -530,11 +519,11 @@ class _RegisterTheraphistPageWidgetState
                                     fontWeight: FontWeight.normal,
                                   ),
                               elevation: 0.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                               ),
-                              disabledColor: Color(0xFFB0B0B0),
-                              disabledTextColor: Color(0x82FFFFFF),
+                              disabledColor: const Color(0xFFB0B0B0),
+                              disabledTextColor: const Color(0x82FFFFFF),
                             ),
                           ),
                         ),

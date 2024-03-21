@@ -4,13 +4,10 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/therapist/praticals/components/alert_delete_modal/alert_delete_modal_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'praticals_theraphist_page_model.dart';
 export 'praticals_theraphist_page_model.dart';
@@ -51,8 +48,8 @@ class _PraticalsTheraphistPageWidgetState
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(-20.0, 0.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(-20.0, 0.0),
+          end: const Offset(0.0, 0.0),
         ),
         FadeEffect(
           curve: Curves.easeInOut,
@@ -71,8 +68,8 @@ class _PraticalsTheraphistPageWidgetState
           curve: Curves.easeInOut,
           delay: 200.ms,
           duration: 600.ms,
-          begin: Offset(-20.0, 0.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(-20.0, 0.0),
+          end: const Offset(0.0, 0.0),
         ),
         FadeEffect(
           curve: Curves.easeInOut,
@@ -91,8 +88,8 @@ class _PraticalsTheraphistPageWidgetState
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 0.0),
-          end: Offset(30.0, -30.0),
+          begin: const Offset(0.0, 0.0),
+          end: const Offset(30.0, -30.0),
         ),
       ],
     ),
@@ -111,8 +108,8 @@ class _PraticalsTheraphistPageWidgetState
           curve: Curves.easeInOut,
           delay: 300.ms,
           duration: 600.ms,
-          begin: Offset(0.0, 0.0),
-          end: Offset(1.0, 1.0),
+          begin: const Offset(0.0, 0.0),
+          end: const Offset(1.0, 1.0),
         ),
       ],
     ),
@@ -188,18 +185,18 @@ class _PraticalsTheraphistPageWidgetState
             key: scaffoldKey,
             backgroundColor: Colors.white,
             appBar: PreferredSize(
-              preferredSize: Size.fromHeight(100.0),
+              preferredSize: const Size.fromHeight(100.0),
               child: AppBar(
-                backgroundColor: Color(0xFFA54EAF),
+                backgroundColor: const Color(0xFFA54EAF),
                 automaticallyImplyLeading: false,
                 leading: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: FlutterFlowIconButton(
                     borderColor: Colors.transparent,
                     borderRadius: 100.0,
                     borderWidth: 1.0,
                     buttonSize: 60.0,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_back_ios,
                       color: Colors.white,
                       size: 30.0,
@@ -210,7 +207,7 @@ class _PraticalsTheraphistPageWidgetState
                   ),
                 ),
                 title: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'dqu9d3jd' /* Minhas Práticas */,
@@ -223,7 +220,7 @@ class _PraticalsTheraphistPageWidgetState
                         ),
                   ),
                 ),
-                actions: [],
+                actions: const [],
                 centerTitle: true,
                 elevation: 0.0,
               ),
@@ -231,12 +228,12 @@ class _PraticalsTheraphistPageWidgetState
             body: SafeArea(
               top: true,
               child: Stack(
-                alignment: AlignmentDirectional(1.0, 1.0),
+                alignment: const AlignmentDirectional(1.0, 1.0),
                 children: [
                   Container(
                     width: double.infinity,
                     height: double.infinity,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.transparent,
                     ),
                     child: StreamBuilder<List<PracticeRecord>>(
@@ -249,7 +246,7 @@ class _PraticalsTheraphistPageWidgetState
                       builder: (context, snapshot) {
                         // Customize what your widget looks like when it's loading.
                         if (!snapshot.hasData) {
-                          return Center(
+                          return const Center(
                             child: SizedBox(
                               width: 40.0,
                               height: 40.0,
@@ -269,7 +266,7 @@ class _PraticalsTheraphistPageWidgetState
                             final columnPracticeRecord =
                                 columnPracticeRecordList[columnIndex];
                             return Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 10.0, 10.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -292,10 +289,10 @@ class _PraticalsTheraphistPageWidgetState
                                               BorderRadius.circular(10.0),
                                         ),
                                         alignment:
-                                            AlignmentDirectional(-1.0, 0.0),
+                                            const AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 10.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -305,7 +302,7 @@ class _PraticalsTheraphistPageWidgetState
                                               Container(
                                                 width: 39.0,
                                                 height: 100.0,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Color(0x9BA954B2),
                                                   borderRadius:
                                                       BorderRadius.only(
@@ -321,7 +318,7 @@ class _PraticalsTheraphistPageWidgetState
                                                 ),
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Column(
                                                   mainAxisSize:
@@ -370,7 +367,7 @@ class _PraticalsTheraphistPageWidgetState
                                               Expanded(
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           1.0, -1.0),
                                                   child: Row(
                                                     mainAxisSize:
@@ -383,7 +380,7 @@ class _PraticalsTheraphistPageWidgetState
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     5.0,
@@ -393,19 +390,19 @@ class _PraticalsTheraphistPageWidgetState
                                                           width: 68.0,
                                                           height: 19.0,
                                                           decoration:
-                                                              BoxDecoration(
+                                                              const BoxDecoration(
                                                             color: Colors.white,
                                                           ),
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     1.0, 0.0),
                                                             child: Transform
                                                                 .rotate(
                                                               angle: 4.7124,
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -455,7 +452,7 @@ class _PraticalsTheraphistPageWidgetState
                                                                         safeSetState(
                                                                             () {}));
                                                                   },
-                                                                  child: Icon(
+                                                                  child: const Icon(
                                                                     Icons
                                                                         .keyboard_control,
                                                                     color: Color(
@@ -472,7 +469,7 @@ class _PraticalsTheraphistPageWidgetState
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(width: 30.0)),
+                                            ].divide(const SizedBox(width: 30.0)),
                                           ),
                                         ),
                                       ),
@@ -488,7 +485,7 @@ class _PraticalsTheraphistPageWidgetState
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 16.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 16.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -502,15 +499,15 @@ class _PraticalsTheraphistPageWidgetState
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10.0),
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 8.0, 0.0, 8.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(1.0, 0.0),
+                                    alignment: const AlignmentDirectional(1.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
                                       focusColor: Colors.transparent,
@@ -522,7 +519,7 @@ class _PraticalsTheraphistPageWidgetState
                                       child: Container(
                                         width: 308.0,
                                         height: 50.0,
-                                        decoration: BoxDecoration(),
+                                        decoration: const BoxDecoration(),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           mainAxisAlignment:
@@ -563,14 +560,14 @@ class _PraticalsTheraphistPageWidgetState
                                                       BorderRadius.circular(
                                                           100.0),
                                                 ),
-                                                child: Icon(
+                                                child: const Icon(
                                                   Icons.access_time,
                                                   color: Color(0xFFA954B2),
                                                   size: 20.0,
                                                 ),
                                               ),
                                             ),
-                                          ].divide(SizedBox(width: 5.0)),
+                                          ].divide(const SizedBox(width: 5.0)),
                                         ),
                                       ),
                                     ).animateOnActionTrigger(
@@ -590,10 +587,10 @@ class _PraticalsTheraphistPageWidgetState
                                       child: Container(
                                         width: 216.0,
                                         height: 50.0,
-                                        decoration: BoxDecoration(),
+                                        decoration: const BoxDecoration(),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -635,7 +632,7 @@ class _PraticalsTheraphistPageWidgetState
                                                         BorderRadius.circular(
                                                             100.0),
                                                   ),
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     Icons
                                                         .design_services_rounded,
                                                     color: Color(0xFFA954B2),
@@ -643,7 +640,7 @@ class _PraticalsTheraphistPageWidgetState
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(width: 6.0)),
+                                            ].divide(const SizedBox(width: 6.0)),
                                           ),
                                         ),
                                       ),
@@ -660,7 +657,7 @@ class _PraticalsTheraphistPageWidgetState
                           animationsMap['containerOnActionTriggerAnimation1']!,
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 8.0, 0.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -758,16 +755,16 @@ class _PraticalsTheraphistPageWidgetState
                               child: Container(
                                 width: 55.0,
                                 height: 55.0,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color(0xFFA954B2),
                                   shape: BoxShape.circle,
                                 ),
                                 child: Stack(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   children: [
                                     Transform.rotate(
                                       angle: -0.7854,
-                                      child: Padding(
+                                      child: const Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: Icon(
@@ -780,7 +777,7 @@ class _PraticalsTheraphistPageWidgetState
                                       animationsMap[
                                           'transformOnActionTriggerAnimation']!,
                                     ),
-                                    Icon(
+                                    const Icon(
                                       Icons.close_rounded,
                                       color: Colors.white,
                                       size: 24.0,

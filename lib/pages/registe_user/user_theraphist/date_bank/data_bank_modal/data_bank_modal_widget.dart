@@ -6,8 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/registe_user/components/alert_register_user_theraphist_modal/alert_register_user_theraphist_modal_widget.dart';
 import '/pages/registe_user/user_theraphist/date_bank/components/alert_erro_register_modal/alert_erro_register_modal_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'data_bank_modal_model.dart';
 export 'data_bank_modal_model.dart';
 
@@ -58,7 +56,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
     return Material(
       color: Colors.transparent,
       elevation: 5.0,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -69,7 +67,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
       child: Container(
         width: double.infinity,
         height: 384.0,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xFFFEFEFE),
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
@@ -78,7 +76,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
             topRight: Radius.circular(16.0),
           ),
         ),
-        alignment: AlignmentDirectional(0.0, 0.0),
+        alignment: const AlignmentDirectional(0.0, 0.0),
         child: SingleChildScrollView(
           primary: false,
           child: Column(
@@ -87,9 +85,9 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, -1.0),
+                alignment: const AlignmentDirectional(0.0, -1.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -99,7 +97,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 12.0, 0.0, 0.0),
                             child: Container(
                               width: 50.0,
@@ -113,14 +111,14 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                         ],
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             10.0, 0.0, 10.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   16.0, 12.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -130,7 +128,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                     .headlineMedium
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF14181B),
+                                      color: const Color(0xFF14181B),
                                       fontWeight: FontWeight.w500,
                                     ),
                               ),
@@ -139,9 +137,9 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 20.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
@@ -151,7 +149,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                 .headlineMedium
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF14181B),
+                                  color: const Color(0xFF14181B),
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.normal,
                                 ),
@@ -159,7 +157,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 12.0, 12.0, 0.0),
                         child: Form(
                           key: _model.formKey,
@@ -169,7 +167,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 0.0, 8.0, 0.0),
                                 child: TextFormField(
                                   controller: _model.textController1,
@@ -217,7 +215,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                       ),
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
-                                    prefixIcon: Icon(
+                                    prefixIcon: const Icon(
                                       Icons.email_sharp,
                                       color: Color(0xFF9420AF),
                                       size: 15.0,
@@ -230,7 +228,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 0.0, 8.0, 0.0),
                                 child: TextFormField(
                                   controller: _model.textController2,
@@ -278,7 +276,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                       ),
                                       borderRadius: BorderRadius.circular(24.0),
                                     ),
-                                    prefixIcon: Icon(
+                                    prefixIcon: const Icon(
                                       Icons.person,
                                       color: Color(0xFF9420AF),
                                       size: 15.0,
@@ -290,22 +288,22 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                       .asValidator(context),
                                 ),
                               ),
-                            ].divide(SizedBox(height: 20.0)),
+                            ].divide(const SizedBox(height: 20.0)),
                           ),
                         ),
                       ),
-                      Row(
+                      const Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [],
                       ),
-                    ].divide(SizedBox(height: 7.0)),
+                    ].divide(const SizedBox(height: 7.0)),
                   ),
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -316,11 +314,10 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                           onPressed: ((/* NOT RECOMMENDED */ _model
                                           .textController1.text ==
                                       'true') &&
-                                  (_model.textController2.text == null ||
-                                      _model.textController2.text == ''))
+                                  (_model.textController2.text == ''))
                               ? null
                               : () async {
-                                  var _shouldSetState = false;
+                                  var shouldSetState = false;
                                   _model.apiResult3qf = await StripeApiNodeGroup
                                       .createAccountConnectedCall
                                       .call(
@@ -328,7 +325,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                     name: _model.textController2.text,
                                     countryCode: 'BR',
                                   );
-                                  _shouldSetState = true;
+                                  shouldSetState = true;
                                   if ((_model.apiResult3qf?.statusCode ??
                                           200) ==
                                       200) {
@@ -346,12 +343,12 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                           padding:
                                               MediaQuery.viewInsetsOf(context),
                                           child:
-                                              AlertRegisterUserTheraphistModalWidget(),
+                                              const AlertRegisterUserTheraphistModalWidget(),
                                         );
                                       },
                                     ).then((value) => safeSetState(() {}));
 
-                                    if (_shouldSetState) setState(() {});
+                                    if (shouldSetState) setState(() {});
                                     return;
                                   } else {
                                     await showModalBottomSheet(
@@ -363,7 +360,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                         return Padding(
                                           padding:
                                               MediaQuery.viewInsetsOf(context),
-                                          child: AlertErroRegisterModalWidget(),
+                                          child: const AlertErroRegisterModalWidget(),
                                         );
                                       },
                                     ).then((value) => safeSetState(() {}));
@@ -380,11 +377,11 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                         .delete();
                                     await widget.theraphistDoc!.fkInvoicing!
                                         .delete();
-                                    if (_shouldSetState) setState(() {});
+                                    if (shouldSetState) setState(() {});
                                     return;
                                   }
 
-                                  if (_shouldSetState) setState(() {});
+                                  if (shouldSetState) setState(() {});
                                 },
                           text: FFLocalizations.of(context).getText(
                             'ai4r6zh0' /* Finalizar */,
@@ -392,11 +389,11 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                           options: FFButtonOptions(
                             width: 279.0,
                             height: 48.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFF95489D),
+                            color: const Color(0xFF95489D),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -404,13 +401,13 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                                   color: Colors.white,
                                 ),
                             elevation: 3.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),
                             borderRadius: BorderRadius.circular(10.0),
-                            disabledColor: Color(0xFFB0B0B0),
-                            disabledTextColor: Color(0xCAFFFFFF),
+                            disabledColor: const Color(0xFFB0B0B0),
+                            disabledTextColor: const Color(0xCAFFFFFF),
                           ),
                         ),
                       ),
@@ -418,7 +415,7 @@ class _DataBankModalWidgetState extends State<DataBankModalWidget> {
                   ),
                 ),
               ),
-            ].divide(SizedBox(height: 10.0)),
+            ].divide(const SizedBox(height: 10.0)),
           ),
         ),
       ),

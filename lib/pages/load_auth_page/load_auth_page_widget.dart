@@ -1,15 +1,11 @@
-import '/auth/base_auth_user_provider.dart';
 import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/drawer/components_general/modal_session/modal_session_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'load_auth_page_model.dart';
 export 'load_auth_page_model.dart';
 
@@ -55,7 +51,7 @@ class _LoadAuthPageWidgetState extends State<LoadAuthPageWidget>
           context.goNamed(
             'home_theraphist_page',
             extra: <String, dynamic>{
-              kTransitionInfoKey: TransitionInfo(
+              kTransitionInfoKey: const TransitionInfo(
                 hasTransition: true,
                 transitionType: PageTransitionType.fade,
                 duration: Duration(milliseconds: 0),
@@ -69,7 +65,7 @@ class _LoadAuthPageWidgetState extends State<LoadAuthPageWidget>
             context.goNamed(
               'home_patient_page',
               extra: <String, dynamic>{
-                kTransitionInfoKey: TransitionInfo(
+                kTransitionInfoKey: const TransitionInfo(
                   hasTransition: true,
                   transitionType: PageTransitionType.fade,
                   duration: Duration(milliseconds: 0),
@@ -95,7 +91,7 @@ class _LoadAuthPageWidgetState extends State<LoadAuthPageWidget>
                         : FocusScope.of(context).unfocus(),
                     child: Padding(
                       padding: MediaQuery.viewInsetsOf(context),
-                      child: Container(
+                      child: const SizedBox(
                         height: 781.0,
                         child: ModalSessionWidget(),
                       ),
@@ -110,7 +106,7 @@ class _LoadAuthPageWidgetState extends State<LoadAuthPageWidget>
         context.goNamed(
           'login_page',
           extra: <String, dynamic>{
-            kTransitionInfoKey: TransitionInfo(
+            kTransitionInfoKey: const TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
               duration: Duration(milliseconds: 0),
@@ -148,7 +144,7 @@ class _LoadAuthPageWidgetState extends State<LoadAuthPageWidget>
             children: [
               Expanded(
                 child: Container(
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     minWidth: 1000.0,
                     minHeight: 1000.0,
                   ),
@@ -161,15 +157,15 @@ class _LoadAuthPageWidgetState extends State<LoadAuthPageWidget>
                       ).image,
                     ),
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -184,11 +180,11 @@ class _LoadAuthPageWidgetState extends State<LoadAuthPageWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Container(
                                   width: 284.0,
                                   height: 25.0,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
                                   ),
                                   child: Text(

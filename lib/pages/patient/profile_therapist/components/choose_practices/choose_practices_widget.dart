@@ -5,13 +5,10 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'choose_practices_model.dart';
 export 'choose_practices_model.dart';
 
@@ -21,7 +18,7 @@ class ChoosePracticesWidget extends StatefulWidget {
     required this.theraphist,
     required this.horary,
     int? numbercowokings,
-  }) : this.numbercowokings = numbercowokings ?? 0;
+  }) : numbercowokings = numbercowokings ?? 0;
 
   final TheraphistRecord? theraphist;
   final DateTime? horary;
@@ -132,13 +129,13 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
               borderRadius: BorderRadius.circular(0.0),
             ),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -154,8 +151,8 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                                   FlutterFlowIconButton(
                                     borderRadius: 20.0,
                                     buttonSize: 40.0,
-                                    fillColor: Color(0xFF657DCA),
-                                    icon: Icon(
+                                    fillColor: const Color(0xFF657DCA),
+                                    icon: const Icon(
                                       Icons.arrow_back,
                                       color: Colors.white,
                                       size: 24.0,
@@ -186,16 +183,16 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                                   ),
                                 ],
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
-                      ].divide(SizedBox(width: 10.0)),
+                      ].divide(const SizedBox(width: 10.0)),
                     ),
                   ),
                   Expanded(
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 50.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -204,7 +201,7 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                               builder: (context) {
                                 if (_model.loadPractices) {
                                   return Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 20.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -219,7 +216,7 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                                                 width: 100.0,
                                                 height: 50.0,
                                                 decoration: BoxDecoration(
-                                                  gradient: LinearGradient(
+                                                  gradient: const LinearGradient(
                                                     colors: [
                                                       Color(0xFFE9E9E9),
                                                       Color(0xFFCBCBCB)
@@ -247,7 +244,7 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                                                 width: 100.0,
                                                 height: 50.0,
                                                 decoration: BoxDecoration(
-                                                  gradient: LinearGradient(
+                                                  gradient: const LinearGradient(
                                                     colors: [
                                                       Color(0xFFE9E9E9),
                                                       Color(0xFFCBCBCB)
@@ -275,7 +272,7 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                                                 width: 100.0,
                                                 height: 50.0,
                                                 decoration: BoxDecoration(
-                                                  gradient: LinearGradient(
+                                                  gradient: const LinearGradient(
                                                     colors: [
                                                       Color(0xFFE9E9E9),
                                                       Color(0xFFCBCBCB)
@@ -295,7 +292,7 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                                             ),
                                           ],
                                         ),
-                                      ].divide(SizedBox(height: 10.0)),
+                                      ].divide(const SizedBox(height: 10.0)),
                                     ),
                                   );
                                 } else {
@@ -329,17 +326,17 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                                               child: Container(
                                                 width: double.infinity,
                                                 height: 50.0,
-                                                constraints: BoxConstraints(
+                                                constraints: const BoxConstraints(
                                                   maxWidth: 500.0,
                                                 ),
                                                 decoration: BoxDecoration(
-                                                  color: Color(0xFF657DCA),
+                                                  color: const Color(0xFF657DCA),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           14.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 0.0, 20.0, 0.0),
                                                   child: Row(
@@ -374,8 +371,8 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                                                         borderWidth: 1.0,
                                                         buttonSize: 40.0,
                                                         fillColor:
-                                                            Color(0x4CFFFFFF),
-                                                        icon: Icon(
+                                                            const Color(0x4CFFFFFF),
+                                                        icon: const Icon(
                                                           Icons
                                                               .help_outline_rounded,
                                                           color: Colors.white,
@@ -391,7 +388,7 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                                                 ),
                                               ),
                                             );
-                                          }).divide(SizedBox(height: 10.0)),
+                                          }).divide(const SizedBox(height: 10.0)),
                                         ),
                                       );
                                     },
@@ -406,7 +403,7 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: (_model.choosedPractice == null)
                           ? null
@@ -478,23 +475,23 @@ class _ChoosePracticesWidgetState extends State<ChoosePracticesWidget>
                       options: FFButtonOptions(
                         width: double.infinity,
                         height: 60.0,
-                        padding: EdgeInsets.all(0.0),
+                        padding: const EdgeInsets.all(0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFF4F90DB),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: const Color(0xFF4F90DB),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Readex Pro',
                                   color: Colors.white,
                                 ),
                         elevation: 3.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),
                         borderRadius: BorderRadius.circular(24.0),
                         disabledColor: FlutterFlowTheme.of(context).accent4,
-                        disabledTextColor: Color(0xFF363636),
+                        disabledTextColor: const Color(0xFF363636),
                       ),
                     ),
                   ),

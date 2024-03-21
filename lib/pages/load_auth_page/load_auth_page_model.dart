@@ -1,16 +1,6 @@
-import '/auth/base_auth_user_provider.dart';
-import '/auth/firebase_auth/auth_util.dart';
-import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/pages/drawer/components_general/modal_session/modal_session_widget.dart';
 import 'load_auth_page_widget.dart' show LoadAuthPageWidget;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class LoadAuthPageModel extends FlutterFlowModel<LoadAuthPageWidget> {
   ///  State fields for stateful widgets in this page.

@@ -4,16 +4,11 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/drawer/components_general/bottom_navigation_bar_theraphist/bottom_navigation_bar_theraphist_widget.dart';
 import '/pages/drawer/modal_languge/modal_languge_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'notification_theraphist_page_model.dart';
 export 'notification_theraphist_page_model.dart';
@@ -22,7 +17,7 @@ class NotificationTheraphistPageWidget extends StatefulWidget {
   const NotificationTheraphistPageWidget({
     super.key,
     bool? intro,
-  }) : this.intro = intro ?? false;
+  }) : intro = intro ?? false;
 
   final bool intro;
 
@@ -124,11 +119,11 @@ class _NotificationTheraphistPageWidgetState
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFFA54EAF),
+        backgroundColor: const Color(0xFFA54EAF),
         drawer: Drawer(
           elevation: 16.0,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
@@ -136,12 +131,12 @@ class _NotificationTheraphistPageWidgetState
               children: [
                 Container(
                   height: 100.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -162,12 +157,12 @@ class _NotificationTheraphistPageWidgetState
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF121518),
+                                    color: const Color(0xFF121518),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                         ),
-                      ].divide(SizedBox(width: 10.0)),
+                      ].divide(const SizedBox(width: 10.0)),
                     ),
                   ),
                 ),
@@ -175,7 +170,7 @@ class _NotificationTheraphistPageWidgetState
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                      color: Color(0x9FA0A0A0),
+                      color: const Color(0x9FA0A0A0),
                     ),
                   ),
                   child: Column(
@@ -189,7 +184,7 @@ class _NotificationTheraphistPageWidgetState
                         desktop: false,
                       ))
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.person_2,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -202,7 +197,7 @@ class _NotificationTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -218,7 +213,7 @@ class _NotificationTheraphistPageWidgetState
                         desktop: false,
                       ))
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.switch_account,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -231,7 +226,7 @@ class _NotificationTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -253,7 +248,7 @@ class _NotificationTheraphistPageWidgetState
                             );
                           },
                           child: ListTile(
-                            leading: Icon(
+                            leading: const Icon(
                               Icons.card_giftcard,
                               color: Color(0xC2000000),
                               size: 14.0,
@@ -266,7 +261,7 @@ class _NotificationTheraphistPageWidgetState
                                   .titleLarge
                                   .override(
                                     fontFamily: 'Outfit',
-                                    color: Color(0xFF121518),
+                                    color: const Color(0xFF121518),
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -285,7 +280,7 @@ class _NotificationTheraphistPageWidgetState
                           context.pushNamed('profile_patient');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.location_history,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -298,7 +293,7 @@ class _NotificationTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -326,14 +321,14 @@ class _NotificationTheraphistPageWidgetState
                                     : FocusScope.of(context).unfocus(),
                                 child: Padding(
                                   padding: MediaQuery.viewInsetsOf(context),
-                                  child: ModalLangugeWidget(),
+                                  child: const ModalLangugeWidget(),
                                 ),
                               );
                             },
                           ).then((value) => safeSetState(() {}));
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.language_rounded,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -346,7 +341,7 @@ class _NotificationTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -364,7 +359,7 @@ class _NotificationTheraphistPageWidgetState
                           await launchURL('https://qtmhealthtech.com.br/');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.computer_sharp,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -377,7 +372,7 @@ class _NotificationTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -393,7 +388,7 @@ class _NotificationTheraphistPageWidgetState
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                      color: Color(0x68B4B4B4),
+                      color: const Color(0x68B4B4B4),
                     ),
                   ),
                   child: Column(
@@ -408,7 +403,7 @@ class _NotificationTheraphistPageWidgetState
                           context.pushNamed('politics_drawer_page');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.content_paste,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -421,7 +416,7 @@ class _NotificationTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -439,7 +434,7 @@ class _NotificationTheraphistPageWidgetState
                           context.pushNamed('terms_drawer_page');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.switch_account,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -452,7 +447,7 @@ class _NotificationTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -474,7 +469,7 @@ class _NotificationTheraphistPageWidgetState
                           context.pushNamedAuth('login_page', context.mounted);
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.output_outlined,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -487,7 +482,7 @@ class _NotificationTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -511,16 +506,16 @@ class _NotificationTheraphistPageWidgetState
             children: [
               Expanded(
                 child: Stack(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFFA54EAF),
+                          color: const Color(0xFFA54EAF),
                           borderRadius: BorderRadius.circular(50.0),
                           border: Border.all(
-                            color: Color(0xFFA54EAF),
+                            color: const Color(0xFFA54EAF),
                             width: 9.0,
                           ),
                         ),
@@ -528,7 +523,7 @@ class _NotificationTheraphistPageWidgetState
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 10.0, 20.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -543,14 +538,14 @@ class _NotificationTheraphistPageWidgetState
                                     onTap: () async {
                                       scaffoldKey.currentState!.openDrawer();
                                     },
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.menu,
                                       color: Colors.white,
                                       size: 35.0,
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         '9c9joxpl' /* Notificações */,
@@ -568,7 +563,7 @@ class _NotificationTheraphistPageWidgetState
                                   Container(
                                     width: 45.0,
                                     height: 59.0,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Color(0xFFA54EAF),
                                     ),
                                   ),
@@ -580,12 +575,12 @@ class _NotificationTheraphistPageWidgetState
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 100.0, 0.0, 0.0),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(50.0),
@@ -593,10 +588,10 @@ class _NotificationTheraphistPageWidgetState
                           ),
                           child: Container(
                             height: double.infinity,
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                               maxHeight: 1080.0,
                             ),
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(0.0),
@@ -606,7 +601,7 @@ class _NotificationTheraphistPageWidgetState
                               ),
                               shape: BoxShape.rectangle,
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Builder(
                               builder: (context) {
                                 if (_model.loadnotifications ?? false) {
@@ -623,7 +618,7 @@ class _NotificationTheraphistPageWidgetState
                                               width: 100.0,
                                               height: 80.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -650,7 +645,7 @@ class _NotificationTheraphistPageWidgetState
                                               width: 100.0,
                                               height: 80.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -677,7 +672,7 @@ class _NotificationTheraphistPageWidgetState
                                               width: 100.0,
                                               height: 80.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -696,18 +691,16 @@ class _NotificationTheraphistPageWidgetState
                                           ),
                                         ],
                                       ),
-                                    ].divide(SizedBox(height: 15.0)),
+                                    ].divide(const SizedBox(height: 15.0)),
                                   );
                                 } else {
                                   return Builder(
                                     builder: (context) {
-                                      if (_model.collectionNotifications
-                                              ?.length ==
-                                          0) {
+                                      if (_model.collectionNotifications.isEmpty) {
                                         return Container(
                                           width: 300.0,
                                           height: 400.0,
-                                          decoration: BoxDecoration(),
+                                          decoration: const BoxDecoration(),
                                           child: ClipRRect(
                                             borderRadius:
                                                 BorderRadius.circular(8.0),
@@ -722,7 +715,7 @@ class _NotificationTheraphistPageWidgetState
                                       } else {
                                         return Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 50.0, 0.0, 0.0),
                                           child: StreamBuilder<
                                               List<NotificationsRecord>>(
@@ -770,7 +763,7 @@ class _NotificationTheraphistPageWidgetState
                                                           listViewIndex];
                                                   return Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 10.0, 0.0),
                                                     child: Container(
@@ -781,7 +774,7 @@ class _NotificationTheraphistPageWidgetState
                                                                 .of(context)
                                                             .secondaryBackground,
                                                         borderRadius:
-                                                            BorderRadius.only(
+                                                            const BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   20.0),
@@ -803,7 +796,7 @@ class _NotificationTheraphistPageWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -817,7 +810,7 @@ class _NotificationTheraphistPageWidgetState
                                                                     MainAxisAlignment
                                                                         .spaceBetween,
                                                                 children: [
-                                                                  Icon(
+                                                                  const Icon(
                                                                     Icons
                                                                         .circle_notifications_rounded,
                                                                     color: Color(
@@ -844,7 +837,7 @@ class _NotificationTheraphistPageWidgetState
                                                                               .titleLarge
                                                                               .override(
                                                                                 fontFamily: 'Raleway',
-                                                                                color: Color(0xB6434343),
+                                                                                color: const Color(0xB6434343),
                                                                                 fontSize: 15.0,
                                                                                 fontWeight: FontWeight.bold,
                                                                               ),
@@ -856,7 +849,7 @@ class _NotificationTheraphistPageWidgetState
                                                                               .titleLarge
                                                                               .override(
                                                                                 fontFamily: 'Raleway',
-                                                                                color: Color(0xD58E979E),
+                                                                                color: const Color(0xD58E979E),
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.bold,
                                                                               ),
@@ -881,7 +874,7 @@ class _NotificationTheraphistPageWidgetState
                                                                               .titleLarge
                                                                               .override(
                                                                                 fontFamily: 'Raleway',
-                                                                                color: Color(0xD58E979E),
+                                                                                color: const Color(0xD58E979E),
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.w600,
                                                                               ),
@@ -891,7 +884,7 @@ class _NotificationTheraphistPageWidgetState
                                                                   ),
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             -1.0),
                                                                     child:
@@ -906,7 +899,7 @@ class _NotificationTheraphistPageWidgetState
                                                                       buttonSize:
                                                                           30.0,
                                                                       icon:
-                                                                          Icon(
+                                                                          const Icon(
                                                                         Icons
                                                                             .close_sharp,
                                                                         color: Color(
@@ -922,7 +915,7 @@ class _NotificationTheraphistPageWidgetState
                                                                       },
                                                                     ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     width:
                                                                         20.0)),
                                                               ),
@@ -944,7 +937,7 @@ class _NotificationTheraphistPageWidgetState
                                                                 Expanded(
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             0.0,
@@ -958,7 +951,7 @@ class _NotificationTheraphistPageWidgetState
                                                                           2.0,
                                                                       decoration:
                                                                           BoxDecoration(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0x599420AF),
                                                                         borderRadius:
                                                                             BorderRadius.circular(20.0),
@@ -993,7 +986,7 @@ class _NotificationTheraphistPageWidgetState
               wrapWithModel(
                 model: _model.bottomNavigationBarTheraphistModel,
                 updateCallback: () => setState(() {}),
-                child: BottomNavigationBarTheraphistWidget(),
+                child: const BottomNavigationBarTheraphistWidget(),
               ),
             ],
           ),

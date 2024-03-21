@@ -8,6 +8,7 @@ export '../base_auth_user_provider.dart';
 class QTMHealthtechFirebaseUser extends BaseAuthUser {
   QTMHealthtechFirebaseUser(this.user);
   User? user;
+  @override
   bool get loggedIn => user != null;
 
   @override

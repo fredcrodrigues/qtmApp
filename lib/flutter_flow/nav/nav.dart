@@ -1,23 +1,15 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 
 import '/auth/base_auth_user_provider.dart';
 
 import '/backend/push_notifications/push_notifications_handler.dart'
     show PushNotificationsHandler;
 import '/index.dart';
-import '/main.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/lat_lng.dart';
-import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -82,24 +74,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? LoadAuthPageWidget() : LoginPageWidget(),
+          appStateNotifier.loggedIn ? const LoadAuthPageWidget() : const LoginPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? LoadAuthPageWidget()
-              : LoginPageWidget(),
+              ? const LoadAuthPageWidget()
+              : const LoginPageWidget(),
         ),
         FFRoute(
           name: 'home_patient_page',
           path: '/homePatientPage',
-          builder: (context, params) => HomePatientPageWidget(),
+          builder: (context, params) => const HomePatientPageWidget(),
         ),
         FFRoute(
           name: 'initial_search',
           path: '/initialSearch',
-          builder: (context, params) => InitialSearchWidget(),
+          builder: (context, params) => const InitialSearchWidget(),
         ),
         FFRoute(
           name: 'search',
@@ -128,12 +120,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'terms_page',
           path: '/termsPage',
-          builder: (context, params) => TermsPageWidget(),
+          builder: (context, params) => const TermsPageWidget(),
         ),
         FFRoute(
           name: 'payment_cards',
           path: '/paymentCards',
-          builder: (context, params) => PaymentCardsWidget(),
+          builder: (context, params) => const PaymentCardsWidget(),
         ),
         FFRoute(
           name: 'confirm_schedule',
@@ -180,7 +172,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'manager_requests',
           path: '/managerRequests',
-          builder: (context, params) => ManagerRequestsWidget(),
+          builder: (context, params) => const ManagerRequestsWidget(),
         ),
         FFRoute(
           name: 'payment_confirm',
@@ -212,7 +204,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'login_page',
           path: '/loginPage',
-          builder: (context, params) => LoginPageWidget(),
+          builder: (context, params) => const LoginPageWidget(),
         ),
         FFRoute(
           name: 'schedulings_page',
@@ -232,7 +224,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'load_auth_page',
           path: '/loadAuthPage',
-          builder: (context, params) => LoadAuthPageWidget(),
+          builder: (context, params) => const LoadAuthPageWidget(),
         ),
         FFRoute(
           name: 'schedules_theraphist_page',
@@ -253,17 +245,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'signup_register_user_page',
           path: '/signupRegisterUserPage',
-          builder: (context, params) => SignupRegisterUserPageWidget(),
+          builder: (context, params) => const SignupRegisterUserPageWidget(),
         ),
         FFRoute(
           name: 'type_user_page',
           path: '/typeUserPage',
-          builder: (context, params) => TypeUserPageWidget(),
+          builder: (context, params) => const TypeUserPageWidget(),
         ),
         FFRoute(
           name: 'register_theraphist_page',
           path: '/registerTheraphistPage',
-          builder: (context, params) => RegisterTheraphistPageWidget(),
+          builder: (context, params) => const RegisterTheraphistPageWidget(),
         ),
         FFRoute(
           name: 'profile_update_user_page',
@@ -276,17 +268,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'add_timer_theraphist_page',
           path: '/addTimerTheraphistPage',
-          builder: (context, params) => AddTimerTheraphistPageWidget(),
+          builder: (context, params) => const AddTimerTheraphistPageWidget(),
         ),
         FFRoute(
           name: 'add_pratical_theraphist_page',
           path: '/addPraticalTheraphistPage',
-          builder: (context, params) => AddPraticalTheraphistPageWidget(),
+          builder: (context, params) => const AddPraticalTheraphistPageWidget(),
         ),
         FFRoute(
           name: 'add_place_theraphist_page',
           path: '/addPlaceTheraphistPage',
-          builder: (context, params) => AddPlaceTheraphistPageWidget(),
+          builder: (context, params) => const AddPlaceTheraphistPageWidget(),
         ),
         FFRoute(
           name: 'loading_page_user',
@@ -314,47 +306,47 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'praticals_theraphist_page',
           path: '/praticalsTheraphistPage',
-          builder: (context, params) => PraticalsTheraphistPageWidget(),
+          builder: (context, params) => const PraticalsTheraphistPageWidget(),
         ),
         FFRoute(
           name: 'add_praticals_page',
           path: '/addPraticalsPage',
-          builder: (context, params) => AddPraticalsPageWidget(),
+          builder: (context, params) => const AddPraticalsPageWidget(),
         ),
         FFRoute(
           name: 'add_timers_page',
           path: '/addTimersPage',
-          builder: (context, params) => AddTimersPageWidget(),
+          builder: (context, params) => const AddTimersPageWidget(),
         ),
         FFRoute(
           name: 'calendar_theraphist_page',
           path: '/calendarTheraphistPage',
-          builder: (context, params) => CalendarTheraphistPageWidget(),
+          builder: (context, params) => const CalendarTheraphistPageWidget(),
         ),
         FFRoute(
           name: 'register_patient_page',
           path: '/registerPatientPage',
-          builder: (context, params) => RegisterPatientPageWidget(),
+          builder: (context, params) => const RegisterPatientPageWidget(),
         ),
         FFRoute(
           name: 'terms_inital_page',
           path: '/termsInitalPage',
-          builder: (context, params) => TermsInitalPageWidget(),
+          builder: (context, params) => const TermsInitalPageWidget(),
         ),
         FFRoute(
           name: 'politics_inital_privacy_page',
           path: '/politicsInitalPrivacyPage',
-          builder: (context, params) => PoliticsInitalPrivacyPageWidget(),
+          builder: (context, params) => const PoliticsInitalPrivacyPageWidget(),
         ),
         FFRoute(
           name: 'politic_general_use_page',
           path: '/politicGeneralUsePage',
-          builder: (context, params) => PoliticGeneralUsePageWidget(),
+          builder: (context, params) => const PoliticGeneralUsePageWidget(),
         ),
         FFRoute(
           name: 'coworking_theraphist_page',
           path: '/coworkingTheraphistPage',
-          builder: (context, params) => CoworkingTheraphistPageWidget(),
+          builder: (context, params) => const CoworkingTheraphistPageWidget(),
         ),
         FFRoute(
           name: 'statusCancel',
@@ -382,22 +374,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'notification_patient_page',
           path: '/notificationPatientPage',
-          builder: (context, params) => NotificationPatientPageWidget(),
+          builder: (context, params) => const NotificationPatientPageWidget(),
         ),
         FFRoute(
           name: 'errorApi',
           path: '/errorApi',
-          builder: (context, params) => ErrorApiWidget(),
+          builder: (context, params) => const ErrorApiWidget(),
         ),
         FFRoute(
           name: 'history_requests_patients_page',
           path: '/historyRequestsPatientsPage',
-          builder: (context, params) => HistoryRequestsPatientsPageWidget(),
+          builder: (context, params) => const HistoryRequestsPatientsPageWidget(),
         ),
         FFRoute(
           name: 'invoincing_theraphist_page',
           path: '/invoincingTheraphistPage',
-          builder: (context, params) => InvoincingTheraphistPageWidget(),
+          builder: (context, params) => const InvoincingTheraphistPageWidget(),
         ),
         FFRoute(
           name: 'interest_page',
@@ -412,17 +404,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'history_requests_theraphist_page',
           path: '/historyRequestsTheraphistPage',
-          builder: (context, params) => HistoryRequestsTheraphistPageWidget(),
+          builder: (context, params) => const HistoryRequestsTheraphistPageWidget(),
         ),
         FFRoute(
           name: 'politics_drawer_page',
           path: '/politicsDrawerPage',
-          builder: (context, params) => PoliticsDrawerPageWidget(),
+          builder: (context, params) => const PoliticsDrawerPageWidget(),
         ),
         FFRoute(
           name: 'terms_drawer_page',
           path: '/termsDrawerPage',
-          builder: (context, params) => TermsDrawerPageWidget(),
+          builder: (context, params) => const TermsDrawerPageWidget(),
         ),
         FFRoute(
           name: 'managerRequestHistory',
@@ -437,7 +429,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'redirect_finished_page',
           path: '/redirectFinishedPage',
-          builder: (context, params) => RedirectFinishedPageWidget(),
+          builder: (context, params) => const RedirectFinishedPageWidget(),
         ),
         FFRoute(
           name: 'profile_theraphist_page',
@@ -450,22 +442,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'redirect_continue_page',
           path: '/redirectContinuePage',
-          builder: (context, params) => RedirectContinuePageWidget(),
+          builder: (context, params) => const RedirectContinuePageWidget(),
         ),
         FFRoute(
           name: 'screenSupport',
           path: '/screenSupport',
-          builder: (context, params) => ScreenSupportWidget(),
+          builder: (context, params) => const ScreenSupportWidget(),
         ),
         FFRoute(
           name: 'supportForm',
           path: '/supportForm',
-          builder: (context, params) => SupportFormWidget(),
+          builder: (context, params) => const SupportFormWidget(),
         ),
         FFRoute(
           name: 'supportConsultas',
           path: '/supportRequests',
-          builder: (context, params) => SupportConsultasWidget(),
+          builder: (context, params) => const SupportConsultasWidget(),
         ),
         FFRoute(
           name: 'supportRequestFinished',
@@ -480,17 +472,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'home_page_admin',
           path: '/homePageAdmin',
-          builder: (context, params) => HomePageAdminWidget(),
+          builder: (context, params) => const HomePageAdminWidget(),
         ),
         FFRoute(
           name: 'registred_theraphist_page',
           path: '/registredTheraphistPage',
-          builder: (context, params) => RegistredTheraphistPageWidget(),
+          builder: (context, params) => const RegistredTheraphistPageWidget(),
         ),
         FFRoute(
           name: 'registred_patients_page',
           path: '/registredPatientsPage',
-          builder: (context, params) => RegistredPatientsPageWidget(),
+          builder: (context, params) => const RegistredPatientsPageWidget(),
         ),
         FFRoute(
           name: 'users_page',
@@ -505,12 +497,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'profile_patient',
           path: '/profilePatient',
-          builder: (context, params) => ProfilePatientWidget(),
+          builder: (context, params) => const ProfilePatientWidget(),
         ),
         FFRoute(
           name: 'edit_profile',
           path: '/editProfile',
-          builder: (context, params) => EditProfileWidget(),
+          builder: (context, params) => const EditProfileWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -744,7 +736,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

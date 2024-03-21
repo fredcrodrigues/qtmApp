@@ -1,10 +1,7 @@
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'confirm_delete_history_model.dart';
 export 'confirm_delete_history_model.dart';
 
@@ -47,7 +44,7 @@ class _ConfirmDeleteHistoryWidgetState
       width: double.infinity,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
           topLeft: Radius.circular(14.0),
@@ -58,7 +55,7 @@ class _ConfirmDeleteHistoryWidgetState
         mainAxisSize: MainAxisSize.max,
         children: [
           Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -67,7 +64,7 @@ class _ConfirmDeleteHistoryWidgetState
                   width: 50.0,
                   height: 4.0,
                   decoration: BoxDecoration(
-                    color: Color(0xFFD9D9D9),
+                    color: const Color(0xFFD9D9D9),
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                 ),
@@ -76,7 +73,7 @@ class _ConfirmDeleteHistoryWidgetState
           ),
           Expanded(
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -92,7 +89,7 @@ class _ConfirmDeleteHistoryWidgetState
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Raleway',
-                              color: Color(0xFF383C3E),
+                              color: const Color(0xFF383C3E),
                               fontSize: 16.0,
                               fontWeight: FontWeight.bold,
                             ),
@@ -101,7 +98,7 @@ class _ConfirmDeleteHistoryWidgetState
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(20.0, 40.0, 20.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 40.0, 20.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -116,11 +113,11 @@ class _ConfirmDeleteHistoryWidgetState
                             ),
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF1DA4D4),
+                              color: const Color(0xFF1DA4D4),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -128,7 +125,7 @@ class _ConfirmDeleteHistoryWidgetState
                                     color: Colors.white,
                                   ),
                               elevation: 3.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -154,11 +151,11 @@ class _ConfirmDeleteHistoryWidgetState
                             ),
                             options: FFButtonOptions(
                               height: 40.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFFAE525C),
+                              color: const Color(0xFFAE525C),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -166,7 +163,7 @@ class _ConfirmDeleteHistoryWidgetState
                                     color: Colors.white,
                                   ),
                               elevation: 3.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Colors.transparent,
                                 width: 1.0,
                               ),
@@ -174,7 +171,7 @@ class _ConfirmDeleteHistoryWidgetState
                             ),
                           ),
                         ),
-                      ].divide(SizedBox(width: 6.0)),
+                      ].divide(const SizedBox(width: 6.0)),
                     ),
                   ),
                 ],

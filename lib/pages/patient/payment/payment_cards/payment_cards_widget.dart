@@ -1,18 +1,15 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/patient/payment/components/confirm_delete_card/confirm_delete_card_widget.dart';
 import '/pages/patient/payment/components/modal_add_card/modal_add_card_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'payment_cards_model.dart';
 export 'payment_cards_model.dart';
@@ -133,13 +130,13 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF1DA4D4),
+        backgroundColor: const Color(0xFF1DA4D4),
         body: SafeArea(
           top: true,
           child: Container(
             width: double.infinity,
             height: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFFF2F2F2),
             ),
             child: Stack(
@@ -147,14 +144,14 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                 Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    Container(
+                    SizedBox(
                       height: 170.0,
                       child: Stack(
                         children: [
                           Container(
                             width: double.infinity,
                             height: 130.0,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Color(0xFF1DA4D4),
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(14.0),
@@ -165,9 +162,9 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: const AlignmentDirectional(0.0, -1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -185,7 +182,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 20.0, 0.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -195,7 +192,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                               onTap: () async {
                                 context.safePop();
                               },
-                              child: Icon(
+                              child: const Icon(
                                 Icons.arrow_back_ios,
                                 color: Colors.white,
                                 size: 24.0,
@@ -203,13 +200,13 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: const AlignmentDirectional(0.0, 1.0),
                             child: Container(
                               width: MediaQuery.sizeOf(context).width * 0.8,
                               height: 100.0,
                               decoration: BoxDecoration(
                                 color: Colors.white,
-                                boxShadow: [
+                                boxShadow: const [
                                   BoxShadow(
                                     blurRadius: 4.0,
                                     color: Color(0x33000000),
@@ -222,7 +219,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                 mainAxisSize: MainAxisSize.max,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(
+                                  const Icon(
                                     Icons.add_card,
                                     color: Color(0xFF1DA4D4),
                                     size: 44.0,
@@ -235,12 +232,12 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Raleway',
-                                          color: Color(0xFF4083A9),
+                                          color: const Color(0xFF4083A9),
                                           fontSize: 20.0,
                                           fontWeight: FontWeight.bold,
                                         ),
                                   ),
-                                ].divide(SizedBox(width: 15.0)),
+                                ].divide(const SizedBox(width: 15.0)),
                               ),
                             ),
                           ),
@@ -254,9 +251,9 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                             return Builder(
                               builder: (context) {
                                 if ((_model.cardsOfPatient != null) &&
-                                    (_model.cardsOfPatient!.cards.length > 0)) {
+                                    (_model.cardsOfPatient!.cards.isNotEmpty)) {
                                   return Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         20.0, 30.0, 20.0, 0.0),
                                     child: Builder(
                                       builder: (context) {
@@ -277,7 +274,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                                 height: 80.0,
                                                 decoration: BoxDecoration(
                                                   color: Colors.white,
-                                                  boxShadow: [
+                                                  boxShadow: const [
                                                     BoxShadow(
                                                       blurRadius: 4.0,
                                                       color: Color(0x33000000),
@@ -289,7 +286,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                                           10.0),
                                                 ),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           20.0, 0.0, 20.0, 0.0),
                                                   child: Row(
@@ -342,7 +339,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 15.0)),
                                                       ),
                                                       InkWell(
@@ -380,7 +377,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                                                       .viewInsetsOf(
                                                                           context),
                                                                   child:
-                                                                      Container(
+                                                                      SizedBox(
                                                                     height:
                                                                         MediaQuery.sizeOf(context).height *
                                                                             0.3,
@@ -409,7 +406,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                                   ),
                                                 ),
                                               );
-                                            }).divide(SizedBox(height: 7.0)),
+                                            }).divide(const SizedBox(height: 7.0)),
                                           ),
                                         );
                                       },
@@ -436,20 +433,20 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                               fontFamily: 'Raleway',
                                             ),
                                       ),
-                                    ].divide(SizedBox(height: 20.0)),
+                                    ].divide(const SizedBox(height: 20.0)),
                                   );
                                 }
                               },
                             );
                           } else {
                             return Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 20.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   ListView(
-                                    padding: EdgeInsets.fromLTRB(
+                                    padding: const EdgeInsets.fromLTRB(
                                       0,
                                       20.0,
                                       0,
@@ -466,7 +463,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                               width: 100.0,
                                               height: 80.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -493,7 +490,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                               width: 100.0,
                                               height: 80.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -520,7 +517,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                               width: 100.0,
                                               height: 80.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -547,7 +544,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                               width: 100.0,
                                               height: 80.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -566,7 +563,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                           ),
                                         ],
                                       ),
-                                    ].divide(SizedBox(height: 15.0)),
+                                    ].divide(const SizedBox(height: 15.0)),
                                   ),
                                 ],
                               ),
@@ -576,7 +573,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(20.0),
+                      padding: const EdgeInsets.all(20.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -597,7 +594,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: Container(
+                                        child: const SizedBox(
                                           height: 370.0,
                                           child: ModalAddCardWidget(),
                                         ),
@@ -610,11 +607,11 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                 'n5m4ofu1' /* Adicionar */,
                               ),
                               options: FFButtonOptions(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     24.0, 20.0, 24.0, 20.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                color: Color(0xFF3F92D4),
+                                color: const Color(0xFF3F92D4),
                                 textStyle: FlutterFlowTheme.of(context)
                                     .titleSmall
                                     .override(
@@ -622,7 +619,7 @@ class _PaymentCardsWidgetState extends State<PaymentCardsWidget>
                                       color: Colors.white,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),

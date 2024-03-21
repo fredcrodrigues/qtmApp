@@ -1,14 +1,10 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'manager_request_history_model.dart';
 export 'manager_request_history_model.dart';
 
@@ -57,11 +53,11 @@ class _ManagerRequestHistoryWidgetState
         resizeToAvoidBottomInset: false,
         backgroundColor: () {
           if (widget.request?.status == 'canceled') {
-            return Color(0xFFE05D5D);
+            return const Color(0xFFE05D5D);
           } else if (widget.request?.status == 'refused') {
-            return Color(0xFFE05D5D);
+            return const Color(0xFFE05D5D);
           } else {
-            return Color(0xFF1DA4D4);
+            return const Color(0xFF1DA4D4);
           }
         }(),
         body: SafeArea(
@@ -102,15 +98,15 @@ class _ManagerRequestHistoryWidgetState
                               decoration: BoxDecoration(
                                 color: () {
                                   if (widget.request?.status == 'canceled') {
-                                    return Color(0xFFE05D5D);
+                                    return const Color(0xFFE05D5D);
                                   } else if (widget.request?.status ==
                                       'refused') {
-                                    return Color(0xFFE05D5D);
+                                    return const Color(0xFFE05D5D);
                                   } else {
-                                    return Color(0xFF1DA4D4);
+                                    return const Color(0xFF1DA4D4);
                                   }
                                 }(),
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   bottomLeft: Radius.circular(14.0),
                                   bottomRight: Radius.circular(14.0),
                                   topLeft: Radius.circular(0.0),
@@ -118,7 +114,7 @@ class _ManagerRequestHistoryWidgetState
                                 ),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     20.0, 20.0, 0.0, 20.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -134,7 +130,7 @@ class _ManagerRequestHistoryWidgetState
                                           onTap: () async {
                                             context.safePop();
                                           },
-                                          child: Icon(
+                                          child: const Icon(
                                             Icons.arrow_back_outlined,
                                             color: Colors.white,
                                             size: 34.0,
@@ -218,23 +214,23 @@ class _ManagerRequestHistoryWidgetState
                                                 );
                                               },
                                             ),
-                                          ].divide(SizedBox(height: 7.0)),
+                                          ].divide(const SizedBox(height: 7.0)),
                                         ),
                                       ],
                                     ),
-                                  ].divide(SizedBox(width: 15.0)),
+                                  ].divide(const SizedBox(width: 15.0)),
                                 ),
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 20.0, 10.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
@@ -249,14 +245,14 @@ class _ManagerRequestHistoryWidgetState
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Roboto',
-                                                  color: Color(0xFF989494),
+                                                  color: const Color(0xFF989494),
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.w500,
                                                 ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 0.0),
                                             child: Text(
                                               '${dateTimeFormat(
@@ -279,7 +275,7 @@ class _ManagerRequestHistoryWidgetState
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 5.0, 0.0, 0.0),
                                             child: Text(
                                               '${dateTimeFormat(
@@ -315,14 +311,14 @@ class _ManagerRequestHistoryWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 20.0, 10.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Expanded(
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: StreamBuilder<CoworkingRecord>(
                                         stream: CoworkingRecord.getDocument(
@@ -364,14 +360,14 @@ class _ManagerRequestHistoryWidgetState
                                                         .override(
                                                           fontFamily: 'Roboto',
                                                           color:
-                                                              Color(0xFF989494),
+                                                              const Color(0xFF989494),
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.w500,
                                                         ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 10.0, 0.0, 0.0),
                                                 child: Text(
@@ -388,7 +384,7 @@ class _ManagerRequestHistoryWidgetState
                                                 ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 10.0, 0.0, 0.0),
                                                 child: ClipRRect(
@@ -514,7 +510,7 @@ class _ManagerRequestHistoryWidgetState
                                                                           context)
                                                                       .bodyMedium,
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height:
                                                                       10.0)),
                                                             ),
@@ -535,7 +531,7 @@ class _ManagerRequestHistoryWidgetState
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 30.0, 20.0, 30.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -548,12 +544,12 @@ class _ManagerRequestHistoryWidgetState
                                         borderRadius:
                                             BorderRadius.circular(14.0),
                                         border: Border.all(
-                                          color: Color(0x32434343),
+                                          color: const Color(0x32434343),
                                           width: 1.0,
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             15.0, 15.0, 15.0, 15.0),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -596,7 +592,7 @@ class _ManagerRequestHistoryWidgetState
                                                       .override(
                                                         fontFamily: 'Raleway',
                                                         color:
-                                                            Color(0xB2434343),
+                                                            const Color(0xB2434343),
                                                         fontSize: 16.0,
                                                         fontWeight:
                                                             FontWeight.bold,
@@ -628,7 +624,7 @@ class _ManagerRequestHistoryWidgetState
                                                           .override(
                                                             fontFamily:
                                                                 'Raleway',
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFFB8B3B3),
                                                             fontSize: 10.0,
                                                             fontWeight:
@@ -661,9 +657,9 @@ class _ManagerRequestHistoryWidgetState
                                                                             'canceled') ||
                                                                         (widget.request?.status ==
                                                                             'refused')
-                                                                    ? Color(
+                                                                    ? const Color(
                                                                         0xFFF77777)
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFADA1F6),
                                                                 fontSize: 16.0,
                                                                 fontWeight:
@@ -672,7 +668,7 @@ class _ManagerRequestHistoryWidgetState
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(height: 10.0)),
+                                                      const SizedBox(height: 10.0)),
                                                 ),
                                                 Icon(
                                                   Icons.info,
@@ -683,7 +679,7 @@ class _ManagerRequestHistoryWidgetState
                                                 ),
                                               ],
                                             ),
-                                          ].divide(SizedBox(height: 20.0)),
+                                          ].divide(const SizedBox(height: 20.0)),
                                         ),
                                       ),
                                     ),
@@ -696,7 +692,7 @@ class _ManagerRequestHistoryWidgetState
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: const AlignmentDirectional(0.0, 1.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -754,12 +750,12 @@ class _ManagerRequestHistoryWidgetState
                                       'vpsd5n9u' /* Remarcar consulta */,
                                     ),
                                     options: FFButtonOptions(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           40.0, 30.0, 40.0, 30.0),
                                       iconPadding:
-                                          EdgeInsetsDirectional.fromSTEB(
+                                          const EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-                                      color: Color(0xFF3F92D4),
+                                      color: const Color(0xFF3F92D4),
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
@@ -767,7 +763,7 @@ class _ManagerRequestHistoryWidgetState
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold,
                                           ),
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Colors.transparent,
                                       ),
                                       borderRadius: BorderRadius.circular(24.0),

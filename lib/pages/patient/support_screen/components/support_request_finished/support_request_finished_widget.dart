@@ -1,11 +1,8 @@
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'support_request_finished_model.dart';
 export 'support_request_finished_model.dart';
 
@@ -55,7 +52,7 @@ class _SupportRequestFinishedWidgetState
         body: SafeArea(
           top: true,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFFF6F9FC),
             ),
             child: Column(
@@ -64,7 +61,7 @@ class _SupportRequestFinishedWidgetState
                 Container(
                   width: double.infinity,
                   height: 100.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFF1DA4D4),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(14.0),
@@ -75,7 +72,7 @@ class _SupportRequestFinishedWidgetState
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -88,7 +85,7 @@ class _SupportRequestFinishedWidgetState
                           onTap: () async {
                             context.safePop();
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.arrow_back_ios_new,
                             color: Colors.white,
                             size: 30.0,
@@ -105,7 +102,7 @@ class _SupportRequestFinishedWidgetState
                                     fontSize: 20.0,
                                   ),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.support_agent_outlined,
                           color: Colors.white,
                           size: 34.0,
@@ -120,7 +117,7 @@ class _SupportRequestFinishedWidgetState
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               25.0, 30.0, 25.0, 20.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -134,7 +131,7 @@ class _SupportRequestFinishedWidgetState
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Raleway',
-                                        color: Color(0xFF4C7BA7),
+                                        color: const Color(0xFF4C7BA7),
                                         fontSize: 28.0,
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -144,7 +141,7 @@ class _SupportRequestFinishedWidgetState
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               25.0, 0.0, 25.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -158,7 +155,7 @@ class _SupportRequestFinishedWidgetState
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF5B587B),
+                                        color: const Color(0xFF5B587B),
                                         fontWeight: FontWeight.w500,
                                       ),
                                 ),
@@ -167,7 +164,7 @@ class _SupportRequestFinishedWidgetState
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               25.0, 30.0, 25.0, 20.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -209,14 +206,14 @@ class _SupportRequestFinishedWidgetState
                                         return Container(
                                           width: double.infinity,
                                           height: 300.0,
-                                          constraints: BoxConstraints(
+                                          constraints: const BoxConstraints(
                                             maxWidth: 380.0,
                                             maxHeight: 500.0,
                                           ),
                                           decoration: BoxDecoration(
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 10.0,
                                                 color: Color(0x33000000),
@@ -228,7 +225,7 @@ class _SupportRequestFinishedWidgetState
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     30.0, 25.0, 30.0, 25.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
@@ -254,7 +251,7 @@ class _SupportRequestFinishedWidgetState
                                                                 .override(
                                                                   fontFamily:
                                                                       'Poppins',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFF0A2540),
                                                                   fontSize:
                                                                       16.0,
@@ -264,7 +261,7 @@ class _SupportRequestFinishedWidgetState
                                                                 ),
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           width: 15.0)),
                                                     ),
                                                   ],
@@ -285,14 +282,14 @@ class _SupportRequestFinishedWidgetState
                                                                   .circular(
                                                                       8.0),
                                                           border: Border.all(
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0x19000000),
                                                             width: 1.0,
                                                           ),
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       10.0,
@@ -304,7 +301,7 @@ class _SupportRequestFinishedWidgetState
                                                                     .max,
                                                             children: [
                                                               Padding(
-                                                                padding: EdgeInsetsDirectional
+                                                                padding: const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -344,14 +341,14 @@ class _SupportRequestFinishedWidgetState
                                                                               context)
                                                                           .bodyMedium,
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           10.0)),
                                                                 ),
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -384,14 +381,14 @@ class _SupportRequestFinishedWidgetState
                                                                               context)
                                                                           .bodyMedium,
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           10.0)),
                                                                 ),
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -421,14 +418,14 @@ class _SupportRequestFinishedWidgetState
                                                                               context)
                                                                           .bodyMedium,
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       width:
                                                                           10.0)),
                                                                 ),
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             15.0,
@@ -444,18 +441,18 @@ class _SupportRequestFinishedWidgetState
                                                                           30.0,
                                                                       decoration:
                                                                           BoxDecoration(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFFF9F5F5),
                                                                         borderRadius:
                                                                             BorderRadius.circular(8.0),
                                                                       ),
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
                                                                           Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             20.0,
                                                                             0.0,
                                                                             20.0,
@@ -480,7 +477,7 @@ class _SupportRequestFinishedWidgetState
                                                                               .bodyMedium
                                                                               .override(
                                                                                 fontFamily: 'Raleway',
-                                                                                color: (widget.request?.status == 'canceled') || (widget.request?.status == 'refused') ? Color(0xFFE05D5D) : Color(0xFF6E8EBE),
+                                                                                color: (widget.request?.status == 'canceled') || (widget.request?.status == 'refused') ? const Color(0xFFE05D5D) : const Color(0xFF6E8EBE),
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.bold,
                                                                               ),
@@ -506,14 +503,14 @@ class _SupportRequestFinishedWidgetState
                                     Container(
                                       width: double.infinity,
                                       height: 100.0,
-                                      constraints: BoxConstraints(
+                                      constraints: const BoxConstraints(
                                         maxWidth: 380.0,
                                         maxHeight: 500.0,
                                       ),
                                       decoration: BoxDecoration(
                                         color: FlutterFlowTheme.of(context)
                                             .secondaryBackground,
-                                        boxShadow: [
+                                        boxShadow: const [
                                           BoxShadow(
                                             blurRadius: 10.0,
                                             color: Color(0x33000000),
@@ -536,18 +533,18 @@ class _SupportRequestFinishedWidgetState
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFF3F92D4),
+                          color: const Color(0xFF3F92D4),
                           borderRadius: BorderRadius.circular(24.0),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               50.0, 20.0, 50.0, 20.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -565,12 +562,12 @@ class _SupportRequestFinishedWidgetState
                                       fontWeight: FontWeight.bold,
                                     ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.arrow_forward_ios_sharp,
                                 color: Colors.white,
                                 size: 18.0,
                               ),
-                            ].divide(SizedBox(width: 20.0)),
+                            ].divide(const SizedBox(width: 20.0)),
                           ),
                         ),
                       ),

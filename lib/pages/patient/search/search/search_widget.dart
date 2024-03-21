@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -7,13 +6,9 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'search_model.dart';
 export 'search_model.dart';
 
@@ -82,8 +77,8 @@ class _SearchWidgetState extends State<SearchWidget>
           curve: Curves.easeInOut,
           delay: 0.ms,
           duration: 500.ms,
-          begin: Offset(0.0, 550.0),
-          end: Offset(0.0, 0.0),
+          begin: const Offset(0.0, 550.0),
+          end: const Offset(0.0, 0.0),
         ),
       ],
     ),
@@ -107,7 +102,7 @@ class _SearchWidgetState extends State<SearchWidget>
       _model.therapists = await queryTheraphistRecordOnce();
       if (widget.search != null && widget.search != '') {
         _model.practices = await queryPracticeRecordOnce();
-        _model.references = await actions.getFkUsersByParamPractice(
+        _model.references = actions.getFkUsersByParamPractice(
           widget.search!,
           _model.practices!.toList(),
         );
@@ -167,7 +162,7 @@ class _SearchWidgetState extends State<SearchWidget>
         // Customize what your widget looks like when it's loading.
         if (!snapshot.hasData) {
           return Scaffold(
-            backgroundColor: Color(0xFF1DA4D4),
+            backgroundColor: const Color(0xFF1DA4D4),
             body: Center(
               child: SizedBox(
                 width: 50.0,
@@ -188,7 +183,7 @@ class _SearchWidgetState extends State<SearchWidget>
               : FocusScope.of(context).unfocus(),
           child: Scaffold(
             key: scaffoldKey,
-            backgroundColor: Color(0xFF1DA4D4),
+            backgroundColor: const Color(0xFF1DA4D4),
             body: SafeArea(
               top: true,
               child: Container(
@@ -208,11 +203,11 @@ class _SearchWidgetState extends State<SearchWidget>
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
                               height: 100.0,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0xFF1DA4D4),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     10.0, 0.0, 10.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -225,7 +220,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                       onTap: () async {
                                         context.pushNamed('initial_search');
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.arrow_back_ios_outlined,
                                         color: Colors.white,
                                         size: 24.0,
@@ -235,7 +230,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                       child: Card(
                                         clipBehavior:
                                             Clip.antiAliasWithSaveLayer,
-                                        color: Color(0xFFE8E8EA),
+                                        color: const Color(0xFFE8E8EA),
                                         elevation: 0.0,
                                         shape: RoundedRectangleBorder(
                                           borderRadius:
@@ -243,7 +238,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                         ),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   8.0, 5.0, 8.0, 5.0),
                                           child: TextFormField(
                                             controller: _model.textController,
@@ -259,7 +254,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                               _model.practice =
                                                   await queryPracticeRecordOnce();
                                               _model.referencesUser =
-                                                  await actions
+                                                  actions
                                                       .getFkUsersByParamPractice(
                                                 _model.textController.text,
                                                 _model.practices!.toList(),
@@ -304,7 +299,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF8485AF),
+                                                    color: const Color(0xFF8485AF),
                                                   ),
                                               hintStyle:
                                                   FlutterFlowTheme.of(context)
@@ -352,7 +347,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                 borderRadius:
                                                     BorderRadius.circular(8.0),
                                               ),
-                                              prefixIcon: Icon(
+                                              prefixIcon: const Icon(
                                                 Icons.search_rounded,
                                                 color: Color(0xFF8485AF),
                                               ),
@@ -372,11 +367,11 @@ class _SearchWidgetState extends State<SearchWidget>
                             ),
                             Container(
                               width: MediaQuery.sizeOf(context).width * 1.0,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0xFF7DAECA),
                               ),
                               child: Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     10.0, 8.0, 10.0, 8.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -394,17 +389,17 @@ class _SearchWidgetState extends State<SearchWidget>
                                       text: FFLocalizations.of(context).getText(
                                         '763edj5z' /* Filtros */,
                                       ),
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.filter_list,
                                         size: 18.0,
                                       ),
                                       options: FFButtonOptions(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             10.0, 5.0, 10.0, 5.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF2B9CC3),
+                                        color: const Color(0xFF2B9CC3),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -412,7 +407,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                               color: Colors.white,
                                               fontWeight: FontWeight.w600,
                                             ),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -435,17 +430,17 @@ class _SearchWidgetState extends State<SearchWidget>
                                       text: FFLocalizations.of(context).getText(
                                         'qlodmp1u' /* Limpar filtros */,
                                       ),
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.layers_clear_outlined,
                                         size: 18.0,
                                       ),
                                       options: FFButtonOptions(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             10.0, 5.0, 10.0, 5.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF2B9CC3),
+                                        color: const Color(0xFF2B9CC3),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -453,7 +448,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                               color: Colors.white,
                                               fontWeight: FontWeight.w600,
                                             ),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -466,17 +461,17 @@ class _SearchWidgetState extends State<SearchWidget>
                                         print('Button pressed ...');
                                       },
                                       text: '',
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.settings,
                                         size: 18.0,
                                       ),
                                       options: FFButtonOptions(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             10.0, 5.0, 10.0, 5.0),
                                         iconPadding:
-                                            EdgeInsetsDirectional.fromSTEB(
+                                            const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
-                                        color: Color(0xFF2B9CC3),
+                                        color: const Color(0xFF2B9CC3),
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
@@ -485,7 +480,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                               fontSize: 1.0,
                                               fontWeight: FontWeight.w600,
                                             ),
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -493,14 +488,14 @@ class _SearchWidgetState extends State<SearchWidget>
                                             BorderRadius.circular(8.0),
                                       ),
                                     ),
-                                  ].divide(SizedBox(width: 5.0)),
+                                  ].divide(const SizedBox(width: 5.0)),
                                 ),
                               ),
                             ),
                           ],
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 5.0, 5.0, 5.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -520,7 +515,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                       fontWeight: FontWeight.w300,
                                     ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
                         ),
                         Expanded(
@@ -528,7 +523,7 @@ class _SearchWidgetState extends State<SearchWidget>
                             builder: (context) {
                               if (_model.loadTheraphists) {
                                 return Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -541,7 +536,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                               width: 100.0,
                                               height: 180.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -568,7 +563,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                               width: 100.0,
                                               height: 180.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -595,7 +590,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                               width: 100.0,
                                               height: 180.0,
                                               decoration: BoxDecoration(
-                                                gradient: LinearGradient(
+                                                gradient: const LinearGradient(
                                                   colors: [
                                                     Color(0xFFE9E9E9),
                                                     Color(0xFFCBCBCB)
@@ -614,11 +609,10 @@ class _SearchWidgetState extends State<SearchWidget>
                                           ),
                                         ],
                                       ),
-                                    ].divide(SizedBox(height: 10.0)),
+                                    ].divide(const SizedBox(height: 10.0)),
                                   ),
                                 );
-                              } else if (_model.theraphistsListData.length ==
-                                  0) {
+                              } else if (_model.theraphistsListData.isEmpty) {
                                 return Container(
                                   width: 100.0,
                                   height: 100.0,
@@ -627,7 +621,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                         .secondaryBackground,
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 60.0, 0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -652,7 +646,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                 );
                               } else {
                                 return Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       20.0, 10.0, 20.0, 0.0),
                                   child: Builder(
                                     builder: (context) {
@@ -749,7 +743,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryBackground,
-                                                    boxShadow: [
+                                                    boxShadow: const [
                                                       BoxShadow(
                                                         blurRadius: 4.0,
                                                         color:
@@ -806,7 +800,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                             ),
                                                             child: ClipRRect(
                                                               borderRadius:
-                                                                  BorderRadius
+                                                                  const BorderRadius
                                                                       .only(
                                                                 bottomLeft: Radius
                                                                     .circular(
@@ -837,7 +831,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                           flex: 1,
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -855,7 +849,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                                 children: [
                                                                   ListTile(
                                                                     title: Text(
-                                                                      '${containerUsersRecord.firstName}',
+                                                                      containerUsersRecord.firstName,
                                                                       textAlign:
                                                                           TextAlign
                                                                               .start,
@@ -866,7 +860,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                                             fontFamily:
                                                                                 'Raleway',
                                                                             color:
-                                                                                Color(0xFF8466B4),
+                                                                                const Color(0xFF8466B4),
                                                                             fontSize:
                                                                                 10.0,
                                                                             fontWeight:
@@ -887,7 +881,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                                             fontFamily:
                                                                                 'Raleway',
                                                                             color:
-                                                                                Color(0xFFC4C2C8),
+                                                                                const Color(0xFFC4C2C8),
                                                                             fontSize:
                                                                                 10.0,
                                                                             fontWeight:
@@ -901,7 +895,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                                         false,
                                                                   ),
                                                                   Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             0.0,
@@ -920,12 +914,12 @@ class _SearchWidgetState extends State<SearchWidget>
                                                                               MainAxisSize.max,
                                                                           children: [
                                                                             Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                                                                               child: Text(
                                                                                 'Experiencia de ${therapistsListItem.experience}',
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Raleway',
-                                                                                      color: Color(0xFFA8A6AA),
+                                                                                      color: const Color(0xFFA8A6AA),
                                                                                       fontSize: 10.0,
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
@@ -936,14 +930,14 @@ class _SearchWidgetState extends State<SearchWidget>
                                                                       ],
                                                                     ),
                                                                   ),
-                                                                  Container(
+                                                                  SizedBox(
                                                                     height:
                                                                         50.0,
                                                                     child:
                                                                         Stack(
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -956,19 +950,19 @@ class _SearchWidgetState extends State<SearchWidget>
                                                                                 29.0,
                                                                             decoration:
                                                                                 BoxDecoration(
-                                                                              color: Color(0x2FA1A1A1),
+                                                                              color: const Color(0x2FA1A1A1),
                                                                               borderRadius: BorderRadius.circular(14.0),
                                                                             ),
                                                                             child:
                                                                                 Align(
-                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                                                                                 child: Text(
                                                                                   therapistsListItem.valueSession.toString(),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Poppins',
-                                                                                        color: Color(0xFF474747),
+                                                                                        color: const Color(0xFF474747),
                                                                                         fontSize: 10.0,
                                                                                         fontWeight: FontWeight.bold,
                                                                                       ),
@@ -978,12 +972,12 @@ class _SearchWidgetState extends State<SearchWidget>
                                                                           ),
                                                                         ),
                                                                         Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               -1.0,
                                                                               -1.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 5.0,
                                                                                 0.0,
                                                                                 0.0,
@@ -995,7 +989,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Raleway',
-                                                                                    color: Color(0xFF656565),
+                                                                                    color: const Color(0xFF656565),
                                                                                     fontSize: 10.0,
                                                                                     fontWeight: FontWeight.bold,
                                                                                   ),
@@ -1030,11 +1024,11 @@ class _SearchWidgetState extends State<SearchWidget>
                     ),
                     if (_model.activeModalFilters)
                       Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: const AlignmentDirectional(0.0, 1.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 550.0,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFFF2F2F2),
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(0.0),
@@ -1050,7 +1044,7 @@ class _SearchWidgetState extends State<SearchWidget>
                               Container(
                                 width: MediaQuery.sizeOf(context).width * 1.0,
                                 height: 60.0,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color(0xFF1DA4D4),
                                   borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(0.0),
@@ -1062,13 +1056,13 @@ class _SearchWidgetState extends State<SearchWidget>
                                 child: Stack(
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          Icon(
+                                          const Icon(
                                             Icons.filter_list,
                                             color: Colors.white,
                                             size: 28.0,
@@ -1086,13 +1080,13 @@ class _SearchWidgetState extends State<SearchWidget>
                                                   fontWeight: FontWeight.w600,
                                                 ),
                                           ),
-                                        ].divide(SizedBox(width: 10.0)),
+                                        ].divide(const SizedBox(width: 10.0)),
                                       ),
                                     ),
                                     Align(
-                                      alignment: AlignmentDirectional(1.0, 0.0),
+                                      alignment: const AlignmentDirectional(1.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 10.0, 0.0),
                                         child: FlutterFlowIconButton(
                                           borderColor: Colors.white,
@@ -1102,7 +1096,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                           fillColor:
                                               FlutterFlowTheme.of(context)
                                                   .accent1,
-                                          icon: Icon(
+                                          icon: const Icon(
                                             Icons.close_rounded,
                                             color: Colors.white,
                                             size: 24.0,
@@ -1131,17 +1125,17 @@ class _SearchWidgetState extends State<SearchWidget>
                                                     .width *
                                                 1.0,
                                             height: 40.0,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Color(0xFFEDEDED),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 5.0, 5.0, 5.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  Icon(
+                                                  const Icon(
                                                     Icons.price_change,
                                                     color: Color(0xFF0083B1),
                                                     size: 24.0,
@@ -1157,19 +1151,19 @@ class _SearchWidgetState extends State<SearchWidget>
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF0083B1),
+                                                              const Color(0xFF0083B1),
                                                           fontSize: 16.0,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 10.0)),
+                                                ].divide(const SizedBox(width: 10.0)),
                                               ),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -1188,7 +1182,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                 ),
                                                 Expanded(
                                                   child: SliderTheme(
-                                                    data: SliderThemeData(
+                                                    data: const SliderThemeData(
                                                       showValueIndicator:
                                                           ShowValueIndicator
                                                               .always,
@@ -1252,17 +1246,17 @@ class _SearchWidgetState extends State<SearchWidget>
                                                     .width *
                                                 1.0,
                                             height: 40.0,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Color(0xFFEDEDED),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 5.0, 5.0, 5.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
-                                                  Icon(
+                                                  const Icon(
                                                     Icons.person,
                                                     color: Color(0xFF0083B1),
                                                     size: 24.0,
@@ -1278,19 +1272,19 @@ class _SearchWidgetState extends State<SearchWidget>
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF0083B1),
+                                                              const Color(0xFF0083B1),
                                                           fontSize: 16.0,
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
                                                   ),
-                                                ].divide(SizedBox(width: 10.0)),
+                                                ].divide(const SizedBox(width: 10.0)),
                                               ),
                                             ),
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 10.0, 20.0, 0.0),
                                             child: StreamBuilder<
                                                 List<PracticeRecord>>(
@@ -1330,7 +1324,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                             columnIndex];
                                                     return Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1353,7 +1347,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                           _model.allPractices =
                                                               await queryPracticeRecordOnce();
                                                           _model.referencesUsers =
-                                                              await actions
+                                                              actions
                                                                   .getFkUsersByParamPractice(
                                                             columnPracticeRecord
                                                                 .name,
@@ -1423,7 +1417,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                                       .of(context)
                                                                   .bodyMedium,
                                                             ),
-                                                          ].divide(SizedBox(
+                                                          ].divide(const SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),

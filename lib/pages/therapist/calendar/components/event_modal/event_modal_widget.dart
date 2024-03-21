@@ -6,11 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/pages/therapist/calendar/components/alert_event_create_modal/alert_event_create_modal_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'event_modal_model.dart';
 export 'event_modal_model.dart';
 
@@ -56,7 +52,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
     return Material(
       color: Colors.transparent,
       elevation: 5.0,
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
@@ -67,7 +63,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
       child: Container(
         width: double.infinity,
         height: 463.0,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
@@ -88,7 +84,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                 children: [
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
                     child: Container(
                       width: 50.0,
                       height: 4.0,
@@ -101,7 +97,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -111,7 +107,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Readex Pro',
-                            color: Color(0xFF171B1E),
+                            color: const Color(0xFF171B1E),
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -120,14 +116,14 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Expanded(
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                         child: TextFormField(
                           controller: _model.textController1,
                           focusNode: _model.textFieldFocusNode1,
@@ -141,13 +137,13 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                                 .labelMedium
                                 .override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xFF56626B),
+                                  color: const Color(0xFF56626B),
                                 ),
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xFF58656E),
+                                  color: const Color(0xFF58656E),
                                 ),
                             enabledBorder: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -157,7 +153,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                               borderRadius: BorderRadius.circular(100.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Color(0xFFA954B2),
                                 width: 1.0,
                               ),
@@ -181,7 +177,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF181D21),
+                                    color: const Color(0xFF181D21),
                                   ),
                           validator: _model.textController1Validator
                               .asValidator(context),
@@ -194,19 +190,19 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
-                        final _datePicked1Date = await showDatePicker(
+                        final datePicked1Date = await showDatePicker(
                           context: context,
                           initialDate: getCurrentTimestamp,
                           firstDate: getCurrentTimestamp,
                           lastDate: DateTime(2050),
                         );
 
-                        if (_datePicked1Date != null) {
+                        if (datePicked1Date != null) {
                           safeSetState(() {
                             _model.datePicked1 = DateTime(
-                              _datePicked1Date.year,
-                              _datePicked1Date.month,
-                              _datePicked1Date.day,
+                              datePicked1Date.year,
+                              datePicked1Date.month,
+                              datePicked1Date.day,
                             );
                           });
                         }
@@ -218,12 +214,12 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(100.0),
                           border: Border.all(
-                            color: Color(0xFFCFD4DB),
+                            color: const Color(0xFFCFD4DB),
                             width: 1.0,
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               12.0, 5.0, 12.0, 5.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -243,12 +239,12 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Lexend Deca',
-                                      color: Color(0xFF57636C),
+                                      color: const Color(0xFF57636C),
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
                                     ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.date_range_sharp,
                                 color: Color(0xFFD2D2D2),
                                 size: 24.0,
@@ -262,7 +258,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -270,7 +266,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                     Expanded(
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 8.0, 0.0),
                         child: TextFormField(
                           controller: _model.textController2,
                           focusNode: _model.textFieldFocusNode2,
@@ -291,7 +287,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                               borderRadius: BorderRadius.circular(100.0),
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Color(0xFFA954B2),
                                 width: 1.0,
                               ),
@@ -339,7 +335,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                       textStyle:
                           FlutterFlowTheme.of(context).bodyMedium.override(
                                 fontFamily: 'Readex Pro',
-                                color: Color(0xFF57636C),
+                                color: const Color(0xFF57636C),
                               ),
                       hintText: FFLocalizations.of(context).getText(
                         '8xsadqhy' /* Tipo de evento */,
@@ -355,7 +351,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                       borderWidth: 2.0,
                       borderRadius: 100.0,
                       margin:
-                          EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                          const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                       hidesUnderline: true,
                       isSearchable: false,
                       isMultiSelect: false,
@@ -364,7 +360,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 10.0, 16.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -376,19 +372,19 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
-                        final _datePicked2Time = await showTimePicker(
+                        final datePicked2Time = await showTimePicker(
                           context: context,
                           initialTime:
                               TimeOfDay.fromDateTime(getCurrentTimestamp),
                         );
-                        if (_datePicked2Time != null) {
+                        if (datePicked2Time != null) {
                           safeSetState(() {
                             _model.datePicked2 = DateTime(
                               getCurrentTimestamp.year,
                               getCurrentTimestamp.month,
                               getCurrentTimestamp.day,
-                              _datePicked2Time.hour,
-                              _datePicked2Time.minute,
+                              datePicked2Time.hour,
+                              datePicked2Time.minute,
                             );
                           });
                         }
@@ -400,12 +396,12 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(100.0),
                           border: Border.all(
-                            color: Color(0xFFCFD4DB),
+                            color: const Color(0xFFCFD4DB),
                             width: 1.0,
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               12.0, 5.0, 12.0, 5.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -425,12 +421,12 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Lexend Deca',
-                                      color: Color(0xFF57636C),
+                                      color: const Color(0xFF57636C),
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
                                     ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.access_time_filled,
                                 color: Color(0xFFD2D2D2),
                                 size: 24.0,
@@ -446,19 +442,19 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
-                        final _datePicked3Time = await showTimePicker(
+                        final datePicked3Time = await showTimePicker(
                           context: context,
                           initialTime:
                               TimeOfDay.fromDateTime(getCurrentTimestamp),
                         );
-                        if (_datePicked3Time != null) {
+                        if (datePicked3Time != null) {
                           safeSetState(() {
                             _model.datePicked3 = DateTime(
                               getCurrentTimestamp.year,
                               getCurrentTimestamp.month,
                               getCurrentTimestamp.day,
-                              _datePicked3Time.hour,
-                              _datePicked3Time.minute,
+                              datePicked3Time.hour,
+                              datePicked3Time.minute,
                             );
                           });
                         }
@@ -470,12 +466,12 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(100.0),
                           border: Border.all(
-                            color: Color(0xFFCFD4DB),
+                            color: const Color(0xFFCFD4DB),
                             width: 1.0,
                           ),
                         ),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               12.0, 5.0, 12.0, 5.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -495,12 +491,12 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                                     .titleSmall
                                     .override(
                                       fontFamily: 'Lexend Deca',
-                                      color: Color(0xFF57636C),
+                                      color: const Color(0xFF57636C),
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.normal,
                                     ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.access_time_filled,
                                 color: Color(0xFFD2D2D2),
                                 size: 24.0,
@@ -510,24 +506,24 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                         ),
                       ),
                     ),
-                  ].divide(SizedBox(width: 18.0)),
+                  ].divide(const SizedBox(width: 18.0)),
                 ),
               ),
               Flexible(
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
-                    padding: EdgeInsets.all(10.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Expanded(
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Builder(
                               builder: (context) => Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     8.0, 20.0, 8.0, 0.0),
                                 child: FFButtonWidget(
                                   onPressed: () async {
@@ -550,11 +546,11 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: AlignmentDirectional(
+                                          alignment: const AlignmentDirectional(
                                                   0.0, 0.0)
                                               .resolve(
                                                   Directionality.of(context)),
-                                          child: AlertEventCreateModalWidget(),
+                                          child: const AlertEventCreateModalWidget(),
                                         );
                                       },
                                     ).then((value) => setState(() {}));
@@ -565,10 +561,10 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                                   options: FFButtonOptions(
                                     width: double.infinity,
                                     height: 45.0,
-                                    padding: EdgeInsets.all(0.0),
-                                    iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsets.all(0.0),
+                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 0.0),
-                                    color: Color(0xFF95489D),
+                                    color: const Color(0xFF95489D),
                                     textStyle: FlutterFlowTheme.of(context)
                                         .titleSmall
                                         .override(
@@ -576,7 +572,7 @@ class _EventModalWidgetState extends State<EventModalWidget> {
                                           color: Colors.white,
                                         ),
                                     elevation: 3.0,
-                                    borderSide: BorderSide(
+                                    borderSide: const BorderSide(
                                       color: Colors.transparent,
                                       width: 1.0,
                                     ),

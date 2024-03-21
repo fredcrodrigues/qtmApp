@@ -6,8 +6,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'signup_register_user_page_model.dart';
 export 'signup_register_user_page_model.dart';
 
@@ -78,13 +76,13 @@ class _SignupRegisterUserPageWidgetState
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -106,7 +104,7 @@ class _SignupRegisterUserPageWidgetState
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Poppins',
-                                  color: Color(0xD42D2D2D),
+                                  color: const Color(0xD42D2D2D),
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -129,7 +127,7 @@ class _SignupRegisterUserPageWidgetState
                 children: [
                   Flexible(
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Form(
                         key: _model.formKey,
                         autovalidateMode: AutovalidateMode.disabled,
@@ -139,7 +137,7 @@ class _SignupRegisterUserPageWidgetState
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 15.0, 0.0),
                                 child: TextFormField(
                                   controller: _model.userFieldController,
@@ -155,11 +153,11 @@ class _SignupRegisterUserPageWidgetState
                                         .labelMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Color(0xFF1E2427),
+                                          color: const Color(0xFF1E2427),
                                           fontSize: 12.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFBBB8B8),
                                         width: 1.0,
                                       ),
@@ -167,7 +165,7 @@ class _SignupRegisterUserPageWidgetState
                                           BorderRadius.circular(100.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFF9420AF),
                                         width: 1.0,
                                       ),
@@ -194,7 +192,7 @@ class _SignupRegisterUserPageWidgetState
                                     ),
                                     filled: true,
                                     fillColor: Colors.white,
-                                    suffixIcon: Icon(
+                                    suffixIcon: const Icon(
                                       Icons.person,
                                       color: Color(0xD8404040),
                                       size: 12.0,
@@ -204,7 +202,7 @@ class _SignupRegisterUserPageWidgetState
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF1E2427),
+                                        color: const Color(0xFF1E2427),
                                         fontSize: 12.0,
                                       ),
                                   validator: _model.userFieldControllerValidator
@@ -212,7 +210,7 @@ class _SignupRegisterUserPageWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 15.0, 0.0),
                                 child: TextFormField(
                                   controller: _model.emailFieldController,
@@ -228,7 +226,7 @@ class _SignupRegisterUserPageWidgetState
                                         .labelMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Color(0xFF1E2427),
+                                          color: const Color(0xFF1E2427),
                                           fontSize: 12.0,
                                         ),
                                     hintStyle: FlutterFlowTheme.of(context)
@@ -238,7 +236,7 @@ class _SignupRegisterUserPageWidgetState
                                           fontSize: 12.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFBBB8B8),
                                         width: 1.0,
                                       ),
@@ -246,7 +244,7 @@ class _SignupRegisterUserPageWidgetState
                                           BorderRadius.circular(100.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFF9420AF),
                                         width: 1.0,
                                       ),
@@ -273,7 +271,7 @@ class _SignupRegisterUserPageWidgetState
                                     ),
                                     filled: true,
                                     fillColor: Colors.white,
-                                    suffixIcon: Icon(
+                                    suffixIcon: const Icon(
                                       Icons.email,
                                       color: Color(0xD8404040),
                                       size: 12.0,
@@ -283,7 +281,7 @@ class _SignupRegisterUserPageWidgetState
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF1E2427),
+                                        color: const Color(0xFF1E2427),
                                         fontSize: 12.0,
                                       ),
                                   keyboardType: TextInputType.emailAddress,
@@ -293,7 +291,7 @@ class _SignupRegisterUserPageWidgetState
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 15.0, 0.0),
                                 child: TextFormField(
                                   controller: _model.passwordFieldController,
@@ -310,7 +308,7 @@ class _SignupRegisterUserPageWidgetState
                                         .labelMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Color(0xFF1E2427),
+                                          color: const Color(0xFF1E2427),
                                           fontSize: 12.0,
                                         ),
                                     hintStyle: FlutterFlowTheme.of(context)
@@ -320,7 +318,7 @@ class _SignupRegisterUserPageWidgetState
                                           fontSize: 12.0,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFFBBB8B8),
                                         width: 1.0,
                                       ),
@@ -328,7 +326,7 @@ class _SignupRegisterUserPageWidgetState
                                           BorderRadius.circular(100.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
+                                      borderSide: const BorderSide(
                                         color: Color(0xFF9420AF),
                                         width: 1.0,
                                       ),
@@ -365,7 +363,7 @@ class _SignupRegisterUserPageWidgetState
                                         _model.passwordFieldVisibility
                                             ? Icons.visibility_outlined
                                             : Icons.visibility_off_outlined,
-                                        color: Color(0xD8404040),
+                                        color: const Color(0xD8404040),
                                         size: 12.0,
                                       ),
                                     ),
@@ -374,7 +372,7 @@ class _SignupRegisterUserPageWidgetState
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Readex Pro',
-                                        color: Color(0xFF1E2427),
+                                        color: const Color(0xFF1E2427),
                                         fontSize: 12.0,
                                       ),
                                   maxLength: 8,
@@ -392,7 +390,7 @@ class _SignupRegisterUserPageWidgetState
                               ),
                               if (!_model.textField)
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 0.0),
                                   child: TextFormField(
                                     controller:
@@ -411,7 +409,7 @@ class _SignupRegisterUserPageWidgetState
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Readex Pro',
-                                            color: Color(0xFF1E2427),
+                                            color: const Color(0xFF1E2427),
                                             fontSize: 12.0,
                                           ),
                                       hintStyle: FlutterFlowTheme.of(context)
@@ -421,7 +419,7 @@ class _SignupRegisterUserPageWidgetState
                                             fontSize: 12.0,
                                           ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xFFBBB8B8),
                                           width: 1.0,
                                         ),
@@ -429,7 +427,7 @@ class _SignupRegisterUserPageWidgetState
                                             BorderRadius.circular(100.0),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(
+                                        borderSide: const BorderSide(
                                           color: Color(0xFF9420AF),
                                           width: 1.0,
                                         ),
@@ -469,7 +467,7 @@ class _SignupRegisterUserPageWidgetState
                                           _model.repeatPasswordFieldOneVisibility
                                               ? Icons.visibility_outlined
                                               : Icons.visibility_off_outlined,
-                                          color: Color(0xD8404040),
+                                          color: const Color(0xD8404040),
                                           size: 12.0,
                                         ),
                                       ),
@@ -478,7 +476,7 @@ class _SignupRegisterUserPageWidgetState
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Readex Pro',
-                                          color: Color(0xFF1E2427),
+                                          color: const Color(0xFF1E2427),
                                           fontSize: 12.0,
                                         ),
                                     maxLength: 8,
@@ -500,7 +498,7 @@ class _SignupRegisterUserPageWidgetState
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           15.0, 0.0, 15.0, 0.0),
                                       child: TextFormField(
                                         controller: _model
@@ -522,7 +520,7 @@ class _SignupRegisterUserPageWidgetState
                                                   .labelMedium
                                                   .override(
                                                     fontFamily: 'Readex Pro',
-                                                    color: Color(0xFF1E2427),
+                                                    color: const Color(0xFF1E2427),
                                                     fontSize: 12.0,
                                                   ),
                                           hintStyle:
@@ -533,7 +531,7 @@ class _SignupRegisterUserPageWidgetState
                                                     fontSize: 12.0,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFFFF5963),
                                               width: 1.0,
                                             ),
@@ -541,7 +539,7 @@ class _SignupRegisterUserPageWidgetState
                                                 BorderRadius.circular(100.0),
                                           ),
                                           focusedBorder: OutlineInputBorder(
-                                            borderSide: BorderSide(
+                                            borderSide: const BorderSide(
                                               color: Color(0xFF9420AF),
                                               width: 1.0,
                                             ),
@@ -585,7 +583,7 @@ class _SignupRegisterUserPageWidgetState
                                                   ? Icons.visibility_outlined
                                                   : Icons
                                                       .visibility_off_outlined,
-                                              color: Color(0xD8404040),
+                                              color: const Color(0xD8404040),
                                               size: 12.0,
                                             ),
                                           ),
@@ -594,7 +592,7 @@ class _SignupRegisterUserPageWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFF1E2427),
+                                              color: const Color(0xFF1E2427),
                                               fontSize: 12.0,
                                             ),
                                         maxLength: 8,
@@ -604,7 +602,7 @@ class _SignupRegisterUserPageWidgetState
                                       ),
                                     ),
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           25.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -615,14 +613,14 @@ class _SignupRegisterUserPageWidgetState
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Readex Pro',
-                                              color: Color(0xFFDA4A4A),
+                                              color: const Color(0xFFDA4A4A),
                                               fontSize: 12.0,
                                             ),
                                       ),
                                     ),
                                   ],
                                 ),
-                            ].divide(SizedBox(height: 20.0)),
+                            ].divide(const SizedBox(height: 20.0)),
                           ),
                         ),
                       ),
@@ -635,19 +633,14 @@ class _SignupRegisterUserPageWidgetState
                 children: [
                   Expanded(
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                         child: FFButtonWidget(
-                          onPressed: ((_model.userFieldController.text ==
-                                          null ||
-                                      _model.userFieldController.text == '') ||
-                                  (_model.emailFieldController.text == null ||
-                                      _model.emailFieldController.text == '') ||
+                          onPressed: ((_model.userFieldController.text == '') ||
+                                  (_model.emailFieldController.text == '') ||
                                   (_model.passwordFieldController.text ==
-                                          null ||
-                                      _model.passwordFieldController.text ==
                                           ''))
                               ? null
                               : () async {
@@ -666,9 +659,6 @@ class _SignupRegisterUserPageWidgetState
                                               .text)) {
                                     if (_model.repeatPasswordFieldTwoController
                                                 .text !=
-                                            null &&
-                                        _model.repeatPasswordFieldTwoController
-                                                .text !=
                                             '') {
                                       setState(() {
                                         _model.repeatPasswordFieldOneController
@@ -682,7 +672,7 @@ class _SignupRegisterUserPageWidgetState
                                       });
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
-                                        SnackBar(
+                                        const SnackBar(
                                           content: Text(
                                             'Estamos validando seus dados',
                                             style: TextStyle(
@@ -697,7 +687,7 @@ class _SignupRegisterUserPageWidgetState
                                     } else {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
-                                        SnackBar(
+                                        const SnackBar(
                                           content: Text(
                                             'Estamos validando seus dados',
                                             style: TextStyle(
@@ -731,7 +721,7 @@ class _SignupRegisterUserPageWidgetState
                                         )) {
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
-                                        SnackBar(
+                                        const SnackBar(
                                           content: Text(
                                             'Passwords don\'t match!',
                                           ),
@@ -783,11 +773,11 @@ class _SignupRegisterUserPageWidgetState
                           options: FFButtonOptions(
                             width: 352.0,
                             height: 50.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFF0DA0D4),
+                            color: const Color(0xFF0DA0D4),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -797,12 +787,12 @@ class _SignupRegisterUserPageWidgetState
                                   fontWeight: FontWeight.normal,
                                 ),
                             elevation: 0.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),
-                            disabledColor: Color(0xFFB0B0B0),
-                            disabledTextColor: Color(0x82FFFFFF),
+                            disabledColor: const Color(0xFFB0B0B0),
+                            disabledTextColor: const Color(0x82FFFFFF),
                           ),
                         ),
                       ),
@@ -810,7 +800,7 @@ class _SignupRegisterUserPageWidgetState
                   ),
                 ],
               ),
-            ].divide(SizedBox(height: 10.0)),
+            ].divide(const SizedBox(height: 10.0)),
           ),
         ),
       ),

@@ -3,16 +3,12 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/drawer/components_general/bottom_navigation_bar_theraphist/bottom_navigation_bar_theraphist_widget.dart';
 import '/pages/drawer/modal_languge/modal_languge_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'history_requests_theraphist_page_model.dart';
@@ -139,11 +135,11 @@ class _HistoryRequestsTheraphistPageWidgetState
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFFA54EAF),
+        backgroundColor: const Color(0xFFA54EAF),
         drawer: Drawer(
           elevation: 16.0,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
@@ -151,12 +147,12 @@ class _HistoryRequestsTheraphistPageWidgetState
               children: [
                 Container(
                   height: 100.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -177,12 +173,12 @@ class _HistoryRequestsTheraphistPageWidgetState
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF121518),
+                                    color: const Color(0xFF121518),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                         ),
-                      ].divide(SizedBox(width: 10.0)),
+                      ].divide(const SizedBox(width: 10.0)),
                     ),
                   ),
                 ),
@@ -190,7 +186,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                      color: Color(0x9FA0A0A0),
+                      color: const Color(0x9FA0A0A0),
                     ),
                   ),
                   child: Column(
@@ -204,7 +200,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                         desktop: false,
                       ))
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.person_2,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -217,7 +213,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -233,7 +229,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                         desktop: false,
                       ))
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.switch_account,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -246,7 +242,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -268,7 +264,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                             );
                           },
                           child: ListTile(
-                            leading: Icon(
+                            leading: const Icon(
                               Icons.card_giftcard,
                               color: Color(0xC2000000),
                               size: 14.0,
@@ -281,7 +277,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                   .titleLarge
                                   .override(
                                     fontFamily: 'Outfit',
-                                    color: Color(0xFF121518),
+                                    color: const Color(0xFF121518),
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -300,7 +296,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                           context.pushNamed('profile_patient');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.location_history,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -313,7 +309,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -341,14 +337,14 @@ class _HistoryRequestsTheraphistPageWidgetState
                                     : FocusScope.of(context).unfocus(),
                                 child: Padding(
                                   padding: MediaQuery.viewInsetsOf(context),
-                                  child: ModalLangugeWidget(),
+                                  child: const ModalLangugeWidget(),
                                 ),
                               );
                             },
                           ).then((value) => safeSetState(() {}));
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.language_rounded,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -361,7 +357,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -379,7 +375,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                           await launchURL('https://qtmhealthtech.com.br/');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.computer_sharp,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -392,7 +388,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -408,7 +404,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                      color: Color(0x68B4B4B4),
+                      color: const Color(0x68B4B4B4),
                     ),
                   ),
                   child: Column(
@@ -423,7 +419,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                           context.pushNamed('politics_drawer_page');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.content_paste,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -436,7 +432,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -454,7 +450,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                           context.pushNamed('terms_drawer_page');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.switch_account,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -467,7 +463,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -489,7 +485,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                           context.pushNamedAuth('login_page', context.mounted);
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.output_outlined,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -502,7 +498,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -525,23 +521,23 @@ class _HistoryRequestsTheraphistPageWidgetState
             children: [
               Expanded(
                 child: Stack(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFFA54EAF),
+                          color: const Color(0xFFA54EAF),
                           borderRadius: BorderRadius.circular(0.0),
                           border: Border.all(
-                            color: Color(0xFF1DA4D4),
+                            color: const Color(0xFF1DA4D4),
                           ),
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 10.0, 20.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -556,14 +552,14 @@ class _HistoryRequestsTheraphistPageWidgetState
                                     onTap: () async {
                                       scaffoldKey.currentState!.openDrawer();
                                     },
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.menu,
                                       color: Colors.white,
                                       size: 35.0,
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         'lx8rkfh5' /* Histórico */,
@@ -581,24 +577,24 @@ class _HistoryRequestsTheraphistPageWidgetState
                                   Container(
                                     width: 45.0,
                                     height: 59.0,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Color(0xFFA54EAF),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                          ].divide(SizedBox(height: 2.0)),
+                          ].divide(const SizedBox(height: 2.0)),
                         ),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 100.0, 0.0, 0.0),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(50.0),
@@ -606,10 +602,10 @@ class _HistoryRequestsTheraphistPageWidgetState
                           ),
                           child: Container(
                             height: double.infinity,
-                            constraints: BoxConstraints(
+                            constraints: const BoxConstraints(
                               maxHeight: 1080.0,
                             ),
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(0.0),
@@ -619,15 +615,15 @@ class _HistoryRequestsTheraphistPageWidgetState
                               ),
                               shape: BoxShape.rectangle,
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 10.0, 20.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 30.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -659,9 +655,9 @@ class _HistoryRequestsTheraphistPageWidgetState
                                               width: 100.0,
                                               decoration: BoxDecoration(
                                                 color: _model.filter == 'all'
-                                                    ? Color(0xFF771D8C)
+                                                    ? const Color(0xFF771D8C)
                                                     : Colors.white,
-                                                borderRadius: BorderRadius.only(
+                                                borderRadius: const BorderRadius.only(
                                                   bottomLeft:
                                                       Radius.circular(14.0),
                                                   bottomRight:
@@ -673,7 +669,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 10.0, 10.0),
                                                 child: Text(
@@ -691,7 +687,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                         color: _model.filter ==
                                                                 'all'
                                                             ? Colors.white
-                                                            : Color(0xFFB5B5B5),
+                                                            : const Color(0xFFB5B5B5),
                                                       ),
                                                 ),
                                               ),
@@ -721,9 +717,9 @@ class _HistoryRequestsTheraphistPageWidgetState
                                           child: Container(
                                             decoration: BoxDecoration(
                                               color: _model.filter == 'canceled'
-                                                  ? Color(0xFFA92ACC)
+                                                  ? const Color(0xFFA92ACC)
                                                   : Colors.white,
-                                              borderRadius: BorderRadius.only(
+                                              borderRadius: const BorderRadius.only(
                                                 bottomLeft:
                                                     Radius.circular(14.0),
                                                 bottomRight:
@@ -732,12 +728,12 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                 topRight: Radius.circular(14.0),
                                               ),
                                               border: Border.all(
-                                                color: Color(0x0D000000),
+                                                color: const Color(0x0D000000),
                                                 width: 1.0,
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 10.0),
                                               child: Text(
@@ -753,7 +749,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                       color: _model.filter ==
                                                               'canceled'
                                                           ? Colors.white
-                                                          : Color(0xFFB5B5B5),
+                                                          : const Color(0xFFB5B5B5),
                                                     ),
                                               ),
                                             ),
@@ -782,9 +778,9 @@ class _HistoryRequestsTheraphistPageWidgetState
                                           child: Container(
                                             decoration: BoxDecoration(
                                               color: _model.filter == 'finished'
-                                                  ? Color(0xFF771D8C)
+                                                  ? const Color(0xFF771D8C)
                                                   : Colors.white,
-                                              borderRadius: BorderRadius.only(
+                                              borderRadius: const BorderRadius.only(
                                                 bottomLeft:
                                                     Radius.circular(14.0),
                                                 bottomRight:
@@ -793,12 +789,12 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                 topRight: Radius.circular(14.0),
                                               ),
                                               border: Border.all(
-                                                color: Color(0x0D000000),
+                                                color: const Color(0x0D000000),
                                                 width: 1.0,
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 10.0),
                                               child: Text(
@@ -814,13 +810,13 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                       color: _model.filter ==
                                                               'finished'
                                                           ? Colors.white
-                                                          : Color(0xFFB5B5B5),
+                                                          : const Color(0xFFB5B5B5),
                                                     ),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 10.0)),
+                                      ].divide(const SizedBox(width: 10.0)),
                                     ),
                                   ),
                                   Builder(
@@ -828,7 +824,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                       if (_model.loadRequests) {
                                         return Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 20.0, 20.0, 0.0),
                                           child: ListView(
                                             padding: EdgeInsets.zero,
@@ -844,7 +840,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                       height: 120.0,
                                                       decoration: BoxDecoration(
                                                         gradient:
-                                                            LinearGradient(
+                                                            const LinearGradient(
                                                           colors: [
                                                             Color(0xFFE9E9E9),
                                                             Color(0xFFCBCBCB)
@@ -876,7 +872,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                       height: 120.0,
                                                       decoration: BoxDecoration(
                                                         gradient:
-                                                            LinearGradient(
+                                                            const LinearGradient(
                                                           colors: [
                                                             Color(0xFFE9E9E9),
                                                             Color(0xFFCBCBCB)
@@ -908,7 +904,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                       height: 120.0,
                                                       decoration: BoxDecoration(
                                                         gradient:
-                                                            LinearGradient(
+                                                            const LinearGradient(
                                                           colors: [
                                                             Color(0xFFE9E9E9),
                                                             Color(0xFFCBCBCB)
@@ -940,7 +936,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                       height: 120.0,
                                                       decoration: BoxDecoration(
                                                         gradient:
-                                                            LinearGradient(
+                                                            const LinearGradient(
                                                           colors: [
                                                             Color(0xFFE9E9E9),
                                                             Color(0xFFCBCBCB)
@@ -963,16 +959,15 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                   ),
                                                 ],
                                               ),
-                                            ].divide(SizedBox(height: 15.0)),
+                                            ].divide(const SizedBox(height: 15.0)),
                                           ),
                                         );
                                       } else {
                                         return Builder(
                                           builder: (context) {
-                                            if (_model.allRequests.length ==
-                                                0) {
+                                            if (_model.allRequests.isEmpty) {
                                               return Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Column(
                                                   mainAxisSize:
@@ -996,7 +991,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                               );
                                             } else {
                                               return Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 30.0, 0.0, 0.0),
                                                 child: Builder(
@@ -1056,7 +1051,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                                           context)
                                                                       .secondaryBackground,
                                                                   borderRadius:
-                                                                      BorderRadius
+                                                                      const BorderRadius
                                                                           .only(
                                                                     bottomLeft:
                                                                         Radius.circular(
@@ -1073,13 +1068,13 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                                   ),
                                                                   border: Border
                                                                       .all(
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0x19000000),
                                                                     width: 1.0,
                                                                   ),
                                                                 ),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           20.0,
                                                                           10.0,
@@ -1094,7 +1089,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                                             .spaceEvenly,
                                                                     children: [
                                                                       Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -1110,7 +1105,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                                               containerPracticeRecord.name,
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Raleway',
-                                                                                    color: Color(0xB6434343),
+                                                                                    color: const Color(0xB6434343),
                                                                                     fontSize: 16.0,
                                                                                     fontWeight: FontWeight.bold,
                                                                                   ),
@@ -1121,7 +1116,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'Raleway',
-                                                                                    color: Color(0xFFB8B3B3),
+                                                                                    color: const Color(0xFFB8B3B3),
                                                                                     fontSize: 8.0,
                                                                                     fontWeight: FontWeight.bold,
                                                                                   ),
@@ -1148,7 +1143,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Raleway',
-                                                                                      color: Color(0xFFB8B3B3),
+                                                                                      color: const Color(0xFFB8B3B3),
                                                                                       fontSize: 12.0,
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
@@ -1167,19 +1162,19 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                                                       fontFamily: 'Raleway',
                                                                                       color: () {
                                                                                         if (requestsFilterItem.status == 'refund') {
-                                                                                          return Color(0xFFF77777);
+                                                                                          return const Color(0xFFF77777);
                                                                                         } else if (requestsFilterItem.status == 'canceled') {
-                                                                                          return Color(0xFFF77777);
+                                                                                          return const Color(0xFFF77777);
                                                                                         } else {
-                                                                                          return Color(0xFFADA1F6);
+                                                                                          return const Color(0xFFADA1F6);
                                                                                         }
                                                                                       }(),
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
                                                                               ),
-                                                                            ].divide(SizedBox(height: 5.0)),
+                                                                            ].divide(const SizedBox(height: 5.0)),
                                                                           ),
-                                                                          SizedBox(
+                                                                          const SizedBox(
                                                                             height:
                                                                                 45.0,
                                                                             child:
@@ -1208,7 +1203,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Raleway',
-                                                                                      color: Color(0xFF9F9F9F),
+                                                                                      color: const Color(0xFF9F9F9F),
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
                                                                               ),
@@ -1216,7 +1211,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                                           ),
                                                                         ],
                                                                       ),
-                                                                    ].divide(SizedBox(
+                                                                    ].divide(const SizedBox(
                                                                         height:
                                                                             10.0)),
                                                                   ),
@@ -1224,7 +1219,7 @@ class _HistoryRequestsTheraphistPageWidgetState
                                                               );
                                                             },
                                                           );
-                                                        }).divide(SizedBox(
+                                                        }).divide(const SizedBox(
                                                             height: 20.0)),
                                                       ),
                                                     );
@@ -1248,11 +1243,11 @@ class _HistoryRequestsTheraphistPageWidgetState
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: wrapWithModel(
                   model: _model.bottomNavigationBarTheraphistModel,
                   updateCallback: () => setState(() {}),
-                  child: BottomNavigationBarTheraphistWidget(),
+                  child: const BottomNavigationBarTheraphistWidget(),
                 ),
               ),
             ],

@@ -3,13 +3,10 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/therapist/coworkings/components/actions_modal/actions_modal_widget.dart';
 import '/pages/therapist/coworkings/components/coworkig_create_modal/coworkig_create_modal_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'coworking_theraphist_page_model.dart';
 export 'coworking_theraphist_page_model.dart';
 
@@ -68,33 +65,33 @@ class _CoworkingTheraphistPageWidgetState
                       : FocusScope.of(context).unfocus(),
                   child: Padding(
                     padding: MediaQuery.viewInsetsOf(context),
-                    child: CoworkigCreateModalWidget(),
+                    child: const CoworkigCreateModalWidget(),
                   ),
                 );
               },
             ).then((value) => safeSetState(() {}));
           },
-          backgroundColor: Color(0xFF95489D),
+          backgroundColor: const Color(0xFF95489D),
           elevation: 8.0,
-          child: Icon(
+          child: const Icon(
             Icons.add,
             color: Colors.white,
             size: 24.0,
           ),
         ),
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
-            backgroundColor: Color(0xFFA54EAF),
+            backgroundColor: const Color(0xFFA54EAF),
             automaticallyImplyLeading: false,
             leading: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: FlutterFlowIconButton(
                 borderColor: Colors.transparent,
                 borderRadius: 100.0,
                 borderWidth: 1.0,
                 buttonSize: 48.0,
-                icon: Icon(
+                icon: const Icon(
                   Icons.keyboard_arrow_left,
                   color: Colors.white,
                   size: 30.0,
@@ -105,7 +102,7 @@ class _CoworkingTheraphistPageWidgetState
               ),
             ),
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 22.0, 0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'rhdmu9xc' /* Criar Coworking */,
@@ -117,7 +114,7 @@ class _CoworkingTheraphistPageWidgetState
                     ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -129,7 +126,7 @@ class _CoworkingTheraphistPageWidgetState
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(5.0, 20.0, 5.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(5.0, 20.0, 5.0, 0.0),
                 child: StreamBuilder<List<CoworkingRecord>>(
                   stream: queryCoworkingRecord(
                     queryBuilder: (coworkingRecord) => coworkingRecord.where(
@@ -159,7 +156,7 @@ class _CoworkingTheraphistPageWidgetState
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
                       itemCount: listViewCoworkingRecordList.length,
-                      separatorBuilder: (_, __) => SizedBox(height: 5.0),
+                      separatorBuilder: (_, __) => const SizedBox(height: 5.0),
                       itemBuilder: (context, listViewIndex) {
                         final listViewCoworkingRecord =
                             listViewCoworkingRecordList[listViewIndex];
@@ -168,7 +165,7 @@ class _CoworkingTheraphistPageWidgetState
                           height: 100.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            boxShadow: [
+                            boxShadow: const [
                               BoxShadow(
                                 blurRadius: 3.0,
                                 color: Color(0x411D2429),
@@ -178,7 +175,7 @@ class _CoworkingTheraphistPageWidgetState
                             borderRadius: BorderRadius.circular(16.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.all(8.0),
+                            padding: const EdgeInsets.all(8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -187,7 +184,7 @@ class _CoworkingTheraphistPageWidgetState
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 10.0, 0.0),
                                       child: ClipRRect(
                                         borderRadius:
@@ -207,7 +204,7 @@ class _CoworkingTheraphistPageWidgetState
                                 ),
                                 Expanded(
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         8.0, 8.0, 4.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -226,7 +223,7 @@ class _CoworkingTheraphistPageWidgetState
                                               .titleMedium
                                               .override(
                                                 fontFamily: 'Outfit',
-                                                color: Color(0xFF090F13),
+                                                color: const Color(0xFF090F13),
                                                 fontSize: 20.0,
                                                 fontWeight: FontWeight.w500,
                                               ),
@@ -234,7 +231,7 @@ class _CoworkingTheraphistPageWidgetState
                                         Expanded(
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 4.0, 8.0, 0.0),
                                             child: AutoSizeText(
                                               'Localizado na ${listViewCoworkingRecord.adress}'
@@ -249,7 +246,7 @@ class _CoworkingTheraphistPageWidgetState
                                                       .override(
                                                         fontFamily: 'Outfit',
                                                         color:
-                                                            Color(0xFF7C8791),
+                                                            const Color(0xFF7C8791),
                                                         fontSize: 10.0,
                                                         fontWeight:
                                                             FontWeight.normal,
@@ -262,7 +259,7 @@ class _CoworkingTheraphistPageWidgetState
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(1.0, -1.0),
+                                  alignment: const AlignmentDirectional(1.0, -1.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment: MainAxisAlignment.end,
@@ -270,21 +267,21 @@ class _CoworkingTheraphistPageWidgetState
                                         CrossAxisAlignment.start,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 0.0),
                                         child: Container(
                                           width: 68.0,
                                           height: 19.0,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             color: Colors.white,
                                           ),
                                           child: Align(
                                             alignment:
-                                                AlignmentDirectional(1.0, 0.0),
+                                                const AlignmentDirectional(1.0, 0.0),
                                             child: Transform.rotate(
                                               angle: 4.7124,
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: InkWell(
@@ -332,7 +329,7 @@ class _CoworkingTheraphistPageWidgetState
                                                     ).then((value) =>
                                                         safeSetState(() {}));
                                                   },
-                                                  child: Icon(
+                                                  child: const Icon(
                                                     Icons.keyboard_control,
                                                     color: Color(0xFFABABB4),
                                                     size: 20.0,

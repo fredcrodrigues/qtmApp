@@ -8,10 +8,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/patient/schedule_management/components/modal_failed/modal_failed_widget.dart';
 import '/pages/patient/schedule_management/components/modal_more_info/modal_more_info_widget.dart';
 import '/pages/patient/schedule_management/components/modal_success_cancel/modal_success_cancel_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'cancel_schedule_model.dart';
 export 'cancel_schedule_model.dart';
 
@@ -58,12 +55,12 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(
+      constraints: const BoxConstraints(
         maxWidth: 700.0,
       ),
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(0.0),
           bottomRight: Radius.circular(0.0),
           topLeft: Radius.circular(14.0),
@@ -76,7 +73,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFF1DA4D4),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(14.0),
@@ -86,7 +83,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
               ),
             ),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 20.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -106,7 +103,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                       ),
                     ],
                   ),
-                ].divide(SizedBox(width: 10.0)),
+                ].divide(const SizedBox(width: 10.0)),
               ),
             ),
           ),
@@ -114,7 +111,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,23 +128,23 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '1z82vwr4' /* O cancelamento resultará na in... */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Roboto',
-                              color: Color(0xFF9A9494),
+                              color: const Color(0xFF9A9494),
                               fontWeight: FontWeight.bold,
                             ),
                       ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -164,27 +161,27 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '3nw5pl97' /* Note que será aplicada uma tax... */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Roboto',
-                              color: Color(0xFF9A9494),
+                              color: const Color(0xFF9A9494),
                               fontWeight: FontWeight.bold,
                             ),
                       ),
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
-            ].divide(SizedBox(height: 20.0)),
+            ].divide(const SizedBox(height: 20.0)),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, 1.0),
+            alignment: const AlignmentDirectional(0.0, 1.0),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 20.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 20.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -194,13 +191,13 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                       children: [
                         FFButtonWidget(
                           onPressed: () async {
-                            var _shouldSetState = false;
+                            var shouldSetState = false;
                             _model.response = await StripeApiNodeGroup
                                 .checkStatusPaymentIntentCall
                                 .call(
                               paymentIntentId: widget.paymentId,
                             );
-                            _shouldSetState = true;
+                            shouldSetState = true;
                             if (StripeApiNodeGroup.checkStatusPaymentIntentCall
                                     .status(
                                   (_model.response?.jsonBody ?? ''),
@@ -235,7 +232,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                                 builder: (context) {
                                   return Padding(
                                     padding: MediaQuery.viewInsetsOf(context),
-                                    child: Container(
+                                    child: SizedBox(
                                       height: 500.0,
                                       child: ModalMoreInfoWidget(
                                         paymentId: widget.paymentId!,
@@ -246,7 +243,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                                 },
                               ).then((value) => safeSetState(() {}));
 
-                              if (_shouldSetState) setState(() {});
+                              if (shouldSetState) setState(() {});
                               return;
                             } else {
                               _model.responseCancelPayment =
@@ -255,7 +252,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                                       .call(
                                 paymentIntentId: widget.paymentId,
                               );
-                              _shouldSetState = true;
+                              shouldSetState = true;
                               if (StripeApiNodeGroup.cancelPaymentIntentCall
                                       .status(
                                     (_model.responseCancelPayment?.jsonBody ??
@@ -300,7 +297,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                                   builder: (context) {
                                     return Padding(
                                       padding: MediaQuery.viewInsetsOf(context),
-                                      child: Container(
+                                      child: const SizedBox(
                                         height: 300.0,
                                         child: ModalSuccessCancelWidget(),
                                       ),
@@ -308,7 +305,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                                   },
                                 ).then((value) => safeSetState(() {}));
 
-                                if (_shouldSetState) setState(() {});
+                                if (shouldSetState) setState(() {});
                                 return;
                               } else {
                                 Navigator.pop(context);
@@ -321,7 +318,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                                   builder: (context) {
                                     return Padding(
                                       padding: MediaQuery.viewInsetsOf(context),
-                                      child: Container(
+                                      child: const SizedBox(
                                         height: 300.0,
                                         child: ModalFailedWidget(),
                                       ),
@@ -329,23 +326,23 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                                   },
                                 ).then((value) => safeSetState(() {}));
 
-                                if (_shouldSetState) setState(() {});
+                                if (shouldSetState) setState(() {});
                                 return;
                               }
                             }
 
-                            if (_shouldSetState) setState(() {});
+                            if (shouldSetState) setState(() {});
                           },
                           text: FFLocalizations.of(context).getText(
                             'zl033rhm' /* Confirmar cancelamento */,
                           ),
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFFD45858),
+                            color: const Color(0xFFD45858),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -354,7 +351,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                                   fontWeight: FontWeight.w600,
                                 ),
                             elevation: 3.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Colors.transparent,
                               width: 1.0,
                             ),
@@ -370,11 +367,11 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                           ),
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFF4F90DB),
+                            color: const Color(0xFF4F90DB),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
@@ -384,7 +381,7 @@ class _CancelScheduleWidgetState extends State<CancelScheduleWidget> {
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                         ),
-                      ].divide(SizedBox(height: 10.0)),
+                      ].divide(const SizedBox(height: 10.0)),
                     ),
                   ),
                 ],

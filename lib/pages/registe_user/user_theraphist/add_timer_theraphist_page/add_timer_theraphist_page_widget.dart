@@ -1,6 +1,5 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -11,14 +10,9 @@ import '/pages/registe_user/user_theraphist/introduction/turorial_theraphist_03_
 import '/pages/registe_user/user_theraphist/introduction/turorial_theraphist_05_page/turorial_theraphist05_page_widget.dart';
 import '/pages/registe_user/user_theraphist/introduction/turorial_theraphist_06_intro_page/turorial_theraphist06_intro_page_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expandable/expandable.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
-import 'package:provider/provider.dart';
 import 'add_timer_theraphist_page_model.dart';
 export 'add_timer_theraphist_page_model.dart';
 
@@ -65,7 +59,7 @@ class _AddTimerTheraphistPageWidgetState
                 : FocusScope.of(context).unfocus(),
             child: Padding(
               padding: MediaQuery.viewInsetsOf(context),
-              child: TurorialTheraphist03PageWidget(),
+              child: const TurorialTheraphist03PageWidget(),
             ),
           );
         },
@@ -102,12 +96,12 @@ class _AddTimerTheraphistPageWidgetState
         key: scaffoldKey,
         backgroundColor: Colors.white,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
-            backgroundColor: Color(0xFFA954B2),
+            backgroundColor: const Color(0xFFA954B2),
             automaticallyImplyLeading: false,
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'imgevf99' /* Adicionar Horários de Atendime... */,
@@ -120,7 +114,7 @@ class _AddTimerTheraphistPageWidgetState
                     ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -134,12 +128,12 @@ class _AddTimerTheraphistPageWidgetState
               children: [
                 Container(
                   height: 532.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
                     child: ListView(
                       padding: EdgeInsets.zero,
                       shrinkWrap: true,
@@ -155,7 +149,7 @@ class _AddTimerTheraphistPageWidgetState
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(11.0),
                                   border: Border.all(
-                                    color: Color(0x359A4C95),
+                                    color: const Color(0x359A4C95),
                                   ),
                                 ),
                                 child: Container(
@@ -164,7 +158,7 @@ class _AddTimerTheraphistPageWidgetState
                                     borderRadius: BorderRadius.circular(11.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(10.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Builder(builder: (_) {
                                       if (!expandableListenerRegistered1) {
                                         expandableListenerRegistered1 = true;
@@ -172,7 +166,7 @@ class _AddTimerTheraphistPageWidgetState
                                             .addListener(
                                           () async {
                                             if (_model.expandableController1
-                                                .expanded!) {
+                                                .expanded) {
                                               setState(() {
                                                 _model.activeMondayValue = true;
                                               });
@@ -182,13 +176,13 @@ class _AddTimerTheraphistPageWidgetState
                                       }
                                       return Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller:
                                               _model.expandableController1,
                                           child: ExpandablePanel(
                                             header: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 1.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -201,8 +195,8 @@ class _AddTimerTheraphistPageWidgetState
                                                         (newValue) async {
                                                       setState(() => _model
                                                               .activeMondayValue =
-                                                          newValue!);
-                                                      if (newValue!) {
+                                                          newValue);
+                                                      if (newValue) {
                                                         if (_model
                                                                 .activeMondayValue ==
                                                             true) {
@@ -231,7 +225,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                       .viewInsetsOf(
                                                                           context),
                                                                   child:
-                                                                      TurorialTheraphist05PageWidget(),
+                                                                      const TurorialTheraphist05PageWidget(),
                                                                 ),
                                                               );
                                                             },
@@ -242,11 +236,11 @@ class _AddTimerTheraphistPageWidgetState
                                                       }
                                                     },
                                                     activeColor:
-                                                        Color(0xFFA954B2),
+                                                        const Color(0xFFA954B2),
                                                     activeTrackColor:
-                                                        Color(0x729A4C95),
+                                                        const Color(0x729A4C95),
                                                     inactiveTrackColor:
-                                                        Color(0xFFEBEDEE),
+                                                        const Color(0xFFEBEDEE),
                                                     inactiveThumbColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -281,7 +275,7 @@ class _AddTimerTheraphistPageWidgetState
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -328,7 +322,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                         .viewInsetsOf(
                                                                             context),
                                                                     child:
-                                                                        TurorialTheraphist06IntroPageWidget(),
+                                                                        const TurorialTheraphist06IntroPageWidget(),
                                                                   ),
                                                                 );
                                                               },
@@ -336,14 +330,14 @@ class _AddTimerTheraphistPageWidgetState
                                                                 safeSetState(
                                                                     () {}));
                                                           } else {
-                                                            final _datePicked1Time =
+                                                            final datePicked1Time =
                                                                 await showTimePicker(
                                                               context: context,
                                                               initialTime: TimeOfDay
                                                                   .fromDateTime(
                                                                       getCurrentTimestamp),
                                                             );
-                                                            if (_datePicked1Time !=
+                                                            if (datePicked1Time !=
                                                                 null) {
                                                               safeSetState(() {
                                                                 _model.datePicked1 =
@@ -354,9 +348,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                       .month,
                                                                   getCurrentTimestamp
                                                                       .day,
-                                                                  _datePicked1Time
+                                                                  datePicked1Time
                                                                       .hour,
-                                                                  _datePicked1Time
+                                                                  datePicked1Time
                                                                       .minute,
                                                                 );
                                                               });
@@ -374,16 +368,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -411,7 +405,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -421,11 +415,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -442,14 +436,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked2Time =
+                                                          final datePicked2Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked2Time !=
+                                                          if (datePicked2Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked2 =
@@ -460,9 +454,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked2Time
+                                                                datePicked2Time
                                                                     .hour,
-                                                                _datePicked2Time
+                                                                datePicked2Time
                                                                     .minute,
                                                               );
                                                             });
@@ -479,16 +473,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -516,7 +510,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -526,11 +520,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -547,14 +541,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked3Time =
+                                                          final datePicked3Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked3Time !=
+                                                          if (datePicked3Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked3 =
@@ -565,9 +559,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked3Time
+                                                                datePicked3Time
                                                                     .hour,
-                                                                _datePicked3Time
+                                                                datePicked3Time
                                                                     .minute,
                                                               );
                                                             });
@@ -584,16 +578,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -621,7 +615,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -631,11 +625,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -652,14 +646,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked4Time =
+                                                          final datePicked4Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked4Time !=
+                                                          if (datePicked4Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked4 =
@@ -670,9 +664,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked4Time
+                                                                datePicked4Time
                                                                     .hour,
-                                                                _datePicked4Time
+                                                                datePicked4Time
                                                                     .minute,
                                                               );
                                                             });
@@ -689,16 +683,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -726,7 +720,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -736,11 +730,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -757,14 +751,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked5Time =
+                                                          final datePicked5Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked5Time !=
+                                                          if (datePicked5Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked5 =
@@ -775,9 +769,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked5Time
+                                                                datePicked5Time
                                                                     .hour,
-                                                                _datePicked5Time
+                                                                datePicked5Time
                                                                     .minute,
                                                               );
                                                             });
@@ -794,16 +788,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -831,7 +825,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -841,11 +835,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -862,14 +856,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked6Time =
+                                                          final datePicked6Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked6Time !=
+                                                          if (datePicked6Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked6 =
@@ -880,9 +874,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked6Time
+                                                                datePicked6Time
                                                                     .hour,
-                                                                _datePicked6Time
+                                                                datePicked6Time
                                                                     .minute,
                                                               );
                                                             });
@@ -899,16 +893,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -936,7 +930,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -946,12 +940,12 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                               ],
                                             ),
-                                            theme: ExpandableThemeData(
+                                            theme: const ExpandableThemeData(
                                               tapHeaderToExpand: true,
                                               tapBodyToExpand: false,
                                               tapBodyToCollapse: false,
@@ -980,7 +974,7 @@ class _AddTimerTheraphistPageWidgetState
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(11.0),
                                   border: Border.all(
-                                    color: Color(0x359A4C95),
+                                    color: const Color(0x359A4C95),
                                   ),
                                 ),
                                 child: Container(
@@ -989,7 +983,7 @@ class _AddTimerTheraphistPageWidgetState
                                     borderRadius: BorderRadius.circular(11.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(10.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Builder(builder: (_) {
                                       if (!expandableListenerRegistered2) {
                                         expandableListenerRegistered2 = true;
@@ -997,7 +991,7 @@ class _AddTimerTheraphistPageWidgetState
                                             .addListener(
                                           () async {
                                             if (_model.expandableController2
-                                                .expanded!) {
+                                                .expanded) {
                                               setState(() {
                                                 _model.activeTuesdayValue =
                                                     true;
@@ -1008,13 +1002,13 @@ class _AddTimerTheraphistPageWidgetState
                                       }
                                       return Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller:
                                               _model.expandableController2,
                                           child: ExpandablePanel(
                                             header: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 1.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -1027,14 +1021,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         (newValue) async {
                                                       setState(() => _model
                                                               .activeTuesdayValue =
-                                                          newValue!);
+                                                          newValue);
                                                     },
                                                     activeColor:
-                                                        Color(0xFFA954B2),
+                                                        const Color(0xFFA954B2),
                                                     activeTrackColor:
-                                                        Color(0x729A4C95),
+                                                        const Color(0x729A4C95),
                                                     inactiveTrackColor:
-                                                        Color(0xFFEBEDEE),
+                                                        const Color(0xFFEBEDEE),
                                                     inactiveThumbColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -1069,7 +1063,7 @@ class _AddTimerTheraphistPageWidgetState
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -1086,14 +1080,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked7Time =
+                                                          final datePicked7Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked7Time !=
+                                                          if (datePicked7Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked7 =
@@ -1104,9 +1098,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked7Time
+                                                                datePicked7Time
                                                                     .hour,
-                                                                _datePicked7Time
+                                                                datePicked7Time
                                                                     .minute,
                                                               );
                                                             });
@@ -1123,16 +1117,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -1160,7 +1154,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -1170,11 +1164,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -1191,14 +1185,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked8Time =
+                                                          final datePicked8Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked8Time !=
+                                                          if (datePicked8Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked8 =
@@ -1209,9 +1203,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked8Time
+                                                                datePicked8Time
                                                                     .hour,
-                                                                _datePicked8Time
+                                                                datePicked8Time
                                                                     .minute,
                                                               );
                                                             });
@@ -1228,16 +1222,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -1265,7 +1259,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -1275,11 +1269,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -1296,14 +1290,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked9Time =
+                                                          final datePicked9Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked9Time !=
+                                                          if (datePicked9Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked9 =
@@ -1314,9 +1308,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked9Time
+                                                                datePicked9Time
                                                                     .hour,
-                                                                _datePicked9Time
+                                                                datePicked9Time
                                                                     .minute,
                                                               );
                                                             });
@@ -1333,16 +1327,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -1370,7 +1364,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -1380,11 +1374,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -1401,14 +1395,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked10Time =
+                                                          final datePicked10Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked10Time !=
+                                                          if (datePicked10Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked10 =
@@ -1419,9 +1413,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked10Time
+                                                                datePicked10Time
                                                                     .hour,
-                                                                _datePicked10Time
+                                                                datePicked10Time
                                                                     .minute,
                                                               );
                                                             });
@@ -1438,16 +1432,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -1475,7 +1469,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -1485,11 +1479,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -1506,14 +1500,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked11Time =
+                                                          final datePicked11Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked11Time !=
+                                                          if (datePicked11Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked11 =
@@ -1524,9 +1518,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked11Time
+                                                                datePicked11Time
                                                                     .hour,
-                                                                _datePicked11Time
+                                                                datePicked11Time
                                                                     .minute,
                                                               );
                                                             });
@@ -1543,16 +1537,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -1580,7 +1574,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -1590,11 +1584,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -1611,14 +1605,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked12Time =
+                                                          final datePicked12Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked12Time !=
+                                                          if (datePicked12Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked12 =
@@ -1629,9 +1623,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked12Time
+                                                                datePicked12Time
                                                                     .hour,
-                                                                _datePicked12Time
+                                                                datePicked12Time
                                                                     .minute,
                                                               );
                                                             });
@@ -1648,16 +1642,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -1685,7 +1679,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -1695,12 +1689,12 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                               ],
                                             ),
-                                            theme: ExpandableThemeData(
+                                            theme: const ExpandableThemeData(
                                               tapHeaderToExpand: true,
                                               tapBodyToExpand: false,
                                               tapBodyToCollapse: false,
@@ -1729,7 +1723,7 @@ class _AddTimerTheraphistPageWidgetState
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(11.0),
                                   border: Border.all(
-                                    color: Color(0x359A4C95),
+                                    color: const Color(0x359A4C95),
                                   ),
                                 ),
                                 child: Container(
@@ -1738,7 +1732,7 @@ class _AddTimerTheraphistPageWidgetState
                                     borderRadius: BorderRadius.circular(11.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(10.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Builder(builder: (_) {
                                       if (!expandableListenerRegistered3) {
                                         expandableListenerRegistered3 = true;
@@ -1746,7 +1740,7 @@ class _AddTimerTheraphistPageWidgetState
                                             .addListener(
                                           () async {
                                             if (_model.expandableController3
-                                                .expanded!) {
+                                                .expanded) {
                                               setState(() {
                                                 _model.activeWendnesDayValue =
                                                     true;
@@ -1757,13 +1751,13 @@ class _AddTimerTheraphistPageWidgetState
                                       }
                                       return Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller:
                                               _model.expandableController3,
                                           child: ExpandablePanel(
                                             header: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 1.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -1776,14 +1770,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         (newValue) async {
                                                       setState(() => _model
                                                               .activeWendnesDayValue =
-                                                          newValue!);
+                                                          newValue);
                                                     },
                                                     activeColor:
-                                                        Color(0xFFA954B2),
+                                                        const Color(0xFFA954B2),
                                                     activeTrackColor:
-                                                        Color(0x729A4C95),
+                                                        const Color(0x729A4C95),
                                                     inactiveTrackColor:
-                                                        Color(0xFFEBEDEE),
+                                                        const Color(0xFFEBEDEE),
                                                     inactiveThumbColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -1818,7 +1812,7 @@ class _AddTimerTheraphistPageWidgetState
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -1835,14 +1829,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked13Time =
+                                                          final datePicked13Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked13Time !=
+                                                          if (datePicked13Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked13 =
@@ -1853,9 +1847,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked13Time
+                                                                datePicked13Time
                                                                     .hour,
-                                                                _datePicked13Time
+                                                                datePicked13Time
                                                                     .minute,
                                                               );
                                                             });
@@ -1872,16 +1866,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -1909,7 +1903,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -1919,11 +1913,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -1940,14 +1934,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked14Time =
+                                                          final datePicked14Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked14Time !=
+                                                          if (datePicked14Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked14 =
@@ -1958,9 +1952,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked14Time
+                                                                datePicked14Time
                                                                     .hour,
-                                                                _datePicked14Time
+                                                                datePicked14Time
                                                                     .minute,
                                                               );
                                                             });
@@ -1977,16 +1971,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2014,7 +2008,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -2024,11 +2018,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -2045,14 +2039,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked15Time =
+                                                          final datePicked15Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked15Time !=
+                                                          if (datePicked15Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked15 =
@@ -2063,9 +2057,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked15Time
+                                                                datePicked15Time
                                                                     .hour,
-                                                                _datePicked15Time
+                                                                datePicked15Time
                                                                     .minute,
                                                               );
                                                             });
@@ -2082,16 +2076,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2119,7 +2113,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -2129,11 +2123,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -2150,14 +2144,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked16Time =
+                                                          final datePicked16Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked16Time !=
+                                                          if (datePicked16Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked16 =
@@ -2168,9 +2162,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked16Time
+                                                                datePicked16Time
                                                                     .hour,
-                                                                _datePicked16Time
+                                                                datePicked16Time
                                                                     .minute,
                                                               );
                                                             });
@@ -2187,16 +2181,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2224,7 +2218,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -2234,11 +2228,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -2255,14 +2249,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked17Time =
+                                                          final datePicked17Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked17Time !=
+                                                          if (datePicked17Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked17 =
@@ -2273,9 +2267,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked17Time
+                                                                datePicked17Time
                                                                     .hour,
-                                                                _datePicked17Time
+                                                                datePicked17Time
                                                                     .minute,
                                                               );
                                                             });
@@ -2292,16 +2286,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2329,7 +2323,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -2339,11 +2333,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -2360,14 +2354,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked18Time =
+                                                          final datePicked18Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked18Time !=
+                                                          if (datePicked18Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked18 =
@@ -2378,9 +2372,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked18Time
+                                                                datePicked18Time
                                                                     .hour,
-                                                                _datePicked18Time
+                                                                datePicked18Time
                                                                     .minute,
                                                               );
                                                             });
@@ -2397,16 +2391,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2434,7 +2428,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -2444,12 +2438,12 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                               ],
                                             ),
-                                            theme: ExpandableThemeData(
+                                            theme: const ExpandableThemeData(
                                               tapHeaderToExpand: true,
                                               tapBodyToExpand: false,
                                               tapBodyToCollapse: false,
@@ -2478,7 +2472,7 @@ class _AddTimerTheraphistPageWidgetState
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(11.0),
                                   border: Border.all(
-                                    color: Color(0x359A4C95),
+                                    color: const Color(0x359A4C95),
                                   ),
                                 ),
                                 child: Container(
@@ -2487,7 +2481,7 @@ class _AddTimerTheraphistPageWidgetState
                                     borderRadius: BorderRadius.circular(11.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(10.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Builder(builder: (_) {
                                       if (!expandableListenerRegistered4) {
                                         expandableListenerRegistered4 = true;
@@ -2495,7 +2489,7 @@ class _AddTimerTheraphistPageWidgetState
                                             .addListener(
                                           () async {
                                             if (_model.expandableController4
-                                                .expanded!) {
+                                                .expanded) {
                                               setState(() {
                                                 _model.activeThursdayValue =
                                                     true;
@@ -2506,13 +2500,13 @@ class _AddTimerTheraphistPageWidgetState
                                       }
                                       return Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller:
                                               _model.expandableController4,
                                           child: ExpandablePanel(
                                             header: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 1.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -2525,14 +2519,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         (newValue) async {
                                                       setState(() => _model
                                                               .activeThursdayValue =
-                                                          newValue!);
+                                                          newValue);
                                                     },
                                                     activeColor:
-                                                        Color(0xFFA954B2),
+                                                        const Color(0xFFA954B2),
                                                     activeTrackColor:
-                                                        Color(0x729A4C95),
+                                                        const Color(0x729A4C95),
                                                     inactiveTrackColor:
-                                                        Color(0xFFEBEDEE),
+                                                        const Color(0xFFEBEDEE),
                                                     inactiveThumbColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -2567,7 +2561,7 @@ class _AddTimerTheraphistPageWidgetState
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -2584,14 +2578,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked19Time =
+                                                          final datePicked19Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked19Time !=
+                                                          if (datePicked19Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked19 =
@@ -2602,9 +2596,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked19Time
+                                                                datePicked19Time
                                                                     .hour,
-                                                                _datePicked19Time
+                                                                datePicked19Time
                                                                     .minute,
                                                               );
                                                             });
@@ -2621,16 +2615,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2658,7 +2652,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -2668,11 +2662,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -2689,14 +2683,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked20Time =
+                                                          final datePicked20Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked20Time !=
+                                                          if (datePicked20Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked20 =
@@ -2707,9 +2701,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked20Time
+                                                                datePicked20Time
                                                                     .hour,
-                                                                _datePicked20Time
+                                                                datePicked20Time
                                                                     .minute,
                                                               );
                                                             });
@@ -2726,16 +2720,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2763,7 +2757,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -2773,11 +2767,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -2794,14 +2788,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked21Time =
+                                                          final datePicked21Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked21Time !=
+                                                          if (datePicked21Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked21 =
@@ -2812,9 +2806,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked21Time
+                                                                datePicked21Time
                                                                     .hour,
-                                                                _datePicked21Time
+                                                                datePicked21Time
                                                                     .minute,
                                                               );
                                                             });
@@ -2831,16 +2825,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2868,7 +2862,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -2878,11 +2872,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -2899,14 +2893,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked22Time =
+                                                          final datePicked22Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked22Time !=
+                                                          if (datePicked22Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked22 =
@@ -2917,9 +2911,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked22Time
+                                                                datePicked22Time
                                                                     .hour,
-                                                                _datePicked22Time
+                                                                datePicked22Time
                                                                     .minute,
                                                               );
                                                             });
@@ -2936,16 +2930,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2973,7 +2967,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -2983,11 +2977,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -3004,14 +2998,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked23Time =
+                                                          final datePicked23Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked23Time !=
+                                                          if (datePicked23Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked23 =
@@ -3022,9 +3016,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked23Time
+                                                                datePicked23Time
                                                                     .hour,
-                                                                _datePicked23Time
+                                                                datePicked23Time
                                                                     .minute,
                                                               );
                                                             });
@@ -3041,16 +3035,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -3078,7 +3072,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -3088,11 +3082,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -3109,14 +3103,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked24Time =
+                                                          final datePicked24Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked24Time !=
+                                                          if (datePicked24Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked24 =
@@ -3127,9 +3121,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked24Time
+                                                                datePicked24Time
                                                                     .hour,
-                                                                _datePicked24Time
+                                                                datePicked24Time
                                                                     .minute,
                                                               );
                                                             });
@@ -3146,16 +3140,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -3183,7 +3177,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -3193,12 +3187,12 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                               ],
                                             ),
-                                            theme: ExpandableThemeData(
+                                            theme: const ExpandableThemeData(
                                               tapHeaderToExpand: true,
                                               tapBodyToExpand: false,
                                               tapBodyToCollapse: false,
@@ -3227,7 +3221,7 @@ class _AddTimerTheraphistPageWidgetState
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(11.0),
                                   border: Border.all(
-                                    color: Color(0x359A4C95),
+                                    color: const Color(0x359A4C95),
                                   ),
                                 ),
                                 child: Container(
@@ -3236,7 +3230,7 @@ class _AddTimerTheraphistPageWidgetState
                                     borderRadius: BorderRadius.circular(11.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(10.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Builder(builder: (_) {
                                       if (!expandableListenerRegistered5) {
                                         expandableListenerRegistered5 = true;
@@ -3244,7 +3238,7 @@ class _AddTimerTheraphistPageWidgetState
                                             .addListener(
                                           () async {
                                             if (_model.expandableController5
-                                                .expanded!) {
+                                                .expanded) {
                                               setState(() {
                                                 _model.activeFridayValue = true;
                                               });
@@ -3254,13 +3248,13 @@ class _AddTimerTheraphistPageWidgetState
                                       }
                                       return Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller:
                                               _model.expandableController5,
                                           child: ExpandablePanel(
                                             header: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 1.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -3273,14 +3267,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         (newValue) async {
                                                       setState(() => _model
                                                               .activeFridayValue =
-                                                          newValue!);
+                                                          newValue);
                                                     },
                                                     activeColor:
-                                                        Color(0xFFA954B2),
+                                                        const Color(0xFFA954B2),
                                                     activeTrackColor:
-                                                        Color(0x729A4C95),
+                                                        const Color(0x729A4C95),
                                                     inactiveTrackColor:
-                                                        Color(0xFFEBEDEE),
+                                                        const Color(0xFFEBEDEE),
                                                     inactiveThumbColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -3315,7 +3309,7 @@ class _AddTimerTheraphistPageWidgetState
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -3332,14 +3326,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked25Time =
+                                                          final datePicked25Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked25Time !=
+                                                          if (datePicked25Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked25 =
@@ -3350,9 +3344,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked25Time
+                                                                datePicked25Time
                                                                     .hour,
-                                                                _datePicked25Time
+                                                                datePicked25Time
                                                                     .minute,
                                                               );
                                                             });
@@ -3369,16 +3363,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -3406,7 +3400,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -3416,11 +3410,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -3437,14 +3431,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked26Time =
+                                                          final datePicked26Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked26Time !=
+                                                          if (datePicked26Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked26 =
@@ -3455,9 +3449,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked26Time
+                                                                datePicked26Time
                                                                     .hour,
-                                                                _datePicked26Time
+                                                                datePicked26Time
                                                                     .minute,
                                                               );
                                                             });
@@ -3474,16 +3468,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -3511,7 +3505,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -3521,11 +3515,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -3542,14 +3536,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked27Time =
+                                                          final datePicked27Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked27Time !=
+                                                          if (datePicked27Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked27 =
@@ -3560,9 +3554,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked27Time
+                                                                datePicked27Time
                                                                     .hour,
-                                                                _datePicked27Time
+                                                                datePicked27Time
                                                                     .minute,
                                                               );
                                                             });
@@ -3579,16 +3573,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -3616,7 +3610,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -3626,11 +3620,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -3647,14 +3641,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked28Time =
+                                                          final datePicked28Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked28Time !=
+                                                          if (datePicked28Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked28 =
@@ -3665,9 +3659,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked28Time
+                                                                datePicked28Time
                                                                     .hour,
-                                                                _datePicked28Time
+                                                                datePicked28Time
                                                                     .minute,
                                                               );
                                                             });
@@ -3684,16 +3678,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -3721,7 +3715,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -3731,11 +3725,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -3752,14 +3746,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked29Time =
+                                                          final datePicked29Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked29Time !=
+                                                          if (datePicked29Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked29 =
@@ -3770,9 +3764,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked29Time
+                                                                datePicked29Time
                                                                     .hour,
-                                                                _datePicked29Time
+                                                                datePicked29Time
                                                                     .minute,
                                                               );
                                                             });
@@ -3789,16 +3783,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -3826,7 +3820,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -3836,11 +3830,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -3857,14 +3851,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked30Time =
+                                                          final datePicked30Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked30Time !=
+                                                          if (datePicked30Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked30 =
@@ -3875,9 +3869,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked30Time
+                                                                datePicked30Time
                                                                     .hour,
-                                                                _datePicked30Time
+                                                                datePicked30Time
                                                                     .minute,
                                                               );
                                                             });
@@ -3894,16 +3888,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -3931,7 +3925,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -3941,12 +3935,12 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                               ],
                                             ),
-                                            theme: ExpandableThemeData(
+                                            theme: const ExpandableThemeData(
                                               tapHeaderToExpand: true,
                                               tapBodyToExpand: false,
                                               tapBodyToCollapse: false,
@@ -3975,7 +3969,7 @@ class _AddTimerTheraphistPageWidgetState
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(11.0),
                                   border: Border.all(
-                                    color: Color(0x359A4C95),
+                                    color: const Color(0x359A4C95),
                                   ),
                                 ),
                                 child: Container(
@@ -3984,7 +3978,7 @@ class _AddTimerTheraphistPageWidgetState
                                     borderRadius: BorderRadius.circular(11.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(10.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Builder(builder: (_) {
                                       if (!expandableListenerRegistered6) {
                                         expandableListenerRegistered6 = true;
@@ -3992,7 +3986,7 @@ class _AddTimerTheraphistPageWidgetState
                                             .addListener(
                                           () async {
                                             if (_model.expandableController6
-                                                .expanded!) {
+                                                .expanded) {
                                               setState(() {
                                                 _model.activeSaturdayValue =
                                                     true;
@@ -4003,13 +3997,13 @@ class _AddTimerTheraphistPageWidgetState
                                       }
                                       return Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller:
                                               _model.expandableController6,
                                           child: ExpandablePanel(
                                             header: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 1.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -4022,14 +4016,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         (newValue) async {
                                                       setState(() => _model
                                                               .activeSaturdayValue =
-                                                          newValue!);
+                                                          newValue);
                                                     },
                                                     activeColor:
-                                                        Color(0xFFAD53B6),
+                                                        const Color(0xFFAD53B6),
                                                     activeTrackColor:
-                                                        Color(0x72964991),
+                                                        const Color(0x72964991),
                                                     inactiveTrackColor:
-                                                        Color(0xFFEBEDEE),
+                                                        const Color(0xFFEBEDEE),
                                                     inactiveThumbColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -4064,7 +4058,7 @@ class _AddTimerTheraphistPageWidgetState
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -4081,14 +4075,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked31Time =
+                                                          final datePicked31Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked31Time !=
+                                                          if (datePicked31Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked31 =
@@ -4099,9 +4093,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked31Time
+                                                                datePicked31Time
                                                                     .hour,
-                                                                _datePicked31Time
+                                                                datePicked31Time
                                                                     .minute,
                                                               );
                                                             });
@@ -4118,16 +4112,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -4155,7 +4149,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -4165,11 +4159,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -4186,14 +4180,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked32Time =
+                                                          final datePicked32Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked32Time !=
+                                                          if (datePicked32Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked32 =
@@ -4204,9 +4198,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked32Time
+                                                                datePicked32Time
                                                                     .hour,
-                                                                _datePicked32Time
+                                                                datePicked32Time
                                                                     .minute,
                                                               );
                                                             });
@@ -4223,16 +4217,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -4260,7 +4254,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -4270,11 +4264,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -4291,14 +4285,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked33Time =
+                                                          final datePicked33Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked33Time !=
+                                                          if (datePicked33Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked33 =
@@ -4309,9 +4303,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked33Time
+                                                                datePicked33Time
                                                                     .hour,
-                                                                _datePicked33Time
+                                                                datePicked33Time
                                                                     .minute,
                                                               );
                                                             });
@@ -4328,16 +4322,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -4365,7 +4359,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -4375,11 +4369,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -4396,14 +4390,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked34Time =
+                                                          final datePicked34Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked34Time !=
+                                                          if (datePicked34Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked34 =
@@ -4414,9 +4408,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked34Time
+                                                                datePicked34Time
                                                                     .hour,
-                                                                _datePicked34Time
+                                                                datePicked34Time
                                                                     .minute,
                                                               );
                                                             });
@@ -4433,16 +4427,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -4470,7 +4464,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -4480,11 +4474,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -4501,14 +4495,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked35Time =
+                                                          final datePicked35Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked35Time !=
+                                                          if (datePicked35Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked35 =
@@ -4519,9 +4513,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked35Time
+                                                                datePicked35Time
                                                                     .hour,
-                                                                _datePicked35Time
+                                                                datePicked35Time
                                                                     .minute,
                                                               );
                                                             });
@@ -4538,16 +4532,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -4575,7 +4569,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -4585,11 +4579,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -4606,14 +4600,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked36Time =
+                                                          final datePicked36Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked36Time !=
+                                                          if (datePicked36Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked36 =
@@ -4624,9 +4618,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked36Time
+                                                                datePicked36Time
                                                                     .hour,
-                                                                _datePicked36Time
+                                                                datePicked36Time
                                                                     .minute,
                                                               );
                                                             });
@@ -4643,16 +4637,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -4680,7 +4674,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -4690,12 +4684,12 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                               ],
                                             ),
-                                            theme: ExpandableThemeData(
+                                            theme: const ExpandableThemeData(
                                               tapHeaderToExpand: true,
                                               tapBodyToExpand: false,
                                               tapBodyToCollapse: false,
@@ -4724,7 +4718,7 @@ class _AddTimerTheraphistPageWidgetState
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(11.0),
                                   border: Border.all(
-                                    color: Color(0x359A4C95),
+                                    color: const Color(0x359A4C95),
                                   ),
                                 ),
                                 child: Container(
@@ -4733,7 +4727,7 @@ class _AddTimerTheraphistPageWidgetState
                                     borderRadius: BorderRadius.circular(11.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsets.all(10.0),
+                                    padding: const EdgeInsets.all(10.0),
                                     child: Builder(builder: (_) {
                                       if (!expandableListenerRegistered7) {
                                         expandableListenerRegistered7 = true;
@@ -4741,7 +4735,7 @@ class _AddTimerTheraphistPageWidgetState
                                             .addListener(
                                           () async {
                                             if (_model.expandableController7
-                                                .expanded!) {
+                                                .expanded) {
                                               setState(() {
                                                 _model.activeSundayValue = true;
                                               });
@@ -4751,13 +4745,13 @@ class _AddTimerTheraphistPageWidgetState
                                       }
                                       return Container(
                                         width: double.infinity,
-                                        color: Color(0x00000000),
+                                        color: const Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller:
                                               _model.expandableController7,
                                           child: ExpandablePanel(
                                             header: Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   0.0, 1.0),
                                               child: Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -4770,14 +4764,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         (newValue) async {
                                                       setState(() => _model
                                                               .activeSundayValue =
-                                                          newValue!);
+                                                          newValue);
                                                     },
                                                     activeColor:
-                                                        Color(0xFFA954B2),
+                                                        const Color(0xFFA954B2),
                                                     activeTrackColor:
-                                                        Color(0x729A4C95),
+                                                        const Color(0x729A4C95),
                                                     inactiveTrackColor:
-                                                        Color(0xFFEBEDEE),
+                                                        const Color(0xFFEBEDEE),
                                                     inactiveThumbColor:
                                                         FlutterFlowTheme.of(
                                                                 context)
@@ -4812,7 +4806,7 @@ class _AddTimerTheraphistPageWidgetState
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -4829,14 +4823,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked37Time =
+                                                          final datePicked37Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked37Time !=
+                                                          if (datePicked37Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked37 =
@@ -4847,9 +4841,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked37Time
+                                                                datePicked37Time
                                                                     .hour,
-                                                                _datePicked37Time
+                                                                datePicked37Time
                                                                     .minute,
                                                               );
                                                             });
@@ -4866,16 +4860,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -4903,7 +4897,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -4913,11 +4907,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -4934,14 +4928,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked38Time =
+                                                          final datePicked38Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked38Time !=
+                                                          if (datePicked38Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked38 =
@@ -4952,9 +4946,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked38Time
+                                                                datePicked38Time
                                                                     .hour,
-                                                                _datePicked38Time
+                                                                datePicked38Time
                                                                     .minute,
                                                               );
                                                             });
@@ -4971,16 +4965,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -5008,7 +5002,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -5018,11 +5012,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -5039,14 +5033,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked39Time =
+                                                          final datePicked39Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked39Time !=
+                                                          if (datePicked39Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked39 =
@@ -5057,9 +5051,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked39Time
+                                                                datePicked39Time
                                                                     .hour,
-                                                                _datePicked39Time
+                                                                datePicked39Time
                                                                     .minute,
                                                               );
                                                             });
@@ -5076,16 +5070,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -5113,7 +5107,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -5123,11 +5117,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -5144,14 +5138,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked40Time =
+                                                          final datePicked40Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked40Time !=
+                                                          if (datePicked40Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked40 =
@@ -5162,9 +5156,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked40Time
+                                                                datePicked40Time
                                                                     .hour,
-                                                                _datePicked40Time
+                                                                datePicked40Time
                                                                     .minute,
                                                               );
                                                             });
@@ -5181,16 +5175,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -5218,7 +5212,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -5228,11 +5222,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -5249,14 +5243,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked41Time =
+                                                          final datePicked41Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked41Time !=
+                                                          if (datePicked41Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked41 =
@@ -5267,9 +5261,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked41Time
+                                                                datePicked41Time
                                                                     .hour,
-                                                                _datePicked41Time
+                                                                datePicked41Time
                                                                     .minute,
                                                               );
                                                             });
@@ -5286,16 +5280,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -5323,7 +5317,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -5333,11 +5327,11 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 10.0, 0.0, 10.0),
                                                   child: Row(
@@ -5354,14 +5348,14 @@ class _AddTimerTheraphistPageWidgetState
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          final _datePicked42Time =
+                                                          final datePicked42Time =
                                                               await showTimePicker(
                                                             context: context,
                                                             initialTime: TimeOfDay
                                                                 .fromDateTime(
                                                                     getCurrentTimestamp),
                                                           );
-                                                          if (_datePicked42Time !=
+                                                          if (datePicked42Time !=
                                                               null) {
                                                             safeSetState(() {
                                                               _model.datePicked42 =
@@ -5372,9 +5366,9 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .month,
                                                                 getCurrentTimestamp
                                                                     .day,
-                                                                _datePicked42Time
+                                                                datePicked42Time
                                                                     .hour,
-                                                                _datePicked42Time
+                                                                datePicked42Time
                                                                     .minute,
                                                               );
                                                             });
@@ -5391,16 +5385,16 @@ class _AddTimerTheraphistPageWidgetState
                                                                     .circular(
                                                                         100.0),
                                                             border: Border.all(
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0x47737373),
                                                             ),
                                                           ),
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -5428,7 +5422,7 @@ class _AddTimerTheraphistPageWidgetState
                                                                   .override(
                                                                     fontFamily:
                                                                         'Readex Pro',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xE257636C),
                                                                     fontSize:
                                                                         12.0,
@@ -5438,12 +5432,12 @@ class _AddTimerTheraphistPageWidgetState
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                               ],
                                             ),
-                                            theme: ExpandableThemeData(
+                                            theme: const ExpandableThemeData(
                                               tapHeaderToExpand: true,
                                               tapBodyToExpand: false,
                                               tapBodyToCollapse: false,
@@ -5462,20 +5456,20 @@ class _AddTimerTheraphistPageWidgetState
                             ),
                           ],
                         ),
-                      ].divide(SizedBox(height: 10.0)),
+                      ].divide(const SizedBox(height: 10.0)),
                     ),
                   ),
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 8.0, 0.0),
                           child: TextFormField(
                             controller: _model.textController,
@@ -5492,14 +5486,14 @@ class _AddTimerTheraphistPageWidgetState
                                   .labelMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF626B73),
+                                    color: const Color(0xFF626B73),
                                     fontSize: 12.0,
                                   ),
                               hintStyle: FlutterFlowTheme.of(context)
                                   .labelMedium
                                   .override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFFE0E3E7),
+                                    color: const Color(0xFFE0E3E7),
                                   ),
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(
@@ -5534,7 +5528,7 @@ class _AddTimerTheraphistPageWidgetState
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xFF161A1C),
+                                  color: const Color(0xFF161A1C),
                                 ),
                             keyboardType: const TextInputType.numberWithOptions(
                                 decimal: true),
@@ -5580,7 +5574,7 @@ class _AddTimerTheraphistPageWidgetState
                         borderColor: FlutterFlowTheme.of(context).alternate,
                         borderWidth: 1.0,
                         borderRadius: 100.0,
-                        margin: EdgeInsetsDirectional.fromSTEB(
+                        margin: const EdgeInsetsDirectional.fromSTEB(
                             16.0, 4.0, 16.0, 4.0),
                         hidesUnderline: true,
                         isSearchable: false,
@@ -5594,8 +5588,7 @@ class _AddTimerTheraphistPageWidgetState
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     FFButtonWidget(
-                      onPressed: ((_model.textController.text == null ||
-                                  _model.textController.text == '') ||
+                      onPressed: ((_model.textController.text == '') ||
                               (((_model.activeMondayValue == false) ||
                                       (_model.datePicked1 == null)) &&
                                   ((_model.activeTuesdayValue == false) ||
@@ -5819,10 +5812,10 @@ class _AddTimerTheraphistPageWidgetState
                         width: 352.0,
                         height: 50.0,
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: Color(0xFF9420AF),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: const Color(0xFF9420AF),
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'Lexend Deca',
@@ -5831,16 +5824,16 @@ class _AddTimerTheraphistPageWidgetState
                                   fontWeight: FontWeight.normal,
                                 ),
                         elevation: 0.0,
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                         ),
-                        disabledColor: Color(0xFFB0B0B0),
-                        disabledTextColor: Color(0x82FFFFFF),
+                        disabledColor: const Color(0xFFB0B0B0),
+                        disabledTextColor: const Color(0x82FFFFFF),
                       ),
                     ),
                   ],
                 ),
-              ].divide(SizedBox(height: 10.0)),
+              ].divide(const SizedBox(height: 10.0)),
             ),
           ),
         ),

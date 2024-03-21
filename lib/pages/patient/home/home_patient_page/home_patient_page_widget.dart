@@ -9,12 +9,9 @@ import '/pages/drawer/components_general/bottomnavigationbar_patient/bottomnavig
 import '/pages/drawer/modal_languge/modal_languge_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'home_patient_page_model.dart';
@@ -89,11 +86,11 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF1DA4D4),
+        backgroundColor: const Color(0xFF1DA4D4),
         drawer: Drawer(
           elevation: 16.0,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
@@ -101,12 +98,12 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
               children: [
                 Container(
                   height: 100.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -127,12 +124,12 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF121518),
+                                    color: const Color(0xFF121518),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                         ),
-                      ].divide(SizedBox(width: 10.0)),
+                      ].divide(const SizedBox(width: 10.0)),
                     ),
                   ),
                 ),
@@ -140,7 +137,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                      color: Color(0x9FA0A0A0),
+                      color: const Color(0x9FA0A0A0),
                     ),
                   ),
                   child: Column(
@@ -154,7 +151,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                         desktop: false,
                       ))
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.person_2,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -167,7 +164,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -183,7 +180,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                         desktop: false,
                       ))
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.switch_account,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -196,7 +193,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -218,7 +215,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                             );
                           },
                           child: ListTile(
-                            leading: Icon(
+                            leading: const Icon(
                               Icons.card_giftcard,
                               color: Color(0xC2000000),
                               size: 14.0,
@@ -231,7 +228,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                   .titleLarge
                                   .override(
                                     fontFamily: 'Outfit',
-                                    color: Color(0xFF121518),
+                                    color: const Color(0xFF121518),
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -250,7 +247,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                           context.pushNamed('profile_patient');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.location_history,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -263,7 +260,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -291,14 +288,14 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                     : FocusScope.of(context).unfocus(),
                                 child: Padding(
                                   padding: MediaQuery.viewInsetsOf(context),
-                                  child: ModalLangugeWidget(),
+                                  child: const ModalLangugeWidget(),
                                 ),
                               );
                             },
                           ).then((value) => safeSetState(() {}));
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.language_rounded,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -311,7 +308,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -329,7 +326,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                           await launchURL('https://qtmhealthtech.com.br/');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.computer_sharp,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -342,7 +339,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -358,7 +355,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                      color: Color(0x68B4B4B4),
+                      color: const Color(0x68B4B4B4),
                     ),
                   ),
                   child: Column(
@@ -373,7 +370,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                           context.pushNamed('politics_drawer_page');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.content_paste,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -386,7 +383,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -404,7 +401,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                           context.pushNamed('terms_drawer_page');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.switch_account,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -417,7 +414,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -439,7 +436,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                           context.pushNamedAuth('login_page', context.mounted);
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.output_outlined,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -452,7 +449,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -476,23 +473,23 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
             children: [
               Expanded(
                 child: Stack(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFF1DA4D4),
+                          color: const Color(0xFF1DA4D4),
                           borderRadius: BorderRadius.circular(0.0),
                           border: Border.all(
-                            color: Color(0xFF1DA4D4),
+                            color: const Color(0xFF1DA4D4),
                           ),
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 10.0, 20.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -505,7 +502,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                     onTap: () async {
                                       scaffoldKey.currentState!.openDrawer();
                                     },
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.menu,
                                       color: Colors.white,
                                       size: 35.0,
@@ -515,7 +512,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 30.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -524,7 +521,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       mainAxisAlignment:
@@ -534,7 +531,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
                                               'h0vjswks' /* Olá, */,
@@ -564,7 +561,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                 ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(height: 5.0)),
+                                      ].divide(const SizedBox(height: 5.0)),
                                     ),
                                   ),
                                   AuthUserStreamWidget(
@@ -572,7 +569,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                       width: 80.0,
                                       height: 80.0,
                                       clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                       ),
                                       child: Image.network(
@@ -584,17 +581,17 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                 ],
                               ),
                             ),
-                          ].divide(SizedBox(height: 2.0)),
+                          ].divide(const SizedBox(height: 2.0)),
                         ),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: const AlignmentDirectional(0.0, 1.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 160.0, 0.0, 0.0),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(50.0),
@@ -602,7 +599,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                           ),
                           child: Container(
                             height: double.infinity,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(0.0),
@@ -612,13 +609,13 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                               ),
                               shape: BoxShape.rectangle,
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Stack(
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: SingleChildScrollView(
                                       child: Column(
@@ -628,7 +625,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                         children: [
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 40.0, 20.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -644,7 +641,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                         decoration:
                                                             BoxDecoration(
                                                           color:
-                                                              Color(0xFFE8E8EA),
+                                                              const Color(0xFFE8E8EA),
                                                           borderRadius:
                                                               BorderRadius
                                                                   .circular(
@@ -652,7 +649,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                         ),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
@@ -737,13 +734,13 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                             8.0),
                                                               ),
                                                               contentPadding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           20.0,
                                                                           10.0,
                                                                           20.0),
-                                                              prefixIcon: Icon(
+                                                              prefixIcon: const Icon(
                                                                 Icons.search,
                                                                 size: 16.0,
                                                               ),
@@ -773,7 +770,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                             extra: <String,
                                                                 dynamic>{
                                                               kTransitionInfoKey:
-                                                                  TransitionInfo(
+                                                                  const TransitionInfo(
                                                                 hasTransition:
                                                                     true,
                                                                 transitionType:
@@ -807,7 +804,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 30.0, 0.0, 30.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -818,8 +815,8 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                       Container(
                                                         width: double.infinity,
                                                         decoration:
-                                                            BoxDecoration(),
-                                                        child: Container(
+                                                            const BoxDecoration(),
+                                                        child: SizedBox(
                                                           width:
                                                               double.infinity,
                                                           height: 132.0,
@@ -832,7 +829,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
@@ -844,7 +841,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                       },
                                                                       text: '',
                                                                       icon:
-                                                                          Icon(
+                                                                          const Icon(
                                                                         Icons
                                                                             .add_card,
                                                                         size:
@@ -856,17 +853,17 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                             91.0,
                                                                         height:
                                                                             91.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF2775B2),
                                                                         textStyle: FlutterFlowTheme.of(context)
                                                                             .titleSmall
@@ -877,7 +874,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                         elevation:
                                                                             3.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -904,7 +901,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         5.0)),
                                                               ),
@@ -915,7 +912,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
@@ -937,7 +934,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                       },
                                                                       text: '',
                                                                       icon:
-                                                                          Icon(
+                                                                          const Icon(
                                                                         Icons
                                                                             .people_alt_rounded,
                                                                         size:
@@ -949,17 +946,17 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                             91.0,
                                                                         height:
                                                                             91.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF2775B2),
                                                                         textStyle: FlutterFlowTheme.of(context)
                                                                             .titleSmall
@@ -970,7 +967,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                         elevation:
                                                                             3.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -997,7 +994,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         5.0)),
                                                               ),
@@ -1008,7 +1005,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
@@ -1020,7 +1017,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                       },
                                                                       text: '',
                                                                       icon:
-                                                                          Icon(
+                                                                          const Icon(
                                                                         Icons
                                                                             .calendar_month,
                                                                         size:
@@ -1032,17 +1029,17 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                             91.0,
                                                                         height:
                                                                             91.0,
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                                                             24.0,
                                                                             0.0,
                                                                             24.0,
                                                                             0.0),
-                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF2775B2),
                                                                         textStyle: FlutterFlowTheme.of(context)
                                                                             .titleSmall
@@ -1053,7 +1050,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                         elevation:
                                                                             3.0,
                                                                         borderSide:
-                                                                            BorderSide(
+                                                                            const BorderSide(
                                                                           color:
                                                                               Colors.transparent,
                                                                           width:
@@ -1082,7 +1079,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                               FontWeight.w500,
                                                                         ),
                                                                   ),
-                                                                ].divide(SizedBox(
+                                                                ].divide(const SizedBox(
                                                                     height:
                                                                         5.0)),
                                                               ),
@@ -1116,11 +1113,11 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 1.2),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       5.0,
                                                                       30.0,
@@ -1136,13 +1133,13 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         1.0,
                                                                         0.0),
                                                                 child:
                                                                     FlutterFlowIconButton(
                                                                   borderColor:
-                                                                      Color(
+                                                                      const Color(
                                                                           0x60E4E4E4),
                                                                   borderRadius:
                                                                       20.0,
@@ -1150,7 +1147,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                       1.0,
                                                                   buttonSize:
                                                                       40.0,
-                                                                  fillColor: Color(
+                                                                  fillColor: const Color(
                                                                       0x60E4E4E4),
                                                                   icon: Icon(
                                                                     Icons
@@ -1165,7 +1162,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                     await _model
                                                                         .carouselController
                                                                         ?.previousPage(
-                                                                      duration: Duration(
+                                                                      duration: const Duration(
                                                                           milliseconds:
                                                                               300),
                                                                       curve: Curves
@@ -1176,13 +1173,13 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                               ),
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0),
                                                                 child:
                                                                     FlutterFlowIconButton(
                                                                   borderColor:
-                                                                      Color(
+                                                                      const Color(
                                                                           0x60E4E4E4),
                                                                   borderRadius:
                                                                       20.0,
@@ -1190,9 +1187,9 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                       1.0,
                                                                   buttonSize:
                                                                       40.0,
-                                                                  fillColor: Color(
+                                                                  fillColor: const Color(
                                                                       0x60E4E4E4),
-                                                                  icon: Icon(
+                                                                  icon: const Icon(
                                                                     Icons
                                                                         .arrow_forward_ios,
                                                                     color: Color(
@@ -1204,7 +1201,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                     await _model
                                                                         .carouselController
                                                                         ?.nextPage(
-                                                                      duration: Duration(
+                                                                      duration: const Duration(
                                                                           milliseconds:
                                                                               300),
                                                                       curve: Curves
@@ -1223,9 +1220,9 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                               ],
                                             ),
                                           ),
-                                          if (_model.request.length != 0)
+                                          if (_model.request.isNotEmpty)
                                             Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       15.0, 0.0, 15.0, 0.0),
                                               child: Column(
@@ -1254,7 +1251,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Raleway',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFF657DCA),
                                                                   fontWeight:
                                                                       FontWeight
@@ -1297,7 +1294,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                   .override(
                                                                     fontFamily:
                                                                         'Raleway',
-                                                                    color: Color(
+                                                                    color: const Color(
                                                                         0xFFA6A6A6),
                                                                     fontWeight:
                                                                         FontWeight
@@ -1356,7 +1353,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                   final scheduleCardTheraphistRecord =
                                                                       snapshot
                                                                           .data!;
-                                                                  return Container(
+                                                                  return SizedBox(
                                                                     width: double
                                                                         .infinity,
                                                                     height:
@@ -1365,7 +1362,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                         Stack(
                                                                       children: [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               15.0,
                                                                               10.0,
                                                                               15.0,
@@ -1378,13 +1375,13 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                                 160.0,
                                                                             decoration:
                                                                                 BoxDecoration(
-                                                                              color: Color(0x81657DCA),
+                                                                              color: const Color(0x81657DCA),
                                                                               borderRadius: BorderRadius.circular(14.0),
                                                                             ),
                                                                           ),
                                                                         ),
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               30.0,
                                                                               20.0,
                                                                               30.0,
@@ -1397,7 +1394,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                                 160.0,
                                                                             decoration:
                                                                                 BoxDecoration(
-                                                                              color: Color(0x3F657DCA),
+                                                                              color: const Color(0x3F657DCA),
                                                                               borderRadius: BorderRadius.circular(14.0),
                                                                             ),
                                                                           ),
@@ -1451,11 +1448,11 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                                 width: double.infinity,
                                                                                 height: 160.0,
                                                                                 decoration: BoxDecoration(
-                                                                                  color: Color(0xFF657DCA),
+                                                                                  color: const Color(0xFF657DCA),
                                                                                   borderRadius: BorderRadius.circular(14.0),
                                                                                 ),
                                                                                 child: Padding(
-                                                                                  padding: EdgeInsets.all(20.0),
+                                                                                  padding: const EdgeInsets.all(20.0),
                                                                                   child: Column(
                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1512,9 +1509,9 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                                                           fontWeight: FontWeight.bold,
                                                                                                         ),
                                                                                                   ),
-                                                                                                ].divide(SizedBox(height: 8.0)),
+                                                                                                ].divide(const SizedBox(height: 8.0)),
                                                                                               ),
-                                                                                            ].divide(SizedBox(width: 10.0)),
+                                                                                            ].divide(const SizedBox(width: 10.0)),
                                                                                           );
                                                                                         },
                                                                                       ),
@@ -1525,11 +1522,11 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                                             child: Container(
                                                                                               width: 100.0,
                                                                                               decoration: BoxDecoration(
-                                                                                                color: Color(0xFF7F97E3),
+                                                                                                color: const Color(0xFF7F97E3),
                                                                                                 borderRadius: BorderRadius.circular(10.0),
                                                                                               ),
                                                                                               child: Padding(
-                                                                                                padding: EdgeInsets.all(15.0),
+                                                                                                padding: const EdgeInsets.all(15.0),
                                                                                                 child: Row(
                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1537,7 +1534,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                                                     Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       children: [
-                                                                                                        Icon(
+                                                                                                        const Icon(
                                                                                                           Icons.calendar_month,
                                                                                                           color: Colors.white,
                                                                                                           size: 24.0,
@@ -1555,12 +1552,12 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                                                                 fontWeight: FontWeight.bold,
                                                                                                               ),
                                                                                                         ),
-                                                                                                      ].divide(SizedBox(width: 4.0)),
+                                                                                                      ].divide(const SizedBox(width: 4.0)),
                                                                                                     ),
                                                                                                     Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       children: [
-                                                                                                        Icon(
+                                                                                                        const Icon(
                                                                                                           Icons.access_time_filled,
                                                                                                           color: Colors.white,
                                                                                                           size: 24.0,
@@ -1582,7 +1579,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                                                                 fontWeight: FontWeight.bold,
                                                                                                               ),
                                                                                                         ),
-                                                                                                      ].divide(SizedBox(width: 4.0)),
+                                                                                                      ].divide(const SizedBox(width: 4.0)),
                                                                                                     ),
                                                                                                   ],
                                                                                                 ),
@@ -1608,15 +1605,15 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                         },
                                                       ),
                                                     ].divide(
-                                                        SizedBox(height: 10.0)),
+                                                        const SizedBox(height: 10.0)),
                                                   ),
                                                 ].divide(
-                                                    SizedBox(height: 20.0)),
+                                                    const SizedBox(height: 20.0)),
                                               ),
                                             ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 20.0, 15.0, 20.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -1651,9 +1648,9 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                           height: 100.0,
                                                           decoration:
                                                               BoxDecoration(
-                                                            color: Color(
+                                                            color: const Color(
                                                                 0xFF1DA4D4),
-                                                            boxShadow: [
+                                                            boxShadow: const [
                                                               BoxShadow(
                                                                 blurRadius: 1.0,
                                                                 color: Color(
@@ -1671,7 +1668,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                           ),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         10.0,
@@ -1729,14 +1726,14 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                             fontFamily:
                                                                                 'Readex Pro',
                                                                             color:
-                                                                                Color(0xFFB1B4B8),
+                                                                                const Color(0xFFB1B4B8),
                                                                             fontSize:
                                                                                 12.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                           ),
                                                                     ),
-                                                                  ].divide(SizedBox(
+                                                                  ].divide(const SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -1761,11 +1758,11 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   1.0, 1.0),
                                                           child: ClipRRect(
                                                             borderRadius:
-                                                                BorderRadius
+                                                                const BorderRadius
                                                                     .only(
                                                               bottomLeft: Radius
                                                                   .circular(
@@ -1796,21 +1793,21 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                             context)
                                                                         .secondary
                                                                   ],
-                                                                  stops: [
+                                                                  stops: const [
                                                                     0.0,
                                                                     1.0
                                                                   ],
                                                                   begin:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           -1.0),
                                                                   end:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0,
                                                                           1.0),
                                                                 ),
                                                                 borderRadius:
-                                                                    BorderRadius
+                                                                    const BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -1831,11 +1828,11 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   1.0, 1.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         20.0,
@@ -1866,7 +1863,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 30.0, 20.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -1874,7 +1871,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                   MainAxisAlignment.start,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 20.0),
                                                   child: Text(
@@ -1888,7 +1885,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF8485AF),
+                                                              const Color(0xFF8485AF),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -1900,7 +1897,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 0.0, 10.0, 10.0),
                                             child: StreamBuilder<
                                                 List<TheraphistRecord>>(
@@ -1993,7 +1990,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
@@ -2043,7 +2040,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                       child:
                                                                           ClipRRect(
                                                                         borderRadius:
-                                                                            BorderRadius.only(
+                                                                            const BorderRadius.only(
                                                                           bottomLeft:
                                                                               Radius.circular(0.0),
                                                                           bottomRight:
@@ -2070,12 +2067,12 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             10.0,
                                                                             2.0,
@@ -2097,7 +2094,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                             'Dr. ${cardUsersRecord.firstName}',
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Raleway',
-                                                                                  color: Color(0xFF464853),
+                                                                                  color: const Color(0xFF464853),
                                                                                   fontSize: 16.0,
                                                                                   fontWeight: FontWeight.bold,
                                                                                 ),
@@ -2108,7 +2105,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                   fontFamily: 'Raleway',
-                                                                                  color: Color(0x80464853),
+                                                                                  color: const Color(0x80464853),
                                                                                   fontSize: 12.0,
                                                                                   fontWeight: FontWeight.bold,
                                                                                 ),
@@ -2137,27 +2134,27 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                                 FFButtonOptions(
                                                                               width: 130.0,
                                                                               height: 40.0,
-                                                                              padding: EdgeInsets.all(0.0),
-                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                                                              color: Color(0xFF5298E9),
+                                                                              padding: const EdgeInsets.all(0.0),
+                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                              color: const Color(0xFF5298E9),
                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                     fontFamily: 'Readex Pro',
                                                                                     color: Colors.white,
                                                                                   ),
                                                                               elevation: 0.0,
-                                                                              borderSide: BorderSide(
+                                                                              borderSide: const BorderSide(
                                                                                 color: Colors.transparent,
                                                                                 width: 1.0,
                                                                               ),
                                                                               borderRadius: BorderRadius.circular(8.0),
                                                                             ),
                                                                           ),
-                                                                        ].divide(SizedBox(height: 10.0)),
+                                                                        ].divide(const SizedBox(height: 10.0)),
                                                                       ),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(SizedBox(
+                                                              ].divide(const SizedBox(
                                                                   height: 5.0)),
                                                             ),
                                                           );
@@ -2186,7 +2183,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
               wrapWithModel(
                 model: _model.bottomnavigationbarPatientModel,
                 updateCallback: () => setState(() {}),
-                child: BottomnavigationbarPatientWidget(),
+                child: const BottomnavigationbarPatientWidget(),
               ),
             ],
           ),

@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -6,12 +5,9 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'schedulings_page_model.dart';
 export 'schedulings_page_model.dart';
@@ -136,16 +132,16 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(80.0),
+          preferredSize: const Size.fromHeight(80.0),
           child: AppBar(
-            backgroundColor: Color(0xFFA54EAF),
+            backgroundColor: const Color(0xFFA54EAF),
             automaticallyImplyLeading: false,
             leading: FlutterFlowIconButton(
               borderColor: Colors.transparent,
               borderRadius: 30.0,
               borderWidth: 1.0,
               buttonSize: 60.0,
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_ios,
                 color: Colors.white,
                 size: 30.0,
@@ -164,7 +160,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                     fontSize: 22.0,
                   ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
           ),
         ),
@@ -181,7 +177,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                   builder: (context) {
                     if (FFAppState().loadRequests) {
                       return Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 0.0),
                         child: ListView(
                           padding: EdgeInsets.zero,
@@ -196,7 +192,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                     width: 100.0,
                                     height: 272.0,
                                     decoration: BoxDecoration(
-                                      gradient: LinearGradient(
+                                      gradient: const LinearGradient(
                                         colors: [
                                           Color(0xFFE9E9E9),
                                           Color(0xFFCBCBCB)
@@ -220,7 +216,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                     width: 100.0,
                                     height: 272.0,
                                     decoration: BoxDecoration(
-                                      gradient: LinearGradient(
+                                      gradient: const LinearGradient(
                                         colors: [
                                           Color(0xFFE9E9E9),
                                           Color(0xFFCBCBCB)
@@ -244,7 +240,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                     width: 100.0,
                                     height: 272.0,
                                     decoration: BoxDecoration(
-                                      gradient: LinearGradient(
+                                      gradient: const LinearGradient(
                                         colors: [
                                           Color(0xFFE9E9E9),
                                           Color(0xFFCBCBCB)
@@ -260,7 +256,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                 ),
                               ],
                             ),
-                          ].divide(SizedBox(height: 15.0)),
+                          ].divide(const SizedBox(height: 15.0)),
                         ),
                       );
                     } else {
@@ -274,9 +270,9 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 150.0, 0.0, 0.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -294,20 +290,20 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                 );
                               } else {
                                 return Align(
-                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  alignment: const AlignmentDirectional(0.0, -1.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: EdgeInsets.all(12.0),
+                                        padding: const EdgeInsets.all(12.0),
                                         child: AnimatedContainer(
-                                          duration: Duration(milliseconds: 90),
+                                          duration: const Duration(milliseconds: 90),
                                           curve: Curves.easeIn,
                                           width: 389.0,
                                           height: 356.0,
                                           decoration: BoxDecoration(
                                             color: Colors.white,
-                                            boxShadow: [
+                                            boxShadow: const [
                                               BoxShadow(
                                                 blurRadius: 6.0,
                                                 color: Color(0x34090F13),
@@ -318,7 +314,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                 BorderRadius.circular(20.0),
                                           ),
                                           child: Padding(
-                                            padding: EdgeInsets.all(12.0),
+                                            padding: const EdgeInsets.all(12.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               mainAxisAlignment:
@@ -374,7 +370,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                   ],
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 4.0, 0.0, 0.0),
                                                   child: Text(
@@ -389,7 +385,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
                                                           color:
-                                                              Color(0xFF14181B),
+                                                              const Color(0xFF14181B),
                                                           fontSize: 14.0,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -397,7 +393,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 10.0),
                                                   child: Row(
@@ -411,7 +407,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                         mainAxisSize:
                                                             MainAxisSize.max,
                                                         children: [
-                                                          Icon(
+                                                          const Icon(
                                                             Icons.place,
                                                             color: Color(
                                                                 0xFF0A7BA2),
@@ -433,14 +429,14 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                       12.0,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 5.0)),
                                                       ),
                                                       Row(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
                                                         children: [
-                                                          Icon(
+                                                          const Icon(
                                                             Icons
                                                                 .person_2_sharp,
                                                             color: Color(
@@ -459,7 +455,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                 .override(
                                                                   fontFamily:
                                                                       'Plus Jakarta Sans',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFF57636C),
                                                                   fontSize:
                                                                       12.0,
@@ -468,11 +464,11 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                           .w500,
                                                                 ),
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             width: 3.0)),
                                                       ),
                                                     ].divide(
-                                                        SizedBox(width: 10.0)),
+                                                        const SizedBox(width: 10.0)),
                                                   ),
                                                 ),
                                                 Row(
@@ -483,7 +479,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   10.0,
                                                                   0.0,
@@ -700,7 +696,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Readex Pro',
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0xFF14181B),
                                                                       fontSize:
                                                                           12.0,
@@ -708,13 +704,13 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                               ),
                                                             ],
                                                           ),
-                                                        ].divide(SizedBox(
+                                                        ].divide(const SizedBox(
                                                             height: 4.0)),
                                                       ),
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               1.0, 0.0),
                                                       child: Row(
                                                         mainAxisSize:
@@ -727,7 +723,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                             children: [
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -754,11 +750,11 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                               ),
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -777,7 +773,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                           fontFamily:
                                                                               'Readex Pro',
                                                                           color:
-                                                                              Color(0xFF484747),
+                                                                              const Color(0xFF484747),
                                                                           fontSize:
                                                                               17.0,
                                                                           fontWeight:
@@ -792,12 +788,12 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 20.0)),
+                                                      const SizedBox(width: 20.0)),
                                                 ),
                                                 Expanded(
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsets.all(10.0),
+                                                        const EdgeInsets.all(10.0),
                                                     child: Row(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -820,14 +816,14 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                 FFButtonOptions(
                                                               height: 40.0,
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -843,7 +839,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                       .override(
                                                                         fontFamily:
                                                                             'Readex Pro',
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFF95489D),
                                                                         fontSize:
                                                                             14.0,
@@ -851,7 +847,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                             FontWeight.normal,
                                                                       ),
                                                               borderSide:
-                                                                  BorderSide(
+                                                                  const BorderSide(
                                                                 color: Color(
                                                                     0xFF95489D),
                                                                 width: 1.0,
@@ -880,20 +876,20 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                 FFButtonOptions(
                                                               height: 40.0,
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           0.0,
                                                                           0.0),
-                                                              color: Color(
+                                                              color: const Color(
                                                                   0xFF95489D),
                                                               textStyle:
                                                                   FlutterFlowTheme.of(
@@ -911,7 +907,7 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                       ),
                                                               elevation: 3.0,
                                                               borderSide:
-                                                                  BorderSide(
+                                                                  const BorderSide(
                                                                 color: Colors
                                                                     .transparent,
                                                                 width: 1.0,
@@ -925,12 +921,12 @@ class _SchedulingsPageWidgetState extends State<SchedulingsPageWidget>
                                                                 false,
                                                           ),
                                                         ),
-                                                      ].divide(SizedBox(
+                                                      ].divide(const SizedBox(
                                                           width: 10.0)),
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(SizedBox(height: 5.0)),
+                                              ].divide(const SizedBox(height: 5.0)),
                                             ),
                                           ),
                                         ),

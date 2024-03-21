@@ -1,24 +1,9 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
-import '/backend/push_notifications/push_notifications_util.dart';
-import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_drop_down.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import '/pages/patient/confirm_schedule/components/load_request/load_request_widget.dart';
-import '/pages/patient/confirm_schedule/components/modal_success_request/modal_success_request_widget.dart';
-import '/pages/patient/confirm_schedule/components/payment_method_not_choosed/payment_method_not_choosed_widget.dart';
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'payment_confirm_widget.dart' show PaymentConfirmWidget;
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class PaymentConfirmModel extends FlutterFlowModel<PaymentConfirmWidget> {
   ///  Local state fields for this page.

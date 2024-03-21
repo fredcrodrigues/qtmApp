@@ -1,15 +1,6 @@
-import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/pages/patient/initial_search/components/confirm_delete_history/confirm_delete_history_widget.dart';
-import '/custom_code/actions/index.dart' as actions;
 import 'initial_search_widget.dart' show InitialSearchWidget;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class InitialSearchModel extends FlutterFlowModel<InitialSearchWidget> {
   ///  State fields for stateful widgets in this page.

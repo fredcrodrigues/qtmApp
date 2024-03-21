@@ -1,18 +1,13 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/patient/schedule_management/components/modal_failed/modal_failed_widget.dart';
 import '/pages/patient/schedule_management/components/modal_success_cancel/modal_success_cancel_widget.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'status_cancel_model.dart';
 export 'status_cancel_model.dart';
 
@@ -84,7 +79,7 @@ class _StatusCancelWidgetState extends State<StatusCancelWidget>
                   : FocusScope.of(context).unfocus(),
               child: Padding(
                 padding: MediaQuery.viewInsetsOf(context),
-                child: Container(
+                child: const SizedBox(
                   height: 300.0,
                   child: ModalSuccessCancelWidget(),
                 ),
@@ -107,7 +102,7 @@ class _StatusCancelWidgetState extends State<StatusCancelWidget>
                   : FocusScope.of(context).unfocus(),
               child: Padding(
                 padding: MediaQuery.viewInsetsOf(context),
-                child: Container(
+                child: const SizedBox(
                   height: 300.0,
                   child: ModalFailedWidget(),
                 ),
@@ -146,7 +141,7 @@ class _StatusCancelWidgetState extends State<StatusCancelWidget>
             children: [
               Expanded(
                 child: Container(
-                  constraints: BoxConstraints(
+                  constraints: const BoxConstraints(
                     minWidth: 1000.0,
                     minHeight: 1000.0,
                   ),
@@ -159,15 +154,15 @@ class _StatusCancelWidgetState extends State<StatusCancelWidget>
                       ).image,
                     ),
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -182,11 +177,11 @@ class _StatusCancelWidgetState extends State<StatusCancelWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Container(
                                   width: 284.0,
                                   height: 25.0,
-                                  decoration: BoxDecoration(
+                                  decoration: const BoxDecoration(
                                     color: Colors.white,
                                   ),
                                   child: Text(

@@ -3,17 +3,12 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/pages/drawer/components_general/bottomnavigationbar_patient/bottomnavigationbar_patient_widget.dart';
 import '/pages/drawer/modal_languge/modal_languge_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'package:share_plus/share_plus.dart';
 import 'history_requests_patients_page_model.dart';
 export 'history_requests_patients_page_model.dart';
@@ -134,11 +129,11 @@ class _HistoryRequestsPatientsPageWidgetState
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF1DA4D4),
+        backgroundColor: const Color(0xFF1DA4D4),
         drawer: Drawer(
           elevation: 16.0,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             child: Column(
@@ -146,12 +141,12 @@ class _HistoryRequestsPatientsPageWidgetState
               children: [
                 Container(
                   height: 100.0,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -172,12 +167,12 @@ class _HistoryRequestsPatientsPageWidgetState
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Readex Pro',
-                                    color: Color(0xFF121518),
+                                    color: const Color(0xFF121518),
                                     fontSize: 16.0,
                                     fontWeight: FontWeight.w600,
                                   ),
                         ),
-                      ].divide(SizedBox(width: 10.0)),
+                      ].divide(const SizedBox(width: 10.0)),
                     ),
                   ),
                 ),
@@ -185,7 +180,7 @@ class _HistoryRequestsPatientsPageWidgetState
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                      color: Color(0x9FA0A0A0),
+                      color: const Color(0x9FA0A0A0),
                     ),
                   ),
                   child: Column(
@@ -199,7 +194,7 @@ class _HistoryRequestsPatientsPageWidgetState
                         desktop: false,
                       ))
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.person_2,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -212,7 +207,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -228,7 +223,7 @@ class _HistoryRequestsPatientsPageWidgetState
                         desktop: false,
                       ))
                         ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.switch_account,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -241,7 +236,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -263,7 +258,7 @@ class _HistoryRequestsPatientsPageWidgetState
                             );
                           },
                           child: ListTile(
-                            leading: Icon(
+                            leading: const Icon(
                               Icons.card_giftcard,
                               color: Color(0xC2000000),
                               size: 14.0,
@@ -276,7 +271,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                   .titleLarge
                                   .override(
                                     fontFamily: 'Outfit',
-                                    color: Color(0xFF121518),
+                                    color: const Color(0xFF121518),
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w600,
                                   ),
@@ -295,7 +290,7 @@ class _HistoryRequestsPatientsPageWidgetState
                           context.pushNamed('profile_patient');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.location_history,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -308,7 +303,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -336,14 +331,14 @@ class _HistoryRequestsPatientsPageWidgetState
                                     : FocusScope.of(context).unfocus(),
                                 child: Padding(
                                   padding: MediaQuery.viewInsetsOf(context),
-                                  child: ModalLangugeWidget(),
+                                  child: const ModalLangugeWidget(),
                                 ),
                               );
                             },
                           ).then((value) => safeSetState(() {}));
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.language_rounded,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -356,7 +351,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -374,7 +369,7 @@ class _HistoryRequestsPatientsPageWidgetState
                           await launchURL('https://qtmhealthtech.com.br/');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.computer_sharp,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -387,7 +382,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -403,7 +398,7 @@ class _HistoryRequestsPatientsPageWidgetState
                   decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(
-                      color: Color(0x68B4B4B4),
+                      color: const Color(0x68B4B4B4),
                     ),
                   ),
                   child: Column(
@@ -418,7 +413,7 @@ class _HistoryRequestsPatientsPageWidgetState
                           context.pushNamed('politics_drawer_page');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.content_paste,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -431,7 +426,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -449,7 +444,7 @@ class _HistoryRequestsPatientsPageWidgetState
                           context.pushNamed('terms_drawer_page');
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.switch_account,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -462,7 +457,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -484,7 +479,7 @@ class _HistoryRequestsPatientsPageWidgetState
                           context.pushNamedAuth('login_page', context.mounted);
                         },
                         child: ListTile(
-                          leading: Icon(
+                          leading: const Icon(
                             Icons.output_outlined,
                             color: Color(0xC2000000),
                             size: 14.0,
@@ -497,7 +492,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                 .titleLarge
                                 .override(
                                   fontFamily: 'Outfit',
-                                  color: Color(0xFF121518),
+                                  color: const Color(0xFF121518),
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.w600,
                                 ),
@@ -520,23 +515,23 @@ class _HistoryRequestsPatientsPageWidgetState
             children: [
               Expanded(
                 child: Stack(
-                  alignment: AlignmentDirectional(0.0, -1.0),
+                  alignment: const AlignmentDirectional(0.0, -1.0),
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFF1DA4D4),
+                          color: const Color(0xFF1DA4D4),
                           borderRadius: BorderRadius.circular(0.0),
                           border: Border.all(
-                            color: Color(0xFF1DA4D4),
+                            color: const Color(0xFF1DA4D4),
                           ),
                         ),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 10.0, 20.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -551,14 +546,14 @@ class _HistoryRequestsPatientsPageWidgetState
                                     onTap: () async {
                                       scaffoldKey.currentState!.openDrawer();
                                     },
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.menu,
                                       color: Colors.white,
                                       size: 35.0,
                                     ),
                                   ),
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         'bbq997ht' /* Histórico */,
@@ -577,24 +572,24 @@ class _HistoryRequestsPatientsPageWidgetState
                                   Container(
                                     width: 45.0,
                                     height: 59.0,
-                                    decoration: BoxDecoration(
+                                    decoration: const BoxDecoration(
                                       color: Color(0xFF1DA4D4),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                          ].divide(SizedBox(height: 2.0)),
+                          ].divide(const SizedBox(height: 2.0)),
                         ),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             0.0, 100.0, 0.0, 0.0),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                             bottomLeft: Radius.circular(0.0),
                             bottomRight: Radius.circular(0.0),
                             topLeft: Radius.circular(50.0),
@@ -602,7 +597,7 @@ class _HistoryRequestsPatientsPageWidgetState
                           ),
                           child: Container(
                             height: double.infinity,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(0.0),
@@ -612,15 +607,15 @@ class _HistoryRequestsPatientsPageWidgetState
                               ),
                               shape: BoxShape.rectangle,
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 10.0, 20.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 30.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -652,9 +647,9 @@ class _HistoryRequestsPatientsPageWidgetState
                                               width: 100.0,
                                               decoration: BoxDecoration(
                                                 color: _model.filter == 'all'
-                                                    ? Color(0xFF566CFF)
+                                                    ? const Color(0xFF566CFF)
                                                     : Colors.white,
-                                                borderRadius: BorderRadius.only(
+                                                borderRadius: const BorderRadius.only(
                                                   bottomLeft:
                                                       Radius.circular(14.0),
                                                   bottomRight:
@@ -666,7 +661,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 10.0, 10.0),
                                                 child: Text(
@@ -684,7 +679,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                         color: _model.filter ==
                                                                 'all'
                                                             ? Colors.white
-                                                            : Color(0xFFB5B5B5),
+                                                            : const Color(0xFFB5B5B5),
                                                       ),
                                                 ),
                                               ),
@@ -714,9 +709,9 @@ class _HistoryRequestsPatientsPageWidgetState
                                           child: Container(
                                             decoration: BoxDecoration(
                                               color: _model.filter == 'canceled'
-                                                  ? Color(0xFF566CFF)
+                                                  ? const Color(0xFF566CFF)
                                                   : Colors.white,
-                                              borderRadius: BorderRadius.only(
+                                              borderRadius: const BorderRadius.only(
                                                 bottomLeft:
                                                     Radius.circular(14.0),
                                                 bottomRight:
@@ -725,12 +720,12 @@ class _HistoryRequestsPatientsPageWidgetState
                                                 topRight: Radius.circular(14.0),
                                               ),
                                               border: Border.all(
-                                                color: Color(0x0D000000),
+                                                color: const Color(0x0D000000),
                                                 width: 1.0,
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 10.0),
                                               child: Text(
@@ -746,7 +741,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                       color: _model.filter ==
                                                               'canceled'
                                                           ? Colors.white
-                                                          : Color(0xFFB5B5B5),
+                                                          : const Color(0xFFB5B5B5),
                                                     ),
                                               ),
                                             ),
@@ -776,9 +771,9 @@ class _HistoryRequestsPatientsPageWidgetState
                                             decoration: BoxDecoration(
                                               color:
                                                   _model.filter == 'finalized'
-                                                      ? Color(0xFF566CFF)
+                                                      ? const Color(0xFF566CFF)
                                                       : Colors.white,
-                                              borderRadius: BorderRadius.only(
+                                              borderRadius: const BorderRadius.only(
                                                 bottomLeft:
                                                     Radius.circular(14.0),
                                                 bottomRight:
@@ -787,12 +782,12 @@ class _HistoryRequestsPatientsPageWidgetState
                                                 topRight: Radius.circular(14.0),
                                               ),
                                               border: Border.all(
-                                                color: Color(0x0D000000),
+                                                color: const Color(0x0D000000),
                                                 width: 1.0,
                                               ),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       10.0, 10.0, 10.0, 10.0),
                                               child: Text(
@@ -808,13 +803,13 @@ class _HistoryRequestsPatientsPageWidgetState
                                                       color: _model.filter ==
                                                               'finalized'
                                                           ? Colors.white
-                                                          : Color(0xFFB5B5B5),
+                                                          : const Color(0xFFB5B5B5),
                                                     ),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      ].divide(SizedBox(width: 10.0)),
+                                      ].divide(const SizedBox(width: 10.0)),
                                     ),
                                   ),
                                   Expanded(
@@ -823,7 +818,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                         if (_model.loadRequests) {
                                           return Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     20.0, 20.0, 20.0, 0.0),
                                             child: ListView(
                                               padding: EdgeInsets.zero,
@@ -841,7 +836,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                         decoration:
                                                             BoxDecoration(
                                                           gradient:
-                                                              LinearGradient(
+                                                              const LinearGradient(
                                                             colors: [
                                                               Color(0xFFE9E9E9),
                                                               Color(0xFFCBCBCB)
@@ -876,7 +871,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                         decoration:
                                                             BoxDecoration(
                                                           gradient:
-                                                              LinearGradient(
+                                                              const LinearGradient(
                                                             colors: [
                                                               Color(0xFFE9E9E9),
                                                               Color(0xFFCBCBCB)
@@ -911,7 +906,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                         decoration:
                                                             BoxDecoration(
                                                           gradient:
-                                                              LinearGradient(
+                                                              const LinearGradient(
                                                             colors: [
                                                               Color(0xFFE9E9E9),
                                                               Color(0xFFCBCBCB)
@@ -946,7 +941,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                         decoration:
                                                             BoxDecoration(
                                                           gradient:
-                                                              LinearGradient(
+                                                              const LinearGradient(
                                                             colors: [
                                                               Color(0xFFE9E9E9),
                                                               Color(0xFFCBCBCB)
@@ -970,17 +965,16 @@ class _HistoryRequestsPatientsPageWidgetState
                                                     ),
                                                   ],
                                                 ),
-                                              ].divide(SizedBox(height: 15.0)),
+                                              ].divide(const SizedBox(height: 15.0)),
                                             ),
                                           );
                                         } else {
                                           return Builder(
                                             builder: (context) {
                                               if (_model
-                                                      .requestsFiltered.length >
-                                                  0) {
+                                                      .requestsFiltered.isNotEmpty) {
                                                 return Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 30.0, 0.0, 0.0),
                                                   child: Builder(
@@ -1041,7 +1035,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                             context)
                                                                         .secondaryBackground,
                                                                     borderRadius:
-                                                                        BorderRadius
+                                                                        const BorderRadius
                                                                             .only(
                                                                       bottomLeft:
                                                                           Radius.circular(
@@ -1059,7 +1053,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                     border:
                                                                         Border
                                                                             .all(
-                                                                      color: Color(
+                                                                      color: const Color(
                                                                           0x19000000),
                                                                       width:
                                                                           1.0,
@@ -1067,7 +1061,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                   ),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             20.0,
                                                                             10.0,
@@ -1084,7 +1078,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                       children:
                                                                           [
                                                                         Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               10.0,
                                                                               0.0,
@@ -1100,7 +1094,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                                 containerPracticeRecord.name,
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Raleway',
-                                                                                      color: Color(0xB6434343),
+                                                                                      color: const Color(0xB6434343),
                                                                                       fontSize: 16.0,
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
@@ -1113,7 +1107,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                                 ),
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'Raleway',
-                                                                                      color: Color(0xFFB8B3B3),
+                                                                                      color: const Color(0xFFB8B3B3),
                                                                                       fontSize: 8.0,
                                                                                       fontWeight: FontWeight.bold,
                                                                                     ),
@@ -1137,7 +1131,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                         fontFamily: 'Raleway',
-                                                                                        color: Color(0xFFB8B3B3),
+                                                                                        color: const Color(0xFFB8B3B3),
                                                                                         fontSize: 12.0,
                                                                                         fontWeight: FontWeight.bold,
                                                                                       ),
@@ -1156,19 +1150,19 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                                         fontFamily: 'Raleway',
                                                                                         color: () {
                                                                                           if (requestsFilterItem.status == 'refused') {
-                                                                                            return Color(0xFFF77777);
+                                                                                            return const Color(0xFFF77777);
                                                                                           } else if (requestsFilterItem.status == 'canceled') {
-                                                                                            return Color(0xFFF77777);
+                                                                                            return const Color(0xFFF77777);
                                                                                           } else {
-                                                                                            return Color(0xFFADA1F6);
+                                                                                            return const Color(0xFFADA1F6);
                                                                                           }
                                                                                         }(),
                                                                                         fontWeight: FontWeight.bold,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(SizedBox(height: 5.0)),
+                                                                              ].divide(const SizedBox(height: 5.0)),
                                                                             ),
-                                                                            SizedBox(
+                                                                            const SizedBox(
                                                                               height: 45.0,
                                                                               child: VerticalDivider(
                                                                                 thickness: 1.0,
@@ -1211,7 +1205,7 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                                     ),
                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                           fontFamily: 'Raleway',
-                                                                                          color: Color(0xFF9F9F9F),
+                                                                                          color: const Color(0xFF9F9F9F),
                                                                                           fontWeight: FontWeight.bold,
                                                                                         ),
                                                                                   ),
@@ -1219,14 +1213,14 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                               ),
                                                                           ],
                                                                         ),
-                                                                      ].divide(SizedBox(
+                                                                      ].divide(const SizedBox(
                                                                               height: 10.0)),
                                                                     ),
                                                                   ),
                                                                 );
                                                               },
                                                             );
-                                                          }).divide(SizedBox(
+                                                          }).divide(const SizedBox(
                                                               height: 20.0)),
                                                         ),
                                                       );
@@ -1263,11 +1257,11 @@ class _HistoryRequestsPatientsPageWidgetState
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: wrapWithModel(
                   model: _model.bottomnavigationbarPatientModel,
                   updateCallback: () => setState(() {}),
-                  child: BottomnavigationbarPatientWidget(),
+                  child: const BottomnavigationbarPatientWidget(),
                 ),
               ),
             ],

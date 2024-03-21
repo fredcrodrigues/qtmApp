@@ -2,10 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'profile_patient_model.dart';
 export 'profile_patient_model.dart';
 
@@ -45,11 +42,11 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
       child: Scaffold(
         key: scaffoldKey,
         resizeToAvoidBottomInset: false,
-        backgroundColor: Color(0xFFF6F9FC),
+        backgroundColor: const Color(0xFFF6F9FC),
         body: SafeArea(
           top: true,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFFF6F9FC),
             ),
             child: SingleChildScrollView(
@@ -59,12 +56,12 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                   Container(
                     width: double.infinity,
                     height: 100.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFF6F9FC),
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -91,7 +88,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Raleway',
-                                  color: Color(0xFF555555),
+                                  color: const Color(0xFF555555),
                                   fontSize: 16.0,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -116,7 +113,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 20.0),
+                        const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 20.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -125,7 +122,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Stack(
-                              alignment: AlignmentDirectional(1.0, 1.0),
+                              alignment: const AlignmentDirectional(1.0, 1.0),
                               children: [
                                 AuthUserStreamWidget(
                                   builder: (context) => Container(
@@ -148,14 +145,14 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                   width: 40.0,
                                   height: 40.0,
                                   decoration: BoxDecoration(
-                                    color: Color(0xFF657DCA),
+                                    color: const Color(0xFF657DCA),
                                     shape: BoxShape.circle,
                                     border: Border.all(
                                       color: Colors.white,
                                       width: 3.0,
                                     ),
                                   ),
-                                  child: Icon(
+                                  child: const Icon(
                                     Icons.edit_sharp,
                                     color: Colors.white,
                                     size: 24.0,
@@ -181,7 +178,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Raleway',
-                                              color: Color(0xFF2B2B2B),
+                                              color: const Color(0xFF2B2B2B),
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w600,
                                             ),
@@ -194,7 +191,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                             .bodyMedium
                                             .override(
                                               fontFamily: 'Raleway',
-                                              color: Color(0xFF2B2B2B),
+                                              color: const Color(0xFF2B2B2B),
                                               fontSize: 16.0,
                                               fontWeight: FontWeight.bold,
                                             ),
@@ -211,7 +208,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                     },
                                     child: Container(
                                       height: 40.0,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Color(0xFF8466B4),
                                         borderRadius: BorderRadius.only(
                                           bottomLeft: Radius.circular(14.0),
@@ -221,12 +218,12 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                         ),
                                       ),
                                       child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             10.0, 0.0, 10.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
-                                            Icon(
+                                            const Icon(
                                               Icons.edit_note_sharp,
                                               color: Colors.white,
                                               size: 28.0,
@@ -249,18 +246,18 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                         ),
                                               ),
                                             ),
-                                          ].divide(SizedBox(width: 5.0)),
+                                          ].divide(const SizedBox(width: 5.0)),
                                         ),
                                       ),
                                     ),
                                   ),
-                                ].divide(SizedBox(height: 10.0)),
+                                ].divide(const SizedBox(height: 10.0)),
                               ),
                             ),
-                          ].divide(SizedBox(width: 30.0)),
+                          ].divide(const SizedBox(width: 30.0)),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 20.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -291,7 +288,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
-                                            color: Color(0x80000000),
+                                            color: const Color(0x80000000),
                                             fontSize: 26.0,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -303,7 +300,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -325,7 +322,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                 .bodyMedium
                                                 .override(
                                                   fontFamily: 'Raleway',
-                                                  color: Color(0xFF2B2B2B),
+                                                  color: const Color(0xFF2B2B2B),
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                           ),
@@ -363,7 +360,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                       .override(
                                                         fontFamily: 'Roboto',
                                                         color:
-                                                            Color(0xFF808080),
+                                                            const Color(0xFF808080),
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -381,7 +378,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF4F4F4F),
+                                                              const Color(0xFF4F4F4F),
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
@@ -389,7 +386,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                 ),
                                               ],
                                             ),
-                                          ].divide(SizedBox(width: 15.0)),
+                                          ].divide(const SizedBox(width: 15.0)),
                                         ),
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -417,7 +414,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                       .override(
                                                         fontFamily: 'Roboto',
                                                         color:
-                                                            Color(0xFF808080),
+                                                            const Color(0xFF808080),
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -435,7 +432,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF4F4F4F),
+                                                              const Color(0xFF4F4F4F),
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
@@ -443,7 +440,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                 ),
                                               ],
                                             ),
-                                          ].divide(SizedBox(width: 15.0)),
+                                          ].divide(const SizedBox(width: 15.0)),
                                         ),
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -471,7 +468,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                       .override(
                                                         fontFamily: 'Roboto',
                                                         color:
-                                                            Color(0xFF808080),
+                                                            const Color(0xFF808080),
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -489,7 +486,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF4F4F4F),
+                                                              const Color(0xFF4F4F4F),
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
@@ -497,7 +494,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                 ),
                                               ],
                                             ),
-                                          ].divide(SizedBox(width: 15.0)),
+                                          ].divide(const SizedBox(width: 15.0)),
                                         ),
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -525,7 +522,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                       .override(
                                                         fontFamily: 'Roboto',
                                                         color:
-                                                            Color(0xFF808080),
+                                                            const Color(0xFF808080),
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                             FontWeight.w500,
@@ -543,7 +540,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF4F4F4F),
+                                                              const Color(0xFF4F4F4F),
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
@@ -551,7 +548,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                 ),
                                               ],
                                             ),
-                                          ].divide(SizedBox(width: 15.0)),
+                                          ].divide(const SizedBox(width: 15.0)),
                                         ),
                                         Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -582,7 +579,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                         .override(
                                                           fontFamily: 'Roboto',
                                                           color:
-                                                              Color(0xFF808080),
+                                                              const Color(0xFF808080),
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.w500,
@@ -607,7 +604,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'Raleway',
-                                                                  color: Color(
+                                                                  color: const Color(
                                                                       0xFF4F4F4F),
                                                                   fontWeight:
                                                                       FontWeight
@@ -621,18 +618,18 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                 ],
                                               ),
                                             ),
-                                          ].divide(SizedBox(width: 15.0)),
+                                          ].divide(const SizedBox(width: 15.0)),
                                         ),
-                                      ].divide(SizedBox(height: 10.0)),
+                                      ].divide(const SizedBox(height: 10.0)),
                                     ),
-                                  ].divide(SizedBox(height: 20.0)),
+                                  ].divide(const SizedBox(height: 20.0)),
                                 ),
                               ),
                             ],
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 40.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -650,18 +647,18 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
-                                            color: Color(0xFF2B2B2B),
+                                            color: const Color(0xFF2B2B2B),
                                             fontWeight: FontWeight.bold,
                                           ),
                                     ),
-                                    Container(
+                                    SizedBox(
                                       width: double.infinity,
                                       child: Stack(
                                         alignment:
-                                            AlignmentDirectional(1.0, 1.0),
+                                            const AlignmentDirectional(1.0, 1.0),
                                         children: [
                                           ClipRRect(
-                                            borderRadius: BorderRadius.only(
+                                            borderRadius: const BorderRadius.only(
                                               bottomLeft: Radius.circular(10.0),
                                               bottomRight:
                                                   Radius.circular(10.0),
@@ -671,7 +668,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                             child: Container(
                                               width: double.infinity,
                                               height: 200.0,
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                 borderRadius: BorderRadius.only(
                                                   bottomLeft:
                                                       Radius.circular(10.0),
@@ -714,12 +711,12 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                           ),
                                           Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 20.0, 20.0),
                                             child: Container(
                                               width: 130.0,
                                               decoration: BoxDecoration(
-                                                color: Color(0xFF657DCA),
+                                                color: const Color(0xFF657DCA),
                                                 borderRadius:
                                                     BorderRadius.circular(24.0),
                                                 border: Border.all(
@@ -728,14 +725,14 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 10.0, 10.0, 10.0),
                                                 child: Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    Icon(
+                                                    const Icon(
                                                       Icons.edit_outlined,
                                                       color: Colors.white,
                                                       size: 24.0,
@@ -756,7 +753,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                           ),
                                                     ),
                                                   ].divide(
-                                                      SizedBox(width: 10.0)),
+                                                      const SizedBox(width: 10.0)),
                                                 ),
                                               ),
                                             ),
@@ -764,14 +761,14 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                         ],
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 20.0)),
+                                  ].divide(const SizedBox(height: 20.0)),
                                 ),
                               ),
                             ],
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 40.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -789,7 +786,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Raleway',
-                                            color: Color(0xFF2B2B2B),
+                                            color: const Color(0xFF2B2B2B),
                                             fontWeight: FontWeight.bold,
                                           ),
                                     ),
@@ -811,7 +808,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                               Container(
                                                 width: 50.0,
                                                 height: 50.0,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Color(0xFFD9D9D9),
                                                   shape: BoxShape.circle,
                                                 ),
@@ -834,17 +831,17 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF808080),
+                                                              const Color(0xFF808080),
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
                                           Container(
                                             width: 30.0,
                                             height: 30.0,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Color(0xFFD9D9D9),
                                               shape: BoxShape.circle,
                                             ),
@@ -877,7 +874,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                               Container(
                                                 width: 50.0,
                                                 height: 50.0,
-                                                decoration: BoxDecoration(
+                                                decoration: const BoxDecoration(
                                                   color: Color(0xFFD9D9D9),
                                                   shape: BoxShape.circle,
                                                 ),
@@ -900,17 +897,17 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                                         .override(
                                                           fontFamily: 'Raleway',
                                                           color:
-                                                              Color(0xFF808080),
+                                                              const Color(0xFF808080),
                                                           fontWeight:
                                                               FontWeight.bold,
                                                         ),
                                               ),
-                                            ].divide(SizedBox(width: 20.0)),
+                                            ].divide(const SizedBox(width: 20.0)),
                                           ),
                                           Container(
                                             width: 30.0,
                                             height: 30.0,
-                                            decoration: BoxDecoration(
+                                            decoration: const BoxDecoration(
                                               color: Color(0xFFD9D9D9),
                                               shape: BoxShape.circle,
                                             ),
@@ -925,7 +922,7 @@ class _ProfilePatientWidgetState extends State<ProfilePatientWidget> {
                                         ],
                                       ),
                                     ),
-                                  ].divide(SizedBox(height: 20.0)),
+                                  ].divide(const SizedBox(height: 20.0)),
                                 ),
                               ),
                             ],

@@ -1,10 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'terms_drawer_page_model.dart';
 export 'terms_drawer_page_model.dart';
 
@@ -45,7 +42,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(100.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: AppBar(
             backgroundColor: Colors.white,
             automaticallyImplyLeading: false,
@@ -54,7 +51,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
               borderRadius: 30.0,
               borderWidth: 1.0,
               buttonSize: 60.0,
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_ios,
                 color: Color(0xFF1C1C1C),
                 size: 30.0,
@@ -64,7 +61,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
               },
             ),
             title: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   '3l91jahv' /* Termos e condições */,
@@ -72,12 +69,12 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                 textAlign: TextAlign.center,
                 style: FlutterFlowTheme.of(context).headlineMedium.override(
                       fontFamily: 'Outfit',
-                      color: Color(0xFF1C1C1C),
+                      color: const Color(0xFF1C1C1C),
                       fontSize: 20.0,
                     ),
               ),
             ),
-            actions: [],
+            actions: const [],
             centerTitle: true,
             elevation: 0.0,
           ),
@@ -97,7 +94,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
               ),
             ),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
@@ -115,7 +112,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                 .labelSmall
                                 .override(
                                   fontFamily: 'Readex Pro',
-                                  color: Color(0xFF8E979E),
+                                  color: const Color(0xFF8E979E),
                                 ),
                           ),
                         ),
@@ -137,7 +134,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -151,7 +148,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
                               Text(
@@ -163,7 +160,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
                               Text(
@@ -175,10 +172,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -199,7 +196,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -213,10 +210,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -237,7 +234,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -251,10 +248,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -275,7 +272,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -289,10 +286,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -313,7 +310,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -327,10 +324,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -351,7 +348,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -365,10 +362,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -389,7 +386,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -403,10 +400,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -427,7 +424,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -441,10 +438,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -465,7 +462,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -479,10 +476,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -503,7 +500,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -517,10 +514,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -541,7 +538,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -555,10 +552,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -579,7 +576,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -595,10 +592,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -619,7 +616,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -633,10 +630,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -657,7 +654,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -671,10 +668,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -695,7 +692,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -709,10 +706,10 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
@@ -733,7 +730,7 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .titleLarge
                                     .override(
                                       fontFamily: 'Outfit',
-                                      color: Color(0xFF1DA4D4),
+                                      color: const Color(0xFF1DA4D4),
                                       fontSize: 16.0,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -747,20 +744,20 @@ class _TermsDrawerPageWidgetState extends State<TermsDrawerPageWidget> {
                                     .labelSmall
                                     .override(
                                       fontFamily: 'Readex Pro',
-                                      color: Color(0xFF8E979E),
+                                      color: const Color(0xFF8E979E),
                                     ),
                               ),
-                            ].divide(SizedBox(height: 10.0)),
+                            ].divide(const SizedBox(height: 10.0)),
                           ),
                         ),
                       ],
                     ),
-                    Row(
+                    const Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [],
                     ),
-                  ].divide(SizedBox(height: 10.0)),
+                  ].divide(const SizedBox(height: 10.0)),
                 ),
               ),
             ),
