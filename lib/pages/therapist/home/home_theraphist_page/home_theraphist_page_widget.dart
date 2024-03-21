@@ -536,10 +536,10 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                       alignment: AlignmentDirectional(0.0, 0.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFFA54EAF),
+                          color: Color.fromARGB(255, 111, 243, 3),
                           borderRadius: BorderRadius.circular(50.0),
                           border: Border.all(
-                            color: Color(0xFFA54EAF),
+                            color: Color.fromARGB(255, 255, 0, 0),
                             width: 9.0,
                           ),
                         ),
