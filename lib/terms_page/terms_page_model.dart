@@ -8,7 +8,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class TermsPageModel extends FlutterFlowModel<TermsPageWidget> {
-  ///  teste
+  ///  teste de novo
+  /// dd
 
   final unfocusNode = FocusNode();
 
