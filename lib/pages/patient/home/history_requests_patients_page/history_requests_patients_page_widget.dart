@@ -134,7 +134,7 @@ class _HistoryRequestsPatientsPageWidgetState
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        backgroundColor: Color(0xFF1DA4D4),
         drawer: Drawer(
           elevation: 16.0,
           child: Container(
@@ -1175,41 +1175,48 @@ class _HistoryRequestsPatientsPageWidgetState
                                                                                 color: Color(0x34000000),
                                                                               ),
                                                                             ),
-                                                                            InkWell(
-                                                                              splashColor: Colors.transparent,
-                                                                              focusColor: Colors.transparent,
-                                                                              hoverColor: Colors.transparent,
-                                                                              highlightColor: Colors.transparent,
-                                                                              onTap: () async {
-                                                                                context.pushNamed(
-                                                                                  'managerRequestHistory',
-                                                                                  queryParameters: {
-                                                                                    'request': serializeParam(
-                                                                                      requestsFilterItem,
-                                                                                      ParamType.Document,
-                                                                                    ),
-                                                                                  }.withoutNulls,
-                                                                                  extra: <String, dynamic>{
-                                                                                    'request': requestsFilterItem,
-                                                                                  },
-                                                                                );
-                                                                              },
-                                                                              child: Container(
-                                                                                decoration: BoxDecoration(
-                                                                                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                                                                                ),
-                                                                                child: Text(
-                                                                                  FFLocalizations.of(context).getText(
-                                                                                    '2njm92nk' /* Ver mais */,
-                                                                                  ),
-                                                                                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                        fontFamily: 'Raleway',
-                                                                                        color: Color(0xFF9F9F9F),
-                                                                                        fontWeight: FontWeight.bold,
+                                                                            if (responsiveVisibility(
+                                                                              context: context,
+                                                                              phone: false,
+                                                                              tablet: false,
+                                                                              tabletLandscape: false,
+                                                                              desktop: false,
+                                                                            ))
+                                                                              InkWell(
+                                                                                splashColor: Colors.transparent,
+                                                                                focusColor: Colors.transparent,
+                                                                                hoverColor: Colors.transparent,
+                                                                                highlightColor: Colors.transparent,
+                                                                                onTap: () async {
+                                                                                  context.pushNamed(
+                                                                                    'managerRequestHistory',
+                                                                                    queryParameters: {
+                                                                                      'request': serializeParam(
+                                                                                        requestsFilterItem,
+                                                                                        ParamType.Document,
                                                                                       ),
+                                                                                    }.withoutNulls,
+                                                                                    extra: <String, dynamic>{
+                                                                                      'request': requestsFilterItem,
+                                                                                    },
+                                                                                  );
+                                                                                },
+                                                                                child: Container(
+                                                                                  decoration: BoxDecoration(
+                                                                                    color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                                  ),
+                                                                                  child: Text(
+                                                                                    FFLocalizations.of(context).getText(
+                                                                                      '2njm92nk' /* Ver mais */,
+                                                                                    ),
+                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                          fontFamily: 'Raleway',
+                                                                                          color: Color(0xFF9F9F9F),
+                                                                                          fontWeight: FontWeight.bold,
+                                                                                        ),
+                                                                                  ),
                                                                                 ),
                                                                               ),
-                                                                            ),
                                                                           ],
                                                                         ),
                                                                       ].divide(SizedBox(

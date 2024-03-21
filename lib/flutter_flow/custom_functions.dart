@@ -20,7 +20,7 @@ List<CardStruct> deleteCardFromUser(
   List<CardStruct> cardsUpdated = [];
 
   cards.forEach((card) {
-    if (!(card.cardNumber == cardDeleted.cardNumber)) {
+    if (card.cardNumber != cardDeleted.cardNumber) {
       cardsUpdated.add(card);
     }
   });

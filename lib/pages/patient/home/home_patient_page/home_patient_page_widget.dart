@@ -1,6 +1,7 @@
 import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -615,7 +616,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                             child: Stack(
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, -1.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
@@ -812,211 +813,411 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Expanded(
-                                                  child: Container(
-                                                    width: double.infinity,
-                                                    height: 110.0,
-                                                    child: CarouselSlider(
-                                                      items: [
-                                                        FFButtonWidget(
-                                                          onPressed: () async {
-                                                            context.pushNamed(
-                                                              'requests_page',
-                                                              queryParameters: {
-                                                                'filterParam':
-                                                                    serializeParam(
+                                                  child: Stack(
+                                                    children: [
+                                                      Container(
+                                                        width: double.infinity,
+                                                        decoration:
+                                                            BoxDecoration(),
+                                                        child: Container(
+                                                          width:
+                                                              double.infinity,
+                                                          height: 132.0,
+                                                          child: CarouselSlider(
+                                                            items: [
+                                                              Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                children: [
+                                                                  Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            0.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        FFButtonWidget(
+                                                                      onPressed:
+                                                                          () async {
+                                                                        context.pushNamed(
+                                                                            'payment_cards');
+                                                                      },
+                                                                      text: '',
+                                                                      icon:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .add_card,
+                                                                        size:
+                                                                            40.0,
+                                                                      ),
+                                                                      options:
+                                                                          FFButtonOptions(
+                                                                        width:
+                                                                            91.0,
+                                                                        height:
+                                                                            91.0,
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            24.0,
+                                                                            0.0,
+                                                                            24.0,
+                                                                            0.0),
+                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                        color: Color(
+                                                                            0xFF2775B2),
+                                                                        textStyle: FlutterFlowTheme.of(context)
+                                                                            .titleSmall
+                                                                            .override(
+                                                                              fontFamily: 'Readex Pro',
+                                                                              color: Colors.white,
+                                                                            ),
+                                                                        elevation:
+                                                                            3.0,
+                                                                        borderSide:
+                                                                            BorderSide(
+                                                                          color:
+                                                                              Colors.transparent,
+                                                                          width:
+                                                                              1.0,
+                                                                        ),
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(100.0),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Text(
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      '1qfza9l9' /* Pagamento */,
+                                                                    ),
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Readex Pro',
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                        ),
+                                                                  ),
+                                                                ].divide(SizedBox(
+                                                                    height:
+                                                                        5.0)),
+                                                              ),
+                                                              Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                children: [
+                                                                  Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            0.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        FFButtonWidget(
+                                                                      onPressed:
+                                                                          () async {
+                                                                        context
+                                                                            .pushNamed(
+                                                                          'requests_page',
+                                                                          queryParameters:
+                                                                              {
+                                                                            'filterParam':
+                                                                                serializeParam(
+                                                                              false,
+                                                                              ParamType.bool,
+                                                                            ),
+                                                                          }.withoutNulls,
+                                                                        );
+                                                                      },
+                                                                      text: '',
+                                                                      icon:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .people_alt_rounded,
+                                                                        size:
+                                                                            40.0,
+                                                                      ),
+                                                                      options:
+                                                                          FFButtonOptions(
+                                                                        width:
+                                                                            91.0,
+                                                                        height:
+                                                                            91.0,
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            24.0,
+                                                                            0.0,
+                                                                            24.0,
+                                                                            0.0),
+                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                        color: Color(
+                                                                            0xFF2775B2),
+                                                                        textStyle: FlutterFlowTheme.of(context)
+                                                                            .titleSmall
+                                                                            .override(
+                                                                              fontFamily: 'Readex Pro',
+                                                                              color: Colors.white,
+                                                                            ),
+                                                                        elevation:
+                                                                            3.0,
+                                                                        borderSide:
+                                                                            BorderSide(
+                                                                          color:
+                                                                              Colors.transparent,
+                                                                          width:
+                                                                              1.0,
+                                                                        ),
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(100.0),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Text(
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'as6t486v' /* Atendimentos */,
+                                                                    ),
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Readex Pro',
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                        ),
+                                                                  ),
+                                                                ].divide(SizedBox(
+                                                                    height:
+                                                                        5.0)),
+                                                              ),
+                                                              Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                children: [
+                                                                  Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            0.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        FFButtonWidget(
+                                                                      onPressed:
+                                                                          () async {
+                                                                        context.pushNamed(
+                                                                            'calendar_theraphist_page');
+                                                                      },
+                                                                      text: '',
+                                                                      icon:
+                                                                          Icon(
+                                                                        Icons
+                                                                            .calendar_month,
+                                                                        size:
+                                                                            40.0,
+                                                                      ),
+                                                                      options:
+                                                                          FFButtonOptions(
+                                                                        width:
+                                                                            91.0,
+                                                                        height:
+                                                                            91.0,
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            24.0,
+                                                                            0.0,
+                                                                            24.0,
+                                                                            0.0),
+                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                        color: Color(
+                                                                            0xFF2775B2),
+                                                                        textStyle: FlutterFlowTheme.of(context)
+                                                                            .titleSmall
+                                                                            .override(
+                                                                              fontFamily: 'Readex Pro',
+                                                                              color: Colors.white,
+                                                                            ),
+                                                                        elevation:
+                                                                            3.0,
+                                                                        borderSide:
+                                                                            BorderSide(
+                                                                          color:
+                                                                              Colors.transparent,
+                                                                          width:
+                                                                              1.0,
+                                                                        ),
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(100.0),
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Text(
+                                                                    FFLocalizations.of(
+                                                                            context)
+                                                                        .getText(
+                                                                      'mp0g2lhx' /* Agenda */,
+                                                                    ),
+                                                                    style: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .bodyMedium
+                                                                        .override(
+                                                                          fontFamily:
+                                                                              'Roboto',
+                                                                          color:
+                                                                              Colors.black,
+                                                                          fontWeight:
+                                                                              FontWeight.w500,
+                                                                        ),
+                                                                  ),
+                                                                ].divide(SizedBox(
+                                                                    height:
+                                                                        5.0)),
+                                                              ),
+                                                            ],
+                                                            carouselController:
+                                                                _model.carouselController ??=
+                                                                    CarouselController(),
+                                                            options:
+                                                                CarouselOptions(
+                                                              initialPage: 1,
+                                                              viewportFraction:
+                                                                  0.3,
+                                                              disableCenter:
                                                                   false,
-                                                                  ParamType
-                                                                      .bool,
-                                                                ),
-                                                              }.withoutNulls,
-                                                            );
-                                                          },
-                                                          text: FFLocalizations
-                                                                  .of(context)
-                                                              .getText(
-                                                            'vulo61iv' /* Solicitações */,
-                                                          ),
-                                                          icon: Icon(
-                                                            Icons
-                                                                .check_circle_outlined,
-                                                            size: 50.0,
-                                                          ),
-                                                          options:
-                                                              FFButtonOptions(
-                                                            width: 80.0,
-                                                            height: 80.0,
-                                                            padding:
-                                                                EdgeInsets.all(
-                                                                    0.0),
-                                                            iconPadding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        5.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            color: Color(
-                                                                0xFF2775B2),
-                                                            textStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleSmall
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Readex Pro',
-                                                                      color: Colors
-                                                                          .white,
-                                                                    ),
-                                                            elevation: 0.0,
-                                                            borderSide:
-                                                                BorderSide(
-                                                              color: Colors
-                                                                  .transparent,
-                                                              width: 1.0,
+                                                              enlargeCenterPage:
+                                                                  true,
+                                                              enlargeFactor:
+                                                                  0.25,
+                                                              enableInfiniteScroll:
+                                                                  true,
+                                                              scrollDirection:
+                                                                  Axis.horizontal,
+                                                              autoPlay: false,
+                                                              onPageChanged:
+                                                                  (index, _) =>
+                                                                      _model.carouselCurrentIndex =
+                                                                          index,
                                                             ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        34.0),
                                                           ),
                                                         ),
-                                                        FFButtonWidget(
-                                                          onPressed: () async {
-                                                            context.pushNamed(
-                                                              'requests_page',
-                                                              queryParameters: {
-                                                                'filterParam':
-                                                                    serializeParam(
-                                                                  false,
-                                                                  ParamType
-                                                                      .bool,
-                                                                ),
-                                                              }.withoutNulls,
-                                                            );
-                                                          },
-                                                          text: FFLocalizations
-                                                                  .of(context)
-                                                              .getText(
-                                                            'g8ac2992' /* Agenda */,
-                                                          ),
-                                                          icon: Icon(
-                                                            Icons
-                                                                .calendar_month,
-                                                            size: 50.0,
-                                                          ),
-                                                          options:
-                                                              FFButtonOptions(
-                                                            width: 80.0,
-                                                            height: 80.0,
-                                                            padding:
-                                                                EdgeInsets.all(
-                                                                    0.0),
-                                                            iconPadding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        5.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            color: Color(
-                                                                0xFF2775B2),
-                                                            textStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleSmall
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Readex Pro',
-                                                                      color: Colors
-                                                                          .white,
-                                                                    ),
-                                                            elevation: 0.0,
-                                                            borderSide:
-                                                                BorderSide(
-                                                              color: Colors
-                                                                  .transparent,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        34.0),
-                                                          ),
-                                                        ),
-                                                        FFButtonWidget(
-                                                          onPressed: () async {
-                                                            context.pushNamed(
-                                                                'payment_cards');
-                                                          },
-                                                          text: FFLocalizations
-                                                                  .of(context)
-                                                              .getText(
-                                                            'a1djrd9g' /* cartões */,
-                                                          ),
-                                                          icon: Icon(
-                                                            Icons.credit_card,
-                                                            size: 50.0,
-                                                          ),
-                                                          options:
-                                                              FFButtonOptions(
-                                                            width: 80.0,
-                                                            height: 80.0,
-                                                            padding:
-                                                                EdgeInsets.all(
-                                                                    0.0),
-                                                            iconPadding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        5.0,
-                                                                        0.0,
-                                                                        0.0,
-                                                                        0.0),
-                                                            color: Color(
-                                                                0xFF2775B2),
-                                                            textStyle:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .titleSmall
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'Readex Pro',
-                                                                      color: Colors
-                                                                          .white,
-                                                                    ),
-                                                            elevation: 0.0,
-                                                            borderSide:
-                                                                BorderSide(
-                                                              color: Colors
-                                                                  .transparent,
-                                                              width: 1.0,
-                                                            ),
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        34.0),
-                                                          ),
-                                                        ),
-                                                      ],
-                                                      carouselController: _model
-                                                              .carouselController ??=
-                                                          CarouselController(),
-                                                      options: CarouselOptions(
-                                                        initialPage: 1,
-                                                        viewportFraction: 0.5,
-                                                        disableCenter: true,
-                                                        enlargeCenterPage: true,
-                                                        enlargeFactor: 0.25,
-                                                        enableInfiniteScroll:
-                                                            true,
-                                                        scrollDirection:
-                                                            Axis.horizontal,
-                                                        autoPlay: false,
-                                                        onPageChanged: (index,
-                                                                _) =>
-                                                            _model.carouselCurrentIndex =
-                                                                index,
                                                       ),
-                                                    ),
+                                                      Align(
+                                                        alignment:
+                                                            AlignmentDirectional(
+                                                                0.0, 1.2),
+                                                        child: Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      5.0,
+                                                                      30.0,
+                                                                      5.0,
+                                                                      0.0),
+                                                          child: Row(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .max,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceBetween,
+                                                            children: [
+                                                              Align(
+                                                                alignment:
+                                                                    AlignmentDirectional(
+                                                                        1.0,
+                                                                        0.0),
+                                                                child:
+                                                                    FlutterFlowIconButton(
+                                                                  borderColor:
+                                                                      Color(
+                                                                          0x60E4E4E4),
+                                                                  borderRadius:
+                                                                      20.0,
+                                                                  borderWidth:
+                                                                      1.0,
+                                                                  buttonSize:
+                                                                      40.0,
+                                                                  fillColor: Color(
+                                                                      0x60E4E4E4),
+                                                                  icon: Icon(
+                                                                    Icons
+                                                                        .arrow_back_ios_new,
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .primaryText,
+                                                                    size: 24.0,
+                                                                  ),
+                                                                  onPressed:
+                                                                      () async {
+                                                                    await _model
+                                                                        .carouselController
+                                                                        ?.previousPage(
+                                                                      duration: Duration(
+                                                                          milliseconds:
+                                                                              300),
+                                                                      curve: Curves
+                                                                          .ease,
+                                                                    );
+                                                                  },
+                                                                ),
+                                                              ),
+                                                              Align(
+                                                                alignment:
+                                                                    AlignmentDirectional(
+                                                                        0.0,
+                                                                        0.0),
+                                                                child:
+                                                                    FlutterFlowIconButton(
+                                                                  borderColor:
+                                                                      Color(
+                                                                          0x60E4E4E4),
+                                                                  borderRadius:
+                                                                      20.0,
+                                                                  borderWidth:
+                                                                      1.0,
+                                                                  buttonSize:
+                                                                      40.0,
+                                                                  fillColor: Color(
+                                                                      0x60E4E4E4),
+                                                                  icon: Icon(
+                                                                    Icons
+                                                                        .arrow_forward_ios,
+                                                                    color: Color(
+                                                                        0xFF52585B),
+                                                                    size: 24.0,
+                                                                  ),
+                                                                  onPressed:
+                                                                      () async {
+                                                                    await _model
+                                                                        .carouselController
+                                                                        ?.nextPage(
+                                                                      duration: Duration(
+                                                                          milliseconds:
+                                                                              300),
+                                                                      curve: Curves
+                                                                          .ease,
+                                                                    );
+                                                                  },
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
                                                   ),
                                                 ),
                                               ],
@@ -1045,7 +1246,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                             FFLocalizations.of(
                                                                     context)
                                                                 .getText(
-                                                              'p9v71rsx' /* Consultas marcadas */,
+                                                              'p9v71rsx' /* Atendimentos  Agendados */,
                                                             ),
                                                             style: FlutterFlowTheme
                                                                     .of(context)
@@ -1306,7 +1507,7 @@ class _HomePatientPageWidgetState extends State<HomePatientPageWidget> {
                                                                                                     'Especialista em ${rowPracticeRecord.speciliaty}',
                                                                                                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                           fontFamily: 'Roboto',
-                                                                                                          color: Color(0xFFCDCCCC),
+                                                                                                          color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                                           fontSize: 12.0,
                                                                                                           fontWeight: FontWeight.bold,
                                                                                                         ),

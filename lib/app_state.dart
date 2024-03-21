@@ -224,6 +224,12 @@ class FFAppState extends ChangeNotifier {
   set stateHistoryTheraphit(bool _value) {
     _stateHistoryTheraphit = _value;
   }
+
+  String _TermosLink = 'Termos e Condições';
+  String get TermosLink => _TermosLink;
+  set TermosLink(String _value) {
+    _TermosLink = _value;
+  }
 }
 
 void _safeInit(Function() initializeField) {

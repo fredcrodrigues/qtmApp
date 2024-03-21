@@ -496,7 +496,7 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                             'tukni66s' /* Homem transgênero */,
                                           ),
                                           FFLocalizations.of(context).getText(
-                                            'jcnt9080' /* Mulher trangênero */,
+                                            'jcnt9080' /* Mulher tranSgênero */,
                                           )
                                         ],
                                         onChanged: (val) => setState(
@@ -672,7 +672,14 @@ class _ProfilePatientPageWidgetState extends State<ProfilePatientPageWidget> {
                                           ));
 
                                           context.pushNamed(
-                                              'register_patient_page');
+                                            'loading_page_user',
+                                            queryParameters: {
+                                              'userRef': serializeParam(
+                                                widget.refUser,
+                                                ParamType.DocumentReference,
+                                              ),
+                                            }.withoutNulls,
+                                          );
                                         },
                                   text: FFLocalizations.of(context).getText(
                                     'tlqp2i1t' /* Continuar */,

@@ -1,6 +1,5 @@
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
-import '/flutter_flow/flutter_flow_google_map.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -156,7 +155,6 @@ class _SchedulePageWidgetState extends State<SchedulePageWidget>
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        resizeToAvoidBottomInset: false,
         body: SafeArea(
           top: true,
           child: Stack(
@@ -410,200 +408,124 @@ class _SchedulePageWidgetState extends State<SchedulePageWidget>
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 15.0, 0.0),
-                                    child: StreamBuilder<CoworkingRecord>(
-                                      stream: CoworkingRecord.getDocument(
-                                          widget.request!.fkCoworking!),
-                                      builder: (context, snapshot) {
-                                        // Customize what your widget looks like when it's loading.
-                                        if (!snapshot.hasData) {
-                                          return Center(
-                                            child: SizedBox(
-                                              width: 50.0,
-                                              height: 50.0,
-                                              child: CircularProgressIndicator(
-                                                valueColor:
-                                                    AlwaysStoppedAnimation<
-                                                        Color>(
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          FFLocalizations.of(context).getText(
+                                            'sogc7t3h' /* Local de atendimento */,
+                                          ),
+                                          style: FlutterFlowTheme.of(context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'Roboto',
+                                                color: Color(0xFF989494),
+                                                fontSize: 12.0,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 10.0, 0.0, 0.0),
+                                          child: Text(
+                                            FFLocalizations.of(context).getText(
+                                              'f1fklqhw' /* ## São Luis, Turu, 65087-567, ... */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'Raleway',
+                                                  fontSize: 14.0,
+                                                  fontWeight: FontWeight.bold,
                                                 ),
-                                              ),
-                                            ),
-                                          );
-                                        }
-                                        final columnCoworkingRecord =
-                                            snapshot.data!;
-                                        return Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              FFLocalizations.of(context)
-                                                  .getText(
-                                                'sogc7t3h' /* Local de atendimento */,
-                                              ),
-                                              style: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'Roboto',
-                                                    color: Color(0xFF989494),
-                                                    fontSize: 12.0,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 10.0, 0.0, 0.0),
-                                              child: Text(
-                                                '${columnCoworkingRecord.city}, ${columnCoworkingRecord.state}',
-                                                style:
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 10.0, 0.0, 0.0),
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(14.0),
+                                            child: Container(
+                                              width: double.infinity,
+                                              height: () {
+                                                if (MediaQuery.sizeOf(context)
+                                                        .width <
+                                                    kBreakpointSmall) {
+                                                  return 200.0;
+                                                } else if (MediaQuery.sizeOf(
+                                                            context)
+                                                        .width <
+                                                    kBreakpointMedium) {
+                                                  return 400.0;
+                                                } else if (MediaQuery.sizeOf(
+                                                            context)
+                                                        .width <
+                                                    kBreakpointLarge) {
+                                                  return 500.0;
+                                                } else {
+                                                  return 200.0;
+                                                }
+                                              }(),
+                                              decoration: BoxDecoration(
+                                                color:
                                                     FlutterFlowTheme.of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: 'Raleway',
-                                                          fontSize: 14.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                        ),
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 10.0, 0.0, 0.0),
-                                              child: ClipRRect(
+                                                        .secondaryBackground,
                                                 borderRadius:
                                                     BorderRadius.circular(14.0),
-                                                child: Container(
-                                                  width: double.infinity,
-                                                  height: () {
-                                                    if (MediaQuery.sizeOf(
-                                                                context)
-                                                            .width <
-                                                        kBreakpointSmall) {
-                                                      return 200.0;
-                                                    } else if (MediaQuery
-                                                                .sizeOf(context)
-                                                            .width <
-                                                        kBreakpointMedium) {
-                                                      return 400.0;
-                                                    } else if (MediaQuery
-                                                                .sizeOf(context)
-                                                            .width <
-                                                        kBreakpointLarge) {
-                                                      return 500.0;
-                                                    } else {
-                                                      return 200.0;
-                                                    }
-                                                  }(),
-                                                  decoration: BoxDecoration(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .secondaryBackground,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            14.0),
-                                                  ),
-                                                  child: Builder(
-                                                    builder: (context) {
-                                                      if (columnCoworkingRecord
-                                                          .hasLtd()) {
-                                                        return Container(
-                                                          width: 100.0,
-                                                          height: 100.0,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryBackground,
-                                                          ),
-                                                          child:
-                                                              FlutterFlowGoogleMap(
-                                                            controller: _model
-                                                                .googleMapsController,
-                                                            onCameraIdle:
-                                                                (latLng) =>
-                                                                    _model.googleMapsCenter =
-                                                                        latLng,
-                                                            initialLocation: _model
-                                                                    .googleMapsCenter ??=
-                                                                columnCoworkingRecord
-                                                                    .ltd!,
-                                                            markerColor:
-                                                                GoogleMarkerColor
-                                                                    .violet,
-                                                            mapType:
-                                                                MapType.normal,
-                                                            style:
-                                                                GoogleMapStyle
-                                                                    .aubergine,
-                                                            initialZoom: 14.0,
-                                                            allowInteraction:
-                                                                true,
-                                                            allowZoom: true,
-                                                            showZoomControls:
-                                                                true,
-                                                            showLocation: true,
-                                                            showCompass: false,
-                                                            showMapToolbar:
-                                                                false,
-                                                            showTraffic: false,
-                                                            centerMapOnMarkerTap:
-                                                                true,
-                                                          ),
-                                                        );
-                                                      } else {
-                                                        return Container(
-                                                          width: 100.0,
-                                                          height: 100.0,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryBackground,
-                                                          ),
-                                                          child: Column(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .center,
-                                                            children: [
-                                                              Icon(
-                                                                Icons
-                                                                    .maps_home_work_outlined,
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryText,
-                                                                size: 54.0,
-                                                              ),
-                                                              Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'tf0xv48v' /* Sem localização */,
-                                                                ),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium,
-                                                              ),
-                                                            ].divide(SizedBox(
-                                                                height: 10.0)),
-                                                          ),
-                                                        );
-                                                      }
-                                                    },
-                                                  ),
+                                              ),
+                                              child: Container(
+                                                width: 100.0,
+                                                height: 100.0,
+                                                decoration: BoxDecoration(
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryBackground,
+                                                  boxShadow: [
+                                                    BoxShadow(
+                                                      blurRadius: 4.0,
+                                                      color: Color(0x33000000),
+                                                      offset: Offset(0.0, 2.0),
+                                                    )
+                                                  ],
+                                                ),
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: [
+                                                    Icon(
+                                                      Icons.maps_home_work,
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .secondaryText,
+                                                      size: 34.0,
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'vb8gmj0h' /* Coworking */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium,
+                                                    ),
+                                                  ].divide(
+                                                      SizedBox(height: 20.0)),
                                                 ),
                                               ),
                                             ),
-                                          ],
-                                        );
-                                      },
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                 ),
@@ -847,7 +769,7 @@ class _SchedulePageWidgetState extends State<SchedulePageWidget>
                                             Text(
                                               FFLocalizations.of(context)
                                                   .getText(
-                                                'l6vhyzow' /* Consulta finalizada */,
+                                                'l6vhyzow' /* Atendimento finalizada */,
                                               ),
                                               style: FlutterFlowTheme.of(
                                                       context)
@@ -885,63 +807,73 @@ class _SchedulePageWidgetState extends State<SchedulePageWidget>
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Expanded(
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryBackground,
-                                      borderRadius: BorderRadius.circular(14.0),
-                                      border: Border.all(
-                                        color: Color(0x7FB4B4B4),
-                                        width: 1.0,
+                                if (responsiveVisibility(
+                                  context: context,
+                                  phone: false,
+                                  tablet: false,
+                                  tabletLandscape: false,
+                                  desktop: false,
+                                ))
+                                  Expanded(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryBackground,
+                                        borderRadius:
+                                            BorderRadius.circular(14.0),
+                                        border: Border.all(
+                                          color: Color(0x7FB4B4B4),
+                                          width: 1.0,
+                                        ),
                                       ),
-                                    ),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          15.0, 20.0, 15.0, 20.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceBetween,
-                                        children: [
-                                          Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
-                                              Icon(
-                                                Icons.sticky_note_2_sharp,
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                size: 34.0,
-                                              ),
-                                              Text(
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'biyrkdp8' /* Prescrição do terapeuta */,
+                                      child: Padding(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                            15.0, 20.0, 15.0, 20.0),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Icon(
+                                                  Icons.sticky_note_2_sharp,
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .secondaryText,
+                                                  size: 34.0,
                                                 ),
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
-                                              ),
-                                            ].divide(SizedBox(width: 10.0)),
-                                          ),
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              'web6ru7h' /* abrir */,
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'biyrkdp8' /* Prescrição do terapeuta */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium,
+                                                ),
+                                              ].divide(SizedBox(width: 10.0)),
                                             ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'Raleway',
-                                                  color: Color(0xB2595959),
-                                                  fontWeight: FontWeight.bold,
-                                                ),
-                                          ),
-                                        ],
+                                            Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                'web6ru7h' /* Abrir */,
+                                              ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'Raleway',
+                                                    color: Color(0xB2595959),
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                            ),
+                                          ],
+                                        ),
                                       ),
                                     ),
                                   ),
-                                ),
                               ],
                             ),
                           ),
@@ -1158,7 +1090,7 @@ class _SchedulePageWidgetState extends State<SchedulePageWidget>
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'd9p1cy64' /* Valor da consulta */,
+                                                        'd9p1cy64' /* Valor do Atendimento */,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -1318,7 +1250,7 @@ class _SchedulePageWidgetState extends State<SchedulePageWidget>
                                                       FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        '2enrjzon' /* Cancelar consulta */,
+                                                        '2enrjzon' /* Cancelar Atendimento */,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)

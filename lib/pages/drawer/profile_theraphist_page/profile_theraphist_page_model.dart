@@ -35,7 +35,7 @@ class ProfileTheraphistPageModel
   String? _texfieldNameControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'syf3r2er' /* Campo Obirgatório */,
+        'syf3r2er' /* Campo Obrigatório */,
       );
     }
 
@@ -50,7 +50,7 @@ class ProfileTheraphistPageModel
       BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'vufh32kt' /* Campo Obirgatório */,
+        'vufh32kt' /* Campo Obrigatório */,
       );
     }
 

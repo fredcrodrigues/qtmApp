@@ -143,7 +143,7 @@ class _ModalSuccessCancelWidgetState extends State<ModalSuccessCancelWidget>
                     ),
                     Text(
                       FFLocalizations.of(context).getText(
-                        'aj93yx15' /* consulta cancelada */,
+                        'aj93yx15' /* Atendimento cancelado */,
                       ),
                       style: FlutterFlowTheme.of(context).titleSmall.override(
                             fontFamily: 'Readex Pro',

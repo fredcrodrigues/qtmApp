@@ -1149,7 +1149,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'l41btxzv' /* preços */,
+                                                      'l41btxzv' /* Preços */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -1270,7 +1270,7 @@ class _SearchWidgetState extends State<SearchWidget>
                                                   Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'lz2lbeob' /* práticas */,
+                                                      'lz2lbeob' /* Práticas */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
