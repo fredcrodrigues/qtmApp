@@ -539,7 +539,7 @@ class _HomeTheraphistPageWidgetState extends State<HomeTheraphistPageWidget>
                           color: Color.fromARGB(255, 111, 243, 3),
                           borderRadius: BorderRadius.circular(50.0),
                           border: Border.all(
-                            color: Color.fromARGB(255, 255, 0, 0),
+                            color: Color.fromARGB(255, 13, 193, 58),
                             width: 9.0,
                           ),
                         ),
