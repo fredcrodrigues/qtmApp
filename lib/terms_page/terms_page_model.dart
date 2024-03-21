@@ -8,11 +8,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class TermsPageModel extends FlutterFlowModel<TermsPageWidget> {
-  ///  State fields for stateful widgets in this page.
+  ///  teste
 
   final unfocusNode = FocusNode();
 
-  /// Initialization and disposal methods.
+  /// Teste codigo.
 
   @override
   void initState(BuildContext context) {}
